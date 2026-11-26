@@ -1,0 +1,592 @@
+{
+  "source": "behavioral_observation_2026-11-22/sensor_sensitivity_results.json",
+  "source_sha256": "8161e5cd9635f4cbce33e5eb3f32159398f1e936cdc308b92091c2535183a672",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "protocol": {
+      "created_at": "2026-11-23T13:18:51.409910+05:30",
+      "scenarios": [
+        "half_visibility",
+        "bounded_export_jitter_1000ms"
+      ],
+      "mask": "Uniform deterministic row-hash parity, independent of labels. Only observed records update state and are scored.",
+      "jitter": "arrival=end+hash(row)%1001ms, stable receipt-time sort; record fields unchanged. Designed scenario, not measured delay.",
+      "guard": "Jitter scores exclude arrivals in final1000ms of permitted stream, to avoid a boundary needing unobserved future records.",
+      "model": "Frozen seed42 shared_pooled selections; no recalibration or refitting.",
+      "units": "FPR/recall conditional on observed records, plus unconditional attack coverage. Same observed subset for every method."
+    },
+    "results": [
+      {
+        "scenario": "half_visibility",
+        "method": "flow14",
+        "seed": 42,
+        "observed_probe_rows": 40008,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 0.5002784739626845,
+        "tp": 3559,
+        "fp": 0,
+        "attacks": 3593,
+        "benign": 36415,
+        "recall": 0.990537155580295,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.9952460850111857,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.971830985915493,
+        "family": {
+          "Analysis": {
+            "n": 12,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 18,
+            "recall": 0.9444444444444444
+          },
+          "DoS": {
+            "n": 193,
+            "recall": 0.9844559585492227
+          },
+          "Exploits": {
+            "n": 1314,
+            "recall": 0.9901065449010654
+          },
+          "Fuzzers": {
+            "n": 1001,
+            "recall": 0.9920079920079921
+          },
+          "Generic": {
+            "n": 517,
+            "recall": 0.9845261121856866
+          },
+          "Reconnaissance": {
+            "n": 462,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 71,
+            "recall": 0.9859154929577465
+          },
+          "Worms": {
+            "n": 5,
+            "recall": 1.0
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.4955444165970482
+      },
+      {
+        "scenario": "half_visibility",
+        "method": "behavior24",
+        "seed": 42,
+        "observed_probe_rows": 40008,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 0.5002784739626845,
+        "tp": 2895,
+        "fp": 0,
+        "attacks": 3593,
+        "benign": 36415,
+        "recall": 0.8057333704425271,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.8924167694204685,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.5627906976744186,
+        "family": {
+          "Analysis": {
+            "n": 12,
+            "recall": 0.6666666666666666
+          },
+          "Backdoor": {
+            "n": 18,
+            "recall": 0.7777777777777778
+          },
+          "DoS": {
+            "n": 193,
+            "recall": 0.8756476683937824
+          },
+          "Exploits": {
+            "n": 1314,
+            "recall": 0.8165905631659056
+          },
+          "Fuzzers": {
+            "n": 1001,
+            "recall": 0.8701298701298701
+          },
+          "Generic": {
+            "n": 517,
+            "recall": 0.5996131528046421
+          },
+          "Reconnaissance": {
+            "n": 462,
+            "recall": 0.8441558441558441
+          },
+          "Shellcode": {
+            "n": 71,
+            "recall": 0.8028169014084507
+          },
+          "Worms": {
+            "n": 5,
+            "recall": 0.6
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.40309106098579783
+      },
+      {
+        "scenario": "half_visibility",
+        "method": "quantile_tail_anomaly",
+        "seed": 42,
+        "observed_probe_rows": 40008,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 0.5002784739626845,
+        "tp": 0,
+        "fp": 0,
+        "attacks": 3593,
+        "benign": 36415,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Analysis": {
+            "n": 12,
+            "recall": 0.0
+          },
+          "Backdoor": {
+            "n": 18,
+            "recall": 0.0
+          },
+          "DoS": {
+            "n": 193,
+            "recall": 0.0
+          },
+          "Exploits": {
+            "n": 1314,
+            "recall": 0.0
+          },
+          "Fuzzers": {
+            "n": 1001,
+            "recall": 0.0
+          },
+          "Generic": {
+            "n": 517,
+            "recall": 0.0
+          },
+          "Reconnaissance": {
+            "n": 462,
+            "recall": 0.0
+          },
+          "Shellcode": {
+            "n": 71,
+            "recall": 0.0
+          },
+          "Worms": {
+            "n": 5,
+            "recall": 0.0
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.0
+      },
+      {
+        "scenario": "half_visibility",
+        "method": "hybrid38",
+        "seed": 42,
+        "observed_probe_rows": 40008,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 0.5002784739626845,
+        "tp": 3583,
+        "fp": 0,
+        "attacks": 3593,
+        "benign": 36415,
+        "recall": 0.9972168104647926,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.9986064659977704,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.9859154929577465,
+        "family": {
+          "Analysis": {
+            "n": 12,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 18,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 193,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 1314,
+            "recall": 0.997716894977169
+          },
+          "Fuzzers": {
+            "n": 1001,
+            "recall": 0.999000999000999
+          },
+          "Generic": {
+            "n": 517,
+            "recall": 0.9903288201160542
+          },
+          "Reconnaissance": {
+            "n": 462,
+            "recall": 0.9978354978354979
+          },
+          "Shellcode": {
+            "n": 71,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 5,
+            "recall": 1.0
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.49888610414926204
+      },
+      {
+        "scenario": "half_visibility",
+        "method": "behavior26_global_ablation",
+        "seed": 42,
+        "observed_probe_rows": 40008,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 0.5002784739626845,
+        "tp": 2855,
+        "fp": 2,
+        "attacks": 3593,
+        "benign": 36415,
+        "recall": 0.7946006123016978,
+        "fpr": 5.492242207881367e-05,
+        "precision": 0.9992999649982499,
+        "f1": 0.8852713178294573,
+        "worst_window_fpr": 0.0011312217194570137,
+        "worst_window_recall": 0.5,
+        "family": {
+          "Analysis": {
+            "n": 12,
+            "recall": 0.5
+          },
+          "Backdoor": {
+            "n": 18,
+            "recall": 0.7777777777777778
+          },
+          "DoS": {
+            "n": 193,
+            "recall": 0.8911917098445595
+          },
+          "Exploits": {
+            "n": 1314,
+            "recall": 0.8485540334855404
+          },
+          "Fuzzers": {
+            "n": 1001,
+            "recall": 0.8771228771228772
+          },
+          "Generic": {
+            "n": 517,
+            "recall": 0.42359767891682787
+          },
+          "Reconnaissance": {
+            "n": 462,
+            "recall": 0.8376623376623377
+          },
+          "Shellcode": {
+            "n": 71,
+            "recall": 0.8309859154929577
+          },
+          "Worms": {
+            "n": 5,
+            "recall": 1.0
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.39752158173210805
+      },
+      {
+        "scenario": "bounded_export_jitter_1000ms",
+        "method": "flow14",
+        "seed": 42,
+        "observed_probe_rows": 79994,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 1.0,
+        "tp": 7110,
+        "fp": 6,
+        "attacks": 7182,
+        "benign": 72812,
+        "recall": 0.9899749373433584,
+        "fpr": 8.2403999340768e-05,
+        "precision": 0.9991568296795953,
+        "f1": 0.9945446915652539,
+        "worst_window_fpr": 0.0002898550724637681,
+        "worst_window_recall": 0.97165991902834,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.9655172413793104
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9792207792207792
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9889439573008006
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9913967611336032
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9854227405247813
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9989583333333333
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.9928571428571429
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.9899749373433584
+      },
+      {
+        "scenario": "bounded_export_jitter_1000ms",
+        "method": "behavior24",
+        "seed": 42,
+        "observed_probe_rows": 79994,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 1.0,
+        "tp": 6692,
+        "fp": 0,
+        "attacks": 7182,
+        "benign": 72812,
+        "recall": 0.9317738791423001,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.9646821392532795,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.7478753541076487,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.967741935483871
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.9655172413793104
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9298701298701298
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9374761723217689
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9549595141700404
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.8688046647230321
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.934375
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.9285714285714286
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.9317738791423001
+      },
+      {
+        "scenario": "bounded_export_jitter_1000ms",
+        "method": "quantile_tail_anomaly",
+        "seed": 42,
+        "observed_probe_rows": 79994,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 1.0,
+        "tp": 0,
+        "fp": 0,
+        "attacks": 7182,
+        "benign": 72812,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.0
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.0
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.0
+      },
+      {
+        "scenario": "bounded_export_jitter_1000ms",
+        "method": "hybrid38",
+        "seed": 42,
+        "observed_probe_rows": 79994,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 1.0,
+        "tp": 7173,
+        "fp": 1,
+        "attacks": 7182,
+        "benign": 72812,
+        "recall": 0.9987468671679198,
+        "fpr": 1.3733999890128001e-05,
+        "precision": 0.9998606077502091,
+        "f1": 0.9993034271384786,
+        "worst_window_fpr": 0.00028042624789680314,
+        "worst_window_recall": 0.989159891598916,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9973313000381243
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9980563654033042
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.9987468671679198
+      },
+      {
+        "scenario": "bounded_export_jitter_1000ms",
+        "method": "behavior26_global_ablation",
+        "seed": 42,
+        "observed_probe_rows": 79994,
+        "all_probe_rows": 80000,
+        "observed_attack_coverage": 1.0,
+        "tp": 6848,
+        "fp": 4,
+        "attacks": 7182,
+        "benign": 72812,
+        "recall": 0.9534948482316903,
+        "fpr": 5.4935999560512006e-05,
+        "precision": 0.9994162288382954,
+        "f1": 0.9759156334615933,
+        "worst_window_fpr": 0.0008412787436904094,
+        "worst_window_recall": 0.5920679886685553,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.967741935483871
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.9655172413793104
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9454545454545454
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9546321006481129
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9782388663967612
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9290573372206026
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9291666666666667
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.95
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.8888888888888888
+          }
+        },
+        "unconditional_recall_including_unobserved": 0.9534948482316903
+      }
+    ],
+    "caveat": "Cross-visibility/jitter shift of models calibrated under the complete ordered-record proxy. Not a matched retraining experiment, live network test or independent validation."
+  }
+}

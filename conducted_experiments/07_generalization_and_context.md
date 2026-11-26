@@ -1,0 +1,98 @@
+# Generalization and network context
+
+Compared single- and multi-environment fitting, robust/group-aware controls and legitimate service/direction context. Later-period performance remains below the joint recall/FPR requirement.
+
+[See results and graph explanations](../results/07_generalization_and_context.md)
+
+## Implementations
+
+<details>
+<summary>Browse the historical scripts for this study</summary>
+
+- [analyze_context_conditional_shift.py](source/analyze_context_conditional_shift.py)
+- [analyze_context_conflict_filter_counterfactual.py](source/analyze_context_conflict_filter_counterfactual.py)
+- [analyze_context_feasibility_gap.py](source/analyze_context_feasibility_gap.py)
+- [analyze_context_paired_blocks.py](source/analyze_context_paired_blocks.py)
+- [analyze_context_shift_decomposition.py](source/analyze_context_shift_decomposition.py)
+- [analyze_context_stress_failure.py](source/analyze_context_stress_failure.py)
+- [analyze_context_time_windows.py](source/analyze_context_time_windows.py)
+- [audit_complete_context_observability.py](source/audit_complete_context_observability.py)
+- [audit_conflict_context.py](source/audit_conflict_context.py)
+- [audit_context_cache_alignment.py](source/audit_context_cache_alignment.py)
+- [audit_context_family_information.py](source/audit_context_family_information.py)
+- [audit_context_identity_invariance.py](source/audit_context_identity_invariance.py)
+- [audit_context_information_bound.py](source/audit_context_information_bound.py)
+- [audit_context_occupancy.py](source/audit_context_occupancy.py)
+- [audit_context_precision_provenance.py](source/audit_context_precision_provenance.py)
+- [audit_context_training_conflicts.py](source/audit_context_training_conflicts.py)
+- [audit_context_training_domains.py](source/audit_context_training_domains.py)
+- [audit_full_context_input_ranges.py](source/audit_full_context_input_ranges.py)
+- [audit_generalization_selection.py](source/audit_generalization_selection.py)
+- [audit_multienvironment_units.py](source/audit_multienvironment_units.py)
+- [audit_multienvironment_weights.py](source/audit_multienvironment_weights.py)
+- [benchmark_causal_flow_context.py](source/benchmark_causal_flow_context.py)
+- [build_causal_flow_context.py](source/build_causal_flow_context.py)
+- [causal_flow_context.py](source/causal_flow_context.py)
+- [context_from_audit_signature.py](source/context_from_audit_signature.py)
+- [context_observability_keys.py](source/context_observability_keys.py)
+- [diagnose_causal_context_shift.py](source/diagnose_causal_context_shift.py)
+- [diagnose_context_score_oracle.py](source/diagnose_context_score_oracle.py)
+- [export_foundation_benchmark_bundle.py](source/export_foundation_benchmark_bundle.py)
+- [generalization_metrics.py](source/generalization_metrics.py)
+- [multienvironment_features.py](source/multienvironment_features.py)
+- [multienvironment_protocol_tools.py](source/multienvironment_protocol_tools.py)
+- [network_context_features.py](source/network_context_features.py)
+- [plot_generalization_study.py](source/plot_generalization_study.py)
+- [plot_multienvironment_milestone.py](source/plot_multienvironment_milestone.py)
+- [plot_network_context_study.py](source/plot_network_context_study.py)
+- [prepare_detection_foundation.py](source/prepare_detection_foundation.py)
+- [prepare_foundation_metric_times.py](source/prepare_foundation_metric_times.py)
+- [prepare_network_context_cache.py](source/prepare_network_context_cache.py)
+- [prepare_unsw_multienvironment.py](source/prepare_unsw_multienvironment.py)
+- [profile_multienvironment_models.py](source/profile_multienvironment_models.py)
+- [profile_multienvironment_steady.py](source/profile_multienvironment_steady.py)
+- [profile_network_context_models.py](source/profile_network_context_models.py)
+- [revalidate_multienvironment_boundaries.py](source/revalidate_multienvironment_boundaries.py)
+- [run_causal_context_ablation.py](source/run_causal_context_ablation.py)
+- [run_causal_context_components.py](source/run_causal_context_components.py)
+- [run_context_fixed_fit_control.py](source/run_context_fixed_fit_control.py)
+- [run_context_full_development_replay.py](source/run_context_full_development_replay.py)
+- [run_context_full_period.py](source/run_context_full_period.py)
+- [run_context_prefix_coverage_control.py](source/run_context_prefix_coverage_control.py)
+- [run_detection_foundation.py](source/run_detection_foundation.py)
+- [run_generalization_evaluator.py](source/run_generalization_evaluator.py)
+- [run_generalization_evaluator_v2.py](source/run_generalization_evaluator_v2.py)
+- [run_generalization_evaluator_v3.py](source/run_generalization_evaluator_v3.py)
+- [run_multienvironment_calibration_control.py](source/run_multienvironment_calibration_control.py)
+- [run_multienvironment_calibration_suite.py](source/run_multienvironment_calibration_suite.py)
+- [run_multienvironment_harmonization.py](source/run_multienvironment_harmonization.py)
+- [run_multienvironment_margin_control.py](source/run_multienvironment_margin_control.py)
+- [run_multienvironment_ranking_objective.py](source/run_multienvironment_ranking_objective.py)
+- [run_multienvironment_target_controls.py](source/run_multienvironment_target_controls.py)
+- [run_multienvironment_training.py](source/run_multienvironment_training.py)
+- [run_network_context_study.py](source/run_network_context_study.py)
+- [summarize_detection_foundation.py](source/summarize_detection_foundation.py)
+- [summarize_generalization_evaluator.py](source/summarize_generalization_evaluator.py)
+- [summarize_generalization_study.py](source/summarize_generalization_study.py)
+- [test_causal_flow_context.py](source/test_causal_flow_context.py)
+- [test_context_information_bound.py](source/test_context_information_bound.py)
+- [test_context_observability_keys.py](source/test_context_observability_keys.py)
+- [test_context_signature_reconstruction.py](source/test_context_signature_reconstruction.py)
+- [test_generalization_metrics.py](source/test_generalization_metrics.py)
+- [test_multienvironment_features.py](source/test_multienvironment_features.py)
+- [test_network_context_features.py](source/test_network_context_features.py)
+- [test_prior_attack_context.py](source/test_prior_attack_context.py)
+- [validate_causal_context_cache.py](source/validate_causal_context_cache.py)
+- [verify_context_observability_certificate.py](source/verify_context_observability_certificate.py)
+- [verify_full_context_key_refinement.py](source/verify_full_context_key_refinement.py)
+- [multienvironment_primary_snapshot_2026-11-21.py](source/research_refs/multienvironment_primary_snapshot_2026-11-21.py)
+
+- [run_representation_selection.py](source/run_representation_selection.py)
+
+- [run_representation_selection_five_seeds.py](source/run_representation_selection_five_seeds.py)
+
+</details>
+
+## Reproduction scope
+
+The packaged core under `src/autoshield/` is the clean implementation used by the documented examples. Historical scripts are preserved under `source/` with their original code and workspace-relative paths. To rerun a historical study, treat that directory as its research workspace, provision the licensed datasets/configuration it expects, and follow its entry point. Saved portfolio graphs do not require retraining.

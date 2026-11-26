@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autoshield-ai"
+version = "0.1.0"
+description = "Resource-aware AutoML and causal network intrusion detection"
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+dependencies = ["numpy>=1.26,<2", "pandas>=2.2,<3", "scipy>=1.11,<1.14", "scikit-learn==1.3.2", "lightgbm==4.5.0", "joblib>=1.3,<2", "threadpoolctl>=3.1,<4"]
+
+[project.optional-dependencies]
+training = ["imbalanced-learn==0.11.0", "xgboost==1.7.6", "duckdb>=1.1,<2"]
+plots = ["matplotlib>=3.8,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

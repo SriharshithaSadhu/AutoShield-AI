@@ -1,0 +1,309 @@
+{
+  "source": "cicids2017_lightgbm_mopso_dev_seed42.json",
+  "source_sha256": "8fe116b02f5d243c3fd608062eabbea0916ccb209a25f2d7460bdcc870eec25a",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "algorithm": "feasibility-first MOPSO with external nondominated archive",
+    "seed": 42,
+    "dimensions": [
+      {
+        "name": "n_estimators",
+        "lower": 50,
+        "upper": 200,
+        "kind": "int"
+      },
+      {
+        "name": "max_depth",
+        "lower": 5,
+        "upper": 100,
+        "kind": "int"
+      },
+      {
+        "name": "learning_rate",
+        "lower": 0.01,
+        "upper": 0.3,
+        "kind": "log_float"
+      },
+      {
+        "name": "num_leaves",
+        "lower": 10,
+        "upper": 50,
+        "kind": "int"
+      },
+      {
+        "name": "min_child_samples",
+        "lower": 10,
+        "upper": 50,
+        "kind": "int"
+      }
+    ],
+    "fixed_config": {
+      "class_weight": "balanced",
+      "verbosity": -1
+    },
+    "particles": 6,
+    "iterations": 4,
+    "iteration_log": [
+      {
+        "iteration": 1,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 6,
+        "archive_size": 1,
+        "feasible_archive_size": 1,
+        "wall_seconds": 199.9358501999959
+      },
+      {
+        "iteration": 2,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 12,
+        "archive_size": 2,
+        "feasible_archive_size": 2,
+        "wall_seconds": 198.62631509998755
+      },
+      {
+        "iteration": 3,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 18,
+        "archive_size": 4,
+        "feasible_archive_size": 4,
+        "wall_seconds": 174.3445772999985
+      },
+      {
+        "iteration": 4,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 24,
+        "archive_size": 5,
+        "feasible_archive_size": 5,
+        "wall_seconds": 167.31645390001358
+      }
+    ],
+    "pareto_archive": [
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 87,
+          "max_depth": 49,
+          "learning_rate": 0.01210543801197853,
+          "num_leaves": 14,
+          "min_child_samples": 34
+        },
+        "metrics": {
+          "weighted_f1": 0.9652593161387624,
+          "macro_f1": 0.8365811615884847,
+          "mean_true_class_probability": 0.7120096367242928,
+          "top_label_ece": 0.2413323993829875,
+          "median_latency_ms_per_row": 0.014856132885360829,
+          "p95_latency_ms_per_row": 0.019241951128177455,
+          "serialized_size_mb": 0.9791164398193359,
+          "mean_fit_seconds": 2.813779899996007
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 24.406001299998024,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "104275689f7a5ab18974f32663316ac46ef577c7c5c9ffbfc571d520bc8e9144",
+          "development_index_sha256": "b02a3a84184614b47ec7dd3bebf3e1595dc5164d942efd85a16d5bde4252d125",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 142,
+          "max_depth": 39,
+          "learning_rate": 0.03717609686117419,
+          "num_leaves": 13,
+          "min_child_samples": 39
+        },
+        "metrics": {
+          "weighted_f1": 0.9941142578541905,
+          "macro_f1": 0.9638437586512549,
+          "mean_true_class_probability": 0.9879055485215792,
+          "top_label_ece": 0.004277152467041622,
+          "median_latency_ms_per_row": 0.027176049635939867,
+          "p95_latency_ms_per_row": 0.03158073680272925,
+          "serialized_size_mb": 1.489431381225586,
+          "mean_fit_seconds": 3.8485197000009066
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 31.0218906999944,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "104275689f7a5ab18974f32663316ac46ef577c7c5c9ffbfc571d520bc8e9144",
+          "development_index_sha256": "b02a3a84184614b47ec7dd3bebf3e1595dc5164d942efd85a16d5bde4252d125",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 74,
+          "max_depth": 48,
+          "learning_rate": 0.011635516802120249,
+          "num_leaves": 15,
+          "min_child_samples": 36
+        },
+        "metrics": {
+          "weighted_f1": 0.9634190012603018,
+          "macro_f1": 0.8284413596983478,
+          "mean_true_class_probability": 0.6485716252613117,
+          "top_label_ece": 0.30317323385598066,
+          "median_latency_ms_per_row": 0.012093821273239413,
+          "p95_latency_ms_per_row": 0.015511606129099879,
+          "serialized_size_mb": 0.8887844085693359,
+          "mean_fit_seconds": 2.132408575002046
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 21.30630340000789,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "104275689f7a5ab18974f32663316ac46ef577c7c5c9ffbfc571d520bc8e9144",
+          "development_index_sha256": "b02a3a84184614b47ec7dd3bebf3e1595dc5164d942efd85a16d5bde4252d125",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 76,
+          "max_depth": 52,
+          "learning_rate": 0.03762345431387085,
+          "num_leaves": 16,
+          "min_child_samples": 37
+        },
+        "metrics": {
+          "weighted_f1": 0.9894820210277127,
+          "macro_f1": 0.939128519877647,
+          "mean_true_class_probability": 0.9574444095129424,
+          "top_label_ece": 0.026961205424969093,
+          "median_latency_ms_per_row": 0.013456583858010022,
+          "p95_latency_ms_per_row": 0.020217119939861524,
+          "serialized_size_mb": 0.9658870697021484,
+          "mean_fit_seconds": 2.218779699996958
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 23.00204579999263,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "104275689f7a5ab18974f32663316ac46ef577c7c5c9ffbfc571d520bc8e9144",
+          "development_index_sha256": "b02a3a84184614b47ec7dd3bebf3e1595dc5164d942efd85a16d5bde4252d125",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 74,
+          "max_depth": 36,
+          "learning_rate": 0.016253967900358515,
+          "num_leaves": 20,
+          "min_child_samples": 39
+        },
+        "metrics": {
+          "weighted_f1": 0.9742779616338663,
+          "macro_f1": 0.8616807610211153,
+          "mean_true_class_probability": 0.7759930926264742,
+          "top_label_ece": 0.1893477483819547,
+          "median_latency_ms_per_row": 0.015396393500955426,
+          "p95_latency_ms_per_row": 0.018693829867304414,
+          "serialized_size_mb": 1.156148910522461,
+          "mean_fit_seconds": 2.433980474997952
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 24.82054149999749,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "104275689f7a5ab18974f32663316ac46ef577c7c5c9ffbfc571d520bc8e9144",
+          "development_index_sha256": "b02a3a84184614b47ec7dd3bebf3e1595dc5164d942efd85a16d5bde4252d125",
+          "inner_splits": 4
+        }
+      }
+    ],
+    "dataset": "CICIDS2017_sample_km.csv",
+    "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+    "target_column": "Label",
+    "n_jobs": 1,
+    "constraints": {
+      "min_weighted_f1": 0.95,
+      "max_p95_latency_ms_per_row": 5.0,
+      "max_serialized_size_mb": 1.5
+    },
+    "outer_partition_note": "Candidate scores use grouped development CV; reserved fold was inspected previously and is not a pristine test.",
+    "environment": {
+      "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+      "logical_cpu_count": 12,
+      "model_jobs": 1,
+      "packages": {
+        "pandas": "2.2.3",
+        "numpy": "1.26.4",
+        "lightgbm": "4.5.0",
+        "scikit-learn": "1.3.2",
+        "imbalanced-learn": "0.11.0",
+        "joblib": "1.4.2"
+      }
+    },
+    "latency_qualification": "Measured during concurrent CPU research workloads; batch-throughput timing is exploratory and should be remeasured in an isolated reference run."
+  }
+}

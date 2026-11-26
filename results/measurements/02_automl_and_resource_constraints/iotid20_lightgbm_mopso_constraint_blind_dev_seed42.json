@@ -1,0 +1,837 @@
+{
+  "source": "iotid20_lightgbm_mopso_constraint_blind_dev_seed42.json",
+  "source_sha256": "710d30a4bccc1c0fc3234b2ea39bd3c4b6cb41fe90023aa26ddfa892aada368b",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "algorithm": "constraint-blind MOPSO with external nondominated archive",
+    "seed": 42,
+    "feasibility_first": false,
+    "dimensions": [
+      {
+        "name": "n_estimators",
+        "lower": 50,
+        "upper": 200,
+        "kind": "int"
+      },
+      {
+        "name": "max_depth",
+        "lower": 5,
+        "upper": 100,
+        "kind": "int"
+      },
+      {
+        "name": "learning_rate",
+        "lower": 0.01,
+        "upper": 0.3,
+        "kind": "log_float"
+      },
+      {
+        "name": "num_leaves",
+        "lower": 10,
+        "upper": 50,
+        "kind": "int"
+      },
+      {
+        "name": "min_child_samples",
+        "lower": 10,
+        "upper": 50,
+        "kind": "int"
+      }
+    ],
+    "fixed_config": {
+      "class_weight": "balanced",
+      "verbosity": -1
+    },
+    "particles": 6,
+    "iterations": 4,
+    "iteration_log": [
+      {
+        "iteration": 1,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 6,
+        "archive_size": 6,
+        "feasible_archive_size": 3,
+        "wall_seconds": 0.0012776000003213994
+      },
+      {
+        "iteration": 2,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 12,
+        "archive_size": 10,
+        "feasible_archive_size": 6,
+        "wall_seconds": 168.31614080000145
+      },
+      {
+        "iteration": 3,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 18,
+        "archive_size": 14,
+        "feasible_archive_size": 10,
+        "wall_seconds": 152.83058329999767
+      },
+      {
+        "iteration": 4,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 24,
+        "archive_size": 17,
+        "feasible_archive_size": 13,
+        "wall_seconds": 158.3805057999998
+      }
+    ],
+    "pareto_archive": [
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 196,
+          "max_depth": 77,
+          "learning_rate": 0.1449146502165535,
+          "num_leaves": 15,
+          "min_child_samples": 28
+        },
+        "metrics": {
+          "weighted_f1": 0.9774438851761584,
+          "macro_f1": 0.9593368999217775,
+          "mean_true_class_probability": 0.9715105317019415,
+          "top_label_ece": 0.008449033336000807,
+          "median_latency_ms_per_row": 0.04321731577409686,
+          "p95_latency_ms_per_row": 0.04615469704216642,
+          "serialized_size_mb": 1.5566158294677734,
+          "mean_fit_seconds": 3.50962597500029
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 28.75457379999898,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 106,
+          "max_depth": 93,
+          "learning_rate": 0.08934430071955696,
+          "num_leaves": 43,
+          "min_child_samples": 28
+        },
+        "metrics": {
+          "weighted_f1": 0.977616592352625,
+          "macro_f1": 0.9597298091627954,
+          "mean_true_class_probability": 0.9715376848329604,
+          "top_label_ece": 0.008188198410830207,
+          "median_latency_ms_per_row": 0.032988450682862436,
+          "p95_latency_ms_per_row": 0.041444270183818445,
+          "serialized_size_mb": 2.4553890228271484,
+          "mean_fit_seconds": 3.5266786749994026
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 27.16681580000113,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 84,
+          "max_depth": 58,
+          "learning_rate": 0.012424125377603113,
+          "num_leaves": 43,
+          "min_child_samples": 35
+        },
+        "metrics": {
+          "weighted_f1": 0.9533447182134274,
+          "macro_f1": 0.9212001337761708,
+          "mean_true_class_probability": 0.735720903794112,
+          "top_label_ece": 0.19566990575645538,
+          "median_latency_ms_per_row": 0.013934214293684797,
+          "p95_latency_ms_per_row": 0.017703806675082097,
+          "serialized_size_mb": 1.928976058959961,
+          "mean_fit_seconds": 2.902341449999767
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 21.91128690000005,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 79,
+          "max_depth": 49,
+          "learning_rate": 0.011606558734739106,
+          "num_leaves": 16,
+          "min_child_samples": 37
+        },
+        "metrics": {
+          "weighted_f1": 0.924410781879807,
+          "macro_f1": 0.8832427529566969,
+          "mean_true_class_probability": 0.6597864092007444,
+          "top_label_ece": 0.23599442713468102,
+          "median_latency_ms_per_row": 0.010220613359156609,
+          "p95_latency_ms_per_row": 0.013055761964679785,
+          "serialized_size_mb": 0.7194271087646484,
+          "mean_fit_seconds": 1.9631508999996186
+        },
+        "feasibility": {
+          "feasible": false,
+          "violations": [
+            {
+              "metric": "weighted_f1",
+              "observed": 0.924410781879807,
+              "limit": 0.95,
+              "direction": "min"
+            }
+          ],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 17.142875200001072,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 166,
+          "max_depth": 58,
+          "learning_rate": 0.07339864489930159,
+          "num_leaves": 23,
+          "min_child_samples": 33
+        },
+        "metrics": {
+          "weighted_f1": 0.9750764338600457,
+          "macro_f1": 0.9553649661819306,
+          "mean_true_class_probability": 0.9660081165135326,
+          "top_label_ece": 0.006214413912686242,
+          "median_latency_ms_per_row": 0.04333340389613899,
+          "p95_latency_ms_per_row": 0.047800786498333844,
+          "serialized_size_mb": 2.1121273040771484,
+          "mean_fit_seconds": 3.7305457749989728
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 29.395125000002736,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 97,
+          "max_depth": 74,
+          "learning_rate": 0.06335893952792833,
+          "num_leaves": 35,
+          "min_child_samples": 36
+        },
+        "metrics": {
+          "weighted_f1": 0.9729334882179415,
+          "macro_f1": 0.9516452605555893,
+          "mean_true_class_probability": 0.9614518610835967,
+          "top_label_ece": 0.005877158637925765,
+          "median_latency_ms_per_row": 0.023807290449078877,
+          "p95_latency_ms_per_row": 0.025896032304692663,
+          "serialized_size_mb": 1.830648422241211,
+          "mean_fit_seconds": 2.9797906750009133
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 23.273241700000654,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 134,
+          "max_depth": 33,
+          "learning_rate": 0.1375353803464459,
+          "num_leaves": 38,
+          "min_child_samples": 42
+        },
+        "metrics": {
+          "weighted_f1": 0.9788769953405698,
+          "macro_f1": 0.9617732569206918,
+          "mean_true_class_probability": 0.9755603434519265,
+          "top_label_ece": 0.011394570612419299,
+          "median_latency_ms_per_row": 0.043003365015229306,
+          "p95_latency_ms_per_row": 0.0492146616786551,
+          "serialized_size_mb": 2.6093502044677734,
+          "mean_fit_seconds": 3.985008375000689
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 30.492771999997785,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 87,
+          "max_depth": 49,
+          "learning_rate": 0.01210543801197853,
+          "num_leaves": 14,
+          "min_child_samples": 34
+        },
+        "metrics": {
+          "weighted_f1": 0.9234312256903023,
+          "macro_f1": 0.8821198493466731,
+          "mean_true_class_probability": 0.6918077104332685,
+          "top_label_ece": 0.20389572073963141,
+          "median_latency_ms_per_row": 0.010801073220533848,
+          "p95_latency_ms_per_row": 0.011785514153314192,
+          "serialized_size_mb": 0.7002468109130859,
+          "mean_fit_seconds": 2.3005918999988353
+        },
+        "feasibility": {
+          "feasible": false,
+          "violations": [
+            {
+              "metric": "weighted_f1",
+              "observed": 0.9234312256903023,
+              "limit": 0.95,
+              "direction": "min"
+            }
+          ],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 25.393296900001587,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 141,
+          "max_depth": 52,
+          "learning_rate": 0.11454102762311248,
+          "num_leaves": 34,
+          "min_child_samples": 30
+        },
+        "metrics": {
+          "weighted_f1": 0.9783966113388843,
+          "macro_f1": 0.9614238498439276,
+          "mean_true_class_probability": 0.9742838124865347,
+          "top_label_ece": 0.010101379830620075,
+          "median_latency_ms_per_row": 0.0411168566668088,
+          "p95_latency_ms_per_row": 0.04523859099485695,
+          "serialized_size_mb": 2.5218257904052734,
+          "mean_fit_seconds": 3.8633947999987868
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 30.115284300001804,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 136,
+          "max_depth": 44,
+          "learning_rate": 0.03717609686117419,
+          "num_leaves": 17,
+          "min_child_samples": 38
+        },
+        "metrics": {
+          "weighted_f1": 0.9591726181066995,
+          "macro_f1": 0.9301960268785927,
+          "mean_true_class_probability": 0.9342153817417971,
+          "top_label_ece": 0.014140439851718357,
+          "median_latency_ms_per_row": 0.024805720802107637,
+          "p95_latency_ms_per_row": 0.02654136964755197,
+          "serialized_size_mb": 1.2966365814208984,
+          "mean_fit_seconds": 2.8773677249992033
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 23.136839099999634,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 127,
+          "max_depth": 58,
+          "learning_rate": 0.060273135348129364,
+          "num_leaves": 27,
+          "min_child_samples": 41
+        },
+        "metrics": {
+          "weighted_f1": 0.9724793735993421,
+          "macro_f1": 0.9513590743172508,
+          "mean_true_class_probability": 0.9604663579834848,
+          "top_label_ece": 0.005678224864283857,
+          "median_latency_ms_per_row": 0.03333255762891076,
+          "p95_latency_ms_per_row": 0.03528017194786154,
+          "serialized_size_mb": 1.873769760131836,
+          "mean_fit_seconds": 3.4112610500014853
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 26.640241600005538,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 104,
+          "max_depth": 52,
+          "learning_rate": 0.1690915092193337,
+          "num_leaves": 46,
+          "min_child_samples": 34
+        },
+        "metrics": {
+          "weighted_f1": 0.9786688570320939,
+          "macro_f1": 0.9618951879138885,
+          "mean_true_class_probability": 0.9762975145535016,
+          "top_label_ece": 0.012932205592939392,
+          "median_latency_ms_per_row": 0.0357104418227976,
+          "p95_latency_ms_per_row": 0.03653218356361945,
+          "serialized_size_mb": 2.413442611694336,
+          "mean_fit_seconds": 3.4683115750012803
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 27.36792620000051,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 91,
+          "max_depth": 49,
+          "learning_rate": 0.012364634775990915,
+          "num_leaves": 12,
+          "min_child_samples": 35
+        },
+        "metrics": {
+          "weighted_f1": 0.9195108846133577,
+          "macro_f1": 0.8760918564549747,
+          "mean_true_class_probability": 0.702437286742346,
+          "top_label_ece": 0.19310299846002085,
+          "median_latency_ms_per_row": 0.011394656320268199,
+          "p95_latency_ms_per_row": 0.026426003820153234,
+          "serialized_size_mb": 0.6376094818115234,
+          "mean_fit_seconds": 2.151867199998378
+        },
+        "feasibility": {
+          "feasible": false,
+          "violations": [
+            {
+              "metric": "weighted_f1",
+              "observed": 0.9195108846133577,
+              "limit": 0.95,
+              "direction": "min"
+            }
+          ],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 18.031837599999562,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 129,
+          "max_depth": 38,
+          "learning_rate": 0.12699621378641462,
+          "num_leaves": 35,
+          "min_child_samples": 30
+        },
+        "metrics": {
+          "weighted_f1": 0.9788591883442014,
+          "macro_f1": 0.9622913631465699,
+          "mean_true_class_probability": 0.9746082536409328,
+          "top_label_ece": 0.009867264510530561,
+          "median_latency_ms_per_row": 0.04164789019071013,
+          "p95_latency_ms_per_row": 0.04315539421100274,
+          "serialized_size_mb": 2.359121322631836,
+          "mean_fit_seconds": 4.059938225000224
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 30.740340299998934,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 114,
+          "max_depth": 42,
+          "learning_rate": 0.03602948726221368,
+          "num_leaves": 23,
+          "min_child_samples": 45
+        },
+        "metrics": {
+          "weighted_f1": 0.9607824190960511,
+          "macro_f1": 0.932696348889618,
+          "mean_true_class_probability": 0.9377277342280448,
+          "top_label_ece": 0.013501104277243842,
+          "median_latency_ms_per_row": 0.022856543168998735,
+          "p95_latency_ms_per_row": 0.025817593155948493,
+          "serialized_size_mb": 1.4409236907958984,
+          "mean_fit_seconds": 2.973147950000566
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 23.318222800000513,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 75,
+          "max_depth": 62,
+          "learning_rate": 0.08564411963959695,
+          "num_leaves": 38,
+          "min_child_samples": 30
+        },
+        "metrics": {
+          "weighted_f1": 0.9744264992291453,
+          "macro_f1": 0.9542259201240295,
+          "mean_true_class_probability": 0.9642293925056281,
+          "top_label_ece": 0.006657272801995743,
+          "median_latency_ms_per_row": 0.021200977462799166,
+          "p95_latency_ms_per_row": 0.022084343513609016,
+          "serialized_size_mb": 1.5333309173583984,
+          "mean_fit_seconds": 2.9814418499991007
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 23.00023749999673,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 91,
+          "max_depth": 62,
+          "learning_rate": 0.012470828084671048,
+          "num_leaves": 20,
+          "min_child_samples": 35
+        },
+        "metrics": {
+          "weighted_f1": 0.9338736648973273,
+          "macro_f1": 0.8962171137760038,
+          "mean_true_class_probability": 0.7316767567287167,
+          "top_label_ece": 0.17991297624759633,
+          "median_latency_ms_per_row": 0.014723815032324842,
+          "p95_latency_ms_per_row": 0.0172975895563228,
+          "serialized_size_mb": 1.0135860443115234,
+          "mean_fit_seconds": 2.7461646999981895
+        },
+        "feasibility": {
+          "feasible": false,
+          "violations": [
+            {
+              "metric": "weighted_f1",
+              "observed": 0.9338736648973273,
+              "limit": 0.95,
+              "direction": "min"
+            }
+          ],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 21.670731500002148,
+        "evaluation_metadata": {
+          "dataset": "IoTID20_sample_0.05.csv",
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "target_column": "Label",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "development_index_sha256": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "inner_splits": 4
+        }
+      }
+    ],
+    "dataset": "IoTID20_sample_0.05.csv",
+    "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+    "target_column": "Label",
+    "n_jobs": 1,
+    "constraints": {
+      "min_weighted_f1": 0.95,
+      "max_p95_latency_ms_per_row": 0.05,
+      "max_serialized_size_mb": 4.0
+    },
+    "search_mode": "constraint_blind",
+    "outer_partition_note": "Candidate scores use grouped development CV; reserved fold was inspected previously and is not a pristine test.",
+    "hardware": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 12,
+          "prefix": "libopenblas",
+          "filepath": "D:\\AutoML-MOO\\.venv\\Lib\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Prescott"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 12,
+          "prefix": "vcomp",
+          "filepath": "D:\\AutoML-MOO\\.venv\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 12,
+          "prefix": "libopenblas",
+          "filepath": "D:\\AutoML-MOO\\.venv\\Lib\\site-packages\\scipy.libs\\libopenblas_v0.3.27--3aa239bc726cfb0bd8e5330d8d4c15c6.dll",
+          "version": "0.3.27",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    }
+  }
+}

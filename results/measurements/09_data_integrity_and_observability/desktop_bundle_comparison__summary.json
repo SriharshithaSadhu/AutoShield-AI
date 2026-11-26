@@ -1,0 +1,43 @@
+{
+  "source": "desktop_bundle_comparison/summary.json",
+  "source_sha256": "d90c00f2ba1af11145029212639527759291eda330ab9ac4a87e58d53e22fc61",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": [
+    {
+      "model": "extra_trees_seed42",
+      "bytes": 4390372,
+      "p95_ms": 3.973894991213456,
+      "batch32_rows_per_second": 10219.234538130546
+    },
+    {
+      "model": "lgb_large_seed42",
+      "bytes": 527170,
+      "p95_ms": 1.067300012800842,
+      "batch32_rows_per_second": 40616.868878174224
+    },
+    {
+      "model": "lgb_small_seed42",
+      "bytes": 112338,
+      "p95_ms": 0.567715000215685,
+      "batch32_rows_per_second": 64626.88056435157
+    },
+    {
+      "model": "logistic_seed42",
+      "bytes": 6385,
+      "p95_ms": 0.26156499588978466,
+      "batch32_rows_per_second": 159006.2076518126
+    },
+    {
+      "model": "random_forest_seed42",
+      "bytes": 2675814,
+      "p95_ms": 4.656860006070927,
+      "batch32_rows_per_second": 10776.950784452887
+    },
+    {
+      "model": "xgboost_seed42",
+      "bytes": 173200,
+      "p95_ms": 0.7115450011042411,
+      "batch32_rows_per_second": 63885.00679637481
+    }
+  ]
+}

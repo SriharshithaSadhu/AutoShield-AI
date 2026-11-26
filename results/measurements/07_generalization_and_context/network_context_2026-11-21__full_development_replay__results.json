@@ -1,0 +1,395 @@
+{
+  "source": "network_context_2026-11-21/full_development_replay/results.json",
+  "source_sha256": "2deb31b953f105b4ceb46ff91636e116d53dd5f043ebc967f036884804e0dad4",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "protocol": {
+      "recorded_at": "2026-11-21T19:01:13.571409+05:30",
+      "scope": "Full existing ToN development-tail replay; never an independent validation.\n\nTwo predeclared representations, three seeds, frozen shared-window decisions.\nReal batches of at most1000 flows; metrics include all rows. No adaptation.\n",
+      "source_rows": [
+        18360007,
+        27520260
+      ],
+      "batch_size": 1000,
+      "flow_window": 10000,
+      "time_window_ms": 60000,
+      "minimum_benign_for_supported_window": 100,
+      "policy": "Previously frozen shared_window; representations chosen as original baseline versus complete context, not stress-period winners.",
+      "deadline_scope": "Offline batch compute including metrics. No network delivery or live arrival-time guarantee.",
+      "choices": [
+        {
+          "identity": "physical14_seed42",
+          "variant": "physical14",
+          "seed": 42,
+          "artifact": "results\\multienvironment_2026-11-21\\physical14_environment_balanced_seed42_step0.joblib",
+          "artifact_sha256": "82c473b9efe135dffd660dd61422849642c2bc26061d4f1250f39d6bf561f230",
+          "threshold": 0.9444769618600583
+        },
+        {
+          "identity": "physical14_seed43",
+          "variant": "physical14",
+          "seed": 43,
+          "artifact": "results\\multienvironment_2026-11-21\\physical14_environment_balanced_seed43_step2.joblib",
+          "artifact_sha256": "c8fc9fc4621cdae00d267e4f38f8b0a8d42d2d62e9a336f65e7ff46535f3a0b9",
+          "threshold": 0.9371424913732074
+        },
+        {
+          "identity": "physical14_seed44",
+          "variant": "physical14",
+          "seed": 44,
+          "artifact": "results\\multienvironment_2026-11-21\\physical14_environment_balanced_seed44_step1.joblib",
+          "artifact_sha256": "7e27009d3e1dc34a384eb4acf8c52d711abb3fcd0e6fe2a8af8a88e8b25fc637",
+          "threshold": 0.9414954866182123
+        },
+        {
+          "identity": "context29_seed42",
+          "variant": "context29",
+          "seed": 42,
+          "artifact": "results\\network_context_2026-11-21\\context29_seed42_step2.joblib",
+          "artifact_sha256": "5809ef39b93b39d7939ca0cca01d9a56843b9c6f89475421cc294f25e15f0103",
+          "threshold": 0.969697462915771
+        },
+        {
+          "identity": "context29_seed43",
+          "variant": "context29",
+          "seed": 43,
+          "artifact": "results\\network_context_2026-11-21\\context29_seed43_step2.joblib",
+          "artifact_sha256": "74d7fe88b8f8571ead680fbcf29f1a3b5c9521337baf041ed85173290bb11e45",
+          "threshold": 0.9799912830553736
+        },
+        {
+          "identity": "context29_seed44",
+          "variant": "context29",
+          "seed": 44,
+          "artifact": "results\\network_context_2026-11-21\\context29_seed44_step0.joblib",
+          "artifact_sha256": "4826379d10e961e86435ea72436768fb9f7aa8c2f2289a078278340121d24ad4",
+          "threshold": 0.958138778513251
+        }
+      ]
+    },
+    "resources": {
+      "cpu_s": 406.015625,
+      "wall_s": 418.03081209992524,
+      "batches": 9161,
+      "combined_six_model_batch_compute_p50_ms": 34.79890001472086,
+      "combined_six_model_batch_compute_p95_ms": 53.51310002151877,
+      "combined_six_model_batch_compute_p99_ms": 71.37349995318793,
+      "peak_resident_bytes": 300154880,
+      "scope": "CSV parse contributes to wall/CPU and memory, but not batch compute timing. Batch timing includes preprocessing, six model scores and all evaluation bookkeeping. Offline desktop only."
+    },
+    "results": [
+      {
+        "identity": "physical14_seed42",
+        "variant": "physical14",
+        "seed": 42,
+        "artifact": "results\\multienvironment_2026-11-21\\physical14_environment_balanced_seed42_step0.joblib",
+        "artifact_sha256": "82c473b9efe135dffd660dd61422849642c2bc26061d4f1250f39d6bf561f230",
+        "threshold": 0.9444769618600583,
+        "benign": 3613012,
+        "attacks": 5547241,
+        "fp": 47177,
+        "tp": 2025378,
+        "recall": 0.3651144776295099,
+        "fpr": 0.013057526518040903,
+        "precision": 0.9772372747647228,
+        "f1": 0.5316095076561105,
+        "family": {
+          "ddos": {
+            "n": 904661,
+            "tp": 841265,
+            "recall": 0.9299229214037081
+          },
+          "password": {
+            "n": 1594777,
+            "tp": 390339,
+            "recall": 0.2447608662527739
+          },
+          "xss": {
+            "n": 2834435,
+            "tp": 602329,
+            "recall": 0.21250407929622658
+          },
+          "ransomware": {
+            "n": 3971,
+            "tp": 116,
+            "recall": 0.029211785444472425
+          },
+          "Backdoor": {
+            "n": 203384,
+            "tp": 190644,
+            "recall": 0.9373598709829681
+          },
+          "mitm": {
+            "n": 6013,
+            "tp": 685,
+            "recall": 0.11391984034591718
+          }
+        },
+        "worst_flow_window_fpr": 0.2932823593664664,
+        "worst_supported_flow_window_fpr": 0.2932823593664664,
+        "worst_time_window_fpr": 0.36,
+        "worst_supported_time_window_fpr": 0.31906614785992216
+      },
+      {
+        "identity": "physical14_seed43",
+        "variant": "physical14",
+        "seed": 43,
+        "artifact": "results\\multienvironment_2026-11-21\\physical14_environment_balanced_seed43_step2.joblib",
+        "artifact_sha256": "c8fc9fc4621cdae00d267e4f38f8b0a8d42d2d62e9a336f65e7ff46535f3a0b9",
+        "threshold": 0.9371424913732074,
+        "benign": 3613012,
+        "attacks": 5547241,
+        "fp": 47896,
+        "tp": 2020900,
+        "recall": 0.364307229485793,
+        "fpr": 0.013256529455202474,
+        "precision": 0.9768483697764303,
+        "f1": 0.5306959511882623,
+        "family": {
+          "ddos": {
+            "n": 904661,
+            "tp": 841147,
+            "recall": 0.9297924858040747
+          },
+          "password": {
+            "n": 1594777,
+            "tp": 430030,
+            "recall": 0.2696489854067371
+          },
+          "xss": {
+            "n": 2834435,
+            "tp": 558108,
+            "recall": 0.1969027337017783
+          },
+          "ransomware": {
+            "n": 3971,
+            "tp": 185,
+            "recall": 0.046587761269201715
+          },
+          "Backdoor": {
+            "n": 203384,
+            "tp": 190648,
+            "recall": 0.9373795382134288
+          },
+          "mitm": {
+            "n": 6013,
+            "tp": 782,
+            "recall": 0.13005155496424414
+          }
+        },
+        "worst_flow_window_fpr": 0.269797924631349,
+        "worst_supported_flow_window_fpr": 0.269797924631349,
+        "worst_time_window_fpr": 0.32,
+        "worst_supported_time_window_fpr": 0.31746031746031744
+      },
+      {
+        "identity": "physical14_seed44",
+        "variant": "physical14",
+        "seed": 44,
+        "artifact": "results\\multienvironment_2026-11-21\\physical14_environment_balanced_seed44_step1.joblib",
+        "artifact_sha256": "7e27009d3e1dc34a384eb4acf8c52d711abb3fcd0e6fe2a8af8a88e8b25fc637",
+        "threshold": 0.9414954866182123,
+        "benign": 3613012,
+        "attacks": 5547241,
+        "fp": 49897,
+        "tp": 2063407,
+        "recall": 0.3719699576780601,
+        "fpr": 0.013810360995202895,
+        "precision": 0.9763891044544467,
+        "f1": 0.5387102353683713,
+        "family": {
+          "ddos": {
+            "n": 904661,
+            "tp": 841544,
+            "recall": 0.9302313242197906
+          },
+          "password": {
+            "n": 1594777,
+            "tp": 431609,
+            "recall": 0.27063909248753903
+          },
+          "xss": {
+            "n": 2834435,
+            "tp": 598894,
+            "recall": 0.2112921975631828
+          },
+          "ransomware": {
+            "n": 3971,
+            "tp": 97,
+            "recall": 0.024427096449257113
+          },
+          "Backdoor": {
+            "n": 203384,
+            "tp": 190646,
+            "recall": 0.9373697045981985
+          },
+          "mitm": {
+            "n": 6013,
+            "tp": 617,
+            "recall": 0.10261100947946117
+          }
+        },
+        "worst_flow_window_fpr": 0.27061238453643516,
+        "worst_supported_flow_window_fpr": 0.27061238453643516,
+        "worst_time_window_fpr": 0.38666666666666666,
+        "worst_supported_time_window_fpr": 0.3457377758546084
+      },
+      {
+        "identity": "context29_seed42",
+        "variant": "context29",
+        "seed": 42,
+        "artifact": "results\\network_context_2026-11-21\\context29_seed42_step2.joblib",
+        "artifact_sha256": "5809ef39b93b39d7939ca0cca01d9a56843b9c6f89475421cc294f25e15f0103",
+        "threshold": 0.969697462915771,
+        "benign": 3613012,
+        "attacks": 5547241,
+        "fp": 56623,
+        "tp": 2584468,
+        "recall": 0.4659015175291645,
+        "fpr": 0.015671965661890965,
+        "precision": 0.9785607538702756,
+        "f1": 0.6312562802778392,
+        "family": {
+          "ddos": {
+            "n": 904661,
+            "tp": 873320,
+            "recall": 0.9653560836600671
+          },
+          "password": {
+            "n": 1594777,
+            "tp": 1052356,
+            "recall": 0.6598765846259383
+          },
+          "xss": {
+            "n": 2834435,
+            "tp": 467877,
+            "recall": 0.16506887616050464
+          },
+          "ransomware": {
+            "n": 3971,
+            "tp": 11,
+            "recall": 0.002770083102493075
+          },
+          "Backdoor": {
+            "n": 203384,
+            "tp": 190594,
+            "recall": 0.9371140306022105
+          },
+          "mitm": {
+            "n": 6013,
+            "tp": 310,
+            "recall": 0.051554964244137705
+          }
+        },
+        "worst_flow_window_fpr": 0.500788643533123,
+        "worst_supported_flow_window_fpr": 0.500788643533123,
+        "worst_time_window_fpr": 0.625,
+        "worst_supported_time_window_fpr": 0.625
+      },
+      {
+        "identity": "context29_seed43",
+        "variant": "context29",
+        "seed": 43,
+        "artifact": "results\\network_context_2026-11-21\\context29_seed43_step2.joblib",
+        "artifact_sha256": "74d7fe88b8f8571ead680fbcf29f1a3b5c9521337baf041ed85173290bb11e45",
+        "threshold": 0.9799912830553736,
+        "benign": 3613012,
+        "attacks": 5547241,
+        "fp": 15821,
+        "tp": 1808770,
+        "recall": 0.32606659779158687,
+        "fpr": 0.004378894949698479,
+        "precision": 0.9913290156533711,
+        "f1": 0.4907246936718037,
+        "family": {
+          "ddos": {
+            "n": 904661,
+            "tp": 865334,
+            "recall": 0.95652846756962
+          },
+          "password": {
+            "n": 1594777,
+            "tp": 825658,
+            "recall": 0.5177263027997018
+          },
+          "xss": {
+            "n": 2834435,
+            "tp": 117332,
+            "recall": 0.04139519869039156
+          },
+          "ransomware": {
+            "n": 3971,
+            "tp": 1,
+            "recall": 0.0002518257365902795
+          },
+          "Backdoor": {
+            "n": 203384,
+            "tp": 274,
+            "recall": 0.0013472052865515479
+          },
+          "mitm": {
+            "n": 6013,
+            "tp": 171,
+            "recall": 0.028438383502411443
+          }
+        },
+        "worst_flow_window_fpr": 0.23669985775248933,
+        "worst_supported_flow_window_fpr": 0.23669985775248933,
+        "worst_time_window_fpr": 0.32,
+        "worst_supported_time_window_fpr": 0.21503957783641162
+      },
+      {
+        "identity": "context29_seed44",
+        "variant": "context29",
+        "seed": 44,
+        "artifact": "results\\network_context_2026-11-21\\context29_seed44_step0.joblib",
+        "artifact_sha256": "4826379d10e961e86435ea72436768fb9f7aa8c2f2289a078278340121d24ad4",
+        "threshold": 0.958138778513251,
+        "benign": 3613012,
+        "attacks": 5547241,
+        "fp": 57188,
+        "tp": 2420583,
+        "recall": 0.43635800211312253,
+        "fpr": 0.015828344882330866,
+        "precision": 0.9769195781208191,
+        "f1": 0.6032596586771459,
+        "family": {
+          "ddos": {
+            "n": 904661,
+            "tp": 873959,
+            "recall": 0.9660624255936754
+          },
+          "password": {
+            "n": 1594777,
+            "tp": 862682,
+            "recall": 0.5409420878279534
+          },
+          "xss": {
+            "n": 2834435,
+            "tp": 492700,
+            "recall": 0.17382652980223573
+          },
+          "ransomware": {
+            "n": 3971,
+            "tp": 30,
+            "recall": 0.007554772097708386
+          },
+          "Backdoor": {
+            "n": 203384,
+            "tp": 190604,
+            "recall": 0.9371631986783621
+          },
+          "mitm": {
+            "n": 6013,
+            "tp": 608,
+            "recall": 0.10111425245301846
+          }
+        },
+        "worst_flow_window_fpr": 0.5070977917981072,
+        "worst_supported_flow_window_fpr": 0.5070977917981072,
+        "worst_time_window_fpr": 0.625,
+        "worst_supported_time_window_fpr": 0.625
+      }
+    ]
+  }
+}

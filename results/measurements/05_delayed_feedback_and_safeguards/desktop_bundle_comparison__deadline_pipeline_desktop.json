@@ -1,0 +1,45 @@
+{
+  "source": "desktop_bundle_comparison/deadline_pipeline_desktop.json",
+  "source_sha256": "ad234d850f58fa8407c83e41aebe1304c0467efe33b7b0bde9e4ed4323667ef8",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "machine": "AMD64",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "bundle_bytes": 639508,
+    "scope": "Repeated fixture at regular synthetic arrival rates; measured compute and local serialization. No detection claims.",
+    "results": [
+      {
+        "flows_per_second": 20,
+        "batches": 953,
+        "cpu_seconds": 1.21875,
+        "service_p95_ms": 1.86298,
+        "observed_rss_bytes": 161271808,
+        "delivery_p95_ms": 0.0129
+      },
+      {
+        "flows_per_second": 140,
+        "batches": 142,
+        "cpu_seconds": 0.34375,
+        "service_p95_ms": 3.264295,
+        "observed_rss_bytes": 161943552,
+        "delivery_p95_ms": 0.015494999999999998
+      },
+      {
+        "flows_per_second": 1000,
+        "batches": 20,
+        "cpu_seconds": 0.1875,
+        "service_p95_ms": 10.037560000000003,
+        "observed_rss_bytes": 161955840,
+        "delivery_p95_ms": 0.01583
+      },
+      {
+        "flows_per_second": 10000,
+        "batches": 20,
+        "cpu_seconds": 0.171875,
+        "service_p95_ms": 10.490305,
+        "observed_rss_bytes": 161955840,
+        "delivery_p95_ms": 0.018860000000000012
+      }
+    ]
+  }
+}

@@ -1,0 +1,1246 @@
+{
+  "source": "exact_topk_ablation/results.json",
+  "source_sha256": "816a0394bf8eb2b10e6064ee000157bff5dcedf68b525d0b9cf36f99af891753",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "status": "paired development ablation; no new confirmation",
+    "runs": [
+      {
+        "seed": 42,
+        "records": [
+          {
+            "name": "top8",
+            "k": 8,
+            "features": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "Flow Byts/s",
+              "Fwd Pkts/s",
+              "Bwd Header Len",
+              "Flow Pkts/s",
+              "Flow IAT Mean",
+              "Fwd Pkt Len Min"
+            ],
+            "fit_cpu_s": 0.078125,
+            "artifact_bytes": 109315,
+            "p95_batch1_ms": 0.770960000022569,
+            "tune": {
+              "nll": 0.031700538332171374,
+              "brier": 0.007762116930303305,
+              "ece15": 0.004716046701677312,
+              "mean_confidence": 0.9866455928075052,
+              "macro_f1": 0.9599941615990659
+            },
+            "evaluation": {
+              "nll": 0.04012591096135022,
+              "brier": 0.009645614168155917,
+              "ece15": 0.004295014643510032,
+              "mean_confidence": 0.9878309482475285,
+              "macro_f1": 0.9494169544886133
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 3,
+                "tp": 3627,
+                "fpr": 0.00974025974025974,
+                "recall": 0.7741728922091782
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 7,
+                "tp": 3815,
+                "fpr": 0.022727272727272728,
+                "recall": 0.8143009605122732
+              }
+            },
+            "conformal": {
+              "coverage": 0.8898457840977368,
+              "mean_set_size": 0.9016623272581614,
+              "empty_fraction": 0.09833767274183858,
+              "class_coverage": {
+                "0": 0.8896103896103896,
+                "1": 0.8898612593383137
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.1590226316843581
+          },
+          {
+            "name": "top16",
+            "k": 16,
+            "features": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "Flow Byts/s",
+              "Fwd Pkts/s",
+              "Bwd Header Len",
+              "Flow Pkts/s",
+              "Flow IAT Mean",
+              "Fwd Pkt Len Min",
+              "Bwd Pkt Len Std",
+              "Bwd Pkts/s",
+              "Pkt Len Std",
+              "ACK Flag Cnt",
+              "Bwd IAT Mean",
+              "Idle Min",
+              "TotLen Bwd Pkts",
+              "Bwd IAT Min"
+            ],
+            "fit_cpu_s": 0.09375,
+            "artifact_bytes": 109956,
+            "p95_batch1_ms": 0.7548349999865421,
+            "tune": {
+              "nll": 0.03309811953419625,
+              "brier": 0.008229582665297006,
+              "ece15": 0.004117287839288395,
+              "mean_confidence": 0.9861329882992361,
+              "macro_f1": 0.9528915651551362
+            },
+            "evaluation": {
+              "nll": 0.038747748509697415,
+              "brier": 0.00954930111007988,
+              "ece15": 0.003913598314380668,
+              "mean_confidence": 0.9874541627762287,
+              "macro_f1": 0.9452634763886392
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 1,
+                "tp": 3498,
+                "fpr": 0.003246753246753247,
+                "recall": 0.7466382070437567
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 7,
+                "tp": 4094,
+                "fpr": 0.022727272727272728,
+                "recall": 0.8738527214514408
+              }
+            },
+            "conformal": {
+              "coverage": 0.8982575605848188,
+              "mean_set_size": 0.912076907670739,
+              "empty_fraction": 0.08792309232926096,
+              "class_coverage": {
+                "0": 0.8993506493506493,
+                "1": 0.8981856990394878
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.05267374324053675
+          },
+          {
+            "name": "top32",
+            "k": 32,
+            "features": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "Flow Byts/s",
+              "Fwd Pkts/s",
+              "Bwd Header Len",
+              "Flow Pkts/s",
+              "Flow IAT Mean",
+              "Fwd Pkt Len Min",
+              "Bwd Pkt Len Std",
+              "Bwd Pkts/s",
+              "Pkt Len Std",
+              "ACK Flag Cnt",
+              "Bwd IAT Mean",
+              "Idle Min",
+              "TotLen Bwd Pkts",
+              "Bwd IAT Min",
+              "Flow IAT Min",
+              "Fwd Header Len",
+              "Bwd Pkt Len Min",
+              "Pkt Len Mean",
+              "Fwd Pkt Len Max",
+              "Bwd Pkt Len Mean",
+              "TotLen Fwd Pkts",
+              "Flow IAT Max",
+              "Bwd IAT Tot",
+              "Protocol",
+              "Flow IAT Std",
+              "Idle Mean",
+              "Bwd IAT Std",
+              "Pkt Len Min",
+              "Pkt Size Avg",
+              "Pkt Len Max"
+            ],
+            "fit_cpu_s": 0.125,
+            "artifact_bytes": 110612,
+            "p95_batch1_ms": 4.434705000073788,
+            "tune": {
+              "nll": 0.033334710259069304,
+              "brier": 0.008354961178323283,
+              "ece15": 0.004017998022012534,
+              "mean_confidence": 0.9865593577882062,
+              "macro_f1": 0.9503511151867727
+            },
+            "evaluation": {
+              "nll": 0.038883912642966145,
+              "brier": 0.009664641960769379,
+              "ece15": 0.002925379478888098,
+              "mean_confidence": 0.987739721744465,
+              "macro_f1": 0.9480746574436822
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 2,
+                "tp": 3463,
+                "fpr": 0.006493506493506494,
+                "recall": 0.7391675560298826
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 5,
+                "tp": 4094,
+                "fpr": 0.016233766233766232,
+                "recall": 0.8738527214514408
+              }
+            },
+            "conformal": {
+              "coverage": 0.8968555978369718,
+              "mean_set_size": 0.9082715802122973,
+              "empty_fraction": 0.09172841978770278,
+              "class_coverage": {
+                "0": 0.8896103896103896,
+                "1": 0.8973319103521878
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.01001401962747847
+          },
+          {
+            "name": "exact_additive",
+            "k": 38,
+            "features": [
+              "Protocol",
+              "Flow Duration",
+              "TotLen Fwd Pkts",
+              "TotLen Bwd Pkts",
+              "Fwd Pkt Len Max",
+              "Fwd Pkt Len Min",
+              "Fwd Pkt Len Std",
+              "Bwd Pkt Len Max",
+              "Bwd Pkt Len Min",
+              "Bwd Pkt Len Mean",
+              "Bwd Pkt Len Std",
+              "Flow Byts/s",
+              "Flow Pkts/s",
+              "Flow IAT Mean",
+              "Flow IAT Std",
+              "Flow IAT Max",
+              "Flow IAT Min",
+              "Fwd IAT Tot",
+              "Fwd IAT Mean",
+              "Bwd IAT Tot",
+              "Bwd IAT Mean",
+              "Bwd IAT Std",
+              "Bwd IAT Max",
+              "Bwd IAT Min",
+              "Fwd Header Len",
+              "Bwd Header Len",
+              "Fwd Pkts/s",
+              "Bwd Pkts/s",
+              "Pkt Len Min",
+              "Pkt Len Max",
+              "Pkt Len Mean",
+              "Pkt Len Std",
+              "ACK Flag Cnt",
+              "Pkt Size Avg",
+              "Init Bwd Win Byts",
+              "Idle Mean",
+              "Idle Max",
+              "Idle Min"
+            ],
+            "fit_cpu_s": 0.453125,
+            "artifact_bytes": 111321,
+            "p95_batch1_ms": 6.444665000020677,
+            "tune": {
+              "nll": 0.03303285282422261,
+              "brier": 0.008162731255673605,
+              "ece15": 0.0036425147819529376,
+              "mean_confidence": 0.9862642919725282,
+              "macro_f1": 0.9538873129483056
+            },
+            "evaluation": {
+              "nll": 0.03795883072114893,
+              "brier": 0.009395385464383907,
+              "ece15": 0.003987072818241068,
+              "mean_confidence": 0.98810732843651,
+              "macro_f1": 0.9530957214348958
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 0,
+                "tp": 3316,
+                "fpr": 0.0,
+                "recall": 0.7077908217716116
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 5,
+                "tp": 4080,
+                "fpr": 0.016233766233766232,
+                "recall": 0.8708644610458911
+              }
+            },
+            "conformal": {
+              "coverage": 0.8970558782295214,
+              "mean_set_size": 0.9100741037452433,
+              "empty_fraction": 0.08992589625475667,
+              "class_coverage": {
+                "0": 0.8896103896103896,
+                "1": 0.8975453575240128
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.0026036451031444022
+          }
+        ],
+        "full77": {
+          "name": "lgb_small",
+          "fit_cpu_s": 0.234375,
+          "artifact_bytes": 112338,
+          "desktop_batch1_ms": {
+            "p50": 0.6154500297270715,
+            "p95": 0.7768800307530905
+          },
+          "tune_raw": {
+            "nll": 0.03235484898988319,
+            "brier": 0.00787502935466269,
+            "ece15": 0.003719113477182717,
+            "mean_confidence": 0.9877854407783345,
+            "macro_f1": 0.9503794957345161
+          },
+          "tune_calibrated": {
+            "nll": 0.033131538536129754,
+            "brier": 0.008142592988193415,
+            "ece15": 0.004626978184740557,
+            "mean_confidence": 0.9861607390175242,
+            "macro_f1": 0.9511042869462126
+          },
+          "evaluation_raw": {
+            "nll": 0.038268614994486104,
+            "brier": 0.009375620524339556,
+            "ece15": 0.0036112307169663175,
+            "mean_confidence": 0.9895137530162872,
+            "macro_f1": 0.9509369260031566
+          },
+          "evaluation_calibrated": {
+            "nll": 0.038080881353159166,
+            "brier": 0.009414498230892824,
+            "ece15": 0.002386041742760439,
+            "mean_confidence": 0.9878833504856469,
+            "macro_f1": 0.9524082207248491
+          },
+          "operating_points": {
+            "0.001": {
+              "benign": 308,
+              "attack": 4685,
+              "fp": 2,
+              "tp": 3388,
+              "fpr": 0.006493506493506494,
+              "recall": 0.7231590181430096
+            },
+            "0.01": {
+              "benign": 308,
+              "attack": 4685,
+              "fp": 6,
+              "tp": 4106,
+              "fpr": 0.01948051948051948,
+              "recall": 0.8764140875133405
+            }
+          },
+          "conformal": {
+            "coverage": 0.8936511115561786,
+            "mean_set_size": 0.9050670939315041,
+            "empty_fraction": 0.0949329060684959,
+            "class_coverage": {
+              "0": 0.8896103896103896,
+              "1": 0.8939167556029882
+            }
+          },
+          "riskcal_class_counts": {
+            "0": 351,
+            "1": 5118
+          },
+          "natural_protocol_subgroups": [
+            {
+              "protocol": 6.0,
+              "attacks": 3043,
+              "recall": 0.9930989155438712
+            },
+            {
+              "protocol": 17.0,
+              "attacks": 1916,
+              "recall": 1.0
+            }
+          ],
+          "explanation": {
+            "seconds_64_rows": 0.007385500008240342,
+            "additivity_max_error": 9.769962616701378e-15,
+            "top10": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "ACK Flag Cnt",
+              "Fwd Pkts/s",
+              "Bwd Header Len",
+              "Fwd Pkt Len Min",
+              "Bwd IAT Mean",
+              "Idle Min",
+              "Flow Byts/s",
+              "Flow IAT Mean"
+            ],
+            "scope": "raw uncalibrated model margin on fixed probe"
+          }
+        },
+        "tuning_selected": "top8",
+        "calibration_support": {
+          "benign_calibration_n": 351,
+          "zero_fp_one_sided_95_upper": 0.00849853134937173,
+          "iid_minimum_n_for_zero_fp_95_bound": {
+            "0.001": 2995,
+            "0.01": 299
+          },
+          "caution": "Illustrative iid fixed-test binomial support calculation, not a guarantee for data-selected thresholds or dependent flows"
+        }
+      },
+      {
+        "seed": 43,
+        "records": [
+          {
+            "name": "top8",
+            "k": 8,
+            "features": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "Flow Byts/s",
+              "Bwd Header Len",
+              "Bwd Pkt Len Std",
+              "Bwd Pkts/s",
+              "Flow IAT Mean",
+              "TotLen Bwd Pkts"
+            ],
+            "fit_cpu_s": 0.203125,
+            "artifact_bytes": 109331,
+            "p95_batch1_ms": 2.6541850000967315,
+            "tune": {
+              "nll": 0.03179163582460524,
+              "brier": 0.008249934234256467,
+              "ece15": 0.0017726101045433121,
+              "mean_confidence": 0.9885173008283052,
+              "macro_f1": 0.955641989589358
+            },
+            "evaluation": {
+              "nll": 0.042564192207545586,
+              "brier": 0.010608312457162167,
+              "ece15": 0.005516875482379323,
+              "mean_confidence": 0.9871770346160773,
+              "macro_f1": 0.9481488487182725
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 1078,
+                "fpr": 0.0,
+                "recall": 0.2276663146779303
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 1,
+                "tp": 2848,
+                "fpr": 0.0029940119760479044,
+                "recall": 0.6014783526927139
+              }
+            },
+            "conformal": {
+              "coverage": 0.9175379759321365,
+              "mean_set_size": 0.9386466758729533,
+              "empty_fraction": 0.061353324127046756,
+              "class_coverage": {
+                "0": 0.9101796407185628,
+                "1": 0.9180570221752904
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.17340698362596174
+          },
+          {
+            "name": "top16",
+            "k": 16,
+            "features": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "Flow Byts/s",
+              "Bwd Header Len",
+              "Bwd Pkt Len Std",
+              "Bwd Pkts/s",
+              "Flow IAT Mean",
+              "TotLen Bwd Pkts",
+              "Fwd Pkt Len Min",
+              "Bwd Pkt Len Min",
+              "Fwd Pkts/s",
+              "Idle Mean",
+              "Flow IAT Std",
+              "Flow IAT Min",
+              "Fwd Pkt Len Max",
+              "Flow Pkts/s"
+            ],
+            "fit_cpu_s": 0.3125,
+            "artifact_bytes": 109796,
+            "p95_batch1_ms": 3.7590050000119355,
+            "tune": {
+              "nll": 0.032170290402263296,
+              "brier": 0.008114256199668627,
+              "ece15": 0.00277387439314305,
+              "mean_confidence": 0.9891420678159492,
+              "macro_f1": 0.955641989589358
+            },
+            "evaluation": {
+              "nll": 0.04280086172425708,
+              "brier": 0.010626780343526458,
+              "ece15": 0.004291859514975778,
+              "mean_confidence": 0.988054461105449,
+              "macro_f1": 0.9492257146863794
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 1847,
+                "fpr": 0.0,
+                "recall": 0.39007391763463567
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 4,
+                "tp": 3532,
+                "fpr": 0.011976047904191617,
+                "recall": 0.745934530095037
+              }
+            },
+            "conformal": {
+              "coverage": 0.9262181889919117,
+              "mean_set_size": 0.9469323337936476,
+              "empty_fraction": 0.05306766620635234,
+              "class_coverage": {
+                "0": 0.9041916167664671,
+                "1": 0.9277719112988384
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.049319392385085814
+          },
+          {
+            "name": "top32",
+            "k": 32,
+            "features": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "Flow Byts/s",
+              "Bwd Header Len",
+              "Bwd Pkt Len Std",
+              "Bwd Pkts/s",
+              "Flow IAT Mean",
+              "TotLen Bwd Pkts",
+              "Fwd Pkt Len Min",
+              "Bwd Pkt Len Min",
+              "Fwd Pkts/s",
+              "Idle Mean",
+              "Flow IAT Std",
+              "Flow IAT Min",
+              "Fwd Pkt Len Max",
+              "Flow Pkts/s",
+              "ACK Flag Cnt",
+              "Bwd IAT Tot",
+              "TotLen Fwd Pkts",
+              "Bwd IAT Std",
+              "Pkt Len Min",
+              "Pkt Len Mean",
+              "Pkt Len Std",
+              "Idle Std",
+              "Fwd Pkt Len Std",
+              "Fwd Header Len",
+              "Pkt Size Avg",
+              "Flow IAT Max",
+              "Idle Min",
+              "Bwd Pkt Len Max",
+              "Fwd IAT Tot",
+              "Fwd IAT Std"
+            ],
+            "fit_cpu_s": 0.40625,
+            "artifact_bytes": 110612,
+            "p95_batch1_ms": 3.700759999998126,
+            "tune": {
+              "nll": 0.031607140364628965,
+              "brier": 0.008068861983077576,
+              "ece15": 0.002177483165691734,
+              "mean_confidence": 0.9892540486939165,
+              "macro_f1": 0.9565257707563779
+            },
+            "evaluation": {
+              "nll": 0.042073058028766604,
+              "brier": 0.010487383054363433,
+              "ece15": 0.004820457030814523,
+              "mean_confidence": 0.9878866187713815,
+              "macro_f1": 0.9492257146863794
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 1713,
+                "fpr": 0.0,
+                "recall": 0.3617740232312566
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 3,
+                "tp": 3360,
+                "fpr": 0.008982035928143712,
+                "recall": 0.7096092925026399
+              }
+            },
+            "conformal": {
+              "coverage": 0.9234563030183468,
+              "mean_set_size": 0.9431840599723812,
+              "empty_fraction": 0.05681594002761886,
+              "class_coverage": {
+                "0": 0.907185628742515,
+                "1": 0.9246040126715945
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.002959163543105149
+          },
+          {
+            "name": "exact_additive",
+            "k": 38,
+            "features": [
+              "Flow Duration",
+              "TotLen Fwd Pkts",
+              "TotLen Bwd Pkts",
+              "Fwd Pkt Len Max",
+              "Fwd Pkt Len Min",
+              "Fwd Pkt Len Std",
+              "Bwd Pkt Len Max",
+              "Bwd Pkt Len Min",
+              "Bwd Pkt Len Mean",
+              "Bwd Pkt Len Std",
+              "Flow Byts/s",
+              "Flow Pkts/s",
+              "Flow IAT Mean",
+              "Flow IAT Std",
+              "Flow IAT Max",
+              "Flow IAT Min",
+              "Fwd IAT Tot",
+              "Fwd IAT Mean",
+              "Fwd IAT Std",
+              "Bwd IAT Tot",
+              "Bwd IAT Mean",
+              "Bwd IAT Std",
+              "Bwd IAT Max",
+              "Fwd Header Len",
+              "Bwd Header Len",
+              "Fwd Pkts/s",
+              "Bwd Pkts/s",
+              "Pkt Len Min",
+              "Pkt Len Max",
+              "Pkt Len Mean",
+              "Pkt Len Std",
+              "ACK Flag Cnt",
+              "Pkt Size Avg",
+              "Init Bwd Win Byts",
+              "Idle Mean",
+              "Idle Std",
+              "Idle Max",
+              "Idle Min"
+            ],
+            "fit_cpu_s": 0.390625,
+            "artifact_bytes": 111225,
+            "p95_batch1_ms": 9.134914999975761,
+            "tune": {
+              "nll": 0.0321803456005038,
+              "brier": 0.008194407295704944,
+              "ece15": 0.0029687076030997612,
+              "mean_confidence": 0.9886952548441259,
+              "macro_f1": 0.9557688191818076
+            },
+            "evaluation": {
+              "nll": 0.043156535559150874,
+              "brier": 0.010764958456046572,
+              "ece15": 0.004314051326558098,
+              "mean_confidence": 0.9877342656566644,
+              "macro_f1": 0.9476882688348731
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 1470,
+                "fpr": 0.0,
+                "recall": 0.31045406546990495
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 4,
+                "tp": 3451,
+                "fpr": 0.011976047904191617,
+                "recall": 0.7288278775079198
+              }
+            },
+            "conformal": {
+              "coverage": 0.9254290787137502,
+              "mean_set_size": 0.9467350562241074,
+              "empty_fraction": 0.05326494377589268,
+              "class_coverage": {
+                "0": 0.9101796407185628,
+                "1": 0.9265047518479409
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.002959163543105149
+          }
+        ],
+        "full77": {
+          "name": "lgb_small",
+          "fit_cpu_s": 0.234375,
+          "artifact_bytes": 112258,
+          "desktop_batch1_ms": {
+            "p50": 0.3932500840164721,
+            "p95": 0.6226999685168266
+          },
+          "tune_raw": {
+            "nll": 0.03250224318229647,
+            "brier": 0.008110799800413631,
+            "ece15": 0.002325171961458021,
+            "mean_confidence": 0.9894742210839172,
+            "macro_f1": 0.9605419122422022
+          },
+          "tune_calibrated": {
+            "nll": 0.032443528424569525,
+            "brier": 0.008270155968477261,
+            "ece15": 0.0020930332689463225,
+            "mean_confidence": 0.9888140803781813,
+            "macro_f1": 0.955641989589358
+          },
+          "evaluation_raw": {
+            "nll": 0.04234637745912704,
+            "brier": 0.01025700950255834,
+            "ece15": 0.004316961756920935,
+            "mean_confidence": 0.9892201390342629,
+            "macro_f1": 0.9498488864652144
+          },
+          "evaluation_calibrated": {
+            "nll": 0.04358115074667103,
+            "brier": 0.010842797529516737,
+            "ece15": 0.005382013360369895,
+            "mean_confidence": 0.9879252729943604,
+            "macro_f1": 0.9492257146863794
+          },
+          "operating_points": {
+            "0.001": {
+              "benign": 334,
+              "attack": 4735,
+              "fp": 0,
+              "tp": 1497,
+              "fpr": 0.0,
+              "recall": 0.31615628299894405
+            },
+            "0.01": {
+              "benign": 334,
+              "attack": 4735,
+              "fp": 3,
+              "tp": 3401,
+              "fpr": 0.008982035928143712,
+              "recall": 0.7182682154171066
+            }
+          },
+          "conformal": {
+            "coverage": 0.9232590254488064,
+            "mean_set_size": 0.9439731702505425,
+            "empty_fraction": 0.05602682974945749,
+            "class_coverage": {
+              "0": 0.907185628742515,
+              "1": 0.9243928194297782
+            }
+          },
+          "riskcal_class_counts": {
+            "0": 333,
+            "1": 4525
+          },
+          "natural_protocol_subgroups": [
+            {
+              "protocol": 0.0,
+              "attacks": 33,
+              "recall": 1.0
+            },
+            {
+              "protocol": 6.0,
+              "attacks": 2794,
+              "recall": 0.9949892627057981
+            },
+            {
+              "protocol": 17.0,
+              "attacks": 1948,
+              "recall": 1.0
+            }
+          ],
+          "explanation": {
+            "seconds_64_rows": 0.00565679999999702,
+            "additivity_max_error": 1.509903313490213e-14,
+            "top10": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "ACK Flag Cnt",
+              "Bwd Header Len",
+              "Fwd Pkt Len Min",
+              "Flow IAT Mean",
+              "Fwd Pkts/s",
+              "Bwd Pkt Len Std",
+              "Flow IAT Min",
+              "Flow Byts/s"
+            ],
+            "scope": "raw uncalibrated model margin on fixed probe"
+          }
+        },
+        "tuning_selected": "top32",
+        "calibration_support": {
+          "benign_calibration_n": 333,
+          "zero_fp_one_sided_95_upper": 0.00895584834276586,
+          "iid_minimum_n_for_zero_fp_95_bound": {
+            "0.001": 2995,
+            "0.01": 299
+          },
+          "caution": "Illustrative iid fixed-test binomial support calculation, not a guarantee for data-selected thresholds or dependent flows"
+        }
+      },
+      {
+        "seed": 44,
+        "records": [
+          {
+            "name": "top8",
+            "k": 8,
+            "features": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "Flow Byts/s",
+              "Flow IAT Max",
+              "Bwd Header Len",
+              "Bwd Pkt Len Std",
+              "Flow IAT Mean",
+              "Bwd Pkts/s"
+            ],
+            "fit_cpu_s": 0.15625,
+            "artifact_bytes": 109187,
+            "p95_batch1_ms": 3.8750149999714263,
+            "tune": {
+              "nll": 0.03447335218823572,
+              "brier": 0.008092517603329488,
+              "ece15": 0.005907812181060365,
+              "mean_confidence": 0.9857038784668912,
+              "macro_f1": 0.9542469848258639
+            },
+            "evaluation": {
+              "nll": 0.03566754408321799,
+              "brier": 0.008685743567566481,
+              "ece15": 0.006034749859417136,
+              "mean_confidence": 0.9845232446213548,
+              "macro_f1": 0.9569480216904857
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 1,
+                "tp": 3615,
+                "fpr": 0.002898550724637681,
+                "recall": 0.7486021950714433
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 7,
+                "tp": 4349,
+                "fpr": 0.020289855072463767,
+                "recall": 0.9006005384137502
+              }
+            },
+            "conformal": {
+              "coverage": 0.9002705836876691,
+              "mean_set_size": 0.9033629686896019,
+              "empty_fraction": 0.09663703131039815,
+              "class_coverage": {
+                "0": 0.881159420289855,
+                "1": 0.9016359494719404
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.054310011596443754
+          },
+          {
+            "name": "top16",
+            "k": 16,
+            "features": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "Flow Byts/s",
+              "Flow IAT Max",
+              "Bwd Header Len",
+              "Bwd Pkt Len Std",
+              "Flow IAT Mean",
+              "Bwd Pkts/s",
+              "Fwd Pkts/s",
+              "Flow Pkts/s",
+              "Bwd Pkt Len Min",
+              "TotLen Fwd Pkts",
+              "Idle Max",
+              "TotLen Bwd Pkts",
+              "Flow IAT Min",
+              "Fwd Pkt Len Min"
+            ],
+            "fit_cpu_s": 0.265625,
+            "artifact_bytes": 109716,
+            "p95_batch1_ms": 3.6135899999351295,
+            "tune": {
+              "nll": 0.0334774239427648,
+              "brier": 0.00810067305954934,
+              "ece15": 0.0062665993058970675,
+              "mean_confidence": 0.9858022145079878,
+              "macro_f1": 0.9603503151452488
+            },
+            "evaluation": {
+              "nll": 0.03465454631230748,
+              "brier": 0.008506458442012964,
+              "ece15": 0.0071856895909265354,
+              "mean_confidence": 0.9841169775911378,
+              "macro_f1": 0.9629047627620728
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 1,
+                "tp": 3756,
+                "fpr": 0.002898550724637681,
+                "recall": 0.7778007869124042
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 4,
+                "tp": 4150,
+                "fpr": 0.011594202898550725,
+                "recall": 0.8593911782977842
+              }
+            },
+            "conformal": {
+              "coverage": 0.8942790877464244,
+              "mean_set_size": 0.8977580208735988,
+              "empty_fraction": 0.10224197912640123,
+              "class_coverage": {
+                "0": 0.8898550724637682,
+                "1": 0.8945951542762477
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.0469655972168535
+          },
+          {
+            "name": "top32",
+            "k": 32,
+            "features": [
+              "Init Bwd Win Byts",
+              "Flow Duration",
+              "Flow Byts/s",
+              "Flow IAT Max",
+              "Bwd Header Len",
+              "Bwd Pkt Len Std",
+              "Flow IAT Mean",
+              "Bwd Pkts/s",
+              "Fwd Pkts/s",
+              "Flow Pkts/s",
+              "Bwd Pkt Len Min",
+              "TotLen Fwd Pkts",
+              "Idle Max",
+              "TotLen Bwd Pkts",
+              "Flow IAT Min",
+              "Fwd Pkt Len Min",
+              "Bwd Pkt Len Max",
+              "Pkt Len Std",
+              "Idle Mean",
+              "Bwd IAT Tot",
+              "ACK Flag Cnt",
+              "Fwd Header Len",
+              "Pkt Len Mean",
+              "Flow IAT Std",
+              "Bwd Pkt Len Mean",
+              "Fwd IAT Min",
+              "Bwd IAT Mean",
+              "Bwd IAT Max",
+              "Pkt Size Avg",
+              "Fwd IAT Tot",
+              "Fwd Pkt Len Std",
+              "Bwd IAT Min"
+            ],
+            "fit_cpu_s": 0.328125,
+            "artifact_bytes": 110548,
+            "p95_batch1_ms": 1.618969999930186,
+            "tune": {
+              "nll": 0.032976773554242896,
+              "brier": 0.008019612866245317,
+              "ece15": 0.005167833507540241,
+              "mean_confidence": 0.9861747009360715,
+              "macro_f1": 0.9594265714493511
+            },
+            "evaluation": {
+              "nll": 0.034930755643400035,
+              "brier": 0.008592070196985416,
+              "ece15": 0.006599638249580001,
+              "mean_confidence": 0.984366481429362,
+              "macro_f1": 0.9587235213064492
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 1,
+                "tp": 3608,
+                "fpr": 0.002898550724637681,
+                "recall": 0.7471526195899773
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 4,
+                "tp": 4067,
+                "fpr": 0.011594202898550725,
+                "recall": 0.8422033547318285
+              }
+            },
+            "conformal": {
+              "coverage": 0.8819095477386935,
+              "mean_set_size": 0.8848086586780054,
+              "empty_fraction": 0.11519134132199459,
+              "class_coverage": {
+                "0": 0.8869565217391304,
+                "1": 0.8815489749430524
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.0015461925009663702
+          },
+          {
+            "name": "exact_additive",
+            "k": 34,
+            "features": [
+              "Flow Duration",
+              "TotLen Fwd Pkts",
+              "TotLen Bwd Pkts",
+              "Fwd Pkt Len Min",
+              "Fwd Pkt Len Std",
+              "Bwd Pkt Len Max",
+              "Bwd Pkt Len Min",
+              "Bwd Pkt Len Mean",
+              "Bwd Pkt Len Std",
+              "Flow Byts/s",
+              "Flow Pkts/s",
+              "Flow IAT Mean",
+              "Flow IAT Std",
+              "Flow IAT Max",
+              "Flow IAT Min",
+              "Fwd IAT Tot",
+              "Fwd IAT Min",
+              "Bwd IAT Tot",
+              "Bwd IAT Mean",
+              "Bwd IAT Max",
+              "Bwd IAT Min",
+              "Bwd PSH Flags",
+              "Fwd Header Len",
+              "Bwd Header Len",
+              "Fwd Pkts/s",
+              "Bwd Pkts/s",
+              "Pkt Len Mean",
+              "Pkt Len Std",
+              "ACK Flag Cnt",
+              "Pkt Size Avg",
+              "Init Bwd Win Byts",
+              "Idle Mean",
+              "Idle Max",
+              "Idle Min"
+            ],
+            "fit_cpu_s": 0.265625,
+            "artifact_bytes": 110977,
+            "p95_batch1_ms": 1.5056900000047333,
+            "tune": {
+              "nll": 0.033370011791035506,
+              "brier": 0.00824764123145172,
+              "ece15": 0.005531591010211886,
+              "mean_confidence": 0.9861115107839018,
+              "macro_f1": 0.9584999918157562
+            },
+            "evaluation": {
+              "nll": 0.034885367315933606,
+              "brier": 0.008751303385413425,
+              "ece15": 0.006517200366532622,
+              "mean_confidence": 0.9842143021105305,
+              "macro_f1": 0.9583192422484554
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 1,
+                "tp": 3315,
+                "fpr": 0.002898550724637681,
+                "recall": 0.6864775315800373
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 3,
+                "tp": 4098,
+                "fpr": 0.008695652173913044,
+                "recall": 0.8486229032926071
+              }
+            },
+            "conformal": {
+              "coverage": 0.8850019327406262,
+              "mean_set_size": 0.8879010436799382,
+              "empty_fraction": 0.11209895632006185,
+              "class_coverage": {
+                "0": 0.8898550724637682,
+                "1": 0.8846552081176227
+              }
+            },
+            "projected_evaluation_overlap_with_train": 0.0
+          }
+        ],
+        "full77": {
+          "name": "lgb_small",
+          "fit_cpu_s": 0.21875,
+          "artifact_bytes": 112226,
+          "desktop_batch1_ms": {
+            "p50": 0.4112499882467091,
+            "p95": 1.4236950955819319
+          },
+          "tune_raw": {
+            "nll": 0.03253501342229378,
+            "brier": 0.008130350834345696,
+            "ece15": 0.004516130862765442,
+            "mean_confidence": 0.9880878749168927,
+            "macro_f1": 0.9583727381627893
+          },
+          "tune_calibrated": {
+            "nll": 0.033298324336918164,
+            "brier": 0.008207781545997168,
+            "ece15": 0.005367074128092576,
+            "mean_confidence": 0.9860456912384338,
+            "macro_f1": 0.9583727381627893
+          },
+          "evaluation_raw": {
+            "nll": 0.03376041055029369,
+            "brier": 0.008509330248456886,
+            "ece15": 0.005073055042718437,
+            "mean_confidence": 0.9861472985358241,
+            "macro_f1": 0.9590780588795076
+          },
+          "evaluation_calibrated": {
+            "nll": 0.034676368983193234,
+            "brier": 0.008630083752674858,
+            "ece15": 0.007513230892176792,
+            "mean_confidence": 0.9840700328825208,
+            "macro_f1": 0.9597235811802751
+          },
+          "operating_points": {
+            "0.001": {
+              "benign": 345,
+              "attack": 4829,
+              "fp": 1,
+              "tp": 3657,
+              "fpr": 0.002898550724637681,
+              "recall": 0.7572996479602402
+            },
+            "0.01": {
+              "benign": 345,
+              "attack": 4829,
+              "fp": 3,
+              "tp": 4081,
+              "fpr": 0.008695652173913044,
+              "recall": 0.8451025056947609
+            }
+          },
+          "conformal": {
+            "coverage": 0.8790104367993815,
+            "mean_set_size": 0.8821028218013143,
+            "empty_fraction": 0.11789717819868574,
+            "class_coverage": {
+              "0": 0.8869565217391304,
+              "1": 0.8784427417684821
+            }
+          },
+          "riskcal_class_counts": {
+            "0": 328,
+            "1": 4653
+          },
+          "natural_protocol_subgroups": [
+            {
+              "protocol": 0.0,
+              "attacks": 55,
+              "recall": 1.0
+            },
+            {
+              "protocol": 6.0,
+              "attacks": 3094,
+              "recall": 0.9993535875888817
+            },
+            {
+              "protocol": 17.0,
+              "attacks": 1805,
+              "recall": 1.0
+            }
+          ],
+          "explanation": {
+            "seconds_64_rows": 0.007026699953712523,
+            "additivity_max_error": 5.329070518200751e-15,
+            "top10": [
+              "Init Bwd Win Byts",
+              "Flow IAT Max",
+              "Flow Duration",
+              "ACK Flag Cnt",
+              "Flow IAT Mean",
+              "Bwd Header Len",
+              "Bwd Pkt Len Std",
+              "Fwd Pkt Len Min",
+              "Fwd Pkts/s",
+              "Flow Byts/s"
+            ],
+            "scope": "raw uncalibrated model margin on fixed probe"
+          }
+        },
+        "tuning_selected": "top32",
+        "calibration_support": {
+          "benign_calibration_n": 328,
+          "zero_fp_one_sided_95_upper": 0.009091747933770877,
+          "iid_minimum_n_for_zero_fp_95_bound": {
+            "0.001": 2995,
+            "0.01": 299
+          },
+          "caution": "Illustrative iid fixed-test binomial support calculation, not a guarantee for data-selected thresholds or dependent flows"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "source": "selection_stability/results.json",
+  "source_sha256": "fdb3e979b0acbe35f4263242bb09b6700253c187fc7c70cdc0b2212eda434fec",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "status": "exploratory development heuristic; not preregistered, not a coverage guarantee",
+    "bootstrap_replicates": 200,
+    "bootstrap_unit": "identical-feature hash groups",
+    "selection_quantile": 0.1,
+    "selection_cpu_seconds": 57.8125,
+    "results": [
+      {
+        "seed": 42,
+        "name": "lgb_small",
+        "cap": 0.001,
+        "threshold": {
+          "threshold": 0.9996455868377363,
+          "k": 2,
+          "status": "supported_under_iid_assumptions",
+          "binomial_tail": 0.018035926667118323
+        },
+        "fp": 4,
+        "benign_n": 15291,
+        "tp": 1518,
+        "attack_n": 4685,
+        "fpr": 0.00026159178601791903,
+        "recall": 0.3240128068303095,
+        "cap_pass": true,
+        "joint_pass": false,
+        "original_selector": {
+          "method": "recall_constrained",
+          "name": "lgb_large",
+          "cap": 0.001,
+          "threshold": {
+            "threshold": 0.9996186989898918,
+            "k": 2,
+            "status": "supported_under_iid_assumptions",
+            "binomial_tail": 0.018035926667118323
+          },
+          "fp": 4,
+          "benign_n": 15291,
+          "tp": 1658,
+          "attack_n": 4685,
+          "fpr": 0.00026159178601791903,
+          "recall": 0.3538954108858058,
+          "cap_pass": true,
+          "joint_pass": false
+        }
+      },
+      {
+        "seed": 42,
+        "name": "xgboost",
+        "cap": 0.01,
+        "threshold": {
+          "threshold": 0.9970152103367705,
+          "k": 61,
+          "status": "supported_under_iid_assumptions",
+          "binomial_tail": 0.03896677184329107
+        },
+        "fp": 128,
+        "benign_n": 15291,
+        "tp": 3695,
+        "attack_n": 4685,
+        "fpr": 0.008370937152573409,
+        "recall": 0.7886872998932765,
+        "cap_pass": true,
+        "joint_pass": true,
+        "original_selector": {
+          "method": "recall_constrained",
+          "name": "xgboost",
+          "cap": 0.01,
+          "threshold": {
+            "threshold": 0.9970152103367705,
+            "k": 61,
+            "status": "supported_under_iid_assumptions",
+            "binomial_tail": 0.03896677184329107
+          },
+          "fp": 128,
+          "benign_n": 15291,
+          "tp": 3695,
+          "attack_n": 4685,
+          "fpr": 0.008370937152573409,
+          "recall": 0.7886872998932765,
+          "cap_pass": true,
+          "joint_pass": true
+        }
+      },
+      {
+        "seed": 43,
+        "name": "rf60",
+        "cap": 0.001,
+        "threshold": {
+          "threshold": 0.999924125227887,
+          "k": 2,
+          "status": "supported_under_iid_assumptions",
+          "binomial_tail": 0.018035926667118323
+        },
+        "fp": 3,
+        "benign_n": 15291,
+        "tp": 2362,
+        "attack_n": 4735,
+        "fpr": 0.00019619383951343929,
+        "recall": 0.4988384371700106,
+        "cap_pass": true,
+        "joint_pass": false,
+        "original_selector": {
+          "method": "recall_constrained",
+          "name": "rf40",
+          "cap": 0.001,
+          "threshold": {
+            "threshold": 0.9999999999984805,
+            "k": 2,
+            "status": "supported_under_iid_assumptions",
+            "binomial_tail": 0.018035926667118323
+          },
+          "fp": 0,
+          "benign_n": 15291,
+          "tp": 0,
+          "attack_n": 4735,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "cap_pass": true,
+          "joint_pass": false
+        }
+      },
+      {
+        "seed": 43,
+        "name": "lgb_small",
+        "cap": 0.01,
+        "threshold": {
+          "threshold": 0.9965045478335902,
+          "k": 61,
+          "status": "supported_under_iid_assumptions",
+          "binomial_tail": 0.03896677184329107
+        },
+        "fp": 148,
+        "benign_n": 15291,
+        "tp": 3858,
+        "attack_n": 4735,
+        "fpr": 0.009678896082663004,
+        "recall": 0.8147835269271383,
+        "cap_pass": true,
+        "joint_pass": true,
+        "original_selector": {
+          "method": "recall_constrained",
+          "name": "lgb_small",
+          "cap": 0.01,
+          "threshold": {
+            "threshold": 0.9965045478335902,
+            "k": 61,
+            "status": "supported_under_iid_assumptions",
+            "binomial_tail": 0.03896677184329107
+          },
+          "fp": 148,
+          "benign_n": 15291,
+          "tp": 3858,
+          "attack_n": 4735,
+          "fpr": 0.009678896082663004,
+          "recall": 0.8147835269271383,
+          "cap_pass": true,
+          "joint_pass": true
+        }
+      },
+      {
+        "seed": 44,
+        "name": "lgb_small",
+        "cap": 0.001,
+        "threshold": {
+          "threshold": 0.9992432823300302,
+          "k": 2,
+          "status": "supported_under_iid_assumptions",
+          "binomial_tail": 0.018035926667118323
+        },
+        "fp": 15,
+        "benign_n": 15291,
+        "tp": 2380,
+        "attack_n": 4829,
+        "fpr": 0.0009809691975671965,
+        "recall": 0.4928556636984883,
+        "cap_pass": true,
+        "joint_pass": false,
+        "original_selector": {
+          "method": "recall_constrained",
+          "name": "lgb_small",
+          "cap": 0.001,
+          "threshold": {
+            "threshold": 0.9992432823300302,
+            "k": 2,
+            "status": "supported_under_iid_assumptions",
+            "binomial_tail": 0.018035926667118323
+          },
+          "fp": 15,
+          "benign_n": 15291,
+          "tp": 2380,
+          "attack_n": 4829,
+          "fpr": 0.0009809691975671965,
+          "recall": 0.4928556636984883,
+          "cap_pass": true,
+          "joint_pass": false
+        }
+      },
+      {
+        "seed": 44,
+        "name": "xgboost",
+        "cap": 0.01,
+        "threshold": {
+          "threshold": 0.9923139452608609,
+          "k": 61,
+          "status": "supported_under_iid_assumptions",
+          "binomial_tail": 0.03896677184329107
+        },
+        "fp": 126,
+        "benign_n": 15291,
+        "tp": 3860,
+        "attack_n": 4829,
+        "fpr": 0.00824014125956445,
+        "recall": 0.7993373369227583,
+        "cap_pass": true,
+        "joint_pass": true,
+        "original_selector": {
+          "method": "recall_constrained",
+          "name": "lgb_small",
+          "cap": 0.01,
+          "threshold": {
+            "threshold": 0.9922720066786404,
+            "k": 61,
+            "status": "supported_under_iid_assumptions",
+            "binomial_tail": 0.03896677184329107
+          },
+          "fp": 136,
+          "benign_n": 15291,
+          "tp": 3798,
+          "attack_n": 4829,
+          "fpr": 0.008894120724609248,
+          "recall": 0.786498239801201,
+          "cap_pass": true,
+          "joint_pass": true
+        }
+      }
+    ]
+  }
+}

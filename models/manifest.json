@@ -1,0 +1,20 @@
+{
+  "models": {
+    "flow": {
+      "file": "flow.joblib",
+      "method": "flow14",
+      "threshold": 0.9444769618600583,
+      "sha256": "82c473b9efe135dffd660dd61422849642c2bc26061d4f1250f39d6bf561f230",
+      "status": "Research model; not production-approved."
+    },
+    "hybrid": {
+      "file": "hybrid.joblib",
+      "method": "hybrid38",
+      "threshold": 0.6647274409461992,
+      "sha256": "7c90dd0b0f00da444744c0f9d8b15058b96b5590be3b671bdd550bdf601f45c1",
+      "status": "Research model; not production-approved."
+    }
+  },
+  "source": "Frozen seed42 research models; source dataset NF-ToN-IoT-v3, development study.",
+  "schema": "See docs/data.md; models consume derived14 or38-dimensional features, not raw packet payload."
+}

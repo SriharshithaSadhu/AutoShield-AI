@@ -1,0 +1,1474 @@
+{
+  "source": "matched_selection/results.json",
+  "source_sha256": "b3d1524b669dd3868e9202c36bc10a52e8be413409817fa70ad284ea562e9a6a",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "status": "development finite-bank comparison; no optimizer, novelty or independent confirmation claim",
+    "limits": {
+      "artifact_bytes": 1572864.0,
+      "primary_fpr_cap": 0.001,
+      "sensitivity_cap": 0.01,
+      "min_recall": 0.5,
+      "delta": 0.05
+    },
+    "partitions": {
+      "selection_benign": 7933,
+      "final_calibration_benign": 7648,
+      "evaluation_benign": 15291
+    },
+    "runs": [
+      {
+        "seed": 42,
+        "eligible": [
+          "lgb_small",
+          "lgb_large",
+          "xgboost",
+          "logistic"
+        ],
+        "excluded": [
+          "random_forest",
+          "extra_trees"
+        ],
+        "shared_bank_fit_cpu_s": 3.21875,
+        "decisions": [
+          {
+            "cap": 0.001,
+            "candidates": [
+              {
+                "name": "lgb_small",
+                "bytes": 112338,
+                "threshold": {
+                  "threshold": 0.9996455868377363,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.3251103088648215
+              },
+              {
+                "name": "lgb_large",
+                "bytes": 527170,
+                "threshold": {
+                  "threshold": 0.9996370065727268,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.32531087043722423
+              },
+              {
+                "name": "xgboost",
+                "bytes": 173200,
+                "threshold": {
+                  "threshold": 0.9998098342307981,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.309265944645006
+              },
+              {
+                "name": "logistic",
+                "bytes": 6385,
+                "threshold": {
+                  "threshold": 0.9999873442732337,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.2547131969514641
+              }
+            ],
+            "selected": {
+              "recall_constrained": "lgb_large",
+              "confidence": "lgb_large",
+              "nll": "lgb_large",
+              "f1": "lgb_large",
+              "fixed_small": "lgb_small"
+            }
+          },
+          {
+            "cap": 0.01,
+            "candidates": [
+              {
+                "name": "lgb_small",
+                "bytes": 112338,
+                "threshold": {
+                  "threshold": 0.9969232603583839,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.6658644203770557
+              },
+              {
+                "name": "lgb_large",
+                "bytes": 527170,
+                "threshold": {
+                  "threshold": 0.9978955190992779,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.6588447653429603
+              },
+              {
+                "name": "xgboost",
+                "bytes": 173200,
+                "threshold": {
+                  "threshold": 0.9977939843673601,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.6905334937825912
+              },
+              {
+                "name": "logistic",
+                "bytes": 6385,
+                "threshold": {
+                  "threshold": 0.9998295136205619,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.4649017248295227
+              }
+            ],
+            "selected": {
+              "recall_constrained": "xgboost",
+              "confidence": "lgb_large",
+              "nll": "lgb_large",
+              "f1": "lgb_large",
+              "fixed_small": "lgb_small"
+            }
+          }
+        ],
+        "candidate_evaluation": [
+          {
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9996455868377363,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 4,
+            "benign_n": 15291,
+            "tp": 1518,
+            "attack_n": 4685,
+            "fpr": 0.00026159178601791903,
+            "recall": 0.3240128068303095,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9957256226404699,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 157,
+            "benign_n": 15291,
+            "tp": 3755,
+            "attack_n": 4685,
+            "fpr": 0.010267477601203322,
+            "recall": 0.8014941302027748,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9996186989898918,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 4,
+            "benign_n": 15291,
+            "tp": 1658,
+            "attack_n": 4685,
+            "fpr": 0.00026159178601791903,
+            "recall": 0.3538954108858058,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.998046324689326,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 84,
+            "benign_n": 15291,
+            "tp": 3215,
+            "attack_n": 4685,
+            "fpr": 0.0054934275063763,
+            "recall": 0.6862326574172892,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "name": "xgboost",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9998659674624455,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 2,
+            "benign_n": 15291,
+            "tp": 868,
+            "attack_n": 4685,
+            "fpr": 0.00013079589300895951,
+            "recall": 0.18527214514407683,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "name": "xgboost",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9970152103367705,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 128,
+            "benign_n": 15291,
+            "tp": 3695,
+            "attack_n": 4685,
+            "fpr": 0.008370937152573409,
+            "recall": 0.7886872998932765,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "name": "logistic",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.999983691807258,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 11,
+            "benign_n": 15291,
+            "tp": 1212,
+            "attack_n": 4685,
+            "fpr": 0.0007193774115492774,
+            "recall": 0.25869797225186764,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "name": "logistic",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9984595494542291,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 175,
+            "benign_n": 15291,
+            "tp": 2654,
+            "attack_n": 4685,
+            "fpr": 0.011444640638283958,
+            "recall": 0.5664887940234792,
+            "cap_pass": false,
+            "joint_pass": false
+          }
+        ],
+        "selected_evaluation": [
+          {
+            "method": "recall_constrained",
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9996186989898918,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 4,
+            "benign_n": 15291,
+            "tp": 1658,
+            "attack_n": 4685,
+            "fpr": 0.00026159178601791903,
+            "recall": 0.3538954108858058,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "method": "confidence",
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9996186989898918,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 4,
+            "benign_n": 15291,
+            "tp": 1658,
+            "attack_n": 4685,
+            "fpr": 0.00026159178601791903,
+            "recall": 0.3538954108858058,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "method": "nll",
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9996186989898918,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 4,
+            "benign_n": 15291,
+            "tp": 1658,
+            "attack_n": 4685,
+            "fpr": 0.00026159178601791903,
+            "recall": 0.3538954108858058,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "method": "f1",
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9996186989898918,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 4,
+            "benign_n": 15291,
+            "tp": 1658,
+            "attack_n": 4685,
+            "fpr": 0.00026159178601791903,
+            "recall": 0.3538954108858058,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "method": "fixed_small",
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9996455868377363,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 4,
+            "benign_n": 15291,
+            "tp": 1518,
+            "attack_n": 4685,
+            "fpr": 0.00026159178601791903,
+            "recall": 0.3240128068303095,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "method": "uniform_random_expectation",
+            "name": "uniform eligible model draw",
+            "cap": 0.001,
+            "fpr": 0.00034333921914851874,
+            "recall": 0.28046958377801495,
+            "cap_pass_probability": 1.0,
+            "joint_pass_probability": 0.0
+          },
+          {
+            "method": "recall_constrained",
+            "name": "xgboost",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9970152103367705,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 128,
+            "benign_n": 15291,
+            "tp": 3695,
+            "attack_n": 4685,
+            "fpr": 0.008370937152573409,
+            "recall": 0.7886872998932765,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "confidence",
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.998046324689326,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 84,
+            "benign_n": 15291,
+            "tp": 3215,
+            "attack_n": 4685,
+            "fpr": 0.0054934275063763,
+            "recall": 0.6862326574172892,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "nll",
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.998046324689326,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 84,
+            "benign_n": 15291,
+            "tp": 3215,
+            "attack_n": 4685,
+            "fpr": 0.0054934275063763,
+            "recall": 0.6862326574172892,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "f1",
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.998046324689326,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 84,
+            "benign_n": 15291,
+            "tp": 3215,
+            "attack_n": 4685,
+            "fpr": 0.0054934275063763,
+            "recall": 0.6862326574172892,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "fixed_small",
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9957256226404699,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 157,
+            "benign_n": 15291,
+            "tp": 3755,
+            "attack_n": 4685,
+            "fpr": 0.010267477601203322,
+            "recall": 0.8014941302027748,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "method": "uniform_random_expectation",
+            "name": "uniform eligible model draw",
+            "cap": 0.01,
+            "fpr": 0.008894120724609248,
+            "recall": 0.7107257203842049,
+            "cap_pass_probability": 0.5,
+            "joint_pass_probability": 0.5
+          }
+        ]
+      },
+      {
+        "seed": 43,
+        "eligible": [
+          "lgb_small",
+          "lgb_large",
+          "xgboost",
+          "logistic"
+        ],
+        "excluded": [
+          "random_forest",
+          "extra_trees"
+        ],
+        "shared_bank_fit_cpu_s": 3.21875,
+        "decisions": [
+          {
+            "cap": 0.001,
+            "candidates": [
+              {
+                "name": "lgb_small",
+                "bytes": 112258,
+                "threshold": {
+                  "threshold": 0.9998494608386844,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.3279581151832461
+              },
+              {
+                "name": "lgb_large",
+                "bytes": 528082,
+                "threshold": {
+                  "threshold": 0.9997493408494409,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.2043979057591623
+              },
+              {
+                "name": "xgboost",
+                "bytes": 163408,
+                "threshold": {
+                  "threshold": 0.9999530501455322,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.17654450261780105
+              },
+              {
+                "name": "logistic",
+                "bytes": 6385,
+                "threshold": {
+                  "threshold": 0.9999853500454037,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.28104712041884816
+              }
+            ],
+            "selected": {
+              "recall_constrained": "lgb_small",
+              "confidence": "lgb_large",
+              "nll": "lgb_large",
+              "f1": "lgb_large",
+              "fixed_small": "lgb_small"
+            }
+          },
+          {
+            "cap": 0.01,
+            "candidates": [
+              {
+                "name": "lgb_small",
+                "bytes": 112258,
+                "threshold": {
+                  "threshold": 0.997463392083336,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.7811518324607329
+              },
+              {
+                "name": "lgb_large",
+                "bytes": 528082,
+                "threshold": {
+                  "threshold": 0.9976109969031173,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.7438743455497382
+              },
+              {
+                "name": "xgboost",
+                "bytes": 163408,
+                "threshold": {
+                  "threshold": 0.9985099672894412,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.7558115183246074
+              },
+              {
+                "name": "logistic",
+                "bytes": 6385,
+                "threshold": {
+                  "threshold": 0.9997068952033212,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.5499476439790576
+              }
+            ],
+            "selected": {
+              "recall_constrained": "lgb_small",
+              "confidence": "lgb_large",
+              "nll": "lgb_large",
+              "f1": "lgb_large",
+              "fixed_small": "lgb_small"
+            }
+          }
+        ],
+        "candidate_evaluation": [
+          {
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9997586114735665,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 17,
+            "benign_n": 15291,
+            "tp": 2168,
+            "attack_n": 4735,
+            "fpr": 0.001111765090576156,
+            "recall": 0.4578669482576558,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9965045478335902,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 148,
+            "benign_n": 15291,
+            "tp": 3858,
+            "attack_n": 4735,
+            "fpr": 0.009678896082663004,
+            "recall": 0.8147835269271383,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9994668509519287,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 25,
+            "benign_n": 15291,
+            "tp": 1775,
+            "attack_n": 4735,
+            "fpr": 0.001634948662611994,
+            "recall": 0.37486800422386485,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9973576178256619,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 120,
+            "benign_n": 15291,
+            "tp": 3767,
+            "attack_n": 4735,
+            "fpr": 0.007847753580537572,
+            "recall": 0.7955649419218584,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "name": "xgboost",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9997385308711125,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 20,
+            "benign_n": 15291,
+            "tp": 1981,
+            "attack_n": 4735,
+            "fpr": 0.001307958930089595,
+            "recall": 0.41837381203801477,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "name": "xgboost",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9984586901569266,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 108,
+            "benign_n": 15291,
+            "tp": 3501,
+            "attack_n": 4735,
+            "fpr": 0.007062978222483814,
+            "recall": 0.7393875395987328,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "name": "logistic",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9999762935604676,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 13,
+            "benign_n": 15291,
+            "tp": 1546,
+            "attack_n": 4735,
+            "fpr": 0.0008501733045582369,
+            "recall": 0.32650475184794087,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "name": "logistic",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9982684532951467,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 166,
+            "benign_n": 15291,
+            "tp": 2786,
+            "attack_n": 4735,
+            "fpr": 0.01085605911974364,
+            "recall": 0.5883843717001056,
+            "cap_pass": false,
+            "joint_pass": false
+          }
+        ],
+        "selected_evaluation": [
+          {
+            "method": "recall_constrained",
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9997586114735665,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 17,
+            "benign_n": 15291,
+            "tp": 2168,
+            "attack_n": 4735,
+            "fpr": 0.001111765090576156,
+            "recall": 0.4578669482576558,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "method": "confidence",
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9994668509519287,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 25,
+            "benign_n": 15291,
+            "tp": 1775,
+            "attack_n": 4735,
+            "fpr": 0.001634948662611994,
+            "recall": 0.37486800422386485,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "method": "nll",
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9994668509519287,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 25,
+            "benign_n": 15291,
+            "tp": 1775,
+            "attack_n": 4735,
+            "fpr": 0.001634948662611994,
+            "recall": 0.37486800422386485,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "method": "f1",
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9994668509519287,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 25,
+            "benign_n": 15291,
+            "tp": 1775,
+            "attack_n": 4735,
+            "fpr": 0.001634948662611994,
+            "recall": 0.37486800422386485,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "method": "fixed_small",
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9997586114735665,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 17,
+            "benign_n": 15291,
+            "tp": 2168,
+            "attack_n": 4735,
+            "fpr": 0.001111765090576156,
+            "recall": 0.4578669482576558,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "method": "uniform_random_expectation",
+            "name": "uniform eligible model draw",
+            "cap": 0.001,
+            "fpr": 0.0012262114969589955,
+            "recall": 0.39440337909186907,
+            "cap_pass_probability": 0.25,
+            "joint_pass_probability": 0.0
+          },
+          {
+            "method": "recall_constrained",
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9965045478335902,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 148,
+            "benign_n": 15291,
+            "tp": 3858,
+            "attack_n": 4735,
+            "fpr": 0.009678896082663004,
+            "recall": 0.8147835269271383,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "confidence",
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9973576178256619,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 120,
+            "benign_n": 15291,
+            "tp": 3767,
+            "attack_n": 4735,
+            "fpr": 0.007847753580537572,
+            "recall": 0.7955649419218584,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "nll",
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9973576178256619,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 120,
+            "benign_n": 15291,
+            "tp": 3767,
+            "attack_n": 4735,
+            "fpr": 0.007847753580537572,
+            "recall": 0.7955649419218584,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "f1",
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9973576178256619,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 120,
+            "benign_n": 15291,
+            "tp": 3767,
+            "attack_n": 4735,
+            "fpr": 0.007847753580537572,
+            "recall": 0.7955649419218584,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "fixed_small",
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9965045478335902,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 148,
+            "benign_n": 15291,
+            "tp": 3858,
+            "attack_n": 4735,
+            "fpr": 0.009678896082663004,
+            "recall": 0.8147835269271383,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "uniform_random_expectation",
+            "name": "uniform eligible model draw",
+            "cap": 0.01,
+            "fpr": 0.008861421751357007,
+            "recall": 0.7345300950369589,
+            "cap_pass_probability": 0.75,
+            "joint_pass_probability": 0.75
+          }
+        ]
+      },
+      {
+        "seed": 44,
+        "eligible": [
+          "lgb_small",
+          "lgb_large",
+          "xgboost",
+          "logistic"
+        ],
+        "excluded": [
+          "random_forest",
+          "extra_trees"
+        ],
+        "shared_bank_fit_cpu_s": 2.984375,
+        "decisions": [
+          {
+            "cap": 0.001,
+            "candidates": [
+              {
+                "name": "lgb_small",
+                "bytes": 112226,
+                "threshold": {
+                  "threshold": 0.9993867020958174,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.37666532095276545
+              },
+              {
+                "name": "lgb_large",
+                "bytes": 527314,
+                "threshold": {
+                  "threshold": 0.9995090359919698,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.19842551473556722
+              },
+              {
+                "name": "xgboost",
+                "bytes": 166464,
+                "threshold": {
+                  "threshold": 0.9996076703341525,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.2133629390391603
+              },
+              {
+                "name": "logistic",
+                "bytes": 6385,
+                "threshold": {
+                  "threshold": 0.9999141217274883,
+                  "k": 3,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04426510550640013
+                },
+                "tuning_recall": 0.22002422285022205
+              }
+            ],
+            "selected": {
+              "recall_constrained": "lgb_small",
+              "confidence": "lgb_large",
+              "nll": "lgb_small",
+              "f1": "lgb_small",
+              "fixed_small": "lgb_small"
+            }
+          },
+          {
+            "cap": 0.01,
+            "candidates": [
+              {
+                "name": "lgb_small",
+                "bytes": 112226,
+                "threshold": {
+                  "threshold": 0.9939050796565427,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.7729107791683488
+              },
+              {
+                "name": "lgb_large",
+                "bytes": 527314,
+                "threshold": {
+                  "threshold": 0.9962000436093312,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.719418651594671
+              },
+              {
+                "name": "xgboost",
+                "bytes": 166464,
+                "threshold": {
+                  "threshold": 0.9939917315583116,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.7612030682276948
+              },
+              {
+                "name": "logistic",
+                "bytes": 6385,
+                "threshold": {
+                  "threshold": 0.9994437731065752,
+                  "k": 64,
+                  "status": "supported_under_iid_assumptions",
+                  "binomial_tail": 0.04359339471093626
+                },
+                "tuning_recall": 0.39442874444893017
+              }
+            ],
+            "selected": {
+              "recall_constrained": "lgb_small",
+              "confidence": "lgb_large",
+              "nll": "lgb_small",
+              "f1": "lgb_small",
+              "fixed_small": "lgb_small"
+            }
+          }
+        ],
+        "candidate_evaluation": [
+          {
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9992432823300302,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 15,
+            "benign_n": 15291,
+            "tp": 2380,
+            "attack_n": 4829,
+            "fpr": 0.0009809691975671965,
+            "recall": 0.4928556636984883,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9922720066786404,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 136,
+            "benign_n": 15291,
+            "tp": 3798,
+            "attack_n": 4829,
+            "fpr": 0.008894120724609248,
+            "recall": 0.786498239801201,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.999084627087241,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 20,
+            "benign_n": 15291,
+            "tp": 1758,
+            "attack_n": 4829,
+            "fpr": 0.001307958930089595,
+            "recall": 0.36405052805963967,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9964299932744514,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 106,
+            "benign_n": 15291,
+            "tp": 3413,
+            "attack_n": 4829,
+            "fpr": 0.006932182329474855,
+            "recall": 0.7067715883205633,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "name": "xgboost",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9991805474022512,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 19,
+            "benign_n": 15291,
+            "tp": 2226,
+            "attack_n": 4829,
+            "fpr": 0.0012425609835851155,
+            "recall": 0.4609650031062332,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "name": "xgboost",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9923139452608609,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 126,
+            "benign_n": 15291,
+            "tp": 3860,
+            "attack_n": 4829,
+            "fpr": 0.00824014125956445,
+            "recall": 0.7993373369227583,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "name": "logistic",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9999226949809263,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 7,
+            "benign_n": 15291,
+            "tp": 1199,
+            "attack_n": 4829,
+            "fpr": 0.0004577856255313583,
+            "recall": 0.24829157175398633,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "name": "logistic",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9951278212686466,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 183,
+            "benign_n": 15291,
+            "tp": 2729,
+            "attack_n": 4829,
+            "fpr": 0.011967824210319796,
+            "recall": 0.5651273555601574,
+            "cap_pass": false,
+            "joint_pass": false
+          }
+        ],
+        "selected_evaluation": [
+          {
+            "method": "recall_constrained",
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9992432823300302,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 15,
+            "benign_n": 15291,
+            "tp": 2380,
+            "attack_n": 4829,
+            "fpr": 0.0009809691975671965,
+            "recall": 0.4928556636984883,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "method": "confidence",
+            "name": "lgb_large",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.999084627087241,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 20,
+            "benign_n": 15291,
+            "tp": 1758,
+            "attack_n": 4829,
+            "fpr": 0.001307958930089595,
+            "recall": 0.36405052805963967,
+            "cap_pass": false,
+            "joint_pass": false
+          },
+          {
+            "method": "nll",
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9992432823300302,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 15,
+            "benign_n": 15291,
+            "tp": 2380,
+            "attack_n": 4829,
+            "fpr": 0.0009809691975671965,
+            "recall": 0.4928556636984883,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "method": "f1",
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9992432823300302,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 15,
+            "benign_n": 15291,
+            "tp": 2380,
+            "attack_n": 4829,
+            "fpr": 0.0009809691975671965,
+            "recall": 0.4928556636984883,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "method": "fixed_small",
+            "name": "lgb_small",
+            "cap": 0.001,
+            "threshold": {
+              "threshold": 0.9992432823300302,
+              "k": 2,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.018035926667118323
+            },
+            "fp": 15,
+            "benign_n": 15291,
+            "tp": 2380,
+            "attack_n": 4829,
+            "fpr": 0.0009809691975671965,
+            "recall": 0.4928556636984883,
+            "cap_pass": true,
+            "joint_pass": false
+          },
+          {
+            "method": "uniform_random_expectation",
+            "name": "uniform eligible model draw",
+            "cap": 0.001,
+            "fpr": 0.0009973186841933162,
+            "recall": 0.3915406916545869,
+            "cap_pass_probability": 0.5,
+            "joint_pass_probability": 0.0
+          },
+          {
+            "method": "recall_constrained",
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9922720066786404,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 136,
+            "benign_n": 15291,
+            "tp": 3798,
+            "attack_n": 4829,
+            "fpr": 0.008894120724609248,
+            "recall": 0.786498239801201,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "confidence",
+            "name": "lgb_large",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9964299932744514,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 106,
+            "benign_n": 15291,
+            "tp": 3413,
+            "attack_n": 4829,
+            "fpr": 0.006932182329474855,
+            "recall": 0.7067715883205633,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "nll",
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9922720066786404,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 136,
+            "benign_n": 15291,
+            "tp": 3798,
+            "attack_n": 4829,
+            "fpr": 0.008894120724609248,
+            "recall": 0.786498239801201,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "f1",
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9922720066786404,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 136,
+            "benign_n": 15291,
+            "tp": 3798,
+            "attack_n": 4829,
+            "fpr": 0.008894120724609248,
+            "recall": 0.786498239801201,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "fixed_small",
+            "name": "lgb_small",
+            "cap": 0.01,
+            "threshold": {
+              "threshold": 0.9922720066786404,
+              "k": 61,
+              "status": "supported_under_iid_assumptions",
+              "binomial_tail": 0.03896677184329107
+            },
+            "fp": 136,
+            "benign_n": 15291,
+            "tp": 3798,
+            "attack_n": 4829,
+            "fpr": 0.008894120724609248,
+            "recall": 0.786498239801201,
+            "cap_pass": true,
+            "joint_pass": true
+          },
+          {
+            "method": "uniform_random_expectation",
+            "name": "uniform eligible model draw",
+            "cap": 0.01,
+            "fpr": 0.009008567130992087,
+            "recall": 0.7144336301511699,
+            "cap_pass_probability": 0.75,
+            "joint_pass_probability": 0.75
+          }
+        ]
+      }
+    ]
+  }
+}

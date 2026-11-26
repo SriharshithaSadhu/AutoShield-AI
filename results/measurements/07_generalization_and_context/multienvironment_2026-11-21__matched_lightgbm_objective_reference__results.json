@@ -1,0 +1,3802 @@
+{
+  "source": "multienvironment_2026-11-21/matched_lightgbm_objective_reference/results.json",
+  "source_sha256": "c44467e3f924ddd380e8917311925655c242b90369e126176ebc43fb469d825e",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "protocol": {
+      "recorded_at": "2026-11-21T17:56:38.106999+05:30",
+      "scope": "Reuse fixed-stage LightGBM controls with original pooled FPR constraints.\nWorst-window hard-cap selection is a separate stricter experiment, not the\noriginal deployment constraint. No fits or protected-label access occur here.\n",
+      "representations": [
+        "raw46",
+        "harmonized14"
+      ],
+      "mixtures": [
+        "two_source",
+        "three_source"
+      ],
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "calibration_targets": [
+        0.001,
+        0.0005,
+        0.00025
+      ],
+      "evaluation_fpr_cap": 0.001,
+      "note": "Exploratory development control added after earlier development outcomes. The original and stricter-window studies remain preserved; protected labels remain unused.",
+      "training_budget": "One fixed stage0 fit per configuration, reused for matched XGBoost comparisons; 200000 training rows each."
+    },
+    "results": [
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9980147618852955,
+          "partial_roc_auc_001": 0.8306268285239251,
+          "average_precision": 0.9965410784914448,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9704722348260095,
+            "0.01": 0.9706816516002932
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27808,
+        "fp": 47,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9705769432131514,
+        "fpr": 0.001136748415808059,
+        "precision": 0.998312690719799,
+        "f1": 0.9842494602343114,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.9297071129707113,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9705769432131514
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9980147618852955,
+          "partial_roc_auc_001": 0.8306268285239251,
+          "average_precision": 0.9965410784914448,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9704722348260095,
+            "0.01": 0.9706816516002932
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10622,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.3707374960734355,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.5409314287169302,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.13640167364016736,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.3707374960734355
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9999994206266947,
+          "partial_roc_auc_001": 0.9997285167785726,
+          "average_precision": 0.9999941690977044,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9998607630186578,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7179,
+        "fp": 25,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9995822890559732,
+        "fpr": 0.000343321706171551,
+        "precision": 0.996529705719045,
+        "f1": 0.9980536632837481,
+        "worst_window_fpr": 0.0013709898546750755,
+        "worst_window_recall": 0.9957983193277311,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9988562714449104
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9999994206266947,
+          "partial_roc_auc_001": 0.9997285167785726,
+          "average_precision": 0.9999941690977044,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9998607630186578,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7176,
+        "fp": 8,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9991645781119465,
+        "fpr": 0.00010986294597489632,
+        "precision": 0.9988864142538976,
+        "f1": 0.9990254768202701,
+        "worst_window_fpr": 0.0002898550724637681,
+        "worst_window_recall": 0.9936974789915967,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9980937857415173
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9994939271255061
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9586730672624342,
+          "partial_roc_auc_001": 0.5550994607519848,
+          "average_precision": 0.9668366718397939,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14440567228450515,
+            "0.01": 0.36952343240857605
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 98205,
+        "fp": 5645,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.8101319078377509,
+        "fpr": 0.07165615202020843,
+        "precision": 0.9456427539720751,
+        "f1": 0.8726579612655562,
+        "worst_window_fpr": 0.6125811283075387,
+        "worst_window_recall": 0.00474158368895211,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.00022794620469569182
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.983643798273512
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.4426229508196721
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9396739130434782
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.06
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.7407143896641495
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9586730672624342,
+          "partial_roc_auc_001": 0.5550994607519848,
+          "average_precision": 0.9668366718397939,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14440567228450515,
+            "0.01": 0.36952343240857605
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10003,
+        "fp": 15,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.08251870550482177,
+        "fpr": 0.00019040607268434482,
+        "precision": 0.9985026951487322,
+        "f1": 0.15243944254375605,
+        "worst_window_fpr": 0.006487889273356401,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.5049724872532687
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9979713524511544,
+          "partial_roc_auc_001": 0.831069586726417,
+          "average_precision": 0.9966433692916591,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9703675264388677,
+            "0.01": 0.9706816516002932
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27809,
+        "fp": 47,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9706118460088653,
+        "fpr": 0.001136748415808059,
+        "precision": 0.9983127512923607,
+        "f1": 0.9842674358928982,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.9297071129707113,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9706118460088653
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9979713524511544,
+          "partial_roc_auc_001": 0.831069586726417,
+          "average_precision": 0.9966433692916591,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9703675264388677,
+            "0.01": 0.9706816516002932
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10622,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.3707374960734355,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.5409314287169302,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.13640167364016736,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.3707374960734355
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9999991816113046,
+          "partial_roc_auc_001": 0.999657124471832,
+          "average_precision": 0.9999917817122606,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9995822890559732,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7178,
+        "fp": 23,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.999443052074631,
+        "fpr": 0.0003158559696778269,
+        "precision": 0.9968059991667824,
+        "f1": 0.9981227838420358,
+        "worst_window_fpr": 0.0013709898546750755,
+        "worst_window_recall": 0.9957983193277311,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9984750285932139
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9999991816113046,
+          "partial_roc_auc_001": 0.999657124471832,
+          "average_precision": 0.9999917817122606,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9995822890559732,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7175,
+        "fp": 4,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9990253411306043,
+        "fpr": 5.493147298744816e-05,
+        "precision": 0.9994428193341691,
+        "f1": 0.9992340366269759,
+        "worst_window_fpr": 0.00027419797093501506,
+        "worst_window_recall": 0.9915966386554622,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9977125428898208
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9994939271255061
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9597869790977959,
+          "partial_roc_auc_001": 0.5535355386643345,
+          "average_precision": 0.9674797730736884,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14323425809059487,
+            "0.01": 0.37924122058059245
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 102782,
+        "fp": 5759,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.8478893921020285,
+        "fpr": 0.07310323817260946,
+        "precision": 0.9469417086630858,
+        "f1": 0.8946823234477416,
+        "worst_window_fpr": 0.654518222666001,
+        "worst_window_recall": 0.0040303461356092935,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.00022794620469569182
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9843505477308294
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.38524590163934425
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9486270022883295
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.14
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.8094206296589751
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9597869790977959,
+          "partial_roc_auc_001": 0.5535355386643345,
+          "average_precision": 0.9674797730736884,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14323425809059487,
+            "0.01": 0.37924122058059245
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10003,
+        "fp": 20,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.08251870550482177,
+        "fpr": 0.00025387476357912643,
+        "precision": 0.9980045894442782,
+        "f1": 0.15243363506141233,
+        "worst_window_fpr": 0.006920415224913495,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.5049724872532687
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9980089979349948,
+          "partial_roc_auc_001": 0.8310047807923242,
+          "average_precision": 0.9965291693917637,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9704722348260095,
+            "0.01": 0.9706816516002932
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27807,
+        "fp": 44,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9705420404174374,
+        "fpr": 0.0010641900062883956,
+        "precision": 0.9984201644465189,
+        "f1": 0.9842837421684189,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.9297071129707113,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9705420404174374
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9980089979349948,
+          "partial_roc_auc_001": 0.8310047807923242,
+          "average_precision": 0.9965291693917637,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9704722348260095,
+            "0.01": 0.9706816516002932
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10622,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.3707374960734355,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.5409314287169302,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.13640167364016736,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.3707374960734355
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9999992064689052,
+          "partial_roc_auc_001": 0.9996781683480886,
+          "average_precision": 0.999992037384464,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9995822890559732,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7178,
+        "fp": 24,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.999443052074631,
+        "fpr": 0.00032958883792468896,
+        "precision": 0.9966675923354624,
+        "f1": 0.9980533926585095,
+        "worst_window_fpr": 0.0013709898546750755,
+        "worst_window_recall": 0.9957983193277311,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9984750285932139
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9999992064689052,
+          "partial_roc_auc_001": 0.9996781683480886,
+          "average_precision": 0.999992037384464,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9995822890559732,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7177,
+        "fp": 6,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9993038150932888,
+        "fpr": 8.239720948117224e-05,
+        "precision": 0.9991646944173743,
+        "f1": 0.9992342499129829,
+        "worst_window_fpr": 0.0002898550724637681,
+        "worst_window_recall": 0.9957983193277311,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9980937857415173
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9597588849308116,
+          "partial_roc_auc_001": 0.5463582741815598,
+          "average_precision": 0.967355213639334,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.1440426988723076,
+            "0.01": 0.37262520520371883
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 100701,
+        "fp": 6176,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.8307223995842304,
+        "fpr": 0.07839652699323424,
+        "precision": 0.9422139468735088,
+        "f1": 0.8829625862567844,
+        "worst_window_fpr": 0.63754368447329,
+        "worst_window_recall": 0.0035561877667140826,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.00045589240939138365
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9840476551062648
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.3770491803278688
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9473684210526315
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.12
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.7766117426386171
+          }
+        }
+      },
+      {
+        "identity": "raw46_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9597588849308116,
+          "partial_roc_auc_001": 0.5463582741815598,
+          "average_precision": 0.967355213639334,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.1440426988723076,
+            "0.01": 0.37262520520371883
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10003,
+        "fp": 20,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.08251870550482177,
+        "fpr": 0.00025387476357912643,
+        "precision": 0.9980045894442782,
+        "f1": 0.15243363506141233,
+        "worst_window_fpr": 0.006920415224913495,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.5049724872532687
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9978729010059618,
+          "partial_roc_auc_001": 0.8324590499058281,
+          "average_precision": 0.9966270201758085,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.967470594394611,
+            "0.01": 0.9710306795574325
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27697,
+        "fp": 40,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9667027328889044,
+        "fpr": 0.0009674454602621777,
+        "precision": 0.9985578829722032,
+        "f1": 0.982372135915443,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.9238493723849373,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9667027328889044
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9978729010059618,
+          "partial_roc_auc_001": 0.8324590499058281,
+          "average_precision": 0.9966270201758085,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.967470594394611,
+            "0.01": 0.9710306795574325
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10622,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.3707374960734355,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.5409314287169302,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.13640167364016736,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.3707374960734355
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.99999856590766,
+          "partial_roc_auc_001": 0.999338422618244,
+          "average_precision": 0.9999855605405351,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9997215260373155,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7166,
+        "fp": 18,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9977722082985241,
+        "fpr": 0.0002471916284435167,
+        "precision": 0.9974944320712695,
+        "f1": 0.9976333008492273,
+        "worst_window_fpr": 0.0008484162895927602,
+        "worst_window_recall": 0.9878542510121457,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9961875714830347
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9969635627530364
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.99999856590766,
+          "partial_roc_auc_001": 0.999338422618244,
+          "average_precision": 0.9999855605405351,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9997215260373155,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7165,
+        "fp": 0,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9976329713171819,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.9988150832926744,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.9878542510121457,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9961875714830347
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9969635627530364
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.9928571428571429
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.8936250475711376,
+          "partial_roc_auc_001": 0.5500997559059819,
+          "average_precision": 0.931519519510515,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.12246227963801652,
+            "0.01": 0.18484421016160565
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 93269,
+        "fp": 4973,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.7694128905057704,
+        "fpr": 0.06312595996394979,
+        "precision": 0.9493801021966165,
+        "f1": 0.8499747109991206,
+        "worst_window_fpr": 0.7879069767441861,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.017323911556872577
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9812206572769953
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.14754098360655737
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9826659038901602
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.02
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.6368061057840014
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.8936250475711376,
+          "partial_roc_auc_001": 0.5500997559059819,
+          "average_precision": 0.931519519510515,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.12246227963801652,
+            "0.01": 0.18484421016160565
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10596,
+        "fp": 28,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.08741059717375703,
+        "fpr": 0.00035542466901077697,
+        "precision": 0.9973644578313253,
+        "f1": 0.16073419545678638,
+        "worst_window_fpr": 0.010484273589615577,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.5049724872532687
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.009588797438675356
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9978431058232085,
+          "partial_roc_auc_001": 0.8324616807914506,
+          "average_precision": 0.9965886613658066,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9676451083731807,
+            "0.01": 0.9710655823531464
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27735,
+        "fp": 43,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.968029039126034,
+        "fpr": 0.001040003869781841,
+        "precision": 0.9984520123839009,
+        "f1": 0.9830051923656276,
+        "worst_window_fpr": 0.0062047569803516025,
+        "worst_window_recall": 0.9271966527196652,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.968029039126034
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9978431058232085,
+          "partial_roc_auc_001": 0.8324616807914506,
+          "average_precision": 0.9965886613658066,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9676451083731807,
+            "0.01": 0.9710655823531464
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10622,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.3707374960734355,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.5409314287169302,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.13640167364016736,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.3707374960734355
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9999989177383141,
+          "partial_roc_auc_001": 0.9995163390265955,
+          "average_precision": 0.9999891122056687,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9997215260373155,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7171,
+        "fp": 18,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9984683932052353,
+        "fpr": 0.0002471916284435167,
+        "precision": 0.9974961747113645,
+        "f1": 0.9979820471783453,
+        "worst_window_fpr": 0.0008484162895927602,
+        "worst_window_recall": 0.9878542510121457,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9961875714830347
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9994939271255061
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9999989177383141,
+          "partial_roc_auc_001": 0.9995163390265955,
+          "average_precision": 0.9999891122056687,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9997215260373155,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7169,
+        "fp": 0,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9981899192425508,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.9990941397811999,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.9878542510121457,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9961875714830347
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9984817813765182
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.8713184743848571,
+          "partial_roc_auc_001": 0.5551240601609353,
+          "average_precision": 0.9208153627597115,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.12212405441301424,
+            "0.01": 0.18747576740003793
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 94162,
+        "fp": 5247,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.7767796008942345,
+        "fpr": 0.06660404422498381,
+        "precision": 0.947218058727077,
+        "f1": 0.8535738566831347,
+        "worst_window_fpr": 0.8018604651162791,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.04718486437200821
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9818769246302186
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.13934426229508196
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9850114416475972
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.03
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.647591481655159
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.8713184743848571,
+          "partial_roc_auc_001": 0.5551240601609353,
+          "average_precision": 0.9208153627597115,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.12212405441301424,
+            "0.01": 0.18747576740003793
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10005,
+        "fp": 0,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.0825352042962853,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.15248502583329523,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.5049724872532687
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 3.2339957634655497e-05
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9977757069427218,
+          "partial_roc_auc_001": 0.8307802889691002,
+          "average_precision": 0.9965114211799316,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9674356915988971,
+            "0.01": 0.9710306795574325
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27727,
+        "fp": 44,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9677498167603225,
+        "fpr": 0.0010641900062883956,
+        "precision": 0.998415613409672,
+        "f1": 0.9828435716564461,
+        "worst_window_fpr": 0.0062047569803516025,
+        "worst_window_recall": 0.9263598326359833,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9677498167603225
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9977757069427218,
+          "partial_roc_auc_001": 0.8307802889691002,
+          "average_precision": 0.9965114211799316,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9674356915988971,
+            "0.01": 0.9710306795574325
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10622,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.3707374960734355,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.5409314287169302,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.13640167364016736,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.3707374960734355
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9999987972745576,
+          "partial_roc_auc_001": 0.9994579900969749,
+          "average_precision": 0.9999879101513864,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9997215260373155,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7171,
+        "fp": 18,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9984683932052353,
+        "fpr": 0.0002471916284435167,
+        "precision": 0.9974961747113645,
+        "f1": 0.9979820471783453,
+        "worst_window_fpr": 0.0008484162895927602,
+        "worst_window_recall": 0.9878542510121457,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9961875714830347
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9994939271255061
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9999987972745576,
+          "partial_roc_auc_001": 0.9994579900969749,
+          "average_precision": 0.9999879101513864,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9997215260373155,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7171,
+        "fp": 0,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9984683932052353,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.9992336096983209,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.9878542510121457,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9961875714830347
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9994939271255061
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.8829160098759814,
+          "partial_roc_auc_001": 0.5547860601403077,
+          "average_precision": 0.925440842518501,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.12295724338192228,
+            "0.01": 0.16301630905536169
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 92957,
+        "fp": 4983,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.7668390790374605,
+        "fpr": 0.06325289734573934,
+        "precision": 0.9491219113743108,
+        "f1": 0.8482987392829928,
+        "worst_window_fpr": 0.7395348837209302,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.017095965352176886
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.981624514109748
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.11475409836065574
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9745137299771167
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.06
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.6362563265042123
+          }
+        }
+      },
+      {
+        "identity": "raw46_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "raw46",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.8829160098759814,
+          "partial_roc_auc_001": 0.5547860601403077,
+          "average_precision": 0.925440842518501,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.12295724338192228,
+            "0.01": 0.16301630905536169
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 10026,
+        "fp": 1,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.08270844160665232,
+        "fpr": 1.2693738178956321e-05,
+        "precision": 0.999900269272963,
+        "f1": 0.15277947092527125,
+        "worst_window_fpr": 0.0004992511233150275,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.5049724872532687
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.00037190951279853824
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9961658013506731,
+          "partial_roc_auc_001": 0.7624790734127804,
+          "average_precision": 0.9939108675617401,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9295661582492758,
+            "0.01": 0.9532651565390388
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 26633,
+        "fp": 41,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9295661582492758,
+        "fpr": 0.000991631596768732,
+        "precision": 0.9984629226962586,
+        "f1": 0.9627835517397199,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.8602510460251046,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9295661582492758
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9961658013506731,
+          "partial_roc_auc_001": 0.7624790734127804,
+          "average_precision": 0.9939108675617401,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9295661582492758,
+            "0.01": 0.9532651565390388
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9999548863231714,
+          "partial_roc_auc_001": 0.9903482988519234,
+          "average_precision": 0.999511386189706,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9974937343358395,
+            "0.01": 0.998886104149262
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7155,
+        "fp": 34,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9962406015037594,
+        "fpr": 0.00046691752039330935,
+        "precision": 0.9952705522325775,
+        "f1": 0.9957553406165194,
+        "worst_window_fpr": 0.0019193857965451055,
+        "worst_window_recall": 0.979757085020243,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9922077922077922
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.994281357224552
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9922254616132167
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.9928571428571429
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9999548863231714,
+          "partial_roc_auc_001": 0.9903482988519234,
+          "average_precision": 0.999511386189706,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9974937343358395,
+            "0.01": 0.998886104149262
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7008,
+        "fp": 7,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9757727652464494,
+        "fpr": 9.613007772803427e-05,
+        "precision": 0.9990021382751247,
+        "f1": 0.9872508276396422,
+        "worst_window_fpr": 0.0005483959418700301,
+        "worst_window_recall": 0.8671171171171171,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.9310344827586207
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9688311688311688
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9740754860846359
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9848178137651822
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9805636540330418
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9666666666666667
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.9357142857142857
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.8888888888888888
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9041038370280153,
+          "partial_roc_auc_001": 0.5526855617375761,
+          "average_precision": 0.9379490002687749,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14703722952293743,
+            "0.01": 0.29622755133186496
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 47779,
+        "fp": 1273,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.3941478786678876,
+        "fpr": 0.016159128701811395,
+        "precision": 0.9740479491152246,
+        "f1": 0.5612046537031707,
+        "worst_window_fpr": 0.13779331003494757,
+        "worst_window_recall": 0.08695652173913043,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.933439708228858
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9289716795396032
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.13114754098360656
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.3665045766590389
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.02
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.20133240625454782
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9041038370280153,
+          "partial_roc_auc_001": 0.5526855617375761,
+          "average_precision": 0.9379490002687749,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14703722952293743,
+            "0.01": 0.29622755133186496
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7,
+        "fp": 1,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 5.774577012233854e-05,
+        "fpr": 1.2693738178956321e-05,
+        "precision": 0.875,
+        "f1": 0.00011548391886429815,
+        "worst_window_fpr": 0.00043252595155709344,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.00011318985172129424
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9961547411168067,
+          "partial_roc_auc_001": 0.7635569755459473,
+          "average_precision": 0.9938959508614005,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9300198945935569,
+            "0.01": 0.9531953509476109
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 26646,
+        "fp": 41,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9300198945935569,
+        "fpr": 0.000991631596768732,
+        "precision": 0.998463671450519,
+        "f1": 0.963027214572265,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.8610878661087866,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9300198945935569
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9961547411168067,
+          "partial_roc_auc_001": 0.7635569755459473,
+          "average_precision": 0.9938959508614005,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9300198945935569,
+            "0.01": 0.9531953509476109
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 14,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0004886391399951136,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.0009768009768009768,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0004886391399951136
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9999598712281449,
+          "partial_roc_auc_001": 0.9917974566941415,
+          "average_precision": 0.9996300864968753,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9974937343358395,
+            "0.01": 0.999443052074631
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7162,
+        "fp": 39,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9972152603731551,
+        "fpr": 0.0005355818616276195,
+        "precision": 0.9945840855436745,
+        "f1": 0.9958979350622262,
+        "worst_window_fpr": 0.0021935837674801205,
+        "worst_window_recall": 0.9924812030075187,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9948051948051948
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9958063286313381
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9994939271255061
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9951409135082604
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.9928571428571429
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9999598712281449,
+          "partial_roc_auc_001": 0.9917974566941415,
+          "average_precision": 0.9996300864968753,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9974937343358395,
+            "0.01": 0.999443052074631
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7015,
+        "fp": 5,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9767474241158451,
+        "fpr": 6.86643412343102e-05,
+        "precision": 0.9992877492877493,
+        "f1": 0.9878890297141247,
+        "worst_window_fpr": 0.00028376844494892167,
+        "worst_window_recall": 0.8693693693693694,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.9310344827586207
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9662337662337662
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9733130003812428
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9858299595141701
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9834791059280855
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9677083333333333
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.9642857142857143
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.8888888888888888
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.928362726958424,
+          "partial_roc_auc_001": 0.5522703661805993,
+          "average_precision": 0.9484238045249223,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14492538421560622,
+            "0.01": 0.2784583529256482
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 44463,
+        "fp": 1394,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.36679288242136265,
+        "fpr": 0.01769507102146511,
+        "precision": 0.9696011514054561,
+        "f1": 0.5322424256933888,
+        "worst_window_fpr": 0.13779331003494757,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.9336676544335537
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9292745721641678
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.10655737704918032
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.27110983981693365
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.03
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.2015587859579904
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.928362726958424,
+          "partial_roc_auc_001": 0.5522703661805993,
+          "average_precision": 0.9484238045249223,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14492538421560622,
+            "0.01": 0.2784583529256482
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 31,
+        "fp": 1,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.0002557312676846421,
+        "fpr": 1.2693738178956321e-05,
+        "precision": 0.96875,
+        "f1": 0.0005113275547821497,
+        "worst_window_fpr": 0.00010052271813429835,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.00010096420818819729
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.00011441647597254005
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.00040424947043319373
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9959838958740317,
+          "partial_roc_auc_001": 0.7646340651873103,
+          "average_precision": 0.9937819538763226,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9306830477121217,
+            "0.01": 0.9532302537433248
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 26628,
+        "fp": 40,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9293916442707061,
+        "fpr": 0.0009674454602621777,
+        "precision": 0.9985000749962502,
+        "f1": 0.962707207288635,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.8594142259414226,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9293916442707061
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9959838958740317,
+          "partial_roc_auc_001": 0.7646340651873103,
+          "average_precision": 0.9937819538763226,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9306830477121217,
+            "0.01": 0.9532302537433248
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9999532791836893,
+          "partial_roc_auc_001": 0.991413580042707,
+          "average_precision": 0.9995729623270297,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9973544973544973,
+            "0.01": 0.9991645781119465
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7153,
+        "fp": 32,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9959621275410749,
+        "fpr": 0.00043945178389958526,
+        "precision": 0.9955462769659011,
+        "f1": 0.9957541588362219,
+        "worst_window_fpr": 0.0019193857965451055,
+        "worst_window_recall": 0.979757085020243,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9896103896103896
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9946626000762485
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9994939271255061
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9912536443148688
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.9928571428571429
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9999532791836893,
+          "partial_roc_auc_001": 0.991413580042707,
+          "average_precision": 0.9995729623270297,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9973544973544973,
+            "0.01": 0.9991645781119465
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7108,
+        "fp": 6,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9896964633806739,
+        "fpr": 8.239720948117224e-05,
+        "precision": 0.9991565926342424,
+        "f1": 0.9944040290990487,
+        "worst_window_fpr": 0.0002898550724637681,
+        "worst_window_recall": 0.9635627530364372,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.9655172413793104
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9766233766233766
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9900876858558902
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9913967611336032
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9834791059280855
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.996875
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.9928571428571429
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9171506221496317,
+          "partial_roc_auc_001": 0.5528710622459966,
+          "average_precision": 0.9431567007813808,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14464490476072628,
+            "0.01": 0.2745233911615974
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 50076,
+        "fp": 1222,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.41309674066374635,
+        "fpr": 0.015511748054684624,
+        "precision": 0.9761784085149519,
+        "f1": 0.5805273622035834,
+        "worst_window_fpr": 0.1293060409385921,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.933439708228858
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9291231258518855
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.10655737704918032
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.44536613272311215
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.04
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.19386187604094238
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_two_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "two_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9171506221496317,
+          "partial_roc_auc_001": 0.5528710622459966,
+          "average_precision": 0.9431567007813808,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14464490476072628,
+            "0.01": 0.2745233911615974
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 1,
+        "fp": 0,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 8.249395731762648e-06,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 1.6498655359588192e-05,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 1.6169978817327748e-05
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9941975744024134,
+          "partial_roc_auc_001": 0.7655983409329261,
+          "average_precision": 0.9918980661351172,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9208404593207916,
+            "0.01": 0.9449582911591219
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 6,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0002094167742836201,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.0004187458561607984,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0002094167742836201
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9941975744024134,
+          "partial_roc_auc_001": 0.7655983409329261,
+          "average_precision": 0.9918980661351172,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9208404593207916,
+            "0.01": 0.9449582911591219
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 6,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0002094167742836201,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "f1": 0.0004187458561607984,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0002094167742836201
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9997861443260281,
+          "partial_roc_auc_001": 0.9605511706131968,
+          "average_precision": 0.997856254509939,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9970760233918129,
+            "0.01": 0.9980506822612085
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 6079,
+        "fp": 7,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.8464216095795043,
+        "fpr": 9.613007772803427e-05,
+        "precision": 0.9988498192573119,
+        "f1": 0.9163400663249924,
+        "worst_window_fpr": 0.000550812448361333,
+        "worst_window_recall": 0.7612612612612613,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.7741935483870968
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.7931034482758621
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.7246753246753247
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.8192908882958444
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.8481781376518218
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9057337220602527
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9291666666666667
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.6928571428571428
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.7777777777777778
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9997861443260281,
+          "partial_roc_auc_001": 0.9605511706131968,
+          "average_precision": 0.997856254509939,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9970760233918129,
+            "0.01": 0.9980506822612085
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 6079,
+        "fp": 7,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.8464216095795043,
+        "fpr": 9.613007772803427e-05,
+        "precision": 0.9988498192573119,
+        "f1": 0.9163400663249924,
+        "worst_window_fpr": 0.000550812448361333,
+        "worst_window_recall": 0.7612612612612613,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.7741935483870968
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.7931034482758621
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.7246753246753247
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.8192908882958444
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.8481781376518218
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9057337220602527
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9291666666666667
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.6928571428571428
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.7777777777777778
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.8111992619869147,
+          "partial_roc_auc_001": 0.5521416537254817,
+          "average_precision": 0.8805087633412474,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14350648814974304,
+            "0.01": 0.15781918974435122
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed42",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 42,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.8111992619869147,
+          "partial_roc_auc_001": 0.5521416537254817,
+          "average_precision": 0.8805087633412474,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14350648814974304,
+            "0.01": 0.15781918974435122
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9954745540393749,
+          "partial_roc_auc_001": 0.7661522905813158,
+          "average_precision": 0.993018853659909,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9215734180307843,
+            "0.01": 0.9446790687934103
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9954745540393749,
+          "partial_roc_auc_001": 0.7661522905813158,
+          "average_precision": 0.993018853659909,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9215734180307843,
+            "0.01": 0.9446790687934103
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9997942173098403,
+          "partial_roc_auc_001": 0.9643796791944064,
+          "average_precision": 0.9982626429119529,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9959621275410749,
+            "0.01": 0.9979114452798663
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 5832,
+        "fp": 5,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.8120300751879699,
+        "fpr": 6.86643412343102e-05,
+        "precision": 0.9991433955799212,
+        "f1": 0.8959213457254781,
+        "worst_window_fpr": 0.000550812448361333,
+        "worst_window_recall": 0.7027027027027027,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.6451612903225806
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.8275862068965517
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.6883116883116883
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.7788791460160122
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.8173076923076923
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.8551992225461613
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9197916666666667
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.6857142857142857
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.6666666666666666
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9997942173098403,
+          "partial_roc_auc_001": 0.9643796791944064,
+          "average_precision": 0.9982626429119529,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9959621275410749,
+            "0.01": 0.9979114452798663
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 5832,
+        "fp": 5,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.8120300751879699,
+        "fpr": 6.86643412343102e-05,
+        "precision": 0.9991433955799212,
+        "f1": 0.8959213457254781,
+        "worst_window_fpr": 0.000550812448361333,
+        "worst_window_recall": 0.7027027027027027,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.6451612903225806
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.8275862068965517
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.6883116883116883
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.7788791460160122
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.8173076923076923
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.8551992225461613
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9197916666666667
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.6857142857142857
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.6666666666666666
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.8157880293327133,
+          "partial_roc_auc_001": 0.5517959380779286,
+          "average_precision": 0.880311028720127,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14378696760462295,
+            "0.01": 0.15824815832240288
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 1,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.0,
+        "fpr": 1.2693738178956321e-05,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.00043252595155709344,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed43",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 43,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.8157880293327133,
+          "partial_roc_auc_001": 0.5517959380779286,
+          "average_precision": 0.880311028720127,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14378696760462295,
+            "0.01": 0.15824815832240288
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 1,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.0,
+        "fpr": 1.2693738178956321e-05,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.00043252595155709344,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9943288520004174,
+          "partial_roc_auc_001": 0.7554833145922424,
+          "average_precision": 0.9920075392667531,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.8442637255244145,
+            "0.01": 0.9454818330948309
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9943288520004174,
+          "partial_roc_auc_001": 0.7554833145922424,
+          "average_precision": 0.9920075392667531,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.8442637255244145,
+            "0.01": 0.9454818330948309
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "unsw_future",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.9997797846045315,
+          "partial_roc_auc_001": 0.9717106865389371,
+          "average_precision": 0.9986144811482481,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9966583124477861,
+            "0.01": 0.9980506822612085
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 6355,
+        "fp": 7,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.8848510164299638,
+        "fpr": 9.613007772803427e-05,
+        "precision": 0.9988997170701037,
+        "f1": 0.9384229178972239,
+        "worst_window_fpr": 0.000550812448361333,
+        "worst_window_recall": 0.7477477477477478,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.7096774193548387
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.8275862068965517
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.8181818181818182
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.8394967594357606
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9225708502024291
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9212827988338192
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9489583333333333
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.7357142857142858
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.7777777777777778
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "unsw_future",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.9997797846045315,
+          "partial_roc_auc_001": 0.9717106865389371,
+          "average_precision": 0.9986144811482481,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9966583124477861,
+            "0.01": 0.9980506822612085
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 6355,
+        "fp": 7,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.8848510164299638,
+        "fpr": 9.613007772803427e-05,
+        "precision": 0.9988997170701037,
+        "f1": 0.9384229178972239,
+        "worst_window_fpr": 0.000550812448361333,
+        "worst_window_recall": 0.7477477477477478,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.7096774193548387
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.8275862068965517
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.8181818181818182
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.8394967594357606
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.9225708502024291
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9212827988338192
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.9489583333333333
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.7357142857142858
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.7777777777777778
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_stress",
+        "policy": "pooled_budget",
+        "ranking": {
+          "roc_auc": 0.7751029787271817,
+          "partial_roc_auc_001": 0.5525862567096282,
+          "average_precision": 0.8618670842566595,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.1415513813613153,
+            "0.01": 0.157340724791909
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "harmonized14_three_source_lightgbm_logloss_balanced_seed44",
+        "representation": "harmonized14",
+        "mixture": "three_source",
+        "method": "lightgbm_logloss_balanced",
+        "seed": 44,
+        "environment": "ton_stress",
+        "policy": "window_budget",
+        "ranking": {
+          "roc_auc": 0.7751029787271817,
+          "partial_roc_auc_001": 0.5525862567096282,
+          "average_precision": 0.8618670842566595,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.1415513813613153,
+            "0.01": 0.157340724791909
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.0
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.0
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0
+          }
+        }
+      }
+    ]
+  }
+}

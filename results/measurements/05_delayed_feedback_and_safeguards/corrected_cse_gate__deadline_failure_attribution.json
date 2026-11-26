@@ -1,0 +1,72 @@
+{
+  "source": "corrected_cse_gate/deadline_failure_attribution.json",
+  "source_sha256": "d1ee0b0d187239f4ee1625f62139c4739c0c8b8d12c4dc7e4376ab0a5b91df96",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "worst_chunk": 702,
+    "captures": [
+      20180301
+    ],
+    "start": "2018-03-01T10:12:50.029981+00:00",
+    "end": "2018-03-01T10:28:01.548566+00:00",
+    "preceding_approved_events": [
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 525,
+        "last_released_chunk": 525
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 554,
+        "observed_chunk": 554,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 595,
+        "last_released_chunk": 595
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 632,
+        "observed_chunk": 632,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 645,
+        "last_released_chunk": 645
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 646,
+        "observed_chunk": 646,
+        "reason": "observed_cap_breach"
+      }
+    ],
+    "suppression_chunks": [
+      {
+        "chunk": 756,
+        "lost": 1774
+      },
+      {
+        "chunk": 757,
+        "lost": 6275
+      },
+      {
+        "chunk": 758,
+        "lost": 5913
+      },
+      {
+        "chunk": 759,
+        "lost": 765
+      }
+    ]
+  }
+}

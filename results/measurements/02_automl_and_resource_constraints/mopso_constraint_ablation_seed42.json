@@ -1,0 +1,223 @@
+{
+  "source": "mopso_constraint_ablation_seed42.json",
+  "source_sha256": "2200bccb6a328aa9ab86d4825017c6fa6959d59dd78fa892f4dd85505992721e",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "analysis_scope": "matched development search; prior grouped folds were inspected; not confirmatory",
+    "method_note": "The two search modes use the same metrics, candidate budget, grouped folds, and actual feasibility checks. Only whether feasibility guides MOPSO archive/personal-best selection differs.",
+    "comparisons": [
+      {
+        "dataset": "CICIDS2017_sample_km.csv",
+        "seed": 42,
+        "constraints": {
+          "min_weighted_f1": 0.95,
+          "max_p95_latency_ms_per_row": 0.05,
+          "max_serialized_size_mb": 4.0
+        },
+        "feasibility_first": {
+          "path": "results\\cicids2017_lightgbm_mopso_feasibility_first_dev_seed42.json",
+          "mode": "feasibility_first",
+          "seed": 42,
+          "dataset": "CICIDS2017_sample_km.csv",
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          },
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "candidate_count": 24,
+          "feasible_candidate_count": 17,
+          "archive_size": 11,
+          "feasible_archive_count": 11,
+          "unconstrained_best_candidate_metrics": {
+            "weighted_f1": 0.9966875721771957,
+            "macro_f1": 0.9735832660592094,
+            "mean_true_class_probability": 0.9963711235383699,
+            "top_label_ece": 0.0026296993338986814,
+            "median_latency_ms_per_row": 0.045179874360136076,
+            "p95_latency_ms_per_row": 0.06818347222219422,
+            "serialized_size_mb": 2.671987533569336,
+            "mean_fit_seconds": 3.9632225249997646
+          },
+          "best_feasible_candidate_metrics": {
+            "weighted_f1": 0.9963952392314483,
+            "macro_f1": 0.9713373028968388,
+            "mean_true_class_probability": 0.9962263750462337,
+            "top_label_ece": 0.003043131584653219,
+            "median_latency_ms_per_row": 0.0418049553432914,
+            "p95_latency_ms_per_row": 0.049265880907613066,
+            "serialized_size_mb": 2.241933822631836,
+            "mean_fit_seconds": 4.022259149999627
+          },
+          "mean_candidate_evaluation_seconds": 30.81853851666665,
+          "total_candidate_evaluation_seconds": 739.6449243999996,
+          "iteration_wall_seconds": [
+            228.01874250000037,
+            184.30563340000117,
+            175.24438349999946,
+            152.0822991999994
+          ],
+          "development_split_hash": "b02a3a84184614b47ec7dd3bebf3e1595dc5164d942efd85a16d5bde4252d125",
+          "reserved_holdout_split_hash": "104275689f7a5ab18974f32663316ac46ef577c7c5c9ffbfc571d520bc8e9144",
+          "holdout_qualification": "Candidate scores use grouped development CV; reserved fold was inspected previously and is not a pristine test."
+        },
+        "constraint_blind": {
+          "path": "results\\cicids2017_lightgbm_mopso_constraint_blind_dev_seed42.json",
+          "mode": "constraint_blind",
+          "seed": 42,
+          "dataset": "CICIDS2017_sample_km.csv",
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          },
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "candidate_count": 24,
+          "feasible_candidate_count": 21,
+          "archive_size": 13,
+          "feasible_archive_count": 13,
+          "unconstrained_best_candidate_metrics": {
+            "weighted_f1": 0.9967318350365971,
+            "macro_f1": 0.9736582457657061,
+            "mean_true_class_probability": 0.996348931177233,
+            "top_label_ece": 0.002908912268399254,
+            "median_latency_ms_per_row": 0.03496466063949249,
+            "p95_latency_ms_per_row": 0.040429725897947535,
+            "serialized_size_mb": 1.8379573822021484,
+            "mean_fit_seconds": 2.967952024999704
+          },
+          "best_feasible_candidate_metrics": {
+            "weighted_f1": 0.9967318350365971,
+            "macro_f1": 0.9736582457657061,
+            "mean_true_class_probability": 0.996348931177233,
+            "top_label_ece": 0.002908912268399254,
+            "median_latency_ms_per_row": 0.03496466063949249,
+            "p95_latency_ms_per_row": 0.040429725897947535,
+            "serialized_size_mb": 1.8379573822021484,
+            "mean_fit_seconds": 2.967952024999704
+          },
+          "mean_candidate_evaluation_seconds": 27.110117225000142,
+          "total_candidate_evaluation_seconds": 650.6428134000034,
+          "iteration_wall_seconds": [
+            168.86468609999974,
+            174.142829299999,
+            160.98287230000096,
+            146.65968489999977
+          ],
+          "development_split_hash": "b02a3a84184614b47ec7dd3bebf3e1595dc5164d942efd85a16d5bde4252d125",
+          "reserved_holdout_split_hash": "104275689f7a5ab18974f32663316ac46ef577c7c5c9ffbfc571d520bc8e9144",
+          "holdout_qualification": "Candidate scores use grouped development CV; reserved fold was inspected previously and is not a pristine test."
+        },
+        "best_feasible_weighted_f1_difference_constrained_minus_blind": -0.00033659580514877607,
+        "best_feasible_macro_f1_difference_constrained_minus_blind": -0.002320942868867304,
+        "feasible_candidate_count_difference_constrained_minus_blind": -4
+      },
+      {
+        "dataset": "IoTID20_sample_0.05.csv",
+        "seed": 42,
+        "constraints": {
+          "min_weighted_f1": 0.95,
+          "max_p95_latency_ms_per_row": 0.05,
+          "max_serialized_size_mb": 4.0
+        },
+        "feasibility_first": {
+          "path": "results\\iotid20_lightgbm_mopso_feasibility_first_dev_seed42.json",
+          "mode": "feasibility_first",
+          "seed": 42,
+          "dataset": "IoTID20_sample_0.05.csv",
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          },
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "candidate_count": 24,
+          "feasible_candidate_count": 13,
+          "archive_size": 9,
+          "feasible_archive_count": 9,
+          "unconstrained_best_candidate_metrics": {
+            "weighted_f1": 0.9785751622221786,
+            "macro_f1": 0.9616463703924414,
+            "mean_true_class_probability": 0.9761957966591674,
+            "top_label_ece": 0.013350153490852633,
+            "median_latency_ms_per_row": 0.04859281372043214,
+            "p95_latency_ms_per_row": 0.05502527235510213,
+            "serialized_size_mb": 3.029775619506836,
+            "mean_fit_seconds": 4.583905524999864
+          },
+          "best_feasible_candidate_metrics": {
+            "weighted_f1": 0.977616592352625,
+            "macro_f1": 0.9597298091627954,
+            "mean_true_class_probability": 0.9715376848329604,
+            "top_label_ece": 0.008188198410830207,
+            "median_latency_ms_per_row": 0.03202490470276236,
+            "p95_latency_ms_per_row": 0.03756964337118347,
+            "serialized_size_mb": 2.4553890228271484,
+            "mean_fit_seconds": 3.4349422499994944
+          },
+          "mean_candidate_evaluation_seconds": 98.30495474583313,
+          "total_candidate_evaluation_seconds": 2359.318913899995,
+          "iteration_wall_seconds": [
+            156.99136159999944,
+            473.3816310000002,
+            1580.5580866,
+            148.39407390000088
+          ],
+          "development_split_hash": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "reserved_holdout_split_hash": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "holdout_qualification": "Candidate scores use grouped development CV; reserved fold was inspected previously and is not a pristine test."
+        },
+        "constraint_blind": {
+          "path": "results\\iotid20_lightgbm_mopso_constraint_blind_dev_seed42.json",
+          "mode": "constraint_blind",
+          "seed": 42,
+          "dataset": "IoTID20_sample_0.05.csv",
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          },
+          "dataset_sha256": "f953aa8c7e7cb15f5b30969097bf2881b482cce5ff6c2e563c42b69f36dbe312",
+          "candidate_count": 24,
+          "feasible_candidate_count": 16,
+          "archive_size": 17,
+          "feasible_archive_count": 13,
+          "unconstrained_best_candidate_metrics": {
+            "weighted_f1": 0.9788769953405698,
+            "macro_f1": 0.9617732569206918,
+            "mean_true_class_probability": 0.9755603434519265,
+            "top_label_ece": 0.011394570612419299,
+            "median_latency_ms_per_row": 0.043003365015229306,
+            "p95_latency_ms_per_row": 0.0492146616786551,
+            "serialized_size_mb": 2.6093502044677734,
+            "mean_fit_seconds": 3.985008375000689
+          },
+          "best_feasible_candidate_metrics": {
+            "weighted_f1": 0.9788769953405698,
+            "macro_f1": 0.9617732569206918,
+            "mean_true_class_probability": 0.9755603434519265,
+            "top_label_ece": 0.011394570612419299,
+            "median_latency_ms_per_row": 0.043003365015229306,
+            "p95_latency_ms_per_row": 0.0492146616786551,
+            "serialized_size_mb": 2.6093502044677734,
+            "mean_fit_seconds": 3.985008375000689
+          },
+          "mean_candidate_evaluation_seconds": 51.15230462500009,
+          "total_candidate_evaluation_seconds": 1227.6553110000023,
+          "iteration_wall_seconds": [
+            0.0012776000003213994,
+            168.31614080000145,
+            152.83058329999767,
+            158.3805057999998
+          ],
+          "development_split_hash": "14c7c20265b626710e875f9efc4fcd9e1105a23ce473da7efc07f6e175f75311",
+          "reserved_holdout_split_hash": "ab8506051434f5d2859fd69670125b89013ac5b2d20d31fb43503e8261f695c4",
+          "holdout_qualification": "Candidate scores use grouped development CV; reserved fold was inspected previously and is not a pristine test."
+        },
+        "best_feasible_weighted_f1_difference_constrained_minus_blind": -0.0012604029879448309,
+        "best_feasible_macro_f1_difference_constrained_minus_blind": -0.002043447757896444,
+        "feasible_candidate_count_difference_constrained_minus_blind": -3
+      }
+    ]
+  }
+}

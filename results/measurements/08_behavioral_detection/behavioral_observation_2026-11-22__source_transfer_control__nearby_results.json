@@ -1,0 +1,1846 @@
+{
+  "source": "behavioral_observation_2026-11-22/source_transfer_control/nearby_results.json",
+  "source_sha256": "5d8d2de149dd91816d8609d7ebb73111a16470df101c67f98fcfb41ccb8961e5",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "scope": "Exploratory source-only control:200k fitting rows, target-benign calibration.\n\nThis is transfer with labeled target benign calibration, not zero-shot IDS.\nFixed one fit per source/method/seed, no target attack-label model selection.\nAdded after nearby exploratory outcomes; protected data remain unused.\n",
+    "results": [
+      {
+        "identity": "ton_flow14_seed42",
+        "method": "flow14",
+        "training_source": "ton",
+        "seed": 42,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9963917704883863,
+          "partial_roc_auc_001": 0.7665227353240976,
+          "average_precision": 0.9939139145660096,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.941014275243447,
+            "0.01": 0.9538585040661757
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27106,
+        "fp": 43,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9460751806219678,
+        "fpr": 0.001040003869781841,
+        "precision": 0.9984161479244171,
+        "f1": 0.9715412186379928,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.8870292887029289,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9460751806219678
+          }
+        }
+      },
+      {
+        "identity": "ton_flow14_seed42",
+        "method": "flow14",
+        "training_source": "ton",
+        "seed": 42,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.4681053178905069,
+          "partial_roc_auc_001": 0.49974987493746875,
+          "average_precision": 0.08268747738596058,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0,
+            "0.01": 0.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.0
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "ton_flow14_seed43",
+        "method": "flow14",
+        "training_source": "ton",
+        "seed": 43,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9963927395884077,
+          "partial_roc_auc_001": 0.7666095503267094,
+          "average_precision": 0.9941800644297665,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9403162193291683,
+            "0.01": 0.9539632124533175
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 26944,
+        "fp": 44,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.94042092771631,
+        "fpr": 0.0010641900062883956,
+        "precision": 0.9983696457684897,
+        "f1": 0.968529269037905,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.8803347280334728,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.94042092771631
+          }
+        }
+      },
+      {
+        "identity": "ton_flow14_seed43",
+        "method": "flow14",
+        "training_source": "ton",
+        "seed": 43,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.49281356346790567,
+          "partial_roc_auc_001": 0.49974987493746875,
+          "average_precision": 0.08903598472043303,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0,
+            "0.01": 0.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.0
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "ton_flow14_seed44",
+        "method": "flow14",
+        "training_source": "ton",
+        "seed": 44,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9963634285335831,
+          "partial_roc_auc_001": 0.7682182266663781,
+          "average_precision": 0.9941583410756166,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.940455830512024,
+            "0.01": 0.9537886984747478
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 26953,
+        "fp": 45,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9407350528777355,
+        "fpr": 0.00108837614279495,
+        "precision": 0.9983332098673976,
+        "f1": 0.9686786824561088,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.8811715481171548,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9407350528777355
+          }
+        }
+      },
+      {
+        "identity": "ton_flow14_seed44",
+        "method": "flow14",
+        "training_source": "ton",
+        "seed": 44,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.5061495657809323,
+          "partial_roc_auc_001": 0.49974987493746875,
+          "average_precision": 0.09189868615424432,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0,
+            "0.01": 0.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 0,
+        "fp": 0,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "worst_window_fpr": 0.0,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.0
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.0
+          }
+        }
+      },
+      {
+        "identity": "ton_behavior24_seed42",
+        "method": "behavior24",
+        "training_source": "ton",
+        "seed": 42,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.994757594343453,
+          "partial_roc_auc_001": 0.8248491097809876,
+          "average_precision": 0.9923371546118438,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.6927855921259293,
+            "0.01": 0.8656591392970577
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 20618,
+        "fp": 58,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.7196258420299466,
+        "fpr": 0.0014027959173801576,
+        "precision": 0.9971948152447282,
+        "f1": 0.835972185618424,
+        "worst_window_fpr": 0.011451942740286299,
+        "worst_window_recall": 0.21338912133891214,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.7196258420299466
+          }
+        }
+      },
+      {
+        "identity": "ton_behavior24_seed42",
+        "method": "behavior24",
+        "training_source": "ton",
+        "seed": 42,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.7024725526390094,
+          "partial_roc_auc_001": 0.549591654969612,
+          "average_precision": 0.6178914999129992,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.16499582289055972,
+            "0.01": 0.47354497354497355
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 1302,
+        "fp": 79,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.18128654970760233,
+        "fpr": 0.0010848965915021011,
+        "precision": 0.942795076031861,
+        "f1": 0.304099030713535,
+        "worst_window_fpr": 0.004506892895015907,
+        "worst_window_recall": 0.030508474576271188,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.0967741935483871
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.3448275862068966
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.15584415584415584
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.15135341212352268
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.2783400809716599
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.11758989310009718
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.13541666666666666
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.20714285714285716
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.2222222222222222
+          }
+        }
+      },
+      {
+        "identity": "ton_behavior24_seed43",
+        "method": "behavior24",
+        "training_source": "ton",
+        "seed": 43,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9947531173208373,
+          "partial_roc_auc_001": 0.8139339116135756,
+          "average_precision": 0.9923170738045438,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.6814421835188998,
+            "0.01": 0.872081253708422
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 21563,
+        "fp": 109,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.7526089839796167,
+        "fpr": 0.0026362888792144344,
+        "precision": 0.9949704688076781,
+        "f1": 0.8569838841086581,
+        "worst_window_fpr": 0.032310838445807774,
+        "worst_window_recall": 0.2535564853556485,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.7526089839796167
+          }
+        }
+      },
+      {
+        "identity": "ton_behavior24_seed43",
+        "method": "behavior24",
+        "training_source": "ton",
+        "seed": 43,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.7029806247853116,
+          "partial_roc_auc_001": 0.5333928155629268,
+          "average_precision": 0.5927256522279948,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.10442773600668337,
+            "0.01": 0.42355889724310775
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 754,
+        "fp": 73,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.10498468393205235,
+        "fpr": 0.0010024993820209288,
+        "precision": 0.9117291414752116,
+        "f1": 0.1882881758022225,
+        "worst_window_fpr": 0.005832449628844115,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.03225806451612903
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.3103448275862069
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.05714285714285714
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.08654212733511246
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.16649797570850203
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.07191448007774538
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.06875
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.17142857142857143
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.2222222222222222
+          }
+        }
+      },
+      {
+        "identity": "ton_behavior24_seed44",
+        "method": "behavior24",
+        "training_source": "ton",
+        "seed": 44,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9946723848734205,
+          "partial_roc_auc_001": 0.8238253477292037,
+          "average_precision": 0.9921977680150581,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.7059788489057973,
+            "0.01": 0.8667062231684758
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 19564,
+        "fp": 25,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.6828382953474573,
+        "fpr": 0.0006046534126638611,
+        "precision": 0.9987237735463781,
+        "f1": 0.8111111111111111,
+        "worst_window_fpr": 0.007361963190184049,
+        "worst_window_recall": 0.1774058577405858,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.6828382953474573
+          }
+        }
+      },
+      {
+        "identity": "ton_behavior24_seed44",
+        "method": "behavior24",
+        "training_source": "ton",
+        "seed": 44,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.60350387460009,
+          "partial_roc_auc_001": 0.5430822809034856,
+          "average_precision": 0.5083139519473923,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.12225006961849066,
+            "0.01": 0.40824282929546085
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 1080,
+        "fp": 79,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.15037593984962405,
+        "fpr": 0.0010848965915021011,
+        "precision": 0.9318377911993098,
+        "f1": 0.25896175518522957,
+        "worst_window_fpr": 0.005832449628844115,
+        "worst_window_recall": 0.020338983050847456,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.12903225806451613
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.3103448275862069
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.08571428571428572
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.12657262676324818
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.23481781376518218
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.11273080660835763
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.096875
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.19285714285714287
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.2222222222222222
+          }
+        }
+      },
+      {
+        "identity": "ton_hybrid38_seed42",
+        "method": "hybrid38",
+        "training_source": "ton",
+        "seed": 42,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9980216523721628,
+          "partial_roc_auc_001": 0.805390595769246,
+          "average_precision": 0.9969603359546729,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9709259711702908,
+            "0.01": 0.97357858364455
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27818,
+        "fp": 54,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9709259711702908,
+        "fpr": 0.00130605137135394,
+        "precision": 0.9980625717566016,
+        "f1": 0.9843072731454452,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.9297071129707113,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9709259711702908
+          }
+        }
+      },
+      {
+        "identity": "ton_hybrid38_seed42",
+        "method": "hybrid38",
+        "training_source": "ton",
+        "seed": 42,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.6750632027439669,
+          "partial_roc_auc_001": 0.5416154442921325,
+          "average_precision": 0.4913035197202199,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14327485380116958,
+            "0.01": 0.29963798384851015
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 1037,
+        "fp": 75,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.14438874965190754,
+        "fpr": 0.001029965118514653,
+        "precision": 0.9325539568345323,
+        "f1": 0.2500602845430432,
+        "worst_window_fpr": 0.00503711558854719,
+        "worst_window_recall": 0.003389830508474576,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.20689655172413793
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.18441558441558442
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.1414410979794129
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.19331983805668015
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.06899902818270165
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.109375
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.2
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.3333333333333333
+          }
+        }
+      },
+      {
+        "identity": "ton_hybrid38_seed43",
+        "method": "hybrid38",
+        "training_source": "ton",
+        "seed": 43,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9980289889995886,
+          "partial_roc_auc_001": 0.8133501860831247,
+          "average_precision": 0.9970832510841525,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9709259711702908,
+            "0.01": 0.9735087780531221
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27819,
+        "fp": 55,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9709608739660047,
+        "fpr": 0.0013302375078604943,
+        "precision": 0.9980268350434096,
+        "f1": 0.9843078283945157,
+        "worst_window_fpr": 0.005687693898655636,
+        "worst_window_recall": 0.9297071129707113,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9709608739660047
+          }
+        }
+      },
+      {
+        "identity": "ton_hybrid38_seed43",
+        "method": "hybrid38",
+        "training_source": "ton",
+        "seed": 43,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.6653977435218627,
+          "partial_roc_auc_001": 0.5663557596756654,
+          "average_precision": 0.5125969692582443,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.19576719576719576,
+            "0.01": 0.3714842662211083
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 1485,
+        "fp": 82,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.20676691729323307,
+        "fpr": 0.0011260951962426872,
+        "precision": 0.9476707083599234,
+        "f1": 0.33946736769916563,
+        "worst_window_fpr": 0.00503711558854719,
+        "worst_window_recall": 0.013559322033898305,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.06451612903225806
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.3448275862068966
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.1974025974025974
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.18414029736942433
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.2839068825910931
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.15160349854227406
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.16770833333333332
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.2357142857142857
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.3333333333333333
+          }
+        }
+      },
+      {
+        "identity": "ton_hybrid38_seed44",
+        "method": "hybrid38",
+        "training_source": "ton",
+        "seed": 44,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9979880968618442,
+          "partial_roc_auc_001": 0.7711044129229205,
+          "average_precision": 0.9965516770185694,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9709259711702908,
+            "0.01": 0.9733691668702663
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 27819,
+        "fp": 52,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.9709608739660047,
+        "fpr": 0.001257679098340831,
+        "precision": 0.9981342614186789,
+        "f1": 0.9843600721842822,
+        "worst_window_fpr": 0.0062047569803516025,
+        "worst_window_recall": 0.9297071129707113,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.9709608739660047
+          }
+        }
+      },
+      {
+        "identity": "ton_hybrid38_seed44",
+        "method": "hybrid38",
+        "training_source": "ton",
+        "seed": 44,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.7230837923939397,
+          "partial_roc_auc_001": 0.5542326044814612,
+          "average_precision": 0.5266829874429049,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.17126148705096073,
+            "0.01": 0.3412698412698413
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 1201,
+        "fp": 50,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.16722361459203564,
+        "fpr": 0.000686643412343102,
+        "precision": 0.9600319744204636,
+        "f1": 0.2848333926242144,
+        "worst_window_fpr": 0.003976670201484623,
+        "worst_window_recall": 0.006779661016949152,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 0.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 0.2413793103448276
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.19220779220779222
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.1505909264201296
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 0.21912955465587045
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.10398445092322643
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 0.15729166666666666
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 0.22142857142857142
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 0.3333333333333333
+          }
+        }
+      },
+      {
+        "identity": "unsw_flow14_seed42",
+        "method": "flow14",
+        "training_source": "unsw",
+        "seed": 42,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.04228524941484971,
+          "partial_roc_auc_001": 0.4999079054378937,
+          "average_precision": 0.34535480464716456,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.002443195699975568,
+            "0.01": 0.007120170325643084
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 70,
+        "fp": 36,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.002443195699975568,
+        "fpr": 0.0008707009142359599,
+        "precision": 0.660377358490566,
+        "f1": 0.004868379872726641,
+        "worst_window_fpr": 0.0026338893766461808,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.002443195699975568
+          }
+        }
+      },
+      {
+        "identity": "unsw_flow14_seed42",
+        "method": "flow14",
+        "training_source": "unsw",
+        "seed": 42,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9999783844041916,
+          "partial_roc_auc_001": 0.9892175788583006,
+          "average_precision": 0.9995758576548721,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.9998607630186578,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7176,
+        "fp": 44,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9991645781119465,
+        "fpr": 0.0006042462028619297,
+        "precision": 0.9939058171745152,
+        "f1": 0.9965282599638939,
+        "worst_window_fpr": 0.0013770311209033324,
+        "worst_window_recall": 0.9956896551724138,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9974025974025974
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9984750285932139
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9990281827016521
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "unsw_flow14_seed43",
+        "method": "flow14",
+        "training_source": "unsw",
+        "seed": 43,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.040642755302094366,
+          "partial_roc_auc_001": 0.5002999394899152,
+          "average_precision": 0.3375934851353584,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.002478098495689505,
+            "0.01": 0.007120170325643084
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 71,
+        "fp": 23,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.002478098495689505,
+        "fpr": 0.0005562811396507522,
+        "precision": 0.7553191489361702,
+        "f1": 0.0049399895634023305,
+        "worst_window_fpr": 0.001755926251097454,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.002478098495689505
+          }
+        }
+      },
+      {
+        "identity": "unsw_flow14_seed43",
+        "method": "flow14",
+        "training_source": "unsw",
+        "seed": 43,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9999786368044433,
+          "partial_roc_auc_001": 0.9893130587510361,
+          "average_precision": 0.999654675361681,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.0,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7178,
+        "fp": 43,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.999443052074631,
+        "fpr": 0.0005905133346150677,
+        "precision": 0.994045146101648,
+        "f1": 0.9967367909463306,
+        "worst_window_fpr": 0.0013770311209033324,
+        "worst_window_recall": 0.9956896551724138,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9988562714449104
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9990281827016521
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "unsw_flow14_seed44",
+        "method": "flow14",
+        "training_source": "unsw",
+        "seed": 44,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.038247410603996786,
+          "partial_roc_auc_001": 0.5006251051286497,
+          "average_precision": 0.3363691956150459,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.002478098495689505,
+            "0.01": 0.007120170325643084
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 71,
+        "fp": 29,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.002478098495689505,
+        "fpr": 0.0007013979586900788,
+        "precision": 0.71,
+        "f1": 0.004938958644916698,
+        "worst_window_fpr": 0.002126528442317916,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.002478098495689505
+          }
+        }
+      },
+      {
+        "identity": "unsw_flow14_seed44",
+        "method": "flow14",
+        "training_source": "unsw",
+        "seed": 44,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9999768365405262,
+          "partial_roc_auc_001": 0.9884124765012355,
+          "average_precision": 0.9994645913969897,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.0,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7176,
+        "fp": 40,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9991645781119465,
+        "fpr": 0.0005493147298744816,
+        "precision": 0.9944567627494457,
+        "f1": 0.9968051118210862,
+        "worst_window_fpr": 0.0010967918837400603,
+        "worst_window_recall": 0.9956896551724138,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 0.9974025974025974
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9984750285932139
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 0.9990281827016521
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "unsw_behavior24_seed42",
+        "method": "behavior24",
+        "training_source": "unsw",
+        "seed": 42,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.8909442597084866,
+          "partial_roc_auc_001": 0.5002089843263656,
+          "average_precision": 0.7118722574302814,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.002338487312833758,
+            "0.01": 0.0023733901085476947
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 5,
+        "fp": 17,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.00017451397856968343,
+        "fpr": 0.00041116432061142553,
+        "precision": 0.22727272727272727,
+        "f1": 0.00034876015763959126,
+        "worst_window_fpr": 0.001755926251097454,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.00017451397856968343
+          }
+        }
+      },
+      {
+        "identity": "unsw_behavior24_seed42",
+        "method": "behavior24",
+        "training_source": "unsw",
+        "seed": 42,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9999985200167054,
+          "partial_roc_auc_001": 0.9992596381716985,
+          "average_precision": 0.9999850083073428,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.0,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7182,
+        "fp": 39,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 1.0,
+        "fpr": 0.0005355818616276195,
+        "precision": 0.9945990859991691,
+        "f1": 0.9972922307852531,
+        "worst_window_fpr": 0.0013770311209033324,
+        "worst_window_recall": 1.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 1.0
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "unsw_behavior24_seed43",
+        "method": "behavior24",
+        "training_source": "unsw",
+        "seed": 43,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.8936312064341528,
+          "partial_roc_auc_001": 0.5004619378557188,
+          "average_precision": 0.7287388897008619,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.002338487312833758,
+            "0.01": 0.0025130012914034413
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 57,
+        "fp": 21,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0019894593556943913,
+        "fpr": 0.0005079088666376433,
+        "precision": 0.7307692307692307,
+        "f1": 0.003968115841136134,
+        "worst_window_fpr": 0.0026338893766461808,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0019894593556943913
+          }
+        }
+      },
+      {
+        "identity": "unsw_behavior24_seed43",
+        "method": "behavior24",
+        "training_source": "unsw",
+        "seed": 43,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9999984913348583,
+          "partial_roc_auc_001": 0.9992452900742508,
+          "average_precision": 0.9999847142661016,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.0,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7181,
+        "fp": 37,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 0.9998607630186578,
+        "fpr": 0.0005081161251338955,
+        "precision": 0.9948739262953726,
+        "f1": 0.9973611111111111,
+        "worst_window_fpr": 0.0013770311209033324,
+        "worst_window_recall": 0.9979423868312757,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 0.9996187571483035
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "unsw_behavior24_seed44",
+        "method": "behavior24",
+        "training_source": "unsw",
+        "seed": 44,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.8976358054519417,
+          "partial_roc_auc_001": 0.5003092138896008,
+          "average_precision": 0.7297155956834973,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0023733901085476947,
+            "0.01": 0.0023733901085476947
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 41,
+        "fp": 22,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.001431014624271404,
+        "fpr": 0.0005320950031441978,
+        "precision": 0.6507936507936508,
+        "f1": 0.0028557498084558056,
+        "worst_window_fpr": 0.0026338893766461808,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.001431014624271404
+          }
+        }
+      },
+      {
+        "identity": "unsw_behavior24_seed44",
+        "method": "behavior24",
+        "training_source": "unsw",
+        "seed": 44,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9999983785195943,
+          "partial_roc_auc_001": 0.9991888542242899,
+          "average_precision": 0.9999835674574732,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.0,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7182,
+        "fp": 39,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 1.0,
+        "fpr": 0.0005355818616276195,
+        "precision": 0.9945990859991691,
+        "f1": 0.9972922307852531,
+        "worst_window_fpr": 0.0013770311209033324,
+        "worst_window_recall": 1.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 1.0
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "unsw_hybrid38_seed42",
+        "method": "hybrid38",
+        "training_source": "unsw",
+        "seed": 42,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.205839425549383,
+          "partial_roc_auc_001": 0.5010492494986428,
+          "average_precision": 0.2996149242449282,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0026177096785452514,
+            "0.01": 0.0026177096785452514
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 75,
+        "fp": 13,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0026177096785452514,
+        "fpr": 0.00031441977458520774,
+        "precision": 0.8522727272727273,
+        "f1": 0.005219388287692682,
+        "worst_window_fpr": 0.0009765625,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0026177096785452514
+          }
+        }
+      },
+      {
+        "identity": "unsw_hybrid38_seed42",
+        "method": "hybrid38",
+        "training_source": "unsw",
+        "seed": 42,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9999999961757539,
+          "partial_roc_auc_001": 0.9999980869203404,
+          "average_precision": 0.9999999612369206,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.0,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7182,
+        "fp": 52,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 1.0,
+        "fpr": 0.0007141091488368261,
+        "precision": 0.9928117224218966,
+        "f1": 0.996392896781354,
+        "worst_window_fpr": 0.003564573622155196,
+        "worst_window_recall": 1.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 1.0
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "unsw_hybrid38_seed43",
+        "method": "hybrid38",
+        "training_source": "unsw",
+        "seed": 43,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.814512000744593,
+          "partial_roc_auc_001": 0.5010484049125682,
+          "average_precision": 0.6035142845441412,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0026177096785452514,
+            "0.01": 0.0026177096785452514
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 75,
+        "fp": 12,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0026177096785452514,
+        "fpr": 0.0002902336380786533,
+        "precision": 0.8620689655172413,
+        "f1": 0.005219569907439627,
+        "worst_window_fpr": 0.0009765625,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0026177096785452514
+          }
+        }
+      },
+      {
+        "identity": "unsw_hybrid38_seed43",
+        "method": "hybrid38",
+        "training_source": "unsw",
+        "seed": 43,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9999999980878767,
+          "partial_roc_auc_001": 0.9999990434601701,
+          "average_precision": 0.999999980615762,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.0,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7182,
+        "fp": 40,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 1.0,
+        "fpr": 0.0005493147298744816,
+        "precision": 0.9944613680420936,
+        "f1": 0.9972229936128854,
+        "worst_window_fpr": 0.0019193857965451055,
+        "worst_window_recall": 1.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 1.0
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      {
+        "identity": "unsw_hybrid38_seed44",
+        "method": "hybrid38",
+        "training_source": "unsw",
+        "seed": 44,
+        "environment": "ton_future",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.8222574811706356,
+          "partial_roc_auc_001": 0.501034891535374,
+          "average_precision": 0.6126055190311539,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0026177096785452514,
+            "0.01": 0.0026177096785452514
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 75,
+        "fp": 13,
+        "attacks": 28651,
+        "benign": 41346,
+        "recall": 0.0026177096785452514,
+        "fpr": 0.00031441977458520774,
+        "precision": 0.8522727272727273,
+        "f1": 0.005219388287692682,
+        "worst_window_fpr": 0.0009765625,
+        "worst_window_recall": 0.0,
+        "family": {
+          "ddos": {
+            "n": 28651,
+            "recall": 0.0026177096785452514
+          }
+        }
+      },
+      {
+        "identity": "unsw_hybrid38_seed44",
+        "method": "hybrid38",
+        "training_source": "unsw",
+        "seed": 44,
+        "environment": "unsw_future",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9999999942636305,
+          "partial_roc_auc_001": 0.9999971303805104,
+          "average_precision": 0.9999999418499836,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.0,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7182,
+        "fp": 37,
+        "attacks": 7182,
+        "benign": 72818,
+        "recall": 1.0,
+        "fpr": 0.0005081161251338955,
+        "precision": 0.9948746363762294,
+        "f1": 0.9974307339768071,
+        "worst_window_fpr": 0.0016451878256100905,
+        "worst_window_recall": 1.0,
+        "family": {
+          "Analysis": {
+            "n": 31,
+            "recall": 1.0
+          },
+          "Backdoor": {
+            "n": 29,
+            "recall": 1.0
+          },
+          "DoS": {
+            "n": 385,
+            "recall": 1.0
+          },
+          "Exploits": {
+            "n": 2623,
+            "recall": 1.0
+          },
+          "Fuzzers": {
+            "n": 1976,
+            "recall": 1.0
+          },
+          "Generic": {
+            "n": 1029,
+            "recall": 1.0
+          },
+          "Reconnaissance": {
+            "n": 960,
+            "recall": 1.0
+          },
+          "Shellcode": {
+            "n": 140,
+            "recall": 1.0
+          },
+          "Worms": {
+            "n": 9,
+            "recall": 1.0
+          }
+        }
+      }
+    ]
+  }
+}

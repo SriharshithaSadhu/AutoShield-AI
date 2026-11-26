@@ -1,0 +1,133 @@
+{
+  "source": "generalization_evaluator_v2/results.json",
+  "source_sha256": "749964ec17514963d013064fc971ad0be7bb57beeb82d663bc208b03f090cb29",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "scope": "Development comparison on previously inspected NF-v3. Four shared configurations per seed, identical internal folds, final calibration excluded from selection.",
+    "bank": [
+      {
+        "n_estimators": 60,
+        "num_leaves": 15,
+        "min_child_samples": 20,
+        "reg_lambda": 0
+      },
+      {
+        "n_estimators": 150,
+        "num_leaves": 31,
+        "min_child_samples": 20,
+        "reg_lambda": 0
+      },
+      {
+        "n_estimators": 150,
+        "num_leaves": 15,
+        "min_child_samples": 200,
+        "reg_lambda": 10
+      },
+      {
+        "n_estimators": 100,
+        "num_leaves": 7,
+        "min_child_samples": 500,
+        "reg_lambda": 30
+      }
+    ],
+    "version": "v2 stochastic subsampling; native warmed inference; min-family then mean-family tie break",
+    "runs": [
+      {
+        "seed": 42,
+        "diagnostic_only": false,
+        "selected": {
+          "pooled": 2,
+          "worst_window": 2,
+          "family_aware": 2
+        },
+        "outcomes": {
+          "pooled": {
+            "fp": 3329,
+            "tp": 89231,
+            "fpr": 0.04225745439774559,
+            "recall": 0.7361018305409128,
+            "bytes": 269190
+          },
+          "worst_window": {
+            "fp": 3329,
+            "tp": 89231,
+            "fpr": 0.04225745439774559,
+            "recall": 0.7361018305409128,
+            "bytes": 269190
+          },
+          "family_aware": {
+            "fp": 3329,
+            "tp": 89231,
+            "fpr": 0.04225745439774559,
+            "recall": 0.7361018305409128,
+            "bytes": 269190
+          }
+        }
+      },
+      {
+        "seed": 43,
+        "diagnostic_only": false,
+        "selected": {
+          "pooled": 2,
+          "worst_window": 2,
+          "family_aware": 2
+        },
+        "outcomes": {
+          "pooled": {
+            "fp": 4123,
+            "tp": 99297,
+            "fpr": 0.05233628251183691,
+            "recall": 0.8191402479768357,
+            "bytes": 269206
+          },
+          "worst_window": {
+            "fp": 4123,
+            "tp": 99297,
+            "fpr": 0.05233628251183691,
+            "recall": 0.8191402479768357,
+            "bytes": 269206
+          },
+          "family_aware": {
+            "fp": 4123,
+            "tp": 99297,
+            "fpr": 0.05233628251183691,
+            "recall": 0.8191402479768357,
+            "bytes": 269206
+          }
+        }
+      },
+      {
+        "seed": 44,
+        "diagnostic_only": false,
+        "selected": {
+          "pooled": 2,
+          "worst_window": 2,
+          "family_aware": 2
+        },
+        "outcomes": {
+          "pooled": {
+            "fp": 3394,
+            "tp": 95807,
+            "fpr": 0.04308254737937775,
+            "recall": 0.7903498568729841,
+            "bytes": 269174
+          },
+          "worst_window": {
+            "fp": 3394,
+            "tp": 95807,
+            "fpr": 0.04308254737937775,
+            "recall": 0.7903498568729841,
+            "bytes": 269174
+          },
+          "family_aware": {
+            "fp": 3394,
+            "tp": 95807,
+            "fpr": 0.04308254737937775,
+            "recall": 0.7903498568729841,
+            "bytes": 269174
+          }
+        }
+      }
+    ]
+  }
+}

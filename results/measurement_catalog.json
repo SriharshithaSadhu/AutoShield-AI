@@ -1,0 +1,437 @@
+[
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__benign_group_control__stress_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/benign_group_control/stress_results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__family_coverage_control__nearby_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/family_coverage_control/nearby_results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__family_coverage_control__stress_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/family_coverage_control/stress_results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__isolation_forest_control__nearby_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/isolation_forest_control/nearby_results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__isolation_forest_control__stress_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/isolation_forest_control/stress_results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__nearby_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/nearby_results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__recent_benign_control__stress_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/recent_benign_control/stress_results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__sensor_sensitivity_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/sensor_sensitivity_results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__source_transfer_control__nearby_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/source_transfer_control/nearby_results.json"
+  },
+  {
+    "path": "measurements/08_behavioral_detection/behavioral_observation_2026-11-22__source_transfer_control__stress_results.json",
+    "phase": "08_behavioral_detection",
+    "source": "behavioral_observation_2026-11-22/source_transfer_control/stress_results.json"
+  },
+  {
+    "path": "measurements/09_data_integrity_and_observability/budget_forest_candidates__results.json",
+    "phase": "09_data_integrity_and_observability",
+    "source": "budget_forest_candidates/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/causal_context_ablation__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "causal_context_ablation/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/causal_context_components__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "causal_context_components/results.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/cicids2017_lightgbm_mopso_constraint_blind_dev_seed42.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "cicids2017_lightgbm_mopso_constraint_blind_dev_seed42.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/cicids2017_lightgbm_mopso_constraint_blind_dev_seed43.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "cicids2017_lightgbm_mopso_constraint_blind_dev_seed43.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/cicids2017_lightgbm_mopso_dev_seed42.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "cicids2017_lightgbm_mopso_dev_seed42.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/cicids2017_lightgbm_mopso_feasibility_first_dev_seed42.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "cicids2017_lightgbm_mopso_feasibility_first_dev_seed42.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/cicids2017_lightgbm_mopso_feasibility_first_dev_seed43.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "cicids2017_lightgbm_mopso_feasibility_first_dev_seed43.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/context_full_period__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "context_full_period/results.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__deadline_delay0.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/deadline_delay0.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__deadline_delay4.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/deadline_delay4.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__deadline_evidence1000_delay4.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/deadline_evidence1000_delay4.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__deadline_failure_attribution.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/deadline_failure_attribution.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__deadline_recovery_summary.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/deadline_recovery_summary.json"
+  },
+  {
+    "path": "measurements/06_budgeted_verification/corrected_cse_gate__decision_value_t1.json",
+    "phase": "06_budgeted_verification",
+    "source": "corrected_cse_gate/decision_value_t1.json"
+  },
+  {
+    "path": "measurements/06_budgeted_verification/corrected_cse_gate__decision_value_t2.json",
+    "phase": "06_budgeted_verification",
+    "source": "corrected_cse_gate/decision_value_t2.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__nf_ton_deadline_failure_attribution.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/nf_ton_deadline_failure_attribution.json"
+  },
+  {
+    "path": "measurements/06_budgeted_verification/corrected_cse_gate__nf_ton_decision_value_t1.json",
+    "phase": "06_budgeted_verification",
+    "source": "corrected_cse_gate/nf_ton_decision_value_t1.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__recovery_delay0_1000.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/recovery_delay0_1000.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__recovery_delay0_3000.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/recovery_delay0_3000.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__recovery_delay4_1000.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/recovery_delay4_1000.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/corrected_cse_gate__recovery_delay4_3000.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "corrected_cse_gate/recovery_delay4_3000.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed42.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed42.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed42_chunk40k.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed42_chunk40k.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed42_fpr_capped_dev.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed42_fpr_capped_dev.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed42_fpr_capped_dev_analysis.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed42_fpr_capped_dev_analysis.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed42_psi99.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed42_psi99.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed42_threshold.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed42_threshold.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed43.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed43.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed43_fpr_capped_dev.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed43_fpr_capped_dev.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed43_fpr_capped_dev_analysis.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed43_fpr_capped_dev_analysis.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/cse_cic_ids2018_adaptation_all10_seed43_threshold.json",
+    "phase": "04_temporal_adaptation",
+    "source": "cse_cic_ids2018_adaptation_all10_seed43_threshold.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/desktop_bundle_comparison__deadline_pipeline_desktop.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "desktop_bundle_comparison/deadline_pipeline_desktop.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/desktop_bundle_comparison__deadline_recovery_desktop.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "desktop_bundle_comparison/deadline_recovery_desktop.json"
+  },
+  {
+    "path": "measurements/09_data_integrity_and_observability/desktop_bundle_comparison__summary.json",
+    "phase": "09_data_integrity_and_observability",
+    "source": "desktop_bundle_comparison/summary.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/detection_foundation__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "detection_foundation/results.json"
+  },
+  {
+    "path": "measurements/09_data_integrity_and_observability/exact_topk_ablation__results.json",
+    "phase": "09_data_integrity_and_observability",
+    "source": "exact_topk_ablation/results.json"
+  },
+  {
+    "path": "measurements/09_data_integrity_and_observability/expanded_benign_calibration__results.json",
+    "phase": "09_data_integrity_and_observability",
+    "source": "expanded_benign_calibration/results.json"
+  },
+  {
+    "path": "measurements/09_data_integrity_and_observability/five_track_pilot__results.json",
+    "phase": "09_data_integrity_and_observability",
+    "source": "five_track_pilot/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/generalization_evaluator__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "generalization_evaluator/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/generalization_evaluator_v2__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "generalization_evaluator_v2/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/generalization_evaluator_v3__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "generalization_evaluator_v3/results.json"
+  },
+  {
+    "path": "measurements/09_data_integrity_and_observability/integrity_observability_2026-11-26__record_identity_integrity.json",
+    "phase": "09_data_integrity_and_observability",
+    "source": "integrity_observability_2026-11-26/record_identity_integrity.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/iotid20_binary_common77_mopso_seed42.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "iotid20_binary_common77_mopso_seed42.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/iotid20_lightgbm_mopso_constraint_blind_dev_seed42.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "iotid20_lightgbm_mopso_constraint_blind_dev_seed42.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/iotid20_lightgbm_mopso_constraint_blind_dev_seed43.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "iotid20_lightgbm_mopso_constraint_blind_dev_seed43.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/iotid20_lightgbm_mopso_dev_seed42.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "iotid20_lightgbm_mopso_dev_seed42.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/iotid20_lightgbm_mopso_feasibility_first_dev_seed42.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "iotid20_lightgbm_mopso_feasibility_first_dev_seed42.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/iotid20_lightgbm_mopso_feasibility_first_dev_seed43.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "iotid20_lightgbm_mopso_feasibility_first_dev_seed43.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/matched_selection__results.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "matched_selection/results.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/matched_selection_budget_forests__results.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "matched_selection_budget_forests/results.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/mopso_constraint_ablation_cicids_seed42_partial.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "mopso_constraint_ablation_cicids_seed42_partial.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/mopso_constraint_ablation_cicids_seed43_partial.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "mopso_constraint_ablation_cicids_seed43_partial.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/mopso_constraint_ablation_seed42.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "mopso_constraint_ablation_seed42.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/mopso_vs_random_resource_profiles_seed42.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "mopso_vs_random_resource_profiles_seed42.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/multienvironment_2026-11-21__calibration_margin__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "multienvironment_2026-11-21/calibration_margin/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/multienvironment_2026-11-21__harmonization__calibration_margin__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "multienvironment_2026-11-21/harmonization/calibration_margin/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/multienvironment_2026-11-21__harmonization__network_calibration__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "multienvironment_2026-11-21/harmonization/network_calibration/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/multienvironment_2026-11-21__harmonization__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "multienvironment_2026-11-21/harmonization/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/multienvironment_2026-11-21__matched_lightgbm_objective_reference__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "multienvironment_2026-11-21/matched_lightgbm_objective_reference/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/multienvironment_2026-11-21__network_calibration__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "multienvironment_2026-11-21/network_calibration/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/multienvironment_2026-11-21__ranking_objective__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "multienvironment_2026-11-21/ranking_objective/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/multienvironment_2026-11-21__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "multienvironment_2026-11-21/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/multienvironment_2026-11-21__source_coverage_pilot__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "multienvironment_2026-11-21/source_coverage_pilot/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/network_context_2026-11-21__fixed_fit_control__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "network_context_2026-11-21/fixed_fit_control/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/network_context_2026-11-21__full_development_replay__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "network_context_2026-11-21/full_development_replay/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/network_context_2026-11-21__full_training_role_text_audit__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "network_context_2026-11-21/full_training_role_text_audit/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/network_context_2026-11-21__full_training_text_audit__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "network_context_2026-11-21/full_training_text_audit/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/network_context_2026-11-21__prefix_coverage_control__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "network_context_2026-11-21/prefix_coverage_control/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/network_context_2026-11-21__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "network_context_2026-11-21/results.json"
+  },
+  {
+    "path": "measurements/09_data_integrity_and_observability/recent_target_score_diagnostic__results.json",
+    "phase": "09_data_integrity_and_observability",
+    "source": "recent_target_score_diagnostic/results.json"
+  },
+  {
+    "path": "measurements/07_generalization_and_context/representation_selection__results.json",
+    "phase": "07_generalization_and_context",
+    "source": "representation_selection/results.json"
+  },
+  {
+    "path": "measurements/02_automl_and_resource_constraints/selection_stability__results.json",
+    "phase": "02_automl_and_resource_constraints",
+    "source": "selection_stability/results.json"
+  },
+  {
+    "path": "measurements/04_temporal_adaptation/SMART_FACTORY_A_TO_S_REPLAY.json",
+    "phase": "04_temporal_adaptation",
+    "source": "SMART_FACTORY_A_TO_S_REPLAY.json"
+  },
+  {
+    "path": "measurements/05_delayed_feedback_and_safeguards/SMART_FACTORY_A_TO_S_VBC_COMPARISON.json",
+    "phase": "05_delayed_feedback_and_safeguards",
+    "source": "SMART_FACTORY_A_TO_S_VBC_COMPARISON.json"
+  },
+  {
+    "path": "measurements/09_data_integrity_and_observability/tolerance_threshold_audit__results.json",
+    "phase": "09_data_integrity_and_observability",
+    "source": "tolerance_threshold_audit/results.json"
+  }
+]

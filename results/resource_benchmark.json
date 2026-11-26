@@ -1,0 +1,91 @@
+{
+  "hardware": "Windows-10-10.0.26200-SP0",
+  "cpu": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+  "records": [
+    {
+      "method": "flow14",
+      "model_bytes": 180326,
+      "warmup_records": 1000,
+      "measured_records": 5000,
+      "service": {
+        "mean_ms": 0.10861539954785257,
+        "p50_ms": 0.10269996710121632,
+        "p95_ms": 0.13490997953340414,
+        "p99_ms": 0.26310890913009666,
+        "max_ms": 1.2678999919444323
+      },
+      "feature": {
+        "mean_ms": 0.07680141974706203,
+        "p50_ms": 0.07319997530430555,
+        "p95_ms": 0.08899997919797897,
+        "p99_ms": 0.17380304168909794,
+        "max_ms": 0.9849000489339232
+      },
+      "native": {
+        "mean_ms": 0.031234679860062897,
+        "p50_ms": 0.028500042390078306,
+        "p95_ms": 0.04339998122304678,
+        "p99_ms": 0.09721604175865685,
+        "max_ms": 0.3522000042721629
+      },
+      "peak_sampled_rss_bytes": 146780160,
+      "process_peak_working_set_bytes": 156495872,
+      "process_cpu_s": 0.671875,
+      "wall_s": 0.669235400040634,
+      "state": null,
+      "resource_pass": true
+    },
+    {
+      "method": "hybrid38",
+      "model_bytes": 182678,
+      "warmup_records": 1000,
+      "measured_records": 5000,
+      "service": {
+        "mean_ms": 0.15759721999056636,
+        "p50_ms": 0.15170004917308688,
+        "p95_ms": 0.2094150753691793,
+        "p99_ms": 0.3629239695146685,
+        "max_ms": 1.1679999297484756
+      },
+      "feature": {
+        "mean_ms": 0.11908212094567716,
+        "p50_ms": 0.11690007522702217,
+        "p95_ms": 0.15480001457035542,
+        "p99_ms": 0.2647489216178666,
+        "max_ms": 1.0858000023290515
+      },
+      "native": {
+        "mean_ms": 0.037699479679577055,
+        "p50_ms": 0.03439991269260645,
+        "p95_ms": 0.05489995237439871,
+        "p99_ms": 0.10830300976522274,
+        "max_ms": 0.24279998615384102
+      },
+      "peak_sampled_rss_bytes": 147767296,
+      "process_peak_working_set_bytes": 156418048,
+      "process_cpu_s": 0.96875,
+      "wall_s": 0.9661474999738857,
+      "state": {
+        "records": 6000,
+        "state_hosts": 28,
+        "pending_hosts": 2,
+        "max_hosts": 4096,
+        "contact_cap": 64,
+        "evictions": 0,
+        "pending_dropped_host_updates": 0,
+        "maximum_state_hosts": 28,
+        "maximum_pending_hosts": 8,
+        "retained_contact_entries": 264
+      },
+      "resource_pass": true
+    }
+  ],
+  "scope": "Isolated desktop, real contiguous prefix, single-flow deployment service cost.\n\nNo accuracy estimation or Pi claim. Excludes capture/export/network transport;\nincludes feature state, native inference, threshold and an in-memory alert sink.\n",
+  "trace": "First6000 genuine ordered ToN records;1000 warmup,5000 measured; early prefix workload, not worst-case capacity.",
+  "caveats": [
+    "Desktop only; no Raspberry Pi measurements.",
+    "Service cost excludes CSV loading, capture, exporter receipt, network transport and queue wait.",
+    "Independent process per method; arrays for6000 records retained. Peak working set includes imports and trace loading.",
+    "Combined service includes state update even at tied timestamps; current event has no access to same-time peers."
+  ]
+}

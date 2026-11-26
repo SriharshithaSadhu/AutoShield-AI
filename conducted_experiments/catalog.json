@@ -1,0 +1,1655 @@
+{
+  "phases": {
+    "01_baseline_reproduction": [
+      "Baseline reproduction",
+      "Reproduced benchmark pipelines on CICIDS2017 and IoTID20; compared tree models, balancing, feature selection and tuning. These are benchmark-split reproduction results, not new cross-network performance."
+    ],
+    "02_automl_and_resource_constraints": [
+      "AutoML and resource constraints",
+      "Implemented Pareto archives, feasibility-first search, repeated seeds and matched optimizer comparisons. Results do not establish consistent MOPSO superiority; measured compute and feasibility accompany quality metrics."
+    ],
+    "03_cross_dataset_transfer": [
+      "Cross-dataset transfer",
+      "Audited feature compatibility and tested source-to-target transfer. Per-capture false alarms and recall reveal failures that pooled scores can conceal."
+    ],
+    "04_temporal_adaptation": [
+      "Chronological adaptation",
+      "Compared frozen, periodic, drift-triggered and threshold-update policies on ordered traffic. Adaptation can recover detection while introducing capture-level false-alarm risk."
+    ],
+    "05_delayed_feedback_and_safeguards": [
+      "Delayed feedback and streaming safeguards",
+      "Evaluated label delays, approval, rollback, recovery and deadline batching. The work measures harmful updates, missed attacks, switching and delivery cost; it does not establish a universally safe update controller."
+    ],
+    "06_budgeted_verification": [
+      "Budgeted verification",
+      "Compared randomized disagreement review and decision-value allocation under label/reviewer budgets. No reliable general advantage was established; this direction was not promoted as a successful new algorithm."
+    ],
+    "07_generalization_and_context": [
+      "Generalization and network context",
+      "Compared single- and multi-environment fitting, robust/group-aware controls and legitimate service/direction context. Later-period performance remains below the joint recall/FPR requirement."
+    ],
+    "08_behavioral_detection": [
+      "Causal behavioral detection",
+      "Implemented bounded host histories and flow/behavioral/hybrid comparisons. Hybrid recall increases substantially on the full development replay, but false alarms exceed the target. Coverage and sensor-visibility controls are reported separately."
+    ],
+    "09_data_integrity_and_observability": [
+      "Data integrity and observability",
+      "Verified timestamps, cache alignment, feature conventions and label consistency; screened temporal data sources. Empirical feature-collision bounds are scoped to the audited family and fixed records, not population guarantees."
+    ]
+  },
+  "scripts": [
+    {
+      "path": "conducted_experiments/source/acquire_nf_cicids2018_v3.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "1168a79e0930e07d9d65aafebc1b6e87a4b444a0b3d5ae061e532905a399face"
+    },
+    {
+      "path": "conducted_experiments/source/acquire_nf_unsw_v3.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "98fc739f4a359e3db0f8333f09d756d7c83db2202700e9d8b5487a845991ac1b"
+    },
+    {
+      "path": "conducted_experiments/source/adaptive_rolling_mean.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "949b8111aa160f3174c945b71e79b40a2f92b41cdc3a974ebae7ebf486a98642"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_behavioral_milestone.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "55b7d9dec76e7d42c4a00cba36beca4073e179761d2752129e00b8b6e1c78824"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_constraint_selection_effect.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "4313e9d88f1d423cc5bb1fb0a146fbdc6c0a03f5031ac63d2ffc38c79930d5a4"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_context_conditional_shift.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "4ec36a3261c5757861539e675aead20e3a67326140dc88936f05d99b906745ba"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_context_conflict_filter_counterfactual.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "82ff08d5b421697a4283f421bb3f4cedf42fd785802c12ece6a03793700beae6"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_context_feasibility_gap.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "1a1c402949c31f12550daffc6c04658c95370b3ff2dbe2f7deb06fb43f52051e"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_context_paired_blocks.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "1d0f3076165225ee94fc9451dc5e3c0812e058957fcd7fb4a0654f1b0b034c38"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_context_shift_decomposition.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "50679aedb0cb5dd393b3e1544453ce43fbb82880c6075d7d817031501c788254"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_context_stress_failure.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "944bdc723cf5577c38e5416c3fa0ef3258f3670eebc7a090b8e17e8f3a0b9e08"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_context_time_windows.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "d3926fd9d19d0647d8b7e515724679f9d4840e2e1270e609a4d9911559a6bf68"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_cse_stream_order_sensitivity.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "e0f93be3883d266e698246956aa62ba1e00e4b022e91defc1b571b90b134353e"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_fpr_capped_replay.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "74929e3f87e0cf80dfa4077f1588c12261a5419a64ce35b01b0c40cf6bdd1a47"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_full_text_observability_envelope.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "f10b25312999ac1b99426f1a95758620657ad3dfaab3e4bd748d8fe5516c81af"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_mopso_constraint_ablation.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "3d4ecd98498d7966d395ed7bf700ebbb68fc82dbdf93910ec484a94ab1d60415"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_psi_threshold_sensitivity.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "8ac8110bcdf35485013ba8e8fe524b9670a972a3898d0b2ef6419113d936bf24"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_rccda_cse_policy.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "1656facc220ac17613efa34deffddd7196d01dc52928d77238d461c0acbedd88"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_recent_target_scores.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "9fff77bf5e5e6242bcb5067c126262235f6b1af734e199332ac39ee594847d92"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_search_comparison.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "4771ad32fd09559d2715e5d4f51a3841479aa0821eaf25c38ddb5c85ca4ee86d"
+    },
+    {
+      "path": "conducted_experiments/source/analyze_transfer_by_capture.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "0b8f11a2de7fa6c5a1c0bee7a2af3158f2fa87146ade6be820670a4cfec26aaf"
+    },
+    {
+      "path": "conducted_experiments/source/apply_strict_bank_constraints.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "decb7e1a60f2e44caa6b4fa369404878c9be04fbe75bfddc527a0c545aaad762"
+    },
+    {
+      "path": "conducted_experiments/source/audit_20261111_extensions.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "304d9d0d4e933c1ab43cee1e2b8e8ab487fe581d474d552aee94bdcbaf14ef2e"
+    },
+    {
+      "path": "conducted_experiments/source/audit_alert_buffer_timeout.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "db8376f54b2cfc0df313f113f401783050e8513c3a6003ec50d56a8f0dadda50"
+    },
+    {
+      "path": "conducted_experiments/source/audit_apex_ids2026_parquet.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "2d74f1da613c90212f294e72ffaf4c0e1b61ef2b7c8c2d7d77c68bb7fb901d0b"
+    },
+    {
+      "path": "conducted_experiments/source/audit_argus_attack_event_packet_coverage.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "20acb146538cbaeafb646bd94783c61e0ea453a2afe00aa42c20c0021dc1d0b9"
+    },
+    {
+      "path": "conducted_experiments/source/audit_base_objectives.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "566f11fcd176ea6bbb647797668d7f31182062d58ce9d97188e035a50f48e207"
+    },
+    {
+      "path": "conducted_experiments/source/audit_behavioral_benign_service_coverage.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "d47dd883e1818e583218d36ca6d6d0327fc5bf8a6249c59bcfdd5eb1994563d0"
+    },
+    {
+      "path": "conducted_experiments/source/audit_behavioral_false_alarm_context.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "a1d97cb07f7086fe1f066940780e193ca1a270e3c5557f96e20d1d685c76420c"
+    },
+    {
+      "path": "conducted_experiments/source/audit_behavioral_family_operating_points.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "6539e0a53452c77cad4d8f28bf5d1ebfc0eb76061dbfa46947b7b04e0b929b4f"
+    },
+    {
+      "path": "conducted_experiments/source/audit_behavioral_training_separation.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "8113817ce088a54dae8e95c439386a75d98e7c8fd0848aaf8dd2d9f01f7957c3"
+    },
+    {
+      "path": "conducted_experiments/source/audit_cicids2017_sample_overlap.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "34f12d90843640ecbac98cc5897cf60b6df719c8fd96fdb6770ff3e6d5c65a3b"
+    },
+    {
+      "path": "conducted_experiments/source/audit_collision_details.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "ee4d03d458caf18fd25899ee34850a5aa494b83643fe0537aaecdc70f5dd1ac7"
+    },
+    {
+      "path": "conducted_experiments/source/audit_collision_shift.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "33033e477098d696f4013a65226463d80b57a5a944f50bb99893766e1bcce426"
+    },
+    {
+      "path": "conducted_experiments/source/audit_complete_context_observability.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "fa1240962eac295c30c60db76729b1836746c3eae13181905a3ce268bd3b4b23"
+    },
+    {
+      "path": "conducted_experiments/source/audit_conflict_context.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "c950f9560e8c49db1b2b62aa5d15c894773736d2c9bfe3f99569b474d03d63bc"
+    },
+    {
+      "path": "conducted_experiments/source/audit_context_cache_alignment.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "ce3829ff93f48a553aa8798c0862a259997797b13928fe1c6b83a7bf92073144"
+    },
+    {
+      "path": "conducted_experiments/source/audit_context_family_information.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "b85537943dc794b2462f92878dfe7ae55b3167181110df20b35ec99109e2794a"
+    },
+    {
+      "path": "conducted_experiments/source/audit_context_identity_invariance.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "14685c10fafc4844338aae241ae9435045d3acf9e91b2f8ea757f1dd6e1814af"
+    },
+    {
+      "path": "conducted_experiments/source/audit_context_information_bound.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "01c96056664dbdfa5fcd7ae7fae28dd11ab134eb26c6ddae8a019e27ca8a0449"
+    },
+    {
+      "path": "conducted_experiments/source/audit_context_occupancy.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "1adab252b3490bff443a2b356e1002641b39dfa0251b3649cb7baf3b1de1aa64"
+    },
+    {
+      "path": "conducted_experiments/source/audit_context_precision_provenance.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "d28e88e9104714c5b6b759a0da6f6da3375341ec98416c11e3bb0b482d480c35"
+    },
+    {
+      "path": "conducted_experiments/source/audit_context_training_conflicts.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "bfd1764ae5ae35e0d52680073d1e4b215e2e8123c2c63659b835619fcf0ef62a"
+    },
+    {
+      "path": "conducted_experiments/source/audit_context_training_domains.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "95feae4686e296e6d780c97f87c6094622c258dde0e496d04f5d30fc3783bd62"
+    },
+    {
+      "path": "conducted_experiments/source/audit_corrected_cse_capture.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "eccb9206f619d53c5a05f44a6722ff64cc0e891f0ee26f5d912bc157e252a794"
+    },
+    {
+      "path": "conducted_experiments/source/audit_corrected_cse_remote.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "e34ef82bfc6f86b6688efd58c8d9c8eb990c766f6c4c7fd97f7cc016c940d7e5"
+    },
+    {
+      "path": "conducted_experiments/source/audit_corrected_replay_cache.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "d9da4784b458ea77ff77258d86b0512779d614e21ca18217b9cb042d28991757"
+    },
+    {
+      "path": "conducted_experiments/source/audit_cse_cic_ids2018.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "844f0b0f4c56c68fb9dce39406114820645b2a302cca923d54ff0c7dddf9bffc"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ctu13_temporal_gate.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "98bb52a6c7442354fc85a85bb198a82ca13cb8aa9d1e43b3d62118a9fa4da55d"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ctu_echo_pcap_alignment.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "29e022e8156731b87767db7e3b24f01c7bd9c5c46aef1b17813e12d95650496e"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ctu_echo_pcap_flow_assignment.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "d6b131661842b8892be423f82d975301856c5ebec159078391580c4980307f30"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ctu_echo_prefix_feasibility.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "d3f33445b5a28c5903e977bd1b5e56c47c87b002b3b1fbff15f304bca90f5636"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ctu_echo_tuple_segment_assignment.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "403cb3fc5970715d84701221ae25352e13cda8aac7f471a917fd093b102aad88"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ctu_idseval6.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "af092ed353f7cd1c88786c739ea7734dec300a3461d0e1fe93a29c820f1a68df"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ctu_raspberrypi_temporal.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "de6da5c35c4cf45ffb7202c1ebad68eb07298c205d9763eb87d7b601927cfc1d"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ctu_sme11_echo.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "48fbf416ffbb532d3d01d4d65a8bbe64c48409fa4bf81053b586415eaa8f6dc0"
+    },
+    {
+      "path": "conducted_experiments/source/audit_detection_score_separability.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "4251f3e929e7f8a533bdb235168c3d20b36502e4e035646461588f7be1e2af3f"
+    },
+    {
+      "path": "conducted_experiments/source/audit_feature_label_ambiguity.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "b0b1565108a08ddb645bda25791b1edd756d8ec07f284e33743b237f0f1d763a"
+    },
+    {
+      "path": "conducted_experiments/source/audit_five_track_pilot.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "1775f72d2590f813a38416f68b7d07ce7531db31cd6bb02e85803d419940bf1b"
+    },
+    {
+      "path": "conducted_experiments/source/audit_full_context_input_ranges.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "ad9385b8e6b5a2f1053d920e3bdeb987bf80fc23c75be94922b67397bb5ed296"
+    },
+    {
+      "path": "conducted_experiments/source/audit_full_training_benign_coverage.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "3ec516e610e95188b345f17c089bfc886fbffaa36bd3d5fadd2427081fe5972c"
+    },
+    {
+      "path": "conducted_experiments/source/audit_full_training_role_text_observability.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "9774aeeaddedab77608524bc97cb85c3d184870b15dab07b7d7fe37d2b91b099"
+    },
+    {
+      "path": "conducted_experiments/source/audit_full_training_text_observability.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "9b1bba55d6223049ad074f3edc846926975bcb5af124b2fdf2825834ea618a50"
+    },
+    {
+      "path": "conducted_experiments/source/audit_generalization_selection.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "21e46569ece9f6a501fdcf638c4ad5d13529c59deabec2db9a0a0c503965c691"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iot_nid_arp_event_temporal_alignment.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "f25198fa8048eb7a49d271941591d2fe4e215a023963dddb0ec1360876b8de11"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iot_nid_attack_filter_packet_protocols.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "3aa11623c097f8790533d65c29b8652a4e69be2b5d30b6f82ab8cdeac02c767c"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iot_nid_attack_filters.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "ccde0ca11059ebc78f6c939656dd02d3d9bd0b9f897e86f45e8364104f527c50"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iot_nid_cfm_v3_timeout_pilot.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "f9d54ea4963382e5ca03fbcb92e29279a7e0276435005b8738c3a0edac82a86f"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iot_nid_dos_capture_label_provenance.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "5d3b7b78ab982fd92524abaf0d23168f26cb9e355e9e1bd6c3f036bd2c703f9a"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iot_nid_raw_capture_inventory.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "301a6684a50cc2919683ec814b7e42e89a512d800392ec36abb62915ad58705d"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iot_nid_scan_capture_label_provenance.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "f9824bf7f033ee265e63d8850d70a8daa49e58729b68b56a9d2c5dad838ba8b8"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iot_nid_scan_timeout_identity.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "da63b24938d99d76470c1c89a9e7867996d4a64763a7a3fdc590f211dbdeb042"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iot_nid_tcp_packet_flow_correspondence.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "3db0946f470c9cf1eb1557688e7ba10df70284a896937421bf66735bbf8ab02f"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iotid20_cse_feature_algebra.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "5afcbd2d4eb79fbad7cad5a513a1ade6e991787bca4358290dcae757c4ac3733"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iotid20_cse_feature_semantics.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "af4f9260301b53bf5bfd89fa4852766fc1f2b643fc1e32149654403b8791fa96"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iotid20_cse_feature_shift.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "035ec72d363e41ffabc4761eb96fa506eb495c4843918a82de8b55f5db0ad64d"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iotid20_label_mapping.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "ffb4a66aed523ae0a0f934769b556fcb779b4ec6284bcf1a9892f62c6ec0c844"
+    },
+    {
+      "path": "conducted_experiments/source/audit_iotid20_split_integrity.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "22ec2da06b9a49c87db0b6a73ff12f4dc7044fe8b76398ba9cfac7e87340d18a"
+    },
+    {
+      "path": "conducted_experiments/source/audit_matched_selection.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "c2502c30a07f5bc21ce67e0aaad6189f9072ca56edada144a486ea4b1c321c56"
+    },
+    {
+      "path": "conducted_experiments/source/audit_multienvironment_units.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "eb0a0ed2d9dbf43d379845688a968202b9d79d07b0f45074a62fde528237193c"
+    },
+    {
+      "path": "conducted_experiments/source/audit_multienvironment_weights.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "a5ab09e8fa3d8f88e0900382d5a71a19ffa45308322e05400653ee053d7c5663"
+    },
+    {
+      "path": "conducted_experiments/source/audit_original_core6_rollback.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "a1a1ea23f2e42c9ddee5e76a8e1c938129775dfa346c96bbdd6eb662e62e337b"
+    },
+    {
+      "path": "conducted_experiments/source/audit_previous_history_observability.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "ea77bcbf65bc5fa3bfd79070fdc7ad3a5d695239dd6e389f923b1f1f8fd6cc4c"
+    },
+    {
+      "path": "conducted_experiments/source/audit_raw_feature_conflicts.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "4b7a058419ffacdf91efa08232d706b5b24df1ac8dc41485a100c75ab8365e79"
+    },
+    {
+      "path": "conducted_experiments/source/audit_record_identity_integrity.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "040487f26b350d6d2b91acc07610d4ce863266eedbb0992f1535418a9321b014"
+    },
+    {
+      "path": "conducted_experiments/source/audit_score_numerical_integrity.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "e713777b293985ef6ca1710429741f6a5b8aa1a27f5567bc50c8f139e091d01d"
+    },
+    {
+      "path": "conducted_experiments/source/audit_smart_factory_flows.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "8cafbfe5624dcb6a1b70d5b843678dd39ec1db6be6a26c63e5702d7350f0883a"
+    },
+    {
+      "path": "conducted_experiments/source/audit_training_domain_fingerprint.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "7582f8ab206ac82780b14dda3904e20d9f6d625aa23249f012f32be1bdb46a6a"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ugr16_feature_data.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "b62de7eef4a281c1dbeb59a642552a7704923bc4b109b75834a17d091b9ccc60"
+    },
+    {
+      "path": "conducted_experiments/source/audit_ugr16_shift_shape_forward_replay.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "496ef5626e2515c7e8ca57e38a8a3a283c5c1a1145b56d563d1d2057ced01345"
+    },
+    {
+      "path": "conducted_experiments/source/audit_uwf_zeekdata24.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "9e6c5e38d276722d946ba8f9bf45b244d1d79753becbbf420f6232e56c45bf38"
+    },
+    {
+      "path": "conducted_experiments/source/audit_wustl_temporal_candidate.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "b0fa6e5acbbe5a2536b8bb834207ff82079e7dcd9da9ba4dc627f07e0232cfb6"
+    },
+    {
+      "path": "conducted_experiments/source/behavioral_data.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "31e8cbdf392d5f337a171b04396c9374f456662f6ffb0de476ff229604d21f36"
+    },
+    {
+      "path": "conducted_experiments/source/behavioral_models.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "7b52027d73e41a59cceb09595a2960374ee687be619db5c2d20b0c8d82aa7656"
+    },
+    {
+      "path": "conducted_experiments/source/behavioral_observation.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "5c805a2a2ec0f577806880c8ed0f15873e89955b764a9fa80726fd68ae611528"
+    },
+    {
+      "path": "conducted_experiments/source/behavioral_runtime.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "271014eb9a735580f9df9df3ba4a99e2c50bfb5e7a2ec4637671d4d6f744d54c"
+    },
+    {
+      "path": "conducted_experiments/source/benchmark_behavioral_deployment.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "0be487832d31bf73344760a87fed960eecbcc386c48f4b70472bbc5612150665"
+    },
+    {
+      "path": "conducted_experiments/source/benchmark_causal_flow_context.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "a8d98617cf778de58a7dc5c84248ca6811f61717f24d4edac03a4447c6882ebd"
+    },
+    {
+      "path": "conducted_experiments/source/benchmark_deadline_router.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "92971506250595e2a4c6e8cbdd54fc7cdded5d56bac3d71ed7b868baf2c44bf5"
+    },
+    {
+      "path": "conducted_experiments/source/benchmark_model_resources.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "0cb1b0867fbc83bcd942d7b4145d44a5ea98ae30e6bd77131d3fc3b64524508e"
+    },
+    {
+      "path": "conducted_experiments/source/benchmark_model_resources_v2.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "1725b3787026411e570416e998903d4f0d6e7c881764a9be8fc9e5161814cdda"
+    },
+    {
+      "path": "conducted_experiments/source/build_behavioral_device_bundle.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "7567a5fafeecf3cdb55f7528ac5e8dac6e3efe595ca7951e2268847dba551524"
+    },
+    {
+      "path": "conducted_experiments/source/build_budget_forest_candidates.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "59ccf29e4f823531767b06ff23f5404da718479a7dad1d07b651445291466f29"
+    },
+    {
+      "path": "conducted_experiments/source/build_causal_flow_context.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "9eafbf21d4f9f3d9733bd0bc82c1f0788589b7c6e218cb5770fa1872fa9faf9c"
+    },
+    {
+      "path": "conducted_experiments/source/build_corrected_replay.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "3a27c49d0f7186a67a27f24416f553eaab2296771e1ce0ca344ab5f8e12d1c2d"
+    },
+    {
+      "path": "conducted_experiments/source/build_nf_ton_core6_development.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "0bd7b316caf2187567d7ad163ce55d50b2910e713152ac7353b49e45c56d888e"
+    },
+    {
+      "path": "conducted_experiments/source/build_original_core6_replay.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "7eb899c6bf09c55a6415fcb3687eecab55a11463443fce4a1e554f4356284cd6"
+    },
+    {
+      "path": "conducted_experiments/source/candidate_evaluation.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "417b8d8afe312a0020be5b11a29434cb3bbac607d66de001290fda65571ad88c"
+    },
+    {
+      "path": "conducted_experiments/source/causal_flow_context.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "1a22000eeb6e39bcd7b3fc5231ef1533254239cbee314baf82bc2e1500b5ef6c"
+    },
+    {
+      "path": "conducted_experiments/source/constrained_candidate_selection.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "d297c620496ffbb1e8bc5803f118d97000e871761ba39cd23be0248feef86f18"
+    },
+    {
+      "path": "conducted_experiments/source/context_from_audit_signature.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "4de8705a1acf9bcad4951c570187f03a17d727a56573a78740764fb1b58ae174"
+    },
+    {
+      "path": "conducted_experiments/source/context_observability_keys.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "916730a7568f18a0cab997b9f63d03e199b845d73d2f90a4038b4bcdb7609bbb"
+    },
+    {
+      "path": "conducted_experiments/source/deadline_alert_router.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "6886d0d5698dab80272d4f3b4d004d31c3104adf36083868f1c22a4da06e30bf"
+    },
+    {
+      "path": "conducted_experiments/source/deployment_evaluation.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "dc0d38b24488cd3e834c470de132fa0a43341315fc6a7ff698ea210d59ab3327"
+    },
+    {
+      "path": "conducted_experiments/source/diagnose_causal_context_shift.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "1f6d74934b29b78131e46d34d699582f5b65d98949de2e47245a3dd4f67c99fc"
+    },
+    {
+      "path": "conducted_experiments/source/diagnose_context_score_oracle.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "a415400ec10b33ad04a8313a169c7aa8a72f67510340cfc60f0d41f8744fee0d"
+    },
+    {
+      "path": "conducted_experiments/source/diagnose_recent_target_failures.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "90a0a99a8749da824752355b7d69832c7829cf41b703de663bf3914922dd4fea"
+    },
+    {
+      "path": "conducted_experiments/source/download_cicids2017_temporal.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "4afb85bfb2324a997b98beb4672049c38a2cddd863da516470ab3584e43c0eb3"
+    },
+    {
+      "path": "conducted_experiments/source/download_corrected_cse_member.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "8fdb75946bc67d26207371a923ffb8d6c4471550b4883fd524adfabfc65024a7"
+    },
+    {
+      "path": "conducted_experiments/source/download_cse_cic_ids2018.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "8bc7de8e812b84c0a360d1366e2b3b71e4fa94c2e3ee637ffa8d9a724f4d019d"
+    },
+    {
+      "path": "conducted_experiments/source/download_cse_v3_ranges.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "a8dc54219341dbd2636eb4053368756b33e36da11b3fc539d3f3b1be2dd9ceb8"
+    },
+    {
+      "path": "conducted_experiments/source/download_ctu_raspberrypi_parallel.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "40585ec10a07a946c01c7d19bbfe5bf153c42e24f7df69b24e90bc07dac06cdb"
+    },
+    {
+      "path": "conducted_experiments/source/download_ctu_sme11_parallel.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "3dd881dd801aa15635e64b62ba3fb6f121b5c757daa7e9712597847f9e33b6a4"
+    },
+    {
+      "path": "conducted_experiments/source/download_smart_factory_flow_data.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "49c5b7447df13fd7dd4cf516d034d6ca6d5cfe27223c8d89c00107e5fa289f22"
+    },
+    {
+      "path": "conducted_experiments/source/download_ugr16_feature_data.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "00efd98a7bf14cce788bc8dde320d39d00187b25c149ef5ff2c7736500588037"
+    },
+    {
+      "path": "conducted_experiments/source/download_uwf_zeekdata24.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "7a491da1ecb590b41340bfc8279365ff5ce4797b794f7d0ad41f2a8f176f256f"
+    },
+    {
+      "path": "conducted_experiments/source/drift_adaptation_experiment.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "4c1a23acd1e26362cc303b11ad70071810b189396b1543b37fe2276a640dfb33"
+    },
+    {
+      "path": "conducted_experiments/source/early_verification.py",
+      "phase": "06_budgeted_verification",
+      "source_sha256": "66ce4b15dafaaeefce44e3aa79cc07d0430c2f35811740243ae86117b2084ebe"
+    },
+    {
+      "path": "conducted_experiments/source/evaluate_behavioral_sensor_sensitivity.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "0b30f6ffecbca4cb2d8518ed566b873d4910282b78e7fa6218b1c6d86e4dd3d8"
+    },
+    {
+      "path": "conducted_experiments/source/evaluate_pending_exposure.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "8cd795ddb67735a2c72de538a4f19b20b71f2bfe8999536598b8f17196a1a9de"
+    },
+    {
+      "path": "conducted_experiments/source/evaluate_released_label_pool.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "382972d81b6d6a690f5ef589bd95378c7549a165c05cf6aa447083275571ca46"
+    },
+    {
+      "path": "conducted_experiments/source/evaluate_rolling_alert_safeguards.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "0c0fee00ced1e1c2961757e48fa2d46d9c818c30b724b7179797f6e38fda24f1"
+    },
+    {
+      "path": "conducted_experiments/source/experiment_protocol.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "9cdf67e829fa9cd05afdce00bf259889a42188853c39d73f88dd1673b0c492f4"
+    },
+    {
+      "path": "conducted_experiments/source/export_foundation_benchmark_bundle.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "c21665cc2b6bfbbd76f3ecdd0c0bcbf6dd94d368791f3e339f942cf53488b7b3"
+    },
+    {
+      "path": "conducted_experiments/source/extract_ctu_echo_pcaps.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "0b127bfddb69e76aa43ec9398557ba5bd83a83e0039d34be74ebb7f43da690ad"
+    },
+    {
+      "path": "conducted_experiments/source/extract_ctu_raspberrypi_conn_logs.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "2670c76521175a02950ef17a7c2b420a18edf6db310ee919d3eae47a48799739"
+    },
+    {
+      "path": "conducted_experiments/source/extract_ctu_sme11_conn_logs.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "2757993df20f23eac2bfd90fa7c495f83f655ac504e750c374aa287c39d6b71e"
+    },
+    {
+      "path": "conducted_experiments/source/five_track_common.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "27e49ccbd845a5892b18031bf099cbf17c5afdf5ea739604a2b611a57d8199fc"
+    },
+    {
+      "path": "conducted_experiments/source/freeze_behavioral_protocol.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "4ed5c1e61aa30796b2e28ab5956e64ebdd1ffcc836aad7d30621fc8723a7f0ca"
+    },
+    {
+      "path": "conducted_experiments/source/generalization_metrics.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "0010f311d80b26ac8d793e2648a86a5c91808ff83d86980b6de877c9281c8e23"
+    },
+    {
+      "path": "conducted_experiments/source/measure_final_adapted_models.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "f4ba8e832e9eaffebd5a061839167f2da4316453463fd3066864acb6526a365c"
+    },
+    {
+      "path": "conducted_experiments/source/migrate_cse_replay_cache_timestamps_v2.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "1c0853424d97ce2a1e8e6edd77cfd2f5ff2676dba678806c08b2b49fcc8acfa1"
+    },
+    {
+      "path": "conducted_experiments/source/multienvironment_features.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "31c8413b6a5807e9ad5b0d1bcfb1131208f48331bb2920fced6ee530518a1402"
+    },
+    {
+      "path": "conducted_experiments/source/multienvironment_protocol_tools.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "9f40b5841c7b759f7ec9041396c6db7677de25b948bf87260f70115fa64594da"
+    },
+    {
+      "path": "conducted_experiments/source/network_context_features.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "c47743f16ec5616e37d643c7bfd2dfeaea2c08c0122212f8c74de7d0c72cd0e2"
+    },
+    {
+      "path": "conducted_experiments/source/observability_relaxation.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "6f629ab068edb9ae5623feae08e7f104804fc67b4da4451ce9b88f221d87cddd"
+    },
+    {
+      "path": "conducted_experiments/source/pareto_mopso.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "79506daf477467b276dc65c5c7e8871675fcd1082e735b3f706a496367dfba18"
+    },
+    {
+      "path": "conducted_experiments/source/plot_behavioral_milestone.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "0d16be7a36a8dbc652c9a8f0c61ba0d265769d7f1a9a789c540e60be1107f693"
+    },
+    {
+      "path": "conducted_experiments/source/plot_cse_daily_results.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "964172b5e30db56268d1cb296853b7d43448129cd7bc87b229abc51bb3e23d2c"
+    },
+    {
+      "path": "conducted_experiments/source/plot_full_training_observability.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "04896638647dc3532ba14a214edb648002e2e2362c3afce682aaf6b6799723bd"
+    },
+    {
+      "path": "conducted_experiments/source/plot_generalization_study.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "2cc431a71bb0ff82da14035b146a946e85f487a8f2537991fe7dc4f91876d61a"
+    },
+    {
+      "path": "conducted_experiments/source/plot_multienvironment_milestone.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "f7d4ab6a5274f5c9a62fda170374a15c7c7d015169e071a8ac7a1dae824bf9e4"
+    },
+    {
+      "path": "conducted_experiments/source/plot_network_context_study.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "cf2f78836179af81338839a9b52c06de39eec931563381a33b22a9146d1d4ed6"
+    },
+    {
+      "path": "conducted_experiments/source/plot_threshold_recalibration_tradeoff.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "badeae6d6f074a16c96894017630af569b6a2cd3f7a968adccbf38cac890aa6b"
+    },
+    {
+      "path": "conducted_experiments/source/plot_wustl_temporal_audit.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "fbff31879a30c9bf84d8931e67a84b6ade251264b6f2018dacbbeb8763d4319d"
+    },
+    {
+      "path": "conducted_experiments/source/prepare_behavioral_caches.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "163ba3c5fd472dfba3ce45406fbf080e84e358e9d3cfb0931218d940602424fb"
+    },
+    {
+      "path": "conducted_experiments/source/prepare_cse_auxiliary_source.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "74d621d2615d6c7130f8e461cfe87b6f5a5ff34f4cb19cd8e7eb924cd1c8df99"
+    },
+    {
+      "path": "conducted_experiments/source/prepare_detection_foundation.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "8ad02a03ebf4132bc61c906871eac576bd61596726f681c8d315348318fa64ec"
+    },
+    {
+      "path": "conducted_experiments/source/prepare_foundation_metric_times.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "02b499b76d51d772049761a522dfc80bb6c69693bc8be0e72203386a5776f08f"
+    },
+    {
+      "path": "conducted_experiments/source/prepare_network_context_cache.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "072b50f9bfe30fa58b9b1bfbf09e897b65e0f63552cbdd9f380dcbb767168961"
+    },
+    {
+      "path": "conducted_experiments/source/prepare_unsw_multienvironment.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "892f5dd79943ee1a49602773a0b3ee1e0a99a0f20f7148d8d9e3a313b3026ef3"
+    },
+    {
+      "path": "conducted_experiments/source/profile_ids_bundle.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "cdd6f8d30fd83eb34ca51dceaea2fec56ea0e44919462a708a04df976e589563"
+    },
+    {
+      "path": "conducted_experiments/source/profile_multienvironment_models.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "8c832e68368ce6537ca3eeac6222467f2d236a1432fb55fabc1f240df3ebedc3"
+    },
+    {
+      "path": "conducted_experiments/source/profile_multienvironment_steady.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "8141ab27ea1196fc496dbbbe2ee4ef931c74e98bcef1e4cc4331f50944ac5623"
+    },
+    {
+      "path": "conducted_experiments/source/profile_network_context_models.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "42693174a3f6cd56cfc6c70744530eabfd00728e4168288bdca72a1dc77b1da7"
+    },
+    {
+      "path": "conducted_experiments/source/remeasure_cse_equal_budget_refit_outlier.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "a8d307ac96b977e905d47ef3045252be5159fc61871d3020a08a4dd6ff19420e"
+    },
+    {
+      "path": "conducted_experiments/source/remeasure_selected_latency.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "6a7e489c861bd924197cac468c8d25c18bcc8bd37b396e1ca78524c36a9d2cec"
+    },
+    {
+      "path": "conducted_experiments/source/repair_cse_order_result_timestamp_metadata.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "4d95f9edb9ec7b947845c8d8147ab5deb546e3fc0f944944044a8a75e66a1733"
+    },
+    {
+      "path": "conducted_experiments/source/report_core6_lifecycle.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "5b65aa6bd81123d8049ca527e16da88def42acd2f424e54ee7c4a5af2ad27f6f"
+    },
+    {
+      "path": "conducted_experiments/source/report_core6_multicapture.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "559d9ebce23d748daaf23fa87201258933e7a0e334451af41139c7cdd675e3d7"
+    },
+    {
+      "path": "conducted_experiments/source/report_exposure_replay.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "fc34623302f73e6bde5c5dc4cf008df1819c3cf35562387fc543e1e55f8fbad6"
+    },
+    {
+      "path": "conducted_experiments/source/research_runner.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "c5d72ee1a13990e51f49bf359d78254f5db411e59cf4a145c81ce3f5a251d0de"
+    },
+    {
+      "path": "conducted_experiments/source/revalidate_multienvironment_boundaries.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "7fcdcab2d48a4fec5ef9636eb103188225af7423bb837a653ea521aa2087c85c"
+    },
+    {
+      "path": "conducted_experiments/source/run_archive_joint_feasibility.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "31cfc8da8c6b5f3455524930974a085c3d5b05efc85239a7e1411829f5b111cf"
+    },
+    {
+      "path": "conducted_experiments/source/run_arw_selection_baseline.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "17d910b15eae60c9bb24b434b2103ba36a6e256eaeafad24ec57c49b36a4eb68"
+    },
+    {
+      "path": "conducted_experiments/source/run_automl_archive_calibrated_reserve.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "bb874feea18f429813aeb43a7238650d9cccab0e17b684999ede2a91a91b3fcd"
+    },
+    {
+      "path": "conducted_experiments/source/run_automl_archive_reserve_pilot.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "c31c694b6f32891463ecbb1d0d47647e917336f5c063fedc5e02dd77bee953dc"
+    },
+    {
+      "path": "conducted_experiments/source/run_auxiliary_source_coverage_pilot.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "747c04b15a9f0ce278e32e54882dad13e5d8469c7ec07655872bb7da3ffad9c2"
+    },
+    {
+      "path": "conducted_experiments/source/run_behavioral_benign_group_control.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "357e5170fe96833073fd1b32105409e8cda2cd1098e97459ecb12900cfe7cd95"
+    },
+    {
+      "path": "conducted_experiments/source/run_behavioral_comparison.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "494f650dde964978552fbaac1e83eed750b3e67f462e2d5368ebfdf290e26376"
+    },
+    {
+      "path": "conducted_experiments/source/run_behavioral_family_coverage_control.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "7ccda57022eb77ecf0f03f779bbc4f659cbdc50f62cbf4219a9832efab11c3c9"
+    },
+    {
+      "path": "conducted_experiments/source/run_behavioral_full_replay.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "d006091234311c8ebcda105026cdb7492027ee669cd295d76e0da84e6f0d2992"
+    },
+    {
+      "path": "conducted_experiments/source/run_behavioral_isolation_control.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "33f983047ce49b564f50ac903867cdbb291873deb9aaa0229fe40a00a600e371"
+    },
+    {
+      "path": "conducted_experiments/source/run_behavioral_recent_benign_control.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "8e3bb760c4c5f2221336aaf33eb9ad4fadbe5beaa6f0074895465bc8e29a9775"
+    },
+    {
+      "path": "conducted_experiments/source/run_behavioral_source_transfer.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "ed2c37f173ca708af2105aaebdb956e5edb0a965344bb456cb4e2e3806179157"
+    },
+    {
+      "path": "conducted_experiments/source/run_causal_context_ablation.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "ae8e6bb01be46dd9aeebf6914895d1d7baa9167b759afd9723cefd1f40d9240b"
+    },
+    {
+      "path": "conducted_experiments/source/run_causal_context_components.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "882e7ab0fac646d3b26b4b8baa0abbf8d730e66004f20c767a1c709205700743"
+    },
+    {
+      "path": "conducted_experiments/source/run_context_fixed_fit_control.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "2f04f3b63cf5c77e9211043b53e3a406756a8fca185e30ea4c7ddd11a3945137"
+    },
+    {
+      "path": "conducted_experiments/source/run_context_full_development_replay.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "dc1ee25d3ee49da52b6f7108cd36e66428a85c130e1419ba1b3e8fa7463a0c2d"
+    },
+    {
+      "path": "conducted_experiments/source/run_context_full_period.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "d75052f1f48f2fb43343dfd640901741e1dcc439b757f2625103752825722adf"
+    },
+    {
+      "path": "conducted_experiments/source/run_context_prefix_coverage_control.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "bb1245930a4285809de7608a3635abc68a65a0dae45fa1438957502fea690445"
+    },
+    {
+      "path": "conducted_experiments/source/run_corrected_replay_adaptation.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "66246c37315246d561f0dbd0b820df890d364db03173693ed81c6beefda5c4ed"
+    },
+    {
+      "path": "conducted_experiments/source/run_corrected_replay_baseline.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "63aeabee283adf906d10a1d85dd871d345c2bd4486245587a075984cb89e4f9f"
+    },
+    {
+      "path": "conducted_experiments/source/run_corrected_replay_frozen.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "9f4588fbe9b843b75024bef881b5f66c20a4172607ae94204977843a940bf474"
+    },
+    {
+      "path": "conducted_experiments/source/run_cse_equal_update_budget_adaptation.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "87f05d7846d694a2314ae99eb1e8303c1d7de8dce597400f381310063c31a5c6"
+    },
+    {
+      "path": "conducted_experiments/source/run_cse_stream_order_sensitivity.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "17a7d61a6c6680fb3f3c25bd31466213de4b7032836561007a62d59f7fe48757"
+    },
+    {
+      "path": "conducted_experiments/source/run_ctu_echo_daily_batch_case_study.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "42d2a20e053a75a0ef66851d253479ae43d36ac6808c8552f3adc9e92037ec5f"
+    },
+    {
+      "path": "conducted_experiments/source/run_ctu_raspberrypi_daily_batch_case_study.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "3d2f8135fa56483377e9bacdae536123703912941b38dfc88e20483fdbc514de"
+    },
+    {
+      "path": "conducted_experiments/source/run_detection_anomaly_baseline.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "bbdc3c3647801312d85bc56e987a576898f665e64e911838af2818f379d5b625"
+    },
+    {
+      "path": "conducted_experiments/source/run_detection_foundation.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "f00bf6009609ab5f712525d1c9c67386b39c273d6a8c23865e163a7ce9306f42"
+    },
+    {
+      "path": "conducted_experiments/source/run_detection_group_ablation.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "e2867836e7070219c37181968044c7c750c73a7a69350904add04265a755902f"
+    },
+    {
+      "path": "conducted_experiments/source/run_exact_topk_ablation.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "32b36dff78198350928bae5765afe4cc94c6a4316e235fc5fc70d6e074bbd4ce"
+    },
+    {
+      "path": "conducted_experiments/source/run_expanded_benign_calibration.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "7dd96e5974d7f0c5367247f94525755ba44cc272c435e029a238d7e8ae7f2d23"
+    },
+    {
+      "path": "conducted_experiments/source/run_five_track_pilot.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "e70c3f2e7add29756c10cb5bd3ead6acfd66887ee2cd07081ba79bc2d488a8f6"
+    },
+    {
+      "path": "conducted_experiments/source/run_full_iotid20_source_transfer_audit.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "0af68ea27f1448b53c3fb3fd780bbe24b3bed93fd10eca245d71505ac88e02a6"
+    },
+    {
+      "path": "conducted_experiments/source/run_generalization_evaluator.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "f429b9672d0986e7d6663877ac3c5e3fa1a12ba27d738fdf719dc77513bf346e"
+    },
+    {
+      "path": "conducted_experiments/source/run_generalization_evaluator_v2.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "45992181506c9c0ecf50ca4acaa93255e16c9ebe69afaa94129d7c03b9d98e4c"
+    },
+    {
+      "path": "conducted_experiments/source/run_generalization_evaluator_v3.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "fccee4bd3a7bdbbef93966b10437574cebbf8e9b6b020ea5258c9062926e8472"
+    },
+    {
+      "path": "conducted_experiments/source/run_harmonization_calibration_suite.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "31333ad6846829c04257912bcdc347fda9028a57e0cd361646d1d714251d20b8"
+    },
+    {
+      "path": "conducted_experiments/source/run_iotid20_binary_end_to_end.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "844b18de6c6b8d38aac2b47ae72772b19e190ff212a774b4c8cf6cc57cabfdfc"
+    },
+    {
+      "path": "conducted_experiments/source/run_iotid20_cse_prefix_vs_fullperiod_threshold_gate.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "670d00168651aa61130e4b93c08c33d877f2aac23fcd2d7dc6429b9af516bb01"
+    },
+    {
+      "path": "conducted_experiments/source/run_iotid20_cse_retraining_gate_pilot.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "115bce4e3bdc23c59e461defb2446acd5513b3d5da88dee605375d1c59a89707"
+    },
+    {
+      "path": "conducted_experiments/source/run_iotid20_cse_transfer_replay.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "ac2607b5d3bdab5eb03405b1685247d69cc1f1a492f9ee7e33ae647f2e485d10"
+    },
+    {
+      "path": "conducted_experiments/source/run_iotid20_exact_dedup_transfer_audit.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "7d20c883386457b48da2fe08f6283e23546f1183ee1d25552cb2159a9e1bb059"
+    },
+    {
+      "path": "conducted_experiments/source/run_iotid20_time_block_split_sensitivity.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "8a0b04c48a036c4720c10a6fdac3c64a28e773a739fe0c7ff7400c60b08e7fd5"
+    },
+    {
+      "path": "conducted_experiments/source/run_matched_lightgbm_objective_reference.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "e5ea6390f208b4ce5322648e74fb40d7153eb2e97df76ce214f7f2c1f440bce9"
+    },
+    {
+      "path": "conducted_experiments/source/run_matched_selection.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "3b329cffb0d342f37eaa09980e56accd7e7cd021d6b2fcbcc1009eddfe93d4cb"
+    },
+    {
+      "path": "conducted_experiments/source/run_mopso_constraint_ablation.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "49baa0ecacc0eb917aab5367a8699e838feb87483ff244e846ec756e7f174cff"
+    },
+    {
+      "path": "conducted_experiments/source/run_mopso_sweeps.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "9d0a21e8c3f8adaafe2144540081c2de5032b7102a85ecd01098a3deeb9099af"
+    },
+    {
+      "path": "conducted_experiments/source/run_multienvironment_calibration_control.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "80291891bc6434bb0677aea7e3d98df41dfc46046367ee9235049706ce37b036"
+    },
+    {
+      "path": "conducted_experiments/source/run_multienvironment_calibration_suite.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "d98fab83c00b79ac25ff72ba20e32215681cc2f3a80a69ea7b43cfdfb98a411c"
+    },
+    {
+      "path": "conducted_experiments/source/run_multienvironment_harmonization.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "5285f945c7849693d080ce957445fdc8cb42a3da2dcfc05e5adfb83d31628694"
+    },
+    {
+      "path": "conducted_experiments/source/run_multienvironment_margin_control.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "84e7d9a862276bb660e718bad7d01ae67fa8f5ca270d9dff3bf9c656983164df"
+    },
+    {
+      "path": "conducted_experiments/source/run_multienvironment_ranking_objective.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "83191da40e44f2a7b878b1e3fd5af503077bb6793e41d70f2150a2fc68155683"
+    },
+    {
+      "path": "conducted_experiments/source/run_multienvironment_target_controls.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "26c128382acd3660bcd4fb6eba802a456a10e2cb6a73cd5edd46dd85e5622d77"
+    },
+    {
+      "path": "conducted_experiments/source/run_multienvironment_training.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "5ff7f77340d2c0a4b0f10516643292033396661dd9010d1ffc0621d677a86169"
+    },
+    {
+      "path": "conducted_experiments/source/run_network_context_study.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "ae6538110319975b8f526b1929638979881b8c71562fc9e279074087818defa2"
+    },
+    {
+      "path": "conducted_experiments/source/run_nf_ton_matched_feature_ablation.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "ad0aeb1a20d5df4975e3efa5d44cb8c92f2f013caeaaedd83c1988d952d89249"
+    },
+    {
+      "path": "conducted_experiments/source/run_random_search_baselines.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "58252c7b954657eed653e9ae519d771f95b563e4c9db05d0a784b286d90bbace"
+    },
+    {
+      "path": "conducted_experiments/source/run_rccda_inspired_cse.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "b1a9e30043aaf5e6b246d18299e6f46d1d6ace045469d6486d7ae1813f56802c"
+    },
+    {
+      "path": "conducted_experiments/source/run_recent_target_score_diagnostic.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "5138ae4bd5cb7c209aa490ca9a5c2eae35ef3d46db9f39a91e0313715dd2c115"
+    },
+    {
+      "path": "conducted_experiments/source/run_selection_stability.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "45d80efa13a11739799209591397c0f5ca97273cf4766d3ecc387a2e5bf2bc50"
+    },
+    {
+      "path": "conducted_experiments/source/run_stability_partition_check.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "da34d090a3324fe41cdff1e0dc100bd0e4e54d2fbea71c287a4939bb3d4b911b"
+    },
+    {
+      "path": "conducted_experiments/source/run_tolerance_threshold_audit.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "2c4f2009d1b2eca4723d55dd41080e81c594345cdbbc7cf7190294ef86aed008"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_aisec24_released_results.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "95c4f95f1a6ae3a783e4740ce5d0af593bf63824dd4c66ada22fb19bf54bea7e"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_archive_joint_feasibility.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "306bbcd3f432ff73f32ed171398296e7a57cb476407a8d79889b8f367584a502"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_corrected_capture.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "8c614878777bdb2de0ff4dda28747a326a8eca403fa29fa6f0c6e65099266c86"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_deadline_recovery.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "4d173e871bf78cd1383aedaf342b1ec65ad81a40b23333286ed1c61f349bac5d"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_detection_foundation.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "fb0cff48ffb0e98d606c7551eee45b7e056ce14e48c674694466b46f2ba5603d"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_early_verification.py",
+      "phase": "06_budgeted_verification",
+      "source_sha256": "372b781248a752bc71abeca230ba0c065d14ffb064af8d00da939bfaf1d804d4"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_five_track_pilot.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "89850157c866964be0f93f8af3038d81bc070173e256db3855a3826eb95e6c4b"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_generalization_evaluator.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "f7aab152aafd8c9a92f3b4959f4a11ef95d9267cdb4525b50a66e6bb38bbd255"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_generalization_study.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "1e959e7f1e0d6df8d67be5286ad4fd998340b2f2126f79e346f99a9feef167d3"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_guard_cutoffs.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "5a98c8c5c3d507c525e23826511fc838755dda210b5251f0198dbd8679c5fd40"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_selection_stability.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "480e94fb243823d4b76aa68654e75f08a55b7c6d68c164841e201a6dd17d61af"
+    },
+    {
+      "path": "conducted_experiments/source/test_adaptive_rolling_mean.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "efa8a4a07741a24a27464cb9510d36ffb5a77e11b53944bbd77c0950c94210fd"
+    },
+    {
+      "path": "conducted_experiments/source/test_behavioral_observation.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "71160697fc159e1409dd0c7ca5c602543b9230ee3ac4233d60c960b196cb8e04"
+    },
+    {
+      "path": "conducted_experiments/source/test_behavioral_runtime.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "aae3957676e56d9408fb956f42e4fe44c58f8efe4297f6de5988d884c10b455e"
+    },
+    {
+      "path": "conducted_experiments/source/test_causal_flow_context.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "b834af44629d2b8dcc450fa7e9bcde52c928494f19992048040134d9b2670547"
+    },
+    {
+      "path": "conducted_experiments/source/test_constrained_candidate_selection.py",
+      "phase": "02_automl_and_resource_constraints",
+      "source_sha256": "316fadbb20b9fff430c532e4c905c9178b7baeb245885e906552fd3e02864f7e"
+    },
+    {
+      "path": "conducted_experiments/source/test_context_information_bound.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "abe8b77140ab20d459e611fd5cd4ca4cef2f242c0d40f15c5cf68e4c4cc8e2dd"
+    },
+    {
+      "path": "conducted_experiments/source/test_context_observability_keys.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "0119a7395ed5de595d1fbf61abc7ee60656da5f5e7a350860c97bb25b7def876"
+    },
+    {
+      "path": "conducted_experiments/source/test_context_signature_reconstruction.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "2eb2be1dedd49b5171d342382b8d991e2cf491764f613751bc934d197722917a"
+    },
+    {
+      "path": "conducted_experiments/source/test_generalization_metrics.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "b5e8ba7e78d8ec8e0de09cf53243934bd239a96ee4b67608ba3ff24322278f43"
+    },
+    {
+      "path": "conducted_experiments/source/test_multienvironment_features.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "e2c892f93e0a839982baf42a54b944d5fda785bf6b83787b63dc02f304897e05"
+    },
+    {
+      "path": "conducted_experiments/source/test_network_context_features.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "02cac4d91b720689aa64cf702e9df721ad2a991f2bfc3fcc5a94ad929e9f4c49"
+    },
+    {
+      "path": "conducted_experiments/source/test_observability_relaxation.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "e0b3a7d91528a6deb923012f3282476671dfe237f707379321c68f0222b4e210"
+    },
+    {
+      "path": "conducted_experiments/source/test_prior_attack_context.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "6371d3eaf0495a5223ca217a47ebc337ccb675c7d2103df88529936324671ec1"
+    },
+    {
+      "path": "conducted_experiments/source/test_record_identity_integrity.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "a89ca3c03a76c3ae1a47f9fb32d16880252db41987ebd8d33806ed69d3e2f349"
+    },
+    {
+      "path": "conducted_experiments/source/update_deck.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "0d75b4710bc60fe173d242797475e3a43ad8201b46ae3f08b36e1bee844cb0e9"
+    },
+    {
+      "path": "conducted_experiments/source/validate_behavioral_stream_memory.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "388ba475740eb50b3154beff99f558fc36666e0cb7489de226a057bc327c764a"
+    },
+    {
+      "path": "conducted_experiments/source/validate_causal_context_cache.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "a0bd06a5da2e60a8c2aac5312b7640eba1c24b8ac8a1742e75bc1ed01bbe4542"
+    },
+    {
+      "path": "conducted_experiments/source/validate_full_period_results.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "c156647dbcd4d7ca1181263ec6b4265bb745b8ce201fd3f9faec7a69fad8c525"
+    },
+    {
+      "path": "conducted_experiments/source/validate_reusable_evaluator.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "cee8c98ff38c5ce55dee57ec686aef4c961f48a5fa12f034a6de523a24c188a0"
+    },
+    {
+      "path": "conducted_experiments/source/verify_behavioral_milestone.py",
+      "phase": "08_behavioral_detection",
+      "source_sha256": "14198f602395014f565606a8bedfb6b31766bc4a1b2b2bcd508230da8bb54b3a"
+    },
+    {
+      "path": "conducted_experiments/source/verify_context_observability_certificate.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "885b381875d14f6a3ea0e34ac62aefd98568a47048ddaaef366725bac853d72b"
+    },
+    {
+      "path": "conducted_experiments/source/verify_exact_exposure.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "4ea078e2ba927edad8bba73e6b2c121b9e9a91fc0963472f8d30e8206be12ab0"
+    },
+    {
+      "path": "conducted_experiments/source/verify_full_context_key_refinement.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "c20cb8aa825d4d90ca939aec9df1f3a424a10ede0aae4557f56054d916cd581e"
+    },
+    {
+      "path": "conducted_experiments/source/verify_integrated_shadow.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "954660f6b755f83ada891dcc73165d4285370f01c404a7fbc191af3828f2e8fc"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/analyze_apex_ids2026_error_clusters.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "ec7235a95bd34ca6f054117da8c1664168f0b60fcde8fd3dbdfd632768b5ffae"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/analyze_fpr_cap_label_evidence.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "8d98797d6022514928093723cc5dc573a336d8f529c6b0beb1e83387dcb588c1"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/analyze_hera_argus_cfm_pair.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "4c60219ba9d03eb8d25ad7ae8eb3c05d2055379b951b03c3228dab78a99af527"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/analyze_hera_argus_v5_cfm_all.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "2f674232fd2a44547909789cb57381c58dcc2e4e01583382237d6639c162ce29"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_5gnidd_dataset_record.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "2211741fe2bd9094de81212575fd0102de71ac85984da6fbf940187754058e54"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_apex_ids2026_gate_next_day_validity.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "89f5ea1bde127ba70e31a6083964db25d725d11b34fc7e58808d0852fca24f48"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_apex_ids2026_temporal_gate.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "a3c7a7d618c4549846e1f2f48d0f4126ed799e8804d8d0fb4460118717307e13"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_litnet2020_allinone.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "49e1d46b3f6467b94b893ecf1c8ec22502085d5ae40bf0416d82ada0d2c4e967"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_nf_ton_fallback_sensitivity.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "33afc73e47b31ddc1d7cb3a246b755adb21ac6648316f4c66bf5cd9db85113c4"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_nf_ton_frozen_fallback.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "c48213b12999f836649a3baf543312183691a70a3639378bb68b85a770fd951f"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_nf_ton_iot_v3.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "7e3cd6aa2a38f51e9f997e3d2fdeff2798a73498e816514aa8e335242cc9b7f8"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_nf_ton_iot_v3_flow_availability.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "5d49618eda967425ba26ff8e7ff6644ed43e35688b5ee01e0d5f83275fabc703"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_nf_ton_iot_v3_flow_end_order.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "421cea7e3666ece737b58202ea093726fca9c3a224e38d6069cd86e326138a22"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_nf_ton_iot_v3_hourly_label_composition.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "cadf1322ee0b64f9958719fd305ebb8a8864796dd2bd432b0787d23d3acce5af"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_nf_ton_iot_v3_model_schema.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "b1734bbcdee45f44791e2c70a3a0fa32aa717a9e0dccb4f7bbbd512428b1c00b"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_nf_ton_promotion_exposure.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "84d984d0829d3e88a3aa3b7150441649a9d99d2879e51bba450caebd6efb4a33"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/audit_nf_ton_shadow_feasibility.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "3ce8b5c5ff80a12717a5459204c409ff0cb3cd273e799c8d7227d9f1a48cde36"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/bootstrap_iotid20_cse_capture_effects.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "7407514a182517eff7742236f4132f1b4268eb0a5f8cb2d298e07bcbe4dc3d10"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/compare_nf_ton_iot_v3_seeds.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "9a7a7173ffa6e58fc15ccea93177ae6f5e3290891581506412d4df801b854973"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/download_5g_oran_metadata_files.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "5546c4028dfeeabbed05e55bfc116b4874e94ebefd65ac4f9286cf5b904dcb79"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/download_nf_ton_iot_v3.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "4f715de2256a43320405a506dbb1053affc65da1a033955f1647c6d76fe4ca93"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/extract_nf_ton_iot_v3.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "44474b6b357db90066fca2ba7004a244c21deeeb3cf099a705ee1030e3d9e086"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/multienvironment_primary_snapshot_2026-11-21.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "07330b390f05b37febc4ae4581f3641c905607695d175d5df7983f02b47687fb"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/pilot_coverage_ranked_reserve.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "eb08179b2f1e43dab160b05de6d8a58c30e48ebd643c806e343ed9242d01bddc"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/plot_apex_ids2026_error_cluster_composition.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "0721b0b63216cc29034d81f040bc42275c7eef614c0383be4981fdaf12137a38"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/plot_apex_ids2026_no_update_baseline.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "e158c01ecff65b86690562d8f79282e816d740783a6365751ecb7edb61ddc0af"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/plot_apex_ids2026_temporal_profile.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "64cea5aff55e12c089b35a0bbe943393eac8f24991b9c9415e1b858fc1df5bbe"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/plot_iotid20_cse_capture_risk_tradeoff.py",
+      "phase": "03_cross_dataset_transfer",
+      "source_sha256": "7682149b2574894e87ca7da7c55cb8779816f765b3224cb82917097cfb298dc0"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/plot_nf_ton_iot_v3_hourly_composition.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "9a375270162471a40e66ab6edc04ae9fe5bd7558cf56553d23565a562c93e2f6"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/plot_smart_factory_a_to_s_replay.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "5ad364e0966a6f7dd6b600dd9b6511d1f77bb1c3c0245a88c0721b7bdba3f409"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/plot_smart_factory_a_to_s_vbc_comparison.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "7468d1a8feb16eebf8f93154b93825c84af7215442ca8cf199617ebedfbfcbe4"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/prepare_nf_ton_iot_v3_endtime_stream.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "335a667c13ddbbe11b00ef6fca9f16e83e03ddeaf1aec1ee23d94835b06d440d"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/project_hera_argus_v5_csv.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "3c28391d2a0b994bf6bb7bd3bfc14589de1292d1cac024e2acc1b9ba27e57dc1"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/recompute_promotion_gate_horizons.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "3073275dde20d3ba42077bd5162bf1e7fedaf5ade1d51ab5f5e84d016c157f1a"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_apex_ids2026_no_update_baseline.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "b96c2a1fda8ea504f80f5bf1d461f8f42709d9d10a21e7de71c41be6742ac983"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_apex_ids2026_update_gate_development.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "836ee5c41f8e24114ad45388cd1789aa7b548b4ed9d91d7e7ec2ea56f08915ae"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_apex_ids2026_update_gate_hash_sensitivity.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "7b05bdce1e8bb385e472098009b2316651c64a93ff9ee3f8a894d0569e9bed2e"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_hera_argus_pcaps.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "66ef15c2f6cf8fb5d483b6fb5d1c62be048fbf914c9142aff5b0b5151aca09b7"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_hera_argus_v5_42.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "e3379f29636cb384be522a0cd0322a7fdc06eee254e188d849ae2c84fb546558"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_nf_ton_iot_v3_fixed_model_replay.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "cb3523ece184f794edf322a714dfa8e949d6d23403387cdad2dca9e5dd74e153"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_nf_ton_iot_v3_promotion_gate_pilot.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "b5c798055f9c344a2f23058070bda0894b3d42e2d7ae2625be74294d48c271b5"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_nf_ton_threshold_only_recalibration.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "f7338e0ef3467db92d8369cc8f211b629f8ab40bf4babb12946717a2576dfb23"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_smart_factory_temporal_adaptation.py",
+      "phase": "04_temporal_adaptation",
+      "source_sha256": "d1401c98c14bfe85b8009fe04333868918661ce934ee204ee2a665c56917dc06"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/run_smart_factory_vbc_comparison.py",
+      "phase": "05_delayed_feedback_and_safeguards",
+      "source_sha256": "fb73ca46e0b6afb7ef1493425bfff8199d9c481f4e1afeffc9adca4982ada550"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/summarize_nf_ton_family_outcomes.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "18eb61eb10095244e9ebc8820b334af274b85c689fb73f26cbb65dfdd55d5ba7"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/summarize_nf_ton_iot_v3_replay.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "1a3d5e069d5ce927f4e2a60c8bb4a8fb476d6162c97aa4e583803ab7b34460f3"
+    },
+    {
+      "path": "conducted_experiments/source/research_refs/verify_nf_ton_iot_v3_endtime_stream.py",
+      "phase": "09_data_integrity_and_observability",
+      "source_sha256": "e44d758684f3e6ded772d6eb752ba7633a2d7463913c1679509ce481e180ece3"
+    },
+    {
+      "path": "conducted_experiments/source/decision_value_review.py",
+      "phase": "06_budgeted_verification",
+      "source_sha256": "423448d9146c8af803468dd1b9e0a39c9227ca413cea4fa1b41cdc99a49b2a01"
+    },
+    {
+      "path": "conducted_experiments/source/summarize_decision_value_review.py",
+      "phase": "06_budgeted_verification",
+      "source_sha256": "a6b9f72895df65326a479d94ddafaff1963c2f7c77fdbebdb9457ee6b5e8f400"
+    },
+    {
+      "path": "conducted_experiments/source/run_representation_selection.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "c7ef29471f2e6edbddfa8b25b179a2570b256e9ec657f1878837774308cf2071"
+    },
+    {
+      "path": "conducted_experiments/source/run_representation_selection_five_seeds.py",
+      "phase": "07_generalization_and_context",
+      "source_sha256": "19d343aaf9b26c3dccfb5e3cb1559a4a92afb57be2174206eec5b2cd07d78b7e"
+    }
+  ],
+  "baseline_notebooks": [
+    {
+      "path": "conducted_experiments/baseline_notebooks/MOO_AutoML_Dataset_1.ipynb",
+      "original_sha256": "15eb59de4b3688044ff6d356dcdd0a65cadb324956014ab396e2329adbdfbfe9",
+      "note": "Code cells retained; saved output figures extracted into results/graphs."
+    },
+    {
+      "path": "conducted_experiments/baseline_notebooks/MOO_AutoML_Dataset_2.ipynb",
+      "original_sha256": "77721bccf61beffe7df425f6b381137036ccaed2bfaa3cdbd6405d59b07c7a54",
+      "note": "Code cells retained; saved output figures extracted into results/graphs."
+    }
+  ],
+  "scope": "Historical research implementations grouped for navigation; dependencies, licensed data and original workspace-relative paths are required for reruns. Presentation/publishing and internal status documents excluded."
+}

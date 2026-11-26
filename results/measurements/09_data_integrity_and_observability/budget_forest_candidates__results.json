@@ -1,0 +1,325 @@
+{
+  "source": "budget_forest_candidates/results.json",
+  "source_sha256": "bd9dd3ae8e69425a3db31f5cdac58e8db77e4d219ea5bbf087b47b6a818cb41a",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "status": "exploratory bank expansion, training/calibration/tuning only",
+    "runs": [
+      {
+        "seed": 42,
+        "candidates": [
+          {
+            "seed": 42,
+            "name": "rf40",
+            "artifact_bytes": 1097630,
+            "fit_cpu_s": 0.515625,
+            "tune_raw": {
+              "nll": 0.04869156581936184,
+              "brier": 0.010194105737152619,
+              "ece15": 0.005901934393835968,
+              "mean_confidence": 0.9829225521010824,
+              "macro_f1": 0.9356197109431973
+            },
+            "tune_calibrated": {
+              "nll": 0.04804379161353114,
+              "brier": 0.010722329225879922,
+              "ece15": 0.006895614203404676,
+              "mean_confidence": 0.9813088802672861,
+              "macro_f1": 0.9369630732870439
+            },
+            "desktop_batch1_ms": {
+              "p50": 1.1727999999493477,
+              "p95": 1.5659549997053543
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\rf40_seed42.joblib"
+          },
+          {
+            "seed": 42,
+            "name": "rf60",
+            "artifact_bytes": 1631550,
+            "fit_cpu_s": 1.390625,
+            "tune_raw": {
+              "nll": 0.04901568631083113,
+              "brier": 0.010192599047090368,
+              "ece15": 0.005087596518022999,
+              "mean_confidence": 0.9829181323100714,
+              "macro_f1": 0.9403092891355503
+            },
+            "tune_calibrated": {
+              "nll": 0.048401860074906225,
+              "brier": 0.010622616706472193,
+              "ece15": 0.006673848325107465,
+              "mean_confidence": 0.9812965589591287,
+              "macro_f1": 0.9379926823543168
+            },
+            "desktop_batch1_ms": {
+              "p50": 5.271949999496428,
+              "p95": 6.560840000793177
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\rf60_seed42.joblib"
+          },
+          {
+            "seed": 42,
+            "name": "et20",
+            "artifact_bytes": 860030,
+            "fit_cpu_s": 0.25,
+            "tune_raw": {
+              "nll": 0.044472098345739626,
+              "brier": 0.011116915372677786,
+              "ece15": 0.006918396746172685,
+              "mean_confidence": 0.9806601563994607,
+              "macro_f1": 0.9400068701096749
+            },
+            "tune_calibrated": {
+              "nll": 0.04566583735375088,
+              "brier": 0.01149409130180529,
+              "ece15": 0.006072922987232001,
+              "mean_confidence": 0.9810447209409083,
+              "macro_f1": 0.9345070516858067
+            },
+            "desktop_batch1_ms": {
+              "p50": 2.3597500003234018,
+              "p95": 4.668045000107668
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\et20_seed42.joblib"
+          },
+          {
+            "seed": 42,
+            "name": "et30",
+            "artifact_bytes": 1296030,
+            "fit_cpu_s": 0.421875,
+            "tune_raw": {
+              "nll": 0.045032123540333306,
+              "brier": 0.011176707230299034,
+              "ece15": 0.007902759712376528,
+              "mean_confidence": 0.9796707482256831,
+              "macro_f1": 0.937783118378318
+            },
+            "tune_calibrated": {
+              "nll": 0.04586257180261318,
+              "brier": 0.011416347153490552,
+              "ece15": 0.008055397454654546,
+              "mean_confidence": 0.9801830085858596,
+              "macro_f1": 0.9375823917137476
+            },
+            "desktop_batch1_ms": {
+              "p50": 3.1489999996665574,
+              "p95": 6.056739999849014
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\et30_seed42.joblib"
+          }
+        ]
+      },
+      {
+        "seed": 43,
+        "candidates": [
+          {
+            "seed": 43,
+            "name": "rf40",
+            "artifact_bytes": 974750,
+            "fit_cpu_s": 1.09375,
+            "tune_raw": {
+              "nll": 0.04652629108039326,
+              "brier": 0.011081171497982985,
+              "ece15": 0.006397909819645344,
+              "mean_confidence": 0.9837681582943815,
+              "macro_f1": 0.9434182654231726
+            },
+            "tune_calibrated": {
+              "nll": 0.046527776421008214,
+              "brier": 0.011130934783046224,
+              "ece15": 0.006575015232957769,
+              "mean_confidence": 0.9832553991012801,
+              "macro_f1": 0.9443451603454691
+            },
+            "desktop_batch1_ms": {
+              "p50": 3.757450000193785,
+              "p95": 4.882200000338343
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\rf40_seed43.joblib"
+          },
+          {
+            "seed": 43,
+            "name": "rf60",
+            "artifact_bytes": 1445630,
+            "fit_cpu_s": 1.828125,
+            "tune_raw": {
+              "nll": 0.04640157832883059,
+              "brier": 0.011130926327540244,
+              "ece15": 0.005424348737703374,
+              "mean_confidence": 0.983328570223255,
+              "macro_f1": 0.9447800998675269
+            },
+            "tune_calibrated": {
+              "nll": 0.04645825605238997,
+              "brier": 0.011136752676666728,
+              "ece15": 0.005662886469732984,
+              "mean_confidence": 0.9833695428870566,
+              "macro_f1": 0.9466382330328784
+            },
+            "desktop_batch1_ms": {
+              "p50": 7.126749999770254,
+              "p95": 14.604244999918592
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\rf60_seed43.joblib"
+          },
+          {
+            "seed": 43,
+            "name": "et20",
+            "artifact_bytes": 868190,
+            "fit_cpu_s": 0.296875,
+            "tune_raw": {
+              "nll": 0.04996684924703246,
+              "brier": 0.011641450947248751,
+              "ece15": 0.0052858302868534005,
+              "mean_confidence": 0.9819400927988969,
+              "macro_f1": 0.9417292584208792
+            },
+            "tune_calibrated": {
+              "nll": 0.049892666649421005,
+              "brier": 0.011562935262037244,
+              "ece15": 0.004127266828422281,
+              "mean_confidence": 0.9837305305311369,
+              "macro_f1": 0.9417292584208792
+            },
+            "desktop_batch1_ms": {
+              "p50": 2.9220499995972204,
+              "p95": 12.315034999755877
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\et20_seed43.joblib"
+          },
+          {
+            "seed": 43,
+            "name": "et30",
+            "artifact_bytes": 1321150,
+            "fit_cpu_s": 0.390625,
+            "tune_raw": {
+              "nll": 0.05030141734773967,
+              "brier": 0.01141890768013604,
+              "ece15": 0.005844429475831762,
+              "mean_confidence": 0.9812857303196835,
+              "macro_f1": 0.9443451603454691
+            },
+            "tune_calibrated": {
+              "nll": 0.049950455760259624,
+              "brier": 0.011251748218912047,
+              "ece15": 0.0037256231121157945,
+              "mean_confidence": 0.9842454888417238,
+              "macro_f1": 0.9443451603454691
+            },
+            "desktop_batch1_ms": {
+              "p50": 2.6739500003714056,
+              "p95": 4.348619999836956
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\et30_seed43.joblib"
+          }
+        ]
+      },
+      {
+        "seed": 44,
+        "candidates": [
+          {
+            "seed": 44,
+            "name": "rf40",
+            "artifact_bytes": 1028510,
+            "fit_cpu_s": 1.03125,
+            "tune_raw": {
+              "nll": 0.040761647054922724,
+              "brier": 0.010304438443952433,
+              "ece15": 0.006003330144174236,
+              "mean_confidence": 0.9825024559161382,
+              "macro_f1": 0.9463576272504227
+            },
+            "tune_calibrated": {
+              "nll": 0.051307800602175845,
+              "brier": 0.013958840143243481,
+              "ece15": 0.011125442126250282,
+              "mean_confidence": 0.9770001672250401,
+              "macro_f1": 0.9039635499221872
+            },
+            "desktop_batch1_ms": {
+              "p50": 3.544799999872339,
+              "p95": 4.402110000091852
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\rf40_seed44.joblib"
+          },
+          {
+            "seed": 44,
+            "name": "rf60",
+            "artifact_bytes": 1528190,
+            "fit_cpu_s": 1.703125,
+            "tune_raw": {
+              "nll": 0.040515222879114465,
+              "brier": 0.010244187224509456,
+              "ece15": 0.006891524721685454,
+              "mean_confidence": 0.9821419530352977,
+              "macro_f1": 0.9445988609307643
+            },
+            "tune_calibrated": {
+              "nll": 0.04330513028306563,
+              "brier": 0.011353720759435507,
+              "ece15": 0.00655030976056871,
+              "mean_confidence": 0.9814290662498547,
+              "macro_f1": 0.9257540868987569
+            },
+            "desktop_batch1_ms": {
+              "p50": 4.636350000055245,
+              "p95": 5.926809999891702
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\rf60_seed44.joblib"
+          },
+          {
+            "seed": 44,
+            "name": "et20",
+            "artifact_bytes": 892030,
+            "fit_cpu_s": 0.296875,
+            "tune_raw": {
+              "nll": 0.04566461701011564,
+              "brier": 0.011506503701698655,
+              "ece15": 0.008771261949718733,
+              "mean_confidence": 0.9776580352518978,
+              "macro_f1": 0.9357831068964468
+            },
+            "tune_calibrated": {
+              "nll": 0.04509748011634878,
+              "brier": 0.011586088132807402,
+              "ece15": 0.007715778782361799,
+              "mean_confidence": 0.9807485410028322,
+              "macro_f1": 0.9355790808859401
+            },
+            "desktop_batch1_ms": {
+              "p50": 2.1245499997348816,
+              "p95": 2.881885000215334
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\et20_seed44.joblib"
+          },
+          {
+            "seed": 44,
+            "name": "et30",
+            "artifact_bytes": 1327230,
+            "fit_cpu_s": 0.375,
+            "tune_raw": {
+              "nll": 0.04581357423582103,
+              "brier": 0.011478504049209678,
+              "ece15": 0.010602957281804621,
+              "mean_confidence": 0.9771927757220713,
+              "macro_f1": 0.9359857584538982
+            },
+            "tune_calibrated": {
+              "nll": 0.04477664216027213,
+              "brier": 0.011501573180906515,
+              "ece15": 0.008793390407478046,
+              "mean_confidence": 0.980796245737382,
+              "macro_f1": 0.9337896109105496
+            },
+            "desktop_batch1_ms": {
+              "p50": 2.8992000002290297,
+              "p95": 4.157485000041561
+            },
+            "path": "D:\\AutoML-MOO\\results\\budget_forest_candidates\\et30_seed44.joblib"
+          }
+        ]
+      }
+    ]
+  }
+}

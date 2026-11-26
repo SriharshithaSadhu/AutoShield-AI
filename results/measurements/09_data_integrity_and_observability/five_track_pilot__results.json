@@ -1,0 +1,5303 @@
+{
+  "source": "five_track_pilot/results.json",
+  "source_sha256": "262966ad8c16147cd04b82000751bd30a76a5df826a53b704d2d3435a3e7bd84",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "status": "development pilot, all five tracks remain incomplete",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "source_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+    "features": [
+      "Protocol",
+      "Flow Duration",
+      "Tot Fwd Pkts",
+      "Tot Bwd Pkts",
+      "TotLen Fwd Pkts",
+      "TotLen Bwd Pkts",
+      "Fwd Pkt Len Max",
+      "Fwd Pkt Len Min",
+      "Fwd Pkt Len Mean",
+      "Fwd Pkt Len Std",
+      "Bwd Pkt Len Max",
+      "Bwd Pkt Len Min",
+      "Bwd Pkt Len Mean",
+      "Bwd Pkt Len Std",
+      "Flow Byts/s",
+      "Flow Pkts/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Tot",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Tot",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Bwd PSH Flags",
+      "Fwd URG Flags",
+      "Bwd URG Flags",
+      "Fwd Header Len",
+      "Bwd Header Len",
+      "Fwd Pkts/s",
+      "Bwd Pkts/s",
+      "Pkt Len Min",
+      "Pkt Len Max",
+      "Pkt Len Mean",
+      "Pkt Len Std",
+      "Pkt Len Var",
+      "FIN Flag Cnt",
+      "SYN Flag Cnt",
+      "RST Flag Cnt",
+      "PSH Flag Cnt",
+      "ACK Flag Cnt",
+      "URG Flag Cnt",
+      "CWE Flag Count",
+      "ECE Flag Cnt",
+      "Down/Up Ratio",
+      "Pkt Size Avg",
+      "Fwd Seg Size Avg",
+      "Bwd Seg Size Avg",
+      "Fwd Byts/b Avg",
+      "Fwd Pkts/b Avg",
+      "Fwd Blk Rate Avg",
+      "Bwd Byts/b Avg",
+      "Bwd Pkts/b Avg",
+      "Bwd Blk Rate Avg",
+      "Subflow Fwd Pkts",
+      "Subflow Fwd Byts",
+      "Subflow Bwd Pkts",
+      "Subflow Bwd Byts",
+      "Init Fwd Win Byts",
+      "Init Bwd Win Byts",
+      "Fwd Act Data Pkts",
+      "Fwd Seg Size Min",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "partition_sizes": {
+          "train": 10315,
+          "probcal": 5209,
+          "tune": 5303,
+          "riskcal": 5469,
+          "evaluation": 4993
+        },
+        "candidates": [
+          {
+            "name": "lgb_small",
+            "fit_cpu_s": 0.234375,
+            "artifact_bytes": 112338,
+            "desktop_batch1_ms": {
+              "p50": 0.6154500297270715,
+              "p95": 0.7768800307530905
+            },
+            "tune_raw": {
+              "nll": 0.03235484898988319,
+              "brier": 0.00787502935466269,
+              "ece15": 0.003719113477182717,
+              "mean_confidence": 0.9877854407783345,
+              "macro_f1": 0.9503794957345161
+            },
+            "tune_calibrated": {
+              "nll": 0.033131538536129754,
+              "brier": 0.008142592988193415,
+              "ece15": 0.004626978184740557,
+              "mean_confidence": 0.9861607390175242,
+              "macro_f1": 0.9511042869462126
+            },
+            "evaluation_raw": {
+              "nll": 0.038268614994486104,
+              "brier": 0.009375620524339556,
+              "ece15": 0.0036112307169663175,
+              "mean_confidence": 0.9895137530162872,
+              "macro_f1": 0.9509369260031566
+            },
+            "evaluation_calibrated": {
+              "nll": 0.038080881353159166,
+              "brier": 0.009414498230892824,
+              "ece15": 0.002386041742760439,
+              "mean_confidence": 0.9878833504856469,
+              "macro_f1": 0.9524082207248491
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 2,
+                "tp": 3388,
+                "fpr": 0.006493506493506494,
+                "recall": 0.7231590181430096
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 6,
+                "tp": 4106,
+                "fpr": 0.01948051948051948,
+                "recall": 0.8764140875133405
+              }
+            },
+            "conformal": {
+              "coverage": 0.8936511115561786,
+              "mean_set_size": 0.9050670939315041,
+              "empty_fraction": 0.0949329060684959,
+              "class_coverage": {
+                "0": 0.8896103896103896,
+                "1": 0.8939167556029882
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 351,
+              "1": 5118
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 6.0,
+                "attacks": 3043,
+                "recall": 0.9930989155438712
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1916,
+                "recall": 1.0
+              }
+            ],
+            "explanation": {
+              "seconds_64_rows": 0.007385500008240342,
+              "additivity_max_error": 9.769962616701378e-15,
+              "top10": [
+                "Init Bwd Win Byts",
+                "Flow Duration",
+                "ACK Flag Cnt",
+                "Fwd Pkts/s",
+                "Bwd Header Len",
+                "Fwd Pkt Len Min",
+                "Bwd IAT Mean",
+                "Idle Min",
+                "Flow Byts/s",
+                "Flow IAT Mean"
+              ],
+              "scope": "raw uncalibrated model margin on fixed probe"
+            }
+          },
+          {
+            "name": "lgb_large",
+            "fit_cpu_s": 0.53125,
+            "artifact_bytes": 527170,
+            "desktop_batch1_ms": {
+              "p50": 0.6809999467805028,
+              "p95": 0.8857899869326502
+            },
+            "tune_raw": {
+              "nll": 0.038810520186195754,
+              "brier": 0.008274636007027523,
+              "ece15": 0.006342443360952283,
+              "mean_confidence": 0.995355292013687,
+              "macro_f1": 0.9528915651551362
+            },
+            "tune_calibrated": {
+              "nll": 0.03294931539751923,
+              "brier": 0.007973081105255351,
+              "ece15": 0.003917801495798259,
+              "mean_confidence": 0.9884124003329458,
+              "macro_f1": 0.9528915651551362
+            },
+            "evaluation_raw": {
+              "nll": 0.05271526842724584,
+              "brier": 0.010507973796107335,
+              "ece15": 0.008052006651980772,
+              "mean_confidence": 0.9949419871405696,
+              "macro_f1": 0.9460888438694399
+            },
+            "evaluation_calibrated": {
+              "nll": 0.04177243029555483,
+              "brier": 0.01027267361965638,
+              "ece15": 0.003089377055964559,
+              "mean_confidence": 0.9877648127405985,
+              "macro_f1": 0.9460888438694399
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 1,
+                "tp": 3368,
+                "fpr": 0.003246753246753247,
+                "recall": 0.7188900747065101
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 7,
+                "tp": 4020,
+                "fpr": 0.022727272727272728,
+                "recall": 0.8580576307363927
+              }
+            },
+            "conformal": {
+              "coverage": 0.8970558782295214,
+              "mean_set_size": 0.9122771880632886,
+              "empty_fraction": 0.0877228119367114,
+              "class_coverage": {
+                "0": 0.8896103896103896,
+                "1": 0.8975453575240128
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 351,
+              "1": 5118
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 6.0,
+                "attacks": 3043,
+                "recall": 0.9953992770292475
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1916,
+                "recall": 1.0
+              }
+            ],
+            "explanation": {
+              "seconds_64_rows": 0.05660929996520281,
+              "additivity_max_error": 3.019806626980426e-14,
+              "top10": [
+                "Init Bwd Win Byts",
+                "Flow Duration",
+                "ACK Flag Cnt",
+                "Bwd Header Len",
+                "Flow IAT Min",
+                "Fwd Pkts/s",
+                "Flow Byts/s",
+                "Flow IAT Mean",
+                "Bwd Pkts/s",
+                "Flow IAT Max"
+              ],
+              "scope": "raw uncalibrated model margin on fixed probe"
+            }
+          },
+          {
+            "name": "xgboost",
+            "fit_cpu_s": 0.421875,
+            "artifact_bytes": 173200,
+            "desktop_batch1_ms": {
+              "p50": 0.5128500051796436,
+              "p95": 0.8714299940038472
+            },
+            "tune_raw": {
+              "nll": 0.03268770997435428,
+              "brier": 0.007943712449830638,
+              "ece15": 0.0026487235907853767,
+              "mean_confidence": 0.9878174662590027,
+              "macro_f1": 0.9526654135458643
+            },
+            "tune_calibrated": {
+              "nll": 0.0335255218678026,
+              "brier": 0.008319190736745042,
+              "ece15": 0.003119447846321114,
+              "mean_confidence": 0.9862205966508428,
+              "macro_f1": 0.9482899643919905
+            },
+            "evaluation_raw": {
+              "nll": 0.03904488006095663,
+              "brier": 0.009492096054735487,
+              "ece15": 0.0038827164913737217,
+              "mean_confidence": 0.9890123605728149,
+              "macro_f1": 0.9495979380209907
+            },
+            "evaluation_calibrated": {
+              "nll": 0.03908403955023438,
+              "brier": 0.00964155067613344,
+              "ece15": 0.002886506767643018,
+              "mean_confidence": 0.9877834966029639,
+              "macro_f1": 0.94974383750541
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 1,
+                "tp": 3272,
+                "fpr": 0.003246753246753247,
+                "recall": 0.6983991462113127
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 5,
+                "tp": 3968,
+                "fpr": 0.016233766233766232,
+                "recall": 0.8469583778014941
+              }
+            },
+            "conformal": {
+              "coverage": 0.9002603645103144,
+              "mean_set_size": 0.9110755057079912,
+              "empty_fraction": 0.08892449429200881,
+              "class_coverage": {
+                "0": 0.8831168831168831,
+                "1": 0.9013874066168623
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 351,
+              "1": 5118
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 6.0,
+                "attacks": 3043,
+                "recall": 0.995070653959908
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1916,
+                "recall": 1.0
+              }
+            ]
+          },
+          {
+            "name": "random_forest",
+            "fit_cpu_s": 1.34375,
+            "artifact_bytes": 2675814,
+            "desktop_batch1_ms": {
+              "p50": 2.3567999596707523,
+              "p95": 4.627444938523695
+            },
+            "tune_raw": {
+              "nll": 0.048804310633431665,
+              "brier": 0.010190618860367713,
+              "ece15": 0.006107078920855735,
+              "mean_confidence": 0.9824965746669686,
+              "macro_f1": 0.9385536799924784
+            },
+            "tune_calibrated": {
+              "nll": 0.04825972029500457,
+              "brier": 0.010461526664771676,
+              "ece15": 0.006957157651680496,
+              "mean_confidence": 0.9809742019560888,
+              "macro_f1": 0.941254015730586
+            },
+            "evaluation_raw": {
+              "nll": 0.04974591829269596,
+              "brier": 0.011668271163530995,
+              "ece15": 0.007276100867506193,
+              "mean_confidence": 0.9829022053479868,
+              "macro_f1": 0.9452029542603049
+            },
+            "evaluation_calibrated": {
+              "nll": 0.04971099215555377,
+              "brier": 0.01201716095048433,
+              "ece15": 0.006288292462287259,
+              "mean_confidence": 0.9814204769407688,
+              "macro_f1": 0.9350234090568095
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 0,
+                "tp": 0,
+                "fpr": 0.0,
+                "recall": 0.0
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 9,
+                "tp": 4052,
+                "fpr": 0.02922077922077922,
+                "recall": 0.8648879402347919
+              }
+            },
+            "conformal": {
+              "coverage": 0.9056679351091528,
+              "mean_set_size": 0.9299018626076507,
+              "empty_fraction": 0.07009813739234928,
+              "class_coverage": {
+                "0": 0.8863636363636364,
+                "1": 0.9069370330843116
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 351,
+              "1": 5118
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 6.0,
+                "attacks": 3043,
+                "recall": 0.9990141307919816
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1916,
+                "recall": 1.0
+              }
+            ]
+          },
+          {
+            "name": "extra_trees",
+            "fit_cpu_s": 0.484375,
+            "artifact_bytes": 4390372,
+            "desktop_batch1_ms": {
+              "p50": 2.5253500207327306,
+              "p95": 4.848519968800247
+            },
+            "tune_raw": {
+              "nll": 0.04464908210940973,
+              "brier": 0.011077791470761903,
+              "ece15": 0.008993385660478477,
+              "mean_confidence": 0.9789140177335933,
+              "macro_f1": 0.9375828708430245
+            },
+            "tune_calibrated": {
+              "nll": 0.04310844696751741,
+              "brier": 0.01089814715876191,
+              "ece15": 0.006255990918460075,
+              "mean_confidence": 0.9826338027449831,
+              "macro_f1": 0.9391962808011556
+            },
+            "evaluation_raw": {
+              "nll": 0.05354591876054529,
+              "brier": 0.013326706270430443,
+              "ece15": 0.005884302865891991,
+              "mean_confidence": 0.979386327109645,
+              "macro_f1": 0.9288282205367123
+            },
+            "evaluation_calibrated": {
+              "nll": 0.05320612884343063,
+              "brier": 0.013170115164609841,
+              "ece15": 0.004108942050214853,
+              "mean_confidence": 0.9829299071912619,
+              "macro_f1": 0.9288282205367123
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 2,
+                "tp": 2933,
+                "fpr": 0.006493506493506494,
+                "recall": 0.6260405549626468
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 6,
+                "tp": 3548,
+                "fpr": 0.01948051948051948,
+                "recall": 0.7573105656350053
+              }
+            },
+            "conformal": {
+              "coverage": 0.9108752253154416,
+              "mean_set_size": 0.933506909673543,
+              "empty_fraction": 0.06649309032645705,
+              "class_coverage": {
+                "0": 0.8636363636363636,
+                "1": 0.9139807897545358
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 351,
+              "1": 5118
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 6.0,
+                "attacks": 3043,
+                "recall": 0.9973710154452843
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1916,
+                "recall": 1.0
+              }
+            ]
+          },
+          {
+            "name": "logistic",
+            "fit_cpu_s": 0.203125,
+            "artifact_bytes": 6385,
+            "desktop_batch1_ms": {
+              "p50": 0.2809499856084585,
+              "p95": 0.6352249125484365
+            },
+            "tune_raw": {
+              "nll": 0.09700191948935002,
+              "brier": 0.026073256162835613,
+              "ece15": 0.015543161064966976,
+              "mean_confidence": 0.9580672361690962,
+              "macro_f1": 0.813931447724116
+            },
+            "tune_calibrated": {
+              "nll": 0.0966939519328608,
+              "brier": 0.025762691766790823,
+              "ece15": 0.019106239236750894,
+              "mean_confidence": 0.9618717384281052,
+              "macro_f1": 0.8132847761398554
+            },
+            "evaluation_raw": {
+              "nll": 0.11812366192430962,
+              "brier": 0.029167511835984344,
+              "ece15": 0.011723608329534396,
+              "mean_confidence": 0.9545223828454976,
+              "macro_f1": 0.7999852414083914
+            },
+            "evaluation_calibrated": {
+              "nll": 0.12005203662155142,
+              "brier": 0.028964078026344084,
+              "ece15": 0.011407134175662558,
+              "mean_confidence": 0.9587237586037923,
+              "macro_f1": 0.7998073828304915
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 2,
+                "tp": 1702,
+                "fpr": 0.006493506493506494,
+                "recall": 0.3632870864461046
+              },
+              "0.01": {
+                "benign": 308,
+                "attack": 4685,
+                "fp": 2,
+                "tp": 1856,
+                "fpr": 0.006493506493506494,
+                "recall": 0.3961579509071505
+              }
+            },
+            "conformal": {
+              "coverage": 0.9098738233526937,
+              "mean_set_size": 1.0476667334267975,
+              "empty_fraction": 0.0,
+              "class_coverage": {
+                "0": 0.8896103896103896,
+                "1": 0.9112059765208111
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 351,
+              "1": 5118
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 6.0,
+                "attacks": 3043,
+                "recall": 0.9881695695037792
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1916,
+                "recall": 1.0
+              }
+            ]
+          }
+        ],
+        "selections": {
+          "confidence": "lgb_large",
+          "calibrated_nll": "lgb_large",
+          "calibrated_f1": "lgb_large"
+        },
+        "four_objective_archive": [
+          "lgb_small",
+          "lgb_large",
+          "xgboost",
+          "random_forest",
+          "extra_trees",
+          "logistic"
+        ],
+        "transfer": [
+          {
+            "chunk": 552,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 19993,
+                    "attack": 25,
+                    "fp": 12813,
+                    "tp": 9,
+                    "fpr": 0.6408743060071025,
+                    "recall": 0.36
+                  },
+                  "0.01": {
+                    "benign": 19993,
+                    "attack": 25,
+                    "fp": 14918,
+                    "tp": 21,
+                    "fpr": 0.7461611564047417,
+                    "recall": 0.84
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.004046358277550205,
+                  "mean_set_size": 0.9122789489459486,
+                  "empty_fraction": 0.08772105105405135,
+                  "class_coverage": {
+                    "0": 0.00300105036762867,
+                    "1": 0.84
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 560,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20013,
+                    "attack": 0,
+                    "fp": 12937,
+                    "tp": 0,
+                    "fpr": 0.6464298206165993,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20013,
+                    "attack": 0,
+                    "fp": 15579,
+                    "tp": 0,
+                    "fpr": 0.7784440113925948,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0029480837455653826,
+                  "mean_set_size": 0.89831609453855,
+                  "empty_fraction": 0.10168390546145006,
+                  "class_coverage": {
+                    "0": 0.0029480837455653826,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 568,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 11821,
+                    "tp": 0,
+                    "fpr": 0.5909318136372725,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 14445,
+                    "tp": 0,
+                    "fpr": 0.7221055788842231,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0022495500899820035,
+                  "mean_set_size": 0.8927714457108579,
+                  "empty_fraction": 0.10722855428914217,
+                  "class_coverage": {
+                    "0": 0.0022495500899820035,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 576,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20037,
+                    "attack": 0,
+                    "fp": 12631,
+                    "tp": 0,
+                    "fpr": 0.6303837899885212,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20037,
+                    "attack": 0,
+                    "fp": 14638,
+                    "tp": 0,
+                    "fpr": 0.730548485302191,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.003493536956630234,
+                  "mean_set_size": 0.9179517891899985,
+                  "empty_fraction": 0.08204821081000149,
+                  "class_coverage": {
+                    "0": 0.003493536956630234,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 584,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 27,
+                    "fp": 13106,
+                    "tp": 18,
+                    "fpr": 0.6551689662067587,
+                    "recall": 0.6666666666666666
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 27,
+                    "fp": 15773,
+                    "tp": 24,
+                    "fpr": 0.7884923015396921,
+                    "recall": 0.8888888888888888
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.004393190554640308,
+                  "mean_set_size": 0.9239179272128202,
+                  "empty_fraction": 0.07608207278717988,
+                  "class_coverage": {
+                    "0": 0.003199360127974405,
+                    "1": 0.8888888888888888
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 592,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 12812,
+                    "tp": 0,
+                    "fpr": 0.6404719056188762,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 15412,
+                    "tp": 0,
+                    "fpr": 0.7704459108178364,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0034993001399720057,
+                  "mean_set_size": 0.9202659468106379,
+                  "empty_fraction": 0.07973405318936212,
+                  "class_coverage": {
+                    "0": 0.0034993001399720057,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 600,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 19978,
+                    "attack": 26,
+                    "fp": 12989,
+                    "tp": 8,
+                    "fpr": 0.6501651816998698,
+                    "recall": 0.3076923076923077
+                  },
+                  "0.01": {
+                    "benign": 19978,
+                    "attack": 26,
+                    "fp": 15558,
+                    "tp": 21,
+                    "fpr": 0.778756632295525,
+                    "recall": 0.8076923076923077
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.004649070185962808,
+                  "mean_set_size": 0.9110677864427115,
+                  "empty_fraction": 0.08893221355728854,
+                  "class_coverage": {
+                    "0": 0.0036039643607968766,
+                    "1": 0.8076923076923077
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 608,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20027,
+                    "attack": 16,
+                    "fp": 12905,
+                    "tp": 6,
+                    "fpr": 0.6443800868827083,
+                    "recall": 0.375
+                  },
+                  "0.01": {
+                    "benign": 20027,
+                    "attack": 16,
+                    "fp": 15355,
+                    "tp": 11,
+                    "fpr": 0.7667149348379687,
+                    "recall": 0.6875
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.004290774834106671,
+                  "mean_set_size": 0.9180262435763109,
+                  "empty_fraction": 0.08197375642368906,
+                  "class_coverage": {
+                    "0": 0.0036450791431567385,
+                    "1": 0.8125
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 616,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20016,
+                    "attack": 0,
+                    "fp": 13122,
+                    "tp": 0,
+                    "fpr": 0.6555755395683454,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20016,
+                    "attack": 0,
+                    "fp": 15426,
+                    "tp": 0,
+                    "fpr": 0.77068345323741,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0022482014388489208,
+                  "mean_set_size": 0.9357014388489209,
+                  "empty_fraction": 0.06429856115107914,
+                  "class_coverage": {
+                    "0": 0.0022482014388489208,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 624,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20020,
+                    "attack": 0,
+                    "fp": 11974,
+                    "tp": 0,
+                    "fpr": 0.5981018981018981,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20020,
+                    "attack": 0,
+                    "fp": 14286,
+                    "tp": 0,
+                    "fpr": 0.7135864135864136,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0011488511488511489,
+                  "mean_set_size": 0.913986013986014,
+                  "empty_fraction": 0.08601398601398601,
+                  "class_coverage": {
+                    "0": 0.0011488511488511489,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 632,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20028,
+                    "attack": 33,
+                    "fp": 12648,
+                    "tp": 10,
+                    "fpr": 0.6315158777711204,
+                    "recall": 0.30303030303030304
+                  },
+                  "0.01": {
+                    "benign": 20028,
+                    "attack": 33,
+                    "fp": 14720,
+                    "tp": 28,
+                    "fpr": 0.7349710405432395,
+                    "recall": 0.8484848484848485
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.004436468770250735,
+                  "mean_set_size": 0.9055381087682568,
+                  "empty_fraction": 0.09446189123174319,
+                  "class_coverage": {
+                    "0": 0.002846015578190533,
+                    "1": 0.9696969696969697
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 640,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20012,
+                    "attack": 0,
+                    "fp": 12900,
+                    "tp": 0,
+                    "fpr": 0.6446132320607636,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20012,
+                    "attack": 0,
+                    "fp": 15640,
+                    "tp": 0,
+                    "fpr": 0.7815310813511893,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.004697181690985409,
+                  "mean_set_size": 0.9021587047771337,
+                  "empty_fraction": 0.09784129522286628,
+                  "class_coverage": {
+                    "0": 0.004697181690985409,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 648,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20047,
+                    "attack": 0,
+                    "fp": 12681,
+                    "tp": 0,
+                    "fpr": 0.6325634758317953,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20047,
+                    "attack": 0,
+                    "fp": 15307,
+                    "tp": 0,
+                    "fpr": 0.7635556442360453,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0034419115079563026,
+                  "mean_set_size": 0.9175437721354817,
+                  "empty_fraction": 0.08245622786451838,
+                  "class_coverage": {
+                    "0": 0.0034419115079563026,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 656,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 13106,
+                    "attack": 6905,
+                    "fp": 10259,
+                    "tp": 5242,
+                    "fpr": 0.7827712498092477,
+                    "recall": 0.7591600289645185
+                  },
+                  "0.01": {
+                    "benign": 13106,
+                    "attack": 6905,
+                    "fp": 11940,
+                    "tp": 6186,
+                    "fpr": 0.9110331146039982,
+                    "recall": 0.8958725561187545
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.3230723102293738,
+                  "mean_set_size": 0.9439308380390785,
+                  "empty_fraction": 0.056069161960921494,
+                  "class_coverage": {
+                    "0": 0.0039676484053105445,
+                    "1": 0.9287472845763939
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 664,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20009,
+                    "attack": 0,
+                    "fp": 14418,
+                    "tp": 0,
+                    "fpr": 0.7205757409165875,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20009,
+                    "attack": 0,
+                    "fp": 17489,
+                    "tp": 0,
+                    "fpr": 0.8740566744964766,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0035983807286720975,
+                  "mean_set_size": 0.9233344994752362,
+                  "empty_fraction": 0.07666550052476385,
+                  "class_coverage": {
+                    "0": 0.0035983807286720975,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 672,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20023,
+                    "attack": 0,
+                    "fp": 14468,
+                    "tp": 0,
+                    "fpr": 0.7225690455975629,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20023,
+                    "attack": 0,
+                    "fp": 17685,
+                    "tp": 0,
+                    "fpr": 0.8832342805773361,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.004045347849972532,
+                  "mean_set_size": 0.9241372421715027,
+                  "empty_fraction": 0.07586275782849723,
+                  "class_coverage": {
+                    "0": 0.004045347849972532,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 680,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 15709,
+                    "attack": 4304,
+                    "fp": 11964,
+                    "tp": 3433,
+                    "fpr": 0.7616016296390604,
+                    "recall": 0.7976301115241635
+                  },
+                  "0.01": {
+                    "benign": 15709,
+                    "attack": 4304,
+                    "fp": 13964,
+                    "tp": 3918,
+                    "fpr": 0.8889171812336877,
+                    "recall": 0.9103159851301115
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.20376755109179034,
+                  "mean_set_size": 0.9363913456253435,
+                  "empty_fraction": 0.06360865437465647,
+                  "class_coverage": {
+                    "0": 0.003373862117257623,
+                    "1": 0.9351765799256505
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 688,
+            "date": "2018-03-01",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 15280,
+                    "attack": 4754,
+                    "fp": 11592,
+                    "tp": 3355,
+                    "fpr": 0.7586387434554974,
+                    "recall": 0.705721497686159
+                  },
+                  "0.01": {
+                    "benign": 15280,
+                    "attack": 4754,
+                    "fp": 13600,
+                    "tp": 4177,
+                    "fpr": 0.8900523560209425,
+                    "recall": 0.878628523348759
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.22312069481880803,
+                  "mean_set_size": 0.9324148946790456,
+                  "empty_fraction": 0.06758510532095438,
+                  "class_coverage": {
+                    "0": 0.0041230366492146595,
+                    "1": 0.9270088346655448
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 696,
+            "date": "2018-03-01",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 5597,
+                    "attack": 14443,
+                    "fp": 4883,
+                    "tp": 11360,
+                    "fpr": 0.8724316598177595,
+                    "recall": 0.7865401924807865
+                  },
+                  "0.01": {
+                    "benign": 5597,
+                    "attack": 14443,
+                    "fp": 5261,
+                    "tp": 13260,
+                    "fpr": 0.9399678399142398,
+                    "recall": 0.918091809180918
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.6830838323353293,
+                  "mean_set_size": 0.9565868263473054,
+                  "empty_fraction": 0.04341317365269461,
+                  "class_coverage": {
+                    "0": 0.001965338574236198,
+                    "1": 0.947033164854947
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 704,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 14880,
+                    "attack": 5124,
+                    "fp": 10264,
+                    "tp": 12,
+                    "fpr": 0.6897849462365592,
+                    "recall": 0.00234192037470726
+                  },
+                  "0.01": {
+                    "benign": 14880,
+                    "attack": 5124,
+                    "fp": 12019,
+                    "tp": 2562,
+                    "fpr": 0.8077284946236559,
+                    "recall": 0.5
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.1303239352129574,
+                  "mean_set_size": 0.9063687262547491,
+                  "empty_fraction": 0.09363127374525095,
+                  "class_coverage": {
+                    "0": 0.0030241935483870967,
+                    "1": 0.5
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 712,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 13697,
+                    "attack": 6308,
+                    "fp": 9510,
+                    "tp": 13,
+                    "fpr": 0.694312623202161,
+                    "recall": 0.002060875079264426
+                  },
+                  "0.01": {
+                    "benign": 13697,
+                    "attack": 6308,
+                    "fp": 10851,
+                    "tp": 3154,
+                    "fpr": 0.7922172738555888,
+                    "recall": 0.5
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.15976005998500376,
+                  "mean_set_size": 0.8937765558610348,
+                  "empty_fraction": 0.10622344413896526,
+                  "class_coverage": {
+                    "0": 0.0030663648974227934,
+                    "1": 0.5
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 720,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20005,
+                    "attack": 0,
+                    "fp": 13592,
+                    "tp": 0,
+                    "fpr": 0.6794301424643839,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20005,
+                    "attack": 0,
+                    "fp": 15364,
+                    "tp": 0,
+                    "fpr": 0.7680079980004999,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0017495626093476631,
+                  "mean_set_size": 0.9273181704573856,
+                  "empty_fraction": 0.07268182954261435,
+                  "class_coverage": {
+                    "0": 0.0017495626093476631,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 728,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20038,
+                    "attack": 0,
+                    "fp": 13704,
+                    "tp": 0,
+                    "fpr": 0.6839005888811258,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20038,
+                    "attack": 0,
+                    "fp": 16235,
+                    "tp": 0,
+                    "fpr": 0.8102105998602654,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.00264497454835812,
+                  "mean_set_size": 0.9195029444056293,
+                  "empty_fraction": 0.08049705559437069,
+                  "class_coverage": {
+                    "0": 0.00264497454835812,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 736,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 12321,
+                    "attack": 7734,
+                    "fp": 7561,
+                    "tp": 48,
+                    "fpr": 0.6136677217758298,
+                    "recall": 0.0062063615205585725
+                  },
+                  "0.01": {
+                    "benign": 12321,
+                    "attack": 7734,
+                    "fp": 9445,
+                    "tp": 3874,
+                    "fpr": 0.7665773881990098,
+                    "recall": 0.5009050943884148
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.1950137122911992,
+                  "mean_set_size": 0.8727499376714036,
+                  "empty_fraction": 0.12725006232859637,
+                  "class_coverage": {
+                    "0": 0.0029218407596785976,
+                    "1": 0.5010343935867597
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 744,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 10431,
+                    "attack": 9581,
+                    "fp": 7013,
+                    "tp": 42,
+                    "fpr": 0.6723228837120123,
+                    "recall": 0.00438367602546707
+                  },
+                  "0.01": {
+                    "benign": 10431,
+                    "attack": 9581,
+                    "fp": 7985,
+                    "tp": 4791,
+                    "fpr": 0.7655066628319432,
+                    "recall": 0.5000521866193508
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.24090545672596442,
+                  "mean_set_size": 0.8773735758544873,
+                  "empty_fraction": 0.1226264241455127,
+                  "class_coverage": {
+                    "0": 0.0028760425654299686,
+                    "1": 0.5000521866193508
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 752,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 5482,
+                    "attack": 1820,
+                    "fp": 3850,
+                    "tp": 1,
+                    "fpr": 0.7022984312294783,
+                    "recall": 0.0005494505494505495
+                  },
+                  "0.01": {
+                    "benign": 5482,
+                    "attack": 1820,
+                    "fp": 4512,
+                    "tp": 910,
+                    "fpr": 0.82305727836556,
+                    "recall": 0.5
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.1257189811010682,
+                  "mean_set_size": 0.9129005751848809,
+                  "empty_fraction": 0.08709942481511915,
+                  "class_coverage": {
+                    "0": 0.0012769062385990515,
+                    "1": 0.5005494505494505
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "seed": 43,
+        "partition_sizes": {
+          "train": 10662,
+          "probcal": 5587,
+          "tune": 5113,
+          "riskcal": 4858,
+          "evaluation": 5069
+        },
+        "candidates": [
+          {
+            "name": "lgb_small",
+            "fit_cpu_s": 0.234375,
+            "artifact_bytes": 112258,
+            "desktop_batch1_ms": {
+              "p50": 0.3932500840164721,
+              "p95": 0.6226999685168266
+            },
+            "tune_raw": {
+              "nll": 0.03250224318229647,
+              "brier": 0.008110799800413631,
+              "ece15": 0.002325171961458021,
+              "mean_confidence": 0.9894742210839172,
+              "macro_f1": 0.9605419122422022
+            },
+            "tune_calibrated": {
+              "nll": 0.032443528424569525,
+              "brier": 0.008270155968477261,
+              "ece15": 0.0020930332689463225,
+              "mean_confidence": 0.9888140803781813,
+              "macro_f1": 0.955641989589358
+            },
+            "evaluation_raw": {
+              "nll": 0.04234637745912704,
+              "brier": 0.01025700950255834,
+              "ece15": 0.004316961756920935,
+              "mean_confidence": 0.9892201390342629,
+              "macro_f1": 0.9498488864652144
+            },
+            "evaluation_calibrated": {
+              "nll": 0.04358115074667103,
+              "brier": 0.010842797529516737,
+              "ece15": 0.005382013360369895,
+              "mean_confidence": 0.9879252729943604,
+              "macro_f1": 0.9492257146863794
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 1497,
+                "fpr": 0.0,
+                "recall": 0.31615628299894405
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 3,
+                "tp": 3401,
+                "fpr": 0.008982035928143712,
+                "recall": 0.7182682154171066
+              }
+            },
+            "conformal": {
+              "coverage": 0.9232590254488064,
+              "mean_set_size": 0.9439731702505425,
+              "empty_fraction": 0.05602682974945749,
+              "class_coverage": {
+                "0": 0.907185628742515,
+                "1": 0.9243928194297782
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 333,
+              "1": 4525
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 33,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 2794,
+                "recall": 0.9949892627057981
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1948,
+                "recall": 1.0
+              }
+            ],
+            "explanation": {
+              "seconds_64_rows": 0.00565679999999702,
+              "additivity_max_error": 1.509903313490213e-14,
+              "top10": [
+                "Init Bwd Win Byts",
+                "Flow Duration",
+                "ACK Flag Cnt",
+                "Bwd Header Len",
+                "Fwd Pkt Len Min",
+                "Flow IAT Mean",
+                "Fwd Pkts/s",
+                "Bwd Pkt Len Std",
+                "Flow IAT Min",
+                "Flow Byts/s"
+              ],
+              "scope": "raw uncalibrated model margin on fixed probe"
+            }
+          },
+          {
+            "name": "lgb_large",
+            "fit_cpu_s": 0.453125,
+            "artifact_bytes": 528082,
+            "desktop_batch1_ms": {
+              "p50": 0.37495000287890434,
+              "p95": 0.5396750289946795
+            },
+            "tune_raw": {
+              "nll": 0.04234937728535919,
+              "brier": 0.00852860916484448,
+              "ece15": 0.006745573570775008,
+              "mean_confidence": 0.995990768729495,
+              "macro_f1": 0.9572848788638262
+            },
+            "tune_calibrated": {
+              "nll": 0.03227634842079829,
+              "brier": 0.008165754613857736,
+              "ece15": 0.0032468935353627986,
+              "mean_confidence": 0.9896696855114098,
+              "macro_f1": 0.9572848788638262
+            },
+            "evaluation_raw": {
+              "nll": 0.05467182516052245,
+              "brier": 0.010770285784746203,
+              "ece15": 0.007742564961203745,
+              "mean_confidence": 0.9947974561600987,
+              "macro_f1": 0.9455588992780567
+            },
+            "evaluation_calibrated": {
+              "nll": 0.0405737215081183,
+              "brier": 0.010309011330375237,
+              "ece15": 0.002380805169813438,
+              "mean_confidence": 0.9877658297343516,
+              "macro_f1": 0.9455588992780567
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 734,
+                "fpr": 0.0,
+                "recall": 0.15501583949313621
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 1,
+                "tp": 3163,
+                "fpr": 0.0029940119760479044,
+                "recall": 0.6680042238648364
+              }
+            },
+            "conformal": {
+              "coverage": 0.9070822647464983,
+              "mean_set_size": 0.9262181889919117,
+              "empty_fraction": 0.07378181100808838,
+              "class_coverage": {
+                "0": 0.9101796407185628,
+                "1": 0.9068637803590285
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 333,
+              "1": 4525
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 33,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 2794,
+                "recall": 0.9953471725125268
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1948,
+                "recall": 1.0
+              }
+            ],
+            "explanation": {
+              "seconds_64_rows": 0.04687389999162406,
+              "additivity_max_error": 2.3092638912203256e-14,
+              "top10": [
+                "Init Bwd Win Byts",
+                "Flow Duration",
+                "Bwd Header Len",
+                "ACK Flag Cnt",
+                "Flow Byts/s",
+                "Flow IAT Mean",
+                "Fwd Pkts/s",
+                "Flow Pkts/s",
+                "Bwd Pkts/s",
+                "Bwd Pkt Len Std"
+              ],
+              "scope": "raw uncalibrated model margin on fixed probe"
+            }
+          },
+          {
+            "name": "xgboost",
+            "fit_cpu_s": 0.328125,
+            "artifact_bytes": 163408,
+            "desktop_batch1_ms": {
+              "p50": 0.3909000661224127,
+              "p95": 0.7283800165168937
+            },
+            "tune_raw": {
+              "nll": 0.032920842164034333,
+              "brier": 0.008290987019584355,
+              "ece15": 0.002127521440937591,
+              "mean_confidence": 0.9888437390327454,
+              "macro_f1": 0.9570574515481519
+            },
+            "tune_calibrated": {
+              "nll": 0.03264768886636519,
+              "brier": 0.008441343881602986,
+              "ece15": 0.0017598076507322907,
+              "mean_confidence": 0.9890725024950706,
+              "macro_f1": 0.9541306272996524
+            },
+            "evaluation_raw": {
+              "nll": 0.04131397324015267,
+              "brier": 0.010258995274104872,
+              "ece15": 0.0022692785716475266,
+              "mean_confidence": 0.9878905415534973,
+              "macro_f1": 0.9489227664668407
+            },
+            "evaluation_calibrated": {
+              "nll": 0.04266028349479231,
+              "brier": 0.010887981751448473,
+              "ece15": 0.005156981779054685,
+              "mean_confidence": 0.9876176002827133,
+              "macro_f1": 0.9461598105131228
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 861,
+                "fpr": 0.0,
+                "recall": 0.18183738120380147
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 3012,
+                "fpr": 0.0,
+                "recall": 0.6361140443505808
+              }
+            },
+            "conformal": {
+              "coverage": 0.918918918918919,
+              "mean_set_size": 0.9433813375419214,
+              "empty_fraction": 0.05661866245807852,
+              "class_coverage": {
+                "0": 0.9131736526946108,
+                "1": 0.919324181626188
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 333,
+              "1": 4525
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 33,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 2794,
+                "recall": 0.9942734430923408
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1948,
+                "recall": 1.0
+              }
+            ]
+          },
+          {
+            "name": "random_forest",
+            "fit_cpu_s": 1.359375,
+            "artifact_bytes": 2396774,
+            "desktop_batch1_ms": {
+              "p50": 2.8198500513099134,
+              "p95": 5.3411049535498
+            },
+            "tune_raw": {
+              "nll": 0.04503715765056679,
+              "brier": 0.011038773568762206,
+              "ece15": 0.005249323598214177,
+              "mean_confidence": 0.9833836629290966,
+              "macro_f1": 0.945385309684414
+            },
+            "tune_calibrated": {
+              "nll": 0.04507062759111474,
+              "brier": 0.011020852009772672,
+              "ece15": 0.00515339208216975,
+              "mean_confidence": 0.9837626096104224,
+              "macro_f1": 0.945385309684414
+            },
+            "evaluation_raw": {
+              "nll": 0.04862461929663065,
+              "brier": 0.011938085906640599,
+              "ece15": 0.005303438106604524,
+              "mean_confidence": 0.9836567734543215,
+              "macro_f1": 0.9334430286545786
+            },
+            "evaluation_calibrated": {
+              "nll": 0.048918049918391625,
+              "brier": 0.011998506288141213,
+              "ece15": 0.005632798588773648,
+              "mean_confidence": 0.9840950758062857,
+              "macro_f1": 0.9336386934585927
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 2546,
+                "fpr": 0.0,
+                "recall": 0.5376979936642028
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 4,
+                "tp": 3159,
+                "fpr": 0.011976047904191617,
+                "recall": 0.6671594508975712
+              }
+            },
+            "conformal": {
+              "coverage": 0.9161570329453541,
+              "mean_set_size": 0.9540343262971,
+              "empty_fraction": 0.04596567370289998,
+              "class_coverage": {
+                "0": 0.9251497005988024,
+                "1": 0.9155227032734953
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 333,
+              "1": 4525
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 33,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 2794,
+                "recall": 0.9978525411596277
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1948,
+                "recall": 1.0
+              }
+            ]
+          },
+          {
+            "name": "extra_trees",
+            "fit_cpu_s": 0.625,
+            "artifact_bytes": 4502052,
+            "desktop_batch1_ms": {
+              "p50": 2.9439000063575804,
+              "p95": 5.102900014026089
+            },
+            "tune_raw": {
+              "nll": 0.04471988936264813,
+              "brier": 0.010972140410764792,
+              "ece15": 0.00711000263213489,
+              "mean_confidence": 0.980768932304463,
+              "macro_f1": 0.94756313808002
+            },
+            "tune_calibrated": {
+              "nll": 0.043018037169955295,
+              "brier": 0.010688368381721991,
+              "ece15": 0.0031257917628777243,
+              "mean_confidence": 0.9853599925123209,
+              "macro_f1": 0.9439161467229342
+            },
+            "evaluation_raw": {
+              "nll": 0.05267665176725077,
+              "brier": 0.012844773414255528,
+              "ece15": 0.007060151071066391,
+              "mean_confidence": 0.980536348827259,
+              "macro_f1": 0.9360493266447898
+            },
+            "evaluation_calibrated": {
+              "nll": 0.0529372813194098,
+              "brier": 0.012784936422658426,
+              "ece15": 0.004953322727769229,
+              "mean_confidence": 0.9846902397444688,
+              "macro_f1": 0.9349134779264978
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 0,
+                "tp": 2168,
+                "fpr": 0.0,
+                "recall": 0.4578669482576558
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 5,
+                "tp": 3280,
+                "fpr": 0.014970059880239521,
+                "recall": 0.6927138331573389
+              }
+            },
+            "conformal": {
+              "coverage": 0.9082659301637404,
+              "mean_set_size": 0.9540343262971,
+              "empty_fraction": 0.04596567370289998,
+              "class_coverage": {
+                "0": 0.9311377245508982,
+                "1": 0.9066525871172122
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 333,
+              "1": 4525
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 33,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 2794,
+                "recall": 0.9949892627057981
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1948,
+                "recall": 1.0
+              }
+            ]
+          },
+          {
+            "name": "logistic",
+            "fit_cpu_s": 0.21875,
+            "artifact_bytes": 6385,
+            "desktop_batch1_ms": {
+              "p50": 0.18610002007335424,
+              "p95": 0.3757299215067175
+            },
+            "tune_raw": {
+              "nll": 0.11159454936827436,
+              "brier": 0.028841290550172864,
+              "ece15": 0.010006785778262351,
+              "mean_confidence": 0.9594849048953236,
+              "macro_f1": 0.7904158331108853
+            },
+            "tune_calibrated": {
+              "nll": 0.11347182824864095,
+              "brier": 0.028093510371515328,
+              "ece15": 0.01174275769438489,
+              "mean_confidence": 0.9662533400749647,
+              "macro_f1": 0.8398225508453383
+            },
+            "evaluation_raw": {
+              "nll": 0.10548309107341139,
+              "brier": 0.028133048964870892,
+              "ece15": 0.007309942707577955,
+              "mean_confidence": 0.958976282110737,
+              "macro_f1": 0.7953832491407745
+            },
+            "evaluation_calibrated": {
+              "nll": 0.10511234416639305,
+              "brier": 0.02738692653327659,
+              "ece15": 0.0075909753270420495,
+              "mean_confidence": 0.966028133756953,
+              "macro_f1": 0.8317805406990655
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 1,
+                "tp": 1310,
+                "fpr": 0.0029940119760479044,
+                "recall": 0.27666314677930304
+              },
+              "0.01": {
+                "benign": 334,
+                "attack": 4735,
+                "fp": 5,
+                "tp": 2177,
+                "fpr": 0.014970059880239521,
+                "recall": 0.4597676874340021
+              }
+            },
+            "conformal": {
+              "coverage": 0.9285855198263957,
+              "mean_set_size": 1.0313671335569146,
+              "empty_fraction": 0.0,
+              "class_coverage": {
+                "0": 0.9131736526946108,
+                "1": 0.9296726504751848
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 333,
+              "1": 4525
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 33,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 2794,
+                "recall": 0.9896206156048676
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1948,
+                "recall": 0.9994866529774127
+              }
+            ]
+          }
+        ],
+        "selections": {
+          "confidence": "lgb_large",
+          "calibrated_nll": "lgb_large",
+          "calibrated_f1": "lgb_large"
+        },
+        "four_objective_archive": [
+          "lgb_small",
+          "lgb_large",
+          "random_forest",
+          "logistic"
+        ],
+        "transfer": [
+          {
+            "chunk": 552,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 19993,
+                    "attack": 25,
+                    "fp": 857,
+                    "tp": 0,
+                    "fpr": 0.04286500275096284,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 19993,
+                    "attack": 25,
+                    "fp": 9179,
+                    "tp": 9,
+                    "fpr": 0.45911068874105937,
+                    "recall": 0.36
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.008392446797881906,
+                  "mean_set_size": 0.8818063742631631,
+                  "empty_fraction": 0.11819362573683685,
+                  "class_coverage": {
+                    "0": 0.007352573400690242,
+                    "1": 0.84
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 560,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20013,
+                    "attack": 0,
+                    "fp": 907,
+                    "tp": 0,
+                    "fpr": 0.04532054164792885,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20013,
+                    "attack": 0,
+                    "fp": 8397,
+                    "tp": 0,
+                    "fpr": 0.4195772747713986,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.008294608504472093,
+                  "mean_set_size": 0.9182031679408384,
+                  "empty_fraction": 0.08179683205916155,
+                  "class_coverage": {
+                    "0": 0.008294608504472093,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 568,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 1779,
+                    "tp": 0,
+                    "fpr": 0.08893221355728854,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 9264,
+                    "tp": 0,
+                    "fpr": 0.4631073785242951,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.005348930213957209,
+                  "mean_set_size": 0.9003199360127975,
+                  "empty_fraction": 0.09968006398720256,
+                  "class_coverage": {
+                    "0": 0.005348930213957209,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 576,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20037,
+                    "attack": 0,
+                    "fp": 803,
+                    "tp": 0,
+                    "fpr": 0.04007585965962968,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20037,
+                    "attack": 0,
+                    "fp": 9681,
+                    "tp": 0,
+                    "fpr": 0.48315616110196136,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.006937166242451465,
+                  "mean_set_size": 0.8674951340020961,
+                  "empty_fraction": 0.13250486599790387,
+                  "class_coverage": {
+                    "0": 0.006937166242451465,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 584,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 27,
+                    "fp": 847,
+                    "tp": 0,
+                    "fpr": 0.04234153169366127,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 27,
+                    "fp": 8103,
+                    "tp": 17,
+                    "fpr": 0.40506898620275944,
+                    "recall": 0.6296296296296297
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.008486845389646048,
+                  "mean_set_size": 0.8775897359093405,
+                  "empty_fraction": 0.12241026409065948,
+                  "class_coverage": {
+                    "0": 0.007198560287942412,
+                    "1": 0.9629629629629629
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 592,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 1225,
+                    "tp": 0,
+                    "fpr": 0.061237752449510095,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 8442,
+                    "tp": 0,
+                    "fpr": 0.4220155968806239,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.010447910417916416,
+                  "mean_set_size": 0.869876024795041,
+                  "empty_fraction": 0.130123975204959,
+                  "class_coverage": {
+                    "0": 0.010447910417916416,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 600,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 19978,
+                    "attack": 26,
+                    "fp": 936,
+                    "tp": 0,
+                    "fpr": 0.046851536690359394,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 19978,
+                    "attack": 26,
+                    "fp": 8472,
+                    "tp": 8,
+                    "fpr": 0.4240664731204325,
+                    "recall": 0.3076923076923077
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.009548090381923615,
+                  "mean_set_size": 0.9016696660667867,
+                  "empty_fraction": 0.09833033393321336,
+                  "class_coverage": {
+                    "0": 0.008509360296325959,
+                    "1": 0.8076923076923077
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 608,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20027,
+                    "attack": 16,
+                    "fp": 1080,
+                    "tp": 0,
+                    "fpr": 0.05392719828231887,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 20027,
+                    "attack": 16,
+                    "fp": 8680,
+                    "tp": 10,
+                    "fpr": 0.43341488989863686,
+                    "recall": 0.625
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.00972908247268373,
+                  "mean_set_size": 0.8898368507708427,
+                  "empty_fraction": 0.1101631492291573,
+                  "class_coverage": {
+                    "0": 0.008987866380386478,
+                    "1": 0.9375
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 616,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20016,
+                    "attack": 0,
+                    "fp": 911,
+                    "tp": 0,
+                    "fpr": 0.04551358912869704,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20016,
+                    "attack": 0,
+                    "fp": 8967,
+                    "tp": 0,
+                    "fpr": 0.4479916067146283,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0069944044764188645,
+                  "mean_set_size": 0.8747501998401279,
+                  "empty_fraction": 0.1252498001598721,
+                  "class_coverage": {
+                    "0": 0.0069944044764188645,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 624,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20020,
+                    "attack": 0,
+                    "fp": 499,
+                    "tp": 0,
+                    "fpr": 0.024925074925074925,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20020,
+                    "attack": 0,
+                    "fp": 8853,
+                    "tp": 0,
+                    "fpr": 0.4422077922077922,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.002897102897102897,
+                  "mean_set_size": 0.8704795204795205,
+                  "empty_fraction": 0.12952047952047951,
+                  "class_coverage": {
+                    "0": 0.002897102897102897,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 632,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20028,
+                    "attack": 33,
+                    "fp": 821,
+                    "tp": 0,
+                    "fpr": 0.040992610345516274,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 20028,
+                    "attack": 33,
+                    "fp": 9398,
+                    "tp": 9,
+                    "fpr": 0.46924305971639707,
+                    "recall": 0.2727272727272727
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.008573849758237375,
+                  "mean_set_size": 0.8698968147151189,
+                  "empty_fraction": 0.1301031852848811,
+                  "class_coverage": {
+                    "0": 0.006940283602955862,
+                    "1": 1.0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 640,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20012,
+                    "attack": 0,
+                    "fp": 1335,
+                    "tp": 0,
+                    "fpr": 0.06670997401559065,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20012,
+                    "attack": 0,
+                    "fp": 8294,
+                    "tp": 0,
+                    "fpr": 0.4144513292024785,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.010693583849690186,
+                  "mean_set_size": 0.9082550469718169,
+                  "empty_fraction": 0.09174495302818308,
+                  "class_coverage": {
+                    "0": 0.010693583849690186,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 648,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20047,
+                    "attack": 0,
+                    "fp": 1008,
+                    "tp": 0,
+                    "fpr": 0.050281837681448595,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20047,
+                    "attack": 0,
+                    "fp": 8406,
+                    "tp": 0,
+                    "fpr": 0.4193146106649374,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.009328079014316357,
+                  "mean_set_size": 0.8763405995909612,
+                  "empty_fraction": 0.12365940040903876,
+                  "class_coverage": {
+                    "0": 0.009328079014316357,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 656,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 13106,
+                    "attack": 6905,
+                    "fp": 2606,
+                    "tp": 1355,
+                    "fpr": 0.1988402258507554,
+                    "recall": 0.19623461259956554
+                  },
+                  "0.01": {
+                    "benign": 13106,
+                    "attack": 6905,
+                    "fp": 7377,
+                    "tp": 3297,
+                    "fpr": 0.5628719670379979,
+                    "recall": 0.4774800868935554
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.32966868222477635,
+                  "mean_set_size": 0.9545749837589326,
+                  "empty_fraction": 0.045425016241067415,
+                  "class_coverage": {
+                    "0": 0.00816419960323516,
+                    "1": 0.939898624185373
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 664,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20009,
+                    "attack": 0,
+                    "fp": 1533,
+                    "tp": 0,
+                    "fpr": 0.07661552301464342,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20009,
+                    "attack": 0,
+                    "fp": 8193,
+                    "tp": 0,
+                    "fpr": 0.40946574041681244,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.01129491728722075,
+                  "mean_set_size": 0.9345794392523364,
+                  "empty_fraction": 0.06542056074766354,
+                  "class_coverage": {
+                    "0": 0.01129491728722075,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 672,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20023,
+                    "attack": 0,
+                    "fp": 1207,
+                    "tp": 0,
+                    "fpr": 0.06028067722119562,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20023,
+                    "attack": 0,
+                    "fp": 7043,
+                    "tp": 0,
+                    "fpr": 0.3517454926834141,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.011187134794985766,
+                  "mean_set_size": 0.9384208160615293,
+                  "empty_fraction": 0.06157918393847076,
+                  "class_coverage": {
+                    "0": 0.011187134794985766,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 680,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 15709,
+                    "attack": 4304,
+                    "fp": 1664,
+                    "tp": 1180,
+                    "fpr": 0.1059265389267299,
+                    "recall": 0.2741635687732342
+                  },
+                  "0.01": {
+                    "benign": 15709,
+                    "attack": 4304,
+                    "fp": 7673,
+                    "tp": 2360,
+                    "fpr": 0.48844611369278756,
+                    "recall": 0.5483271375464684
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.21241193224404137,
+                  "mean_set_size": 0.9567281267176335,
+                  "empty_fraction": 0.04327187328236646,
+                  "class_coverage": {
+                    "0": 0.008784773060029283,
+                    "1": 0.9556226765799256
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 688,
+            "date": "2018-03-01",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 15280,
+                    "attack": 4754,
+                    "fp": 1899,
+                    "tp": 220,
+                    "fpr": 0.12428010471204189,
+                    "recall": 0.04627681952040387
+                  },
+                  "0.01": {
+                    "benign": 15280,
+                    "attack": 4754,
+                    "fp": 7655,
+                    "tp": 1977,
+                    "fpr": 0.5009816753926701,
+                    "recall": 0.41586032814472024
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.23000898472596587,
+                  "mean_set_size": 0.9453429170410302,
+                  "empty_fraction": 0.054657082958969753,
+                  "class_coverage": {
+                    "0": 0.009096858638743455,
+                    "1": 0.9400504838031132
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 696,
+            "date": "2018-03-01",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 5597,
+                    "attack": 14443,
+                    "fp": 3184,
+                    "tp": 2338,
+                    "fpr": 0.5688761836698231,
+                    "recall": 0.16187772623416188
+                  },
+                  "0.01": {
+                    "benign": 5597,
+                    "attack": 14443,
+                    "fp": 4161,
+                    "tp": 9070,
+                    "fpr": 0.74343398249062,
+                    "recall": 0.627985875510628
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.6854790419161677,
+                  "mean_set_size": 0.9613772455089821,
+                  "empty_fraction": 0.038622754491017965,
+                  "class_coverage": {
+                    "0": 0.003930677148472396,
+                    "1": 0.9495949594959496
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 704,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 14880,
+                    "attack": 5124,
+                    "fp": 617,
+                    "tp": 0,
+                    "fpr": 0.04146505376344086,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 14880,
+                    "attack": 5124,
+                    "fp": 7185,
+                    "tp": 2562,
+                    "fpr": 0.48286290322580644,
+                    "recall": 0.5
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.15011997600479904,
+                  "mean_set_size": 0.9127674465106979,
+                  "empty_fraction": 0.08723255348930214,
+                  "class_coverage": {
+                    "0": 0.007526881720430108,
+                    "1": 0.5642076502732241
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 712,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 13697,
+                    "attack": 6308,
+                    "fp": 374,
+                    "tp": 0,
+                    "fpr": 0.027305249324669635,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 13697,
+                    "attack": 6308,
+                    "fp": 7169,
+                    "tp": 3154,
+                    "fpr": 0.5233992845148573,
+                    "recall": 0.5
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.18070482379405148,
+                  "mean_set_size": 0.9247688077980505,
+                  "empty_fraction": 0.07523119220194951,
+                  "class_coverage": {
+                    "0": 0.0049645907863035705,
+                    "1": 0.5623018389346861
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 720,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20005,
+                    "attack": 0,
+                    "fp": 615,
+                    "tp": 0,
+                    "fpr": 0.03074231442139465,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20005,
+                    "attack": 0,
+                    "fp": 10828,
+                    "tp": 0,
+                    "fpr": 0.5412646838290427,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.005298675331167208,
+                  "mean_set_size": 0.8781804548862784,
+                  "empty_fraction": 0.12181954511372158,
+                  "class_coverage": {
+                    "0": 0.005298675331167208,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 728,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20038,
+                    "attack": 0,
+                    "fp": 702,
+                    "tp": 0,
+                    "fpr": 0.035033436470705656,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20038,
+                    "attack": 0,
+                    "fp": 9606,
+                    "tp": 0,
+                    "fpr": 0.47938916059486975,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.007136440762551152,
+                  "mean_set_size": 0.9362710849386167,
+                  "empty_fraction": 0.06372891506138337,
+                  "class_coverage": {
+                    "0": 0.007136440762551152,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 736,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 12321,
+                    "attack": 7734,
+                    "fp": 1019,
+                    "tp": 0,
+                    "fpr": 0.08270432594756918,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 12321,
+                    "attack": 7734,
+                    "fp": 5295,
+                    "tp": 3857,
+                    "fpr": 0.42975407840272706,
+                    "recall": 0.4987070080165503
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.2218898030416355,
+                  "mean_set_size": 0.9329842931937172,
+                  "empty_fraction": 0.06701570680628273,
+                  "class_coverage": {
+                    "0": 0.008603197792386982,
+                    "1": 0.5616757176105508
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 744,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 10431,
+                    "attack": 9581,
+                    "fp": 386,
+                    "tp": 0,
+                    "fpr": 0.03700508100853226,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 10431,
+                    "attack": 9581,
+                    "fp": 5398,
+                    "tp": 4790,
+                    "fpr": 0.5174959256063656,
+                    "recall": 0.4999478133806492
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.276134319408355,
+                  "mean_set_size": 0.9250949430341795,
+                  "empty_fraction": 0.0749050569658205,
+                  "class_coverage": {
+                    "0": 0.007381842584603586,
+                    "1": 0.5687297776850015
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 752,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 5482,
+                    "attack": 1820,
+                    "fp": 177,
+                    "tp": 0,
+                    "fpr": 0.032287486318861726,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 5482,
+                    "attack": 1820,
+                    "fp": 2676,
+                    "tp": 910,
+                    "fpr": 0.4881430134987231,
+                    "recall": 0.5
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.1443440153382635,
+                  "mean_set_size": 0.9157764995891536,
+                  "empty_fraction": 0.08422350041084635,
+                  "class_coverage": {
+                    "0": 0.0056548704852243704,
+                    "1": 0.5620879120879121
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "seed": 44,
+        "partition_sizes": {
+          "train": 10412,
+          "probcal": 5440,
+          "tune": 5282,
+          "riskcal": 4981,
+          "evaluation": 5174
+        },
+        "candidates": [
+          {
+            "name": "lgb_small",
+            "fit_cpu_s": 0.21875,
+            "artifact_bytes": 112226,
+            "desktop_batch1_ms": {
+              "p50": 0.4112499882467091,
+              "p95": 1.4236950955819319
+            },
+            "tune_raw": {
+              "nll": 0.03253501342229378,
+              "brier": 0.008130350834345696,
+              "ece15": 0.004516130862765442,
+              "mean_confidence": 0.9880878749168927,
+              "macro_f1": 0.9583727381627893
+            },
+            "tune_calibrated": {
+              "nll": 0.033298324336918164,
+              "brier": 0.008207781545997168,
+              "ece15": 0.005367074128092576,
+              "mean_confidence": 0.9860456912384338,
+              "macro_f1": 0.9583727381627893
+            },
+            "evaluation_raw": {
+              "nll": 0.03376041055029369,
+              "brier": 0.008509330248456886,
+              "ece15": 0.005073055042718437,
+              "mean_confidence": 0.9861472985358241,
+              "macro_f1": 0.9590780588795076
+            },
+            "evaluation_calibrated": {
+              "nll": 0.034676368983193234,
+              "brier": 0.008630083752674858,
+              "ece15": 0.007513230892176792,
+              "mean_confidence": 0.9840700328825208,
+              "macro_f1": 0.9597235811802751
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 1,
+                "tp": 3657,
+                "fpr": 0.002898550724637681,
+                "recall": 0.7572996479602402
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 3,
+                "tp": 4081,
+                "fpr": 0.008695652173913044,
+                "recall": 0.8451025056947609
+              }
+            },
+            "conformal": {
+              "coverage": 0.8790104367993815,
+              "mean_set_size": 0.8821028218013143,
+              "empty_fraction": 0.11789717819868574,
+              "class_coverage": {
+                "0": 0.8869565217391304,
+                "1": 0.8784427417684821
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 328,
+              "1": 4653
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 55,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 3094,
+                "recall": 0.9993535875888817
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1805,
+                "recall": 1.0
+              }
+            ],
+            "explanation": {
+              "seconds_64_rows": 0.007026699953712523,
+              "additivity_max_error": 5.329070518200751e-15,
+              "top10": [
+                "Init Bwd Win Byts",
+                "Flow IAT Max",
+                "Flow Duration",
+                "ACK Flag Cnt",
+                "Flow IAT Mean",
+                "Bwd Header Len",
+                "Bwd Pkt Len Std",
+                "Fwd Pkt Len Min",
+                "Fwd Pkts/s",
+                "Flow Byts/s"
+              ],
+              "scope": "raw uncalibrated model margin on fixed probe"
+            }
+          },
+          {
+            "name": "lgb_large",
+            "fit_cpu_s": 0.40625,
+            "artifact_bytes": 527314,
+            "desktop_batch1_ms": {
+              "p50": 0.5683999042958021,
+              "p95": 1.1355099442880594
+            },
+            "tune_raw": {
+              "nll": 0.0389020202344056,
+              "brier": 0.008122501702668409,
+              "ece15": 0.0055859229677739635,
+              "mean_confidence": 0.9943764831657178,
+              "macro_f1": 0.9562404208607762
+            },
+            "tune_calibrated": {
+              "nll": 0.03482166663548262,
+              "brier": 0.00818190483142532,
+              "ece15": 0.005432483867827861,
+              "mean_confidence": 0.985613544449555,
+              "macro_f1": 0.9569025164622269
+            },
+            "evaluation_raw": {
+              "nll": 0.041783915114116554,
+              "brier": 0.010056131026125613,
+              "ece15": 0.0076136626063772975,
+              "mean_confidence": 0.9942385684014737,
+              "macro_f1": 0.9471790974286582
+            },
+            "evaluation_calibrated": {
+              "nll": 0.03609066684248559,
+              "brier": 0.009210379875230885,
+              "ece15": 0.004876655399927671,
+              "mean_confidence": 0.9857030482777682,
+              "macro_f1": 0.9500036988651692
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 1,
+                "tp": 2981,
+                "fpr": 0.002898550724637681,
+                "recall": 0.6173120728929385
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 1,
+                "tp": 3726,
+                "fpr": 0.002898550724637681,
+                "recall": 0.7715883205632637
+              }
+            },
+            "conformal": {
+              "coverage": 0.870892926169308,
+              "mean_set_size": 0.8753382296095864,
+              "empty_fraction": 0.12466177039041361,
+              "class_coverage": {
+                "0": 0.8724637681159421,
+                "1": 0.8707806999378753
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 328,
+              "1": 4653
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 55,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 3094,
+                "recall": 0.9983839689722043
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1805,
+                "recall": 1.0
+              }
+            ],
+            "explanation": {
+              "seconds_64_rows": 0.06085510004777461,
+              "additivity_max_error": 1.4210854715202004e-14,
+              "top10": [
+                "Init Bwd Win Byts",
+                "Flow Duration",
+                "Flow IAT Max",
+                "Bwd Header Len",
+                "ACK Flag Cnt",
+                "Flow IAT Min",
+                "Flow Byts/s",
+                "Flow IAT Mean",
+                "Bwd Pkts/s",
+                "Bwd Pkt Len Std"
+              ],
+              "scope": "raw uncalibrated model margin on fixed probe"
+            }
+          },
+          {
+            "name": "xgboost",
+            "fit_cpu_s": 0.328125,
+            "artifact_bytes": 166464,
+            "desktop_batch1_ms": {
+              "p50": 0.46594999730587006,
+              "p95": 1.0106249828822909
+            },
+            "tune_raw": {
+              "nll": 0.03311682179541504,
+              "brier": 0.00836349324714303,
+              "ece15": 0.003675558730897837,
+              "mean_confidence": 0.987119734287262,
+              "macro_f1": 0.9547650339100848
+            },
+            "tune_calibrated": {
+              "nll": 0.03369941011151406,
+              "brier": 0.008425558396519577,
+              "ece15": 0.004890589348404343,
+              "mean_confidence": 0.9856741732187864,
+              "macro_f1": 0.9547650339100848
+            },
+            "evaluation_raw": {
+              "nll": 0.033671392870527485,
+              "brier": 0.008382903278180249,
+              "ece15": 0.00630706029137357,
+              "mean_confidence": 0.9851163625717163,
+              "macro_f1": 0.9614782597813598
+            },
+            "evaluation_calibrated": {
+              "nll": 0.03437822522607285,
+              "brier": 0.008491227361794994,
+              "ece15": 0.007745578453821808,
+              "mean_confidence": 0.9836708680623577,
+              "macro_f1": 0.9614782597813598
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 2,
+                "tp": 3689,
+                "fpr": 0.005797101449275362,
+                "recall": 0.7639262787326568
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 3,
+                "tp": 4119,
+                "fpr": 0.008695652173913044,
+                "recall": 0.8529716297370056
+              }
+            },
+            "conformal": {
+              "coverage": 0.8971781986857363,
+              "mean_set_size": 0.9091611905682258,
+              "empty_fraction": 0.09083880943177426,
+              "class_coverage": {
+                "0": 0.9043478260869565,
+                "1": 0.8966659763926279
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 328,
+              "1": 4653
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 55,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 3094,
+                "recall": 0.9990303813833226
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1805,
+                "recall": 1.0
+              }
+            ]
+          },
+          {
+            "name": "random_forest",
+            "fit_cpu_s": 1.234375,
+            "artifact_bytes": 2566854,
+            "desktop_batch1_ms": {
+              "p50": 2.482099982444197,
+              "p95": 3.906189958797767
+            },
+            "tune_raw": {
+              "nll": 0.03935474012055379,
+              "brier": 0.010158290041795035,
+              "ece15": 0.00631416903319396,
+              "mean_confidence": 0.9824010902078542,
+              "macro_f1": 0.9381416703573305
+            },
+            "tune_calibrated": {
+              "nll": 0.041994611297716214,
+              "brier": 0.01107762816391205,
+              "ece15": 0.005504945624298289,
+              "mean_confidence": 0.9820381900935093,
+              "macro_f1": 0.9329364207867791
+            },
+            "evaluation_raw": {
+              "nll": 0.04469884507493294,
+              "brier": 0.011445065727922124,
+              "ece15": 0.006297259380252583,
+              "mean_confidence": 0.9819867243558249,
+              "macro_f1": 0.9383524201738905
+            },
+            "evaluation_calibrated": {
+              "nll": 0.04507752804515109,
+              "brier": 0.011467758147407225,
+              "ece15": 0.006106724640776193,
+              "mean_confidence": 0.9813626858632776,
+              "macro_f1": 0.9355958633067067
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 2,
+                "tp": 3347,
+                "fpr": 0.005797101449275362,
+                "recall": 0.693104162352454
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 4,
+                "tp": 3865,
+                "fpr": 0.011594202898550725,
+                "recall": 0.8003727479809485
+              }
+            },
+            "conformal": {
+              "coverage": 0.8919597989949749,
+              "mean_set_size": 0.9027831465017395,
+              "empty_fraction": 0.09721685349826054,
+              "class_coverage": {
+                "0": 0.8724637681159421,
+                "1": 0.8933526610064195
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 328,
+              "1": 4653
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 55,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 3094,
+                "recall": 0.9996767937944409
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1805,
+                "recall": 1.0
+              }
+            ]
+          },
+          {
+            "name": "extra_trees",
+            "fit_cpu_s": 0.59375,
+            "artifact_bytes": 4462052,
+            "desktop_batch1_ms": {
+              "p50": 2.6022999081760645,
+              "p95": 3.9606900012586266
+            },
+            "tune_raw": {
+              "nll": 0.044425975564712394,
+              "brier": 0.011113263023459512,
+              "ece15": 0.010089338684950865,
+              "mean_confidence": 0.9779772475162166,
+              "macro_f1": 0.9407116895779636
+            },
+            "tune_calibrated": {
+              "nll": 0.04269175549551432,
+              "brier": 0.01101779571652702,
+              "ece15": 0.005118440076961793,
+              "mean_confidence": 0.9825849750285005,
+              "macro_f1": 0.9375669094826566
+            },
+            "evaluation_raw": {
+              "nll": 0.04963466147666014,
+              "brier": 0.012244758188400715,
+              "ece15": 0.011134844219901832,
+              "mean_confidence": 0.9764928328206328,
+              "macro_f1": 0.9447153492275653
+            },
+            "evaluation_calibrated": {
+              "nll": 0.047963275876334026,
+              "brier": 0.011915881321139686,
+              "ece15": 0.006545586528150715,
+              "mean_confidence": 0.9811670171224925,
+              "macro_f1": 0.9408428803366033
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 2,
+                "tp": 3028,
+                "fpr": 0.005797101449275362,
+                "recall": 0.6270449368399255
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 5,
+                "tp": 3560,
+                "fpr": 0.014492753623188406,
+                "recall": 0.7372126734313522
+              }
+            },
+            "conformal": {
+              "coverage": 0.9000773096250483,
+              "mean_set_size": 0.9271356783919598,
+              "empty_fraction": 0.0728643216080402,
+              "class_coverage": {
+                "0": 0.8869565217391304,
+                "1": 0.9010147028370263
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 328,
+              "1": 4653
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 55,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 3094,
+                "recall": 0.9987071751777634
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1805,
+                "recall": 1.0
+              }
+            ]
+          },
+          {
+            "name": "logistic",
+            "fit_cpu_s": 0.203125,
+            "artifact_bytes": 6385,
+            "desktop_batch1_ms": {
+              "p50": 0.19175006309524179,
+              "p95": 0.4097600816749036
+            },
+            "tune_raw": {
+              "nll": 0.10135707783485066,
+              "brier": 0.025618332913679077,
+              "ece15": 0.014057153080766745,
+              "mean_confidence": 0.9583870083884345,
+              "macro_f1": 0.8281465891740155
+            },
+            "tune_calibrated": {
+              "nll": 0.10229057327809235,
+              "brier": 0.026106186106401134,
+              "ece15": 0.012520493944828587,
+              "mean_confidence": 0.956020434053916,
+              "macro_f1": 0.8255283463489853
+            },
+            "evaluation_raw": {
+              "nll": 0.11461900488167644,
+              "brier": 0.028409204661356782,
+              "ece15": 0.01919857151092724,
+              "mean_confidence": 0.9535425455554449,
+              "macro_f1": 0.8150353010770574
+            },
+            "evaluation_calibrated": {
+              "nll": 0.1148684711701176,
+              "brier": 0.028789307326232326,
+              "ece15": 0.015853888066001857,
+              "mean_confidence": 0.9514123263548588,
+              "macro_f1": 0.8130791720159902
+            },
+            "operating_points": {
+              "0.001": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 0,
+                "tp": 1244,
+                "fpr": 0.0,
+                "recall": 0.25761027127769726
+              },
+              "0.01": {
+                "benign": 345,
+                "attack": 4829,
+                "fp": 5,
+                "tp": 2333,
+                "fpr": 0.014492753623188406,
+                "recall": 0.48312279975150135
+              }
+            },
+            "conformal": {
+              "coverage": 0.8973714727483572,
+              "mean_set_size": 0.982025512176266,
+              "empty_fraction": 0.017974487823734054,
+              "class_coverage": {
+                "0": 0.8927536231884058,
+                "1": 0.897701387450818
+              }
+            },
+            "riskcal_class_counts": {
+              "0": 328,
+              "1": 4653
+            },
+            "natural_protocol_subgroups": [
+              {
+                "protocol": 0.0,
+                "attacks": 55,
+                "recall": 1.0
+              },
+              {
+                "protocol": 6.0,
+                "attacks": 3094,
+                "recall": 0.9957983193277311
+              },
+              {
+                "protocol": 17.0,
+                "attacks": 1805,
+                "recall": 1.0
+              }
+            ]
+          }
+        ],
+        "selections": {
+          "confidence": "lgb_large",
+          "calibrated_nll": "lgb_small",
+          "calibrated_f1": "lgb_small"
+        },
+        "four_objective_archive": [
+          "lgb_small",
+          "random_forest",
+          "logistic"
+        ],
+        "transfer": [
+          {
+            "chunk": 552,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 19993,
+                    "attack": 25,
+                    "fp": 6747,
+                    "tp": 9,
+                    "fpr": 0.33746811383984393,
+                    "recall": 0.36
+                  },
+                  "0.01": {
+                    "benign": 19993,
+                    "attack": 25,
+                    "fp": 12725,
+                    "tp": 9,
+                    "fpr": 0.6364727654679138,
+                    "recall": 0.36
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.041662503746628034,
+                  "mean_set_size": 0.8584274153262064,
+                  "empty_fraction": 0.14157258467379358,
+                  "class_coverage": {
+                    "0": 0.04066423248136848,
+                    "1": 0.84
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 19993,
+                    "attack": 25,
+                    "fp": 14994,
+                    "tp": 21,
+                    "fpr": 0.7499624868704047,
+                    "recall": 0.84
+                  },
+                  "0.01": {
+                    "benign": 19993,
+                    "attack": 25,
+                    "fp": 15132,
+                    "tp": 21,
+                    "fpr": 0.7568649027159506,
+                    "recall": 0.84
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.040763313018283544,
+                  "mean_set_size": 0.8232091117993806,
+                  "empty_fraction": 0.17679088820061944,
+                  "class_coverage": {
+                    "0": 0.03976391737107988,
+                    "1": 0.84
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 560,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20013,
+                    "attack": 0,
+                    "fp": 7007,
+                    "tp": 0,
+                    "fpr": 0.35012242042672265,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20013,
+                    "attack": 0,
+                    "fp": 13125,
+                    "tp": 0,
+                    "fpr": 0.6558237145855194,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.039624244241243195,
+                  "mean_set_size": 0.8912706740618598,
+                  "empty_fraction": 0.1087293259381402,
+                  "class_coverage": {
+                    "0": 0.039624244241243195,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20013,
+                    "attack": 0,
+                    "fp": 15631,
+                    "tp": 0,
+                    "fpr": 0.7810423224903813,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20013,
+                    "attack": 0,
+                    "fp": 15819,
+                    "tp": 0,
+                    "fpr": 0.7904362164593014,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.03882476390346275,
+                  "mean_set_size": 0.8586418827761955,
+                  "empty_fraction": 0.14135811722380454,
+                  "class_coverage": {
+                    "0": 0.03882476390346275,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 568,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 6236,
+                    "tp": 0,
+                    "fpr": 0.3117376524695061,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 11989,
+                    "tp": 0,
+                    "fpr": 0.5993301339732053,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.015496900619876025,
+                  "mean_set_size": 0.8234853029394121,
+                  "empty_fraction": 0.1765146970605879,
+                  "class_coverage": {
+                    "0": 0.015496900619876025,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 14339,
+                    "tp": 0,
+                    "fpr": 0.7168066386722656,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 15391,
+                    "tp": 0,
+                    "fpr": 0.7693961207758448,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.015046990601879624,
+                  "mean_set_size": 0.8446810637872425,
+                  "empty_fraction": 0.15531893621275744,
+                  "class_coverage": {
+                    "0": 0.015046990601879624,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 576,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20037,
+                    "attack": 0,
+                    "fp": 6253,
+                    "tp": 0,
+                    "fpr": 0.3120726655686979,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20037,
+                    "attack": 0,
+                    "fp": 12494,
+                    "tp": 0,
+                    "fpr": 0.6235464390876878,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.036332784348954435,
+                  "mean_set_size": 0.8417926835354594,
+                  "empty_fraction": 0.1582073164645406,
+                  "class_coverage": {
+                    "0": 0.036332784348954435,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20037,
+                    "attack": 0,
+                    "fp": 14774,
+                    "tp": 0,
+                    "fpr": 0.7373359285322154,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20037,
+                    "attack": 0,
+                    "fp": 14972,
+                    "tp": 0,
+                    "fpr": 0.747217647352398,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.03383740080850427,
+                  "mean_set_size": 0.8083046364226182,
+                  "empty_fraction": 0.19169536357738184,
+                  "class_coverage": {
+                    "0": 0.03383740080850427,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 584,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 27,
+                    "fp": 6844,
+                    "tp": 10,
+                    "fpr": 0.3421315736852629,
+                    "recall": 0.37037037037037035
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 27,
+                    "fp": 13521,
+                    "tp": 10,
+                    "fpr": 0.6759148170365927,
+                    "recall": 0.37037037037037035
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.015176476461484699,
+                  "mean_set_size": 0.8537267235784534,
+                  "empty_fraction": 0.1462732764215466,
+                  "class_coverage": {
+                    "0": 0.014197160567886422,
+                    "1": 0.7407407407407407
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 27,
+                    "fp": 15704,
+                    "tp": 24,
+                    "fpr": 0.7850429914017196,
+                    "recall": 0.8888888888888888
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 27,
+                    "fp": 15926,
+                    "tp": 24,
+                    "fpr": 0.7961407718456309,
+                    "recall": 0.8888888888888888
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.017023613399231193,
+                  "mean_set_size": 0.8387998602166642,
+                  "empty_fraction": 0.16120013978333583,
+                  "class_coverage": {
+                    "0": 0.015846830633873224,
+                    "1": 0.8888888888888888
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 592,
+            "date": "2018-02-22",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 7049,
+                    "tp": 0,
+                    "fpr": 0.352379524095181,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 13324,
+                    "tp": 0,
+                    "fpr": 0.6660667866426715,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.015746850629874024,
+                  "mean_set_size": 0.8459808038392321,
+                  "empty_fraction": 0.15401919616076784,
+                  "class_coverage": {
+                    "0": 0.015746850629874024,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 15130,
+                    "tp": 0,
+                    "fpr": 0.7563487302539492,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20004,
+                    "attack": 0,
+                    "fp": 15375,
+                    "tp": 0,
+                    "fpr": 0.7685962807438512,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.021095780843831232,
+                  "mean_set_size": 0.8288842231553689,
+                  "empty_fraction": 0.17111577684463108,
+                  "class_coverage": {
+                    "0": 0.021095780843831232,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 600,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 19978,
+                    "attack": 26,
+                    "fp": 7561,
+                    "tp": 8,
+                    "fpr": 0.37846631294423866,
+                    "recall": 0.3076923076923077
+                  },
+                  "0.01": {
+                    "benign": 19978,
+                    "attack": 26,
+                    "fp": 13273,
+                    "tp": 8,
+                    "fpr": 0.6643808189007908,
+                    "recall": 0.3076923076923077
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.035292941411717654,
+                  "mean_set_size": 0.8754249150169966,
+                  "empty_fraction": 0.1245750849830034,
+                  "class_coverage": {
+                    "0": 0.03418760636700371,
+                    "1": 0.8846153846153846
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 19978,
+                    "attack": 26,
+                    "fp": 15534,
+                    "tp": 21,
+                    "fpr": 0.7775553108419261,
+                    "recall": 0.8076923076923077
+                  },
+                  "0.01": {
+                    "benign": 19978,
+                    "attack": 26,
+                    "fp": 15756,
+                    "tp": 21,
+                    "fpr": 0.7886675342877165,
+                    "recall": 0.8076923076923077
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.035342931413717256,
+                  "mean_set_size": 0.8507298540291942,
+                  "empty_fraction": 0.14927014597080585,
+                  "class_coverage": {
+                    "0": 0.03433777154870357,
+                    "1": 0.8076923076923077
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 608,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20027,
+                    "attack": 16,
+                    "fp": 6890,
+                    "tp": 6,
+                    "fpr": 0.3440355520047935,
+                    "recall": 0.375
+                  },
+                  "0.01": {
+                    "benign": 20027,
+                    "attack": 16,
+                    "fp": 12972,
+                    "tp": 6,
+                    "fpr": 0.6477255704798522,
+                    "recall": 0.375
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.025096043506461108,
+                  "mean_set_size": 0.8603502469690166,
+                  "empty_fraction": 0.1396497530309834,
+                  "class_coverage": {
+                    "0": 0.02481649772806711,
+                    "1": 0.375
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20027,
+                    "attack": 16,
+                    "fp": 15400,
+                    "tp": 15,
+                    "fpr": 0.7689619014330653,
+                    "recall": 0.9375
+                  },
+                  "0.01": {
+                    "benign": 20027,
+                    "attack": 16,
+                    "fp": 15599,
+                    "tp": 15,
+                    "fpr": 0.7788984870424926,
+                    "recall": 0.9375
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.025794541735269173,
+                  "mean_set_size": 0.8372000199570923,
+                  "empty_fraction": 0.16279998004290774,
+                  "class_coverage": {
+                    "0": 0.025066160683077845,
+                    "1": 0.9375
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 616,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20016,
+                    "attack": 0,
+                    "fp": 6646,
+                    "tp": 0,
+                    "fpr": 0.3320343725019984,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20016,
+                    "attack": 0,
+                    "fp": 13088,
+                    "tp": 0,
+                    "fpr": 0.653876898481215,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.01623701039168665,
+                  "mean_set_size": 0.8499700239808153,
+                  "empty_fraction": 0.15002997601918466,
+                  "class_coverage": {
+                    "0": 0.01623701039168665,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20016,
+                    "attack": 0,
+                    "fp": 15459,
+                    "tp": 0,
+                    "fpr": 0.772332134292566,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20016,
+                    "attack": 0,
+                    "fp": 15623,
+                    "tp": 0,
+                    "fpr": 0.7805255795363709,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.01753597122302158,
+                  "mean_set_size": 0.8283872901678657,
+                  "empty_fraction": 0.17161270983213428,
+                  "class_coverage": {
+                    "0": 0.01753597122302158,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 624,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20020,
+                    "attack": 0,
+                    "fp": 5837,
+                    "tp": 0,
+                    "fpr": 0.2915584415584416,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20020,
+                    "attack": 0,
+                    "fp": 11845,
+                    "tp": 0,
+                    "fpr": 0.5916583416583416,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.04525474525474525,
+                  "mean_set_size": 0.8408591408591408,
+                  "empty_fraction": 0.15914085914085915,
+                  "class_coverage": {
+                    "0": 0.04525474525474525,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20020,
+                    "attack": 0,
+                    "fp": 14787,
+                    "tp": 0,
+                    "fpr": 0.7386113886113886,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20020,
+                    "attack": 0,
+                    "fp": 14924,
+                    "tp": 0,
+                    "fpr": 0.7454545454545455,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.03391608391608392,
+                  "mean_set_size": 0.7941558441558442,
+                  "empty_fraction": 0.20584415584415586,
+                  "class_coverage": {
+                    "0": 0.03391608391608392,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 632,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20028,
+                    "attack": 33,
+                    "fp": 6366,
+                    "tp": 6,
+                    "fpr": 0.3178550029958059,
+                    "recall": 0.18181818181818182
+                  },
+                  "0.01": {
+                    "benign": 20028,
+                    "attack": 33,
+                    "fp": 12616,
+                    "tp": 6,
+                    "fpr": 0.6299181146395046,
+                    "recall": 0.18181818181818182
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.04247046508150142,
+                  "mean_set_size": 0.8319625143312895,
+                  "empty_fraction": 0.16803748566871043,
+                  "class_coverage": {
+                    "0": 0.041042540443379266,
+                    "1": 0.9090909090909091
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20028,
+                    "attack": 33,
+                    "fp": 14941,
+                    "tp": 31,
+                    "fpr": 0.7460055921709606,
+                    "recall": 0.9393939393939394
+                  },
+                  "0.01": {
+                    "benign": 20028,
+                    "attack": 33,
+                    "fp": 15135,
+                    "tp": 31,
+                    "fpr": 0.7556920311563811,
+                    "recall": 0.9393939393939394
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.039330043367728426,
+                  "mean_set_size": 0.8194008274761976,
+                  "empty_fraction": 0.1805991725238024,
+                  "class_coverage": {
+                    "0": 0.03784701418014779,
+                    "1": 0.9393939393939394
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 640,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20012,
+                    "attack": 0,
+                    "fp": 7822,
+                    "tp": 0,
+                    "fpr": 0.39086548071157307,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20012,
+                    "attack": 0,
+                    "fp": 13464,
+                    "tp": 0,
+                    "fpr": 0.672796322206676,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.03193084149510294,
+                  "mean_set_size": 0.8756246252248651,
+                  "empty_fraction": 0.12437537477513493,
+                  "class_coverage": {
+                    "0": 0.03193084149510294,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20012,
+                    "attack": 0,
+                    "fp": 15648,
+                    "tp": 0,
+                    "fpr": 0.781930841495103,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20012,
+                    "attack": 0,
+                    "fp": 15870,
+                    "tp": 0,
+                    "fpr": 0.7930241854887068,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.03582850289826104,
+                  "mean_set_size": 0.8655306815910454,
+                  "empty_fraction": 0.13446931840895462,
+                  "class_coverage": {
+                    "0": 0.03582850289826104,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 648,
+            "date": "2018-02-23",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20047,
+                    "attack": 0,
+                    "fp": 6845,
+                    "tp": 0,
+                    "fpr": 0.34144759814436076,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20047,
+                    "attack": 0,
+                    "fp": 12923,
+                    "tp": 0,
+                    "fpr": 0.6446351074973812,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.01765850251908016,
+                  "mean_set_size": 0.8431186711228613,
+                  "empty_fraction": 0.15688132887713874,
+                  "class_coverage": {
+                    "0": 0.01765850251908016,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20047,
+                    "attack": 0,
+                    "fp": 15507,
+                    "tp": 0,
+                    "fpr": 0.7735321993315708,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20047,
+                    "attack": 0,
+                    "fp": 15716,
+                    "tp": 0,
+                    "fpr": 0.7839576994063949,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.02159924178181274,
+                  "mean_set_size": 0.8340898887614107,
+                  "empty_fraction": 0.16591011123858931,
+                  "class_coverage": {
+                    "0": 0.02159924178181274,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 656,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 13106,
+                    "attack": 6905,
+                    "fp": 7947,
+                    "tp": 3682,
+                    "fpr": 0.6063634976346711,
+                    "recall": 0.5332367849384504
+                  },
+                  "0.01": {
+                    "benign": 13106,
+                    "attack": 6905,
+                    "fp": 10745,
+                    "tp": 5465,
+                    "fpr": 0.819853502212727,
+                    "recall": 0.7914554670528603
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.31887461895957225,
+                  "mean_set_size": 0.9327869671680575,
+                  "empty_fraction": 0.06721303283194244,
+                  "class_coverage": {
+                    "0": 0.0005341065160994964,
+                    "1": 0.9230992034757423
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 13106,
+                    "attack": 6905,
+                    "fp": 11689,
+                    "tp": 6044,
+                    "fpr": 0.8918815809552877,
+                    "recall": 0.8753077480086894
+                  },
+                  "0.01": {
+                    "benign": 13106,
+                    "attack": 6905,
+                    "fp": 11831,
+                    "tp": 6116,
+                    "fpr": 0.9027163131390203,
+                    "recall": 0.8857349746560463
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.32617060616660837,
+                  "mean_set_size": 0.9423317175553445,
+                  "empty_fraction": 0.05766828244465544,
+                  "class_coverage": {
+                    "0": 0.010148023805890432,
+                    "1": 0.9259956553222303
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 664,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20009,
+                    "attack": 0,
+                    "fp": 8476,
+                    "tp": 0,
+                    "fpr": 0.4236093757808986,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20009,
+                    "attack": 0,
+                    "fp": 14984,
+                    "tp": 0,
+                    "fpr": 0.7488630116447599,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 9.99550202408916e-05,
+                  "mean_set_size": 0.9143885251636763,
+                  "empty_fraction": 0.08561147483632366,
+                  "class_coverage": {
+                    "0": 9.99550202408916e-05,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20009,
+                    "attack": 0,
+                    "fp": 16649,
+                    "tp": 0,
+                    "fpr": 0.8320755659953021,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20009,
+                    "attack": 0,
+                    "fp": 17101,
+                    "tp": 0,
+                    "fpr": 0.8546654005697436,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.013943725323604378,
+                  "mean_set_size": 0.9249837573092109,
+                  "empty_fraction": 0.07501624269078914,
+                  "class_coverage": {
+                    "0": 0.013943725323604378,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 672,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20023,
+                    "attack": 0,
+                    "fp": 9126,
+                    "tp": 0,
+                    "fpr": 0.4557758577635719,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20023,
+                    "attack": 0,
+                    "fp": 15272,
+                    "tp": 0,
+                    "fpr": 0.7627228687009938,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0,
+                  "mean_set_size": 0.9161963741697048,
+                  "empty_fraction": 0.08380362583029516,
+                  "class_coverage": {
+                    "0": 0.0,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20023,
+                    "attack": 0,
+                    "fp": 16978,
+                    "tp": 0,
+                    "fpr": 0.8479248863806622,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20023,
+                    "attack": 0,
+                    "fp": 17313,
+                    "tp": 0,
+                    "fpr": 0.8646556460070919,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.013584377965339858,
+                  "mean_set_size": 0.9237377016431104,
+                  "empty_fraction": 0.07626229835688958,
+                  "class_coverage": {
+                    "0": 0.013584377965339858,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 680,
+            "date": "2018-02-28",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 15709,
+                    "attack": 4304,
+                    "fp": 7520,
+                    "tp": 2454,
+                    "fpr": 0.4787064739957986,
+                    "recall": 0.5701672862453532
+                  },
+                  "0.01": {
+                    "benign": 15709,
+                    "attack": 4304,
+                    "fp": 12325,
+                    "tp": 3488,
+                    "fpr": 0.7845820867018907,
+                    "recall": 0.8104089219330854
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.20286813571178733,
+                  "mean_set_size": 0.9306450806975466,
+                  "empty_fraction": 0.06935491930245341,
+                  "class_coverage": {
+                    "0": 0.0006365777579731364,
+                    "1": 0.9409851301115242
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 15709,
+                    "attack": 4304,
+                    "fp": 13736,
+                    "tp": 3837,
+                    "fpr": 0.8744032083519002,
+                    "recall": 0.891496282527881
+                  },
+                  "0.01": {
+                    "benign": 15709,
+                    "attack": 4304,
+                    "fp": 13970,
+                    "tp": 3878,
+                    "fpr": 0.8892991278884715,
+                    "recall": 0.9010223048327137
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.20791485534402637,
+                  "mean_set_size": 0.9309448858242143,
+                  "empty_fraction": 0.06905511417578573,
+                  "class_coverage": {
+                    "0": 0.010694506333948691,
+                    "1": 0.9277416356877324
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 688,
+            "date": "2018-03-01",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 15280,
+                    "attack": 4754,
+                    "fp": 7129,
+                    "tp": 1881,
+                    "fpr": 0.46655759162303667,
+                    "recall": 0.3956668068994531
+                  },
+                  "0.01": {
+                    "benign": 15280,
+                    "attack": 4754,
+                    "fp": 12045,
+                    "tp": 3401,
+                    "fpr": 0.7882853403141361,
+                    "recall": 0.7153975599495161
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.21947688928821005,
+                  "mean_set_size": 0.9226315264051113,
+                  "empty_fraction": 0.07736847359488869,
+                  "class_coverage": {
+                    "0": 0.0002617801047120419,
+                    "1": 0.92406394615061
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 15280,
+                    "attack": 4754,
+                    "fp": 13299,
+                    "tp": 4030,
+                    "fpr": 0.8703534031413612,
+                    "recall": 0.8477071939419436
+                  },
+                  "0.01": {
+                    "benign": 15280,
+                    "attack": 4754,
+                    "fp": 13514,
+                    "tp": 4130,
+                    "fpr": 0.8844240837696336,
+                    "recall": 0.8687421119057636
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.2233203553958271,
+                  "mean_set_size": 0.929120495158231,
+                  "empty_fraction": 0.070879504841769,
+                  "class_coverage": {
+                    "0": 0.011649214659685865,
+                    "1": 0.9036600757257046
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 696,
+            "date": "2018-03-01",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 5597,
+                    "attack": 14443,
+                    "fp": 4108,
+                    "tp": 9884,
+                    "fpr": 0.7339646239056637,
+                    "recall": 0.6843453576126843
+                  },
+                  "0.01": {
+                    "benign": 5597,
+                    "attack": 14443,
+                    "fp": 4846,
+                    "tp": 12254,
+                    "fpr": 0.8658209755226014,
+                    "recall": 0.8484386900228484
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.6803393213572855,
+                  "mean_set_size": 0.948502994011976,
+                  "empty_fraction": 0.05149700598802395,
+                  "class_coverage": {
+                    "0": 0.00035733428622476324,
+                    "1": 0.9438482309769438
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 5597,
+                    "attack": 14443,
+                    "fp": 5258,
+                    "tp": 13174,
+                    "fpr": 0.9394318384849026,
+                    "recall": 0.9121373675829121
+                  },
+                  "0.01": {
+                    "benign": 5597,
+                    "attack": 14443,
+                    "fp": 5288,
+                    "tp": 13265,
+                    "fpr": 0.944791852778274,
+                    "recall": 0.9184379976459185
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.6761976047904191,
+                  "mean_set_size": 0.950998003992016,
+                  "empty_fraction": 0.04900199600798403,
+                  "class_coverage": {
+                    "0": 0.004288011434697159,
+                    "1": 0.9365782732119365
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 704,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 14880,
+                    "attack": 5124,
+                    "fp": 4572,
+                    "tp": 0,
+                    "fpr": 0.307258064516129,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 14880,
+                    "attack": 5124,
+                    "fp": 10539,
+                    "tp": 0,
+                    "fpr": 0.708266129032258,
+                    "recall": 0.0
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.18056388722255548,
+                  "mean_set_size": 0.8285842831433713,
+                  "empty_fraction": 0.17141571685662868,
+                  "class_coverage": {
+                    "0": 0.016801075268817203,
+                    "1": 0.656128024980484
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 14880,
+                    "attack": 5124,
+                    "fp": 12082,
+                    "tp": 2562,
+                    "fpr": 0.8119623655913979,
+                    "recall": 0.5
+                  },
+                  "0.01": {
+                    "benign": 14880,
+                    "attack": 5124,
+                    "fp": 12280,
+                    "tp": 2562,
+                    "fpr": 0.8252688172043011,
+                    "recall": 0.5
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.14272145570885822,
+                  "mean_set_size": 0.8071885622875425,
+                  "empty_fraction": 0.1928114377124575,
+                  "class_coverage": {
+                    "0": 0.019690860215053764,
+                    "1": 0.5
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 712,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 13697,
+                    "attack": 6308,
+                    "fp": 4159,
+                    "tp": 0,
+                    "fpr": 0.3036431335328904,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 13697,
+                    "attack": 6308,
+                    "fp": 9539,
+                    "tp": 0,
+                    "fpr": 0.6964298751551434,
+                    "recall": 0.0
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.23364158960259934,
+                  "mean_set_size": 0.8217945513621595,
+                  "empty_fraction": 0.17820544863784055,
+                  "class_coverage": {
+                    "0": 0.04227203037161422,
+                    "1": 0.6491756499682942
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 13697,
+                    "attack": 6308,
+                    "fp": 11115,
+                    "tp": 3154,
+                    "fpr": 0.8114915674965321,
+                    "recall": 0.5
+                  },
+                  "0.01": {
+                    "benign": 13697,
+                    "attack": 6308,
+                    "fp": 11264,
+                    "tp": 3154,
+                    "fpr": 0.8223698620135796,
+                    "recall": 0.5
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.1810047488127968,
+                  "mean_set_size": 0.7949512621844539,
+                  "empty_fraction": 0.2050487378155461,
+                  "class_coverage": {
+                    "0": 0.03409505731182011,
+                    "1": 0.5
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 720,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20005,
+                    "attack": 0,
+                    "fp": 5300,
+                    "tp": 0,
+                    "fpr": 0.26493376655836043,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20005,
+                    "attack": 0,
+                    "fp": 13479,
+                    "tp": 0,
+                    "fpr": 0.6737815546113471,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.03074231442139465,
+                  "mean_set_size": 0.8550862284428893,
+                  "empty_fraction": 0.14491377155711072,
+                  "class_coverage": {
+                    "0": 0.03074231442139465,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20005,
+                    "attack": 0,
+                    "fp": 15521,
+                    "tp": 0,
+                    "fpr": 0.7758560359910023,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20005,
+                    "attack": 0,
+                    "fp": 15688,
+                    "tp": 0,
+                    "fpr": 0.7842039490127468,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.0266433391652087,
+                  "mean_set_size": 0.8304923769057736,
+                  "empty_fraction": 0.16950762309422646,
+                  "class_coverage": {
+                    "0": 0.0266433391652087,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 728,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20038,
+                    "attack": 0,
+                    "fp": 6688,
+                    "tp": 0,
+                    "fpr": 0.33376584489470007,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20038,
+                    "attack": 0,
+                    "fp": 13968,
+                    "tp": 0,
+                    "fpr": 0.6970755564427588,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.02839604750973151,
+                  "mean_set_size": 0.9109691585986626,
+                  "empty_fraction": 0.08903084140133746,
+                  "class_coverage": {
+                    "0": 0.02839604750973151,
+                    "1": null
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 20038,
+                    "attack": 0,
+                    "fp": 16385,
+                    "tp": 0,
+                    "fpr": 0.8176963768839206,
+                    "recall": null
+                  },
+                  "0.01": {
+                    "benign": 20038,
+                    "attack": 0,
+                    "fp": 16554,
+                    "tp": 0,
+                    "fpr": 0.8261303523305719,
+                    "recall": null
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.02859566823036231,
+                  "mean_set_size": 0.8806767142429384,
+                  "empty_fraction": 0.11932328575706158,
+                  "class_coverage": {
+                    "0": 0.02859566823036231,
+                    "1": null
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 736,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 12321,
+                    "attack": 7734,
+                    "fp": 4468,
+                    "tp": 4,
+                    "fpr": 0.3626329031734437,
+                    "recall": 0.000517196793379881
+                  },
+                  "0.01": {
+                    "benign": 12321,
+                    "attack": 7734,
+                    "fp": 8142,
+                    "tp": 30,
+                    "fpr": 0.6608229851473094,
+                    "recall": 0.003878975950349108
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.2663674894041386,
+                  "mean_set_size": 0.7740713039142358,
+                  "empty_fraction": 0.22592869608576416,
+                  "class_coverage": {
+                    "0": 0.03197792386981576,
+                    "1": 0.6397724334109128
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 12321,
+                    "attack": 7734,
+                    "fp": 9028,
+                    "tp": 3874,
+                    "fpr": 0.7327327327327328,
+                    "recall": 0.5009050943884148
+                  },
+                  "0.01": {
+                    "benign": 12321,
+                    "attack": 7734,
+                    "fp": 9605,
+                    "tp": 3874,
+                    "fpr": 0.7795633471309147,
+                    "recall": 0.5009050943884148
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.2162054350536026,
+                  "mean_set_size": 0.7873348292196459,
+                  "empty_fraction": 0.21266517078035402,
+                  "class_coverage": {
+                    "0": 0.03749695641587533,
+                    "1": 0.5009050943884148
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 744,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 10431,
+                    "attack": 9581,
+                    "fp": 3338,
+                    "tp": 0,
+                    "fpr": 0.32000766944684117,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 10431,
+                    "attack": 9581,
+                    "fp": 6921,
+                    "tp": 19,
+                    "fpr": 0.6635030198446937,
+                    "recall": 0.0019830915353303414
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.33764741155306816,
+                  "mean_set_size": 0.7792324605236858,
+                  "empty_fraction": 0.22076753947631422,
+                  "class_coverage": {
+                    "0": 0.04764643850062314,
+                    "1": 0.6533764742719966
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 10431,
+                    "attack": 9581,
+                    "fp": 8198,
+                    "tp": 4791,
+                    "fpr": 0.785926565046496,
+                    "recall": 0.5000521866193508
+                  },
+                  "0.01": {
+                    "benign": 10431,
+                    "attack": 9581,
+                    "fp": 8366,
+                    "tp": 4791,
+                    "fpr": 0.8020324034129038,
+                    "recall": 0.5000521866193508
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.2618428942634419,
+                  "mean_set_size": 0.7531980811513093,
+                  "empty_fraction": 0.2468019188486908,
+                  "class_coverage": {
+                    "0": 0.04304477039593519,
+                    "1": 0.5000521866193508
+                  }
+                }
+              }
+            }
+          },
+          {
+            "chunk": 752,
+            "date": "2018-03-02",
+            "arms": {
+              "lgb_large": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 5482,
+                    "attack": 1820,
+                    "fp": 1694,
+                    "tp": 0,
+                    "fpr": 0.30901130974097046,
+                    "recall": 0.0
+                  },
+                  "0.01": {
+                    "benign": 5482,
+                    "attack": 1820,
+                    "fp": 3917,
+                    "tp": 0,
+                    "fpr": 0.7145202480846407,
+                    "recall": 0.0
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.17666392769104355,
+                  "mean_set_size": 0.8310052040536839,
+                  "empty_fraction": 0.16899479594631608,
+                  "class_coverage": {
+                    "0": 0.01787668734038672,
+                    "1": 0.654945054945055
+                  }
+                }
+              },
+              "lgb_small": {
+                "operating_points": {
+                  "0.001": {
+                    "benign": 5482,
+                    "attack": 1820,
+                    "fp": 4580,
+                    "tp": 910,
+                    "fpr": 0.835461510397665,
+                    "recall": 0.5
+                  },
+                  "0.01": {
+                    "benign": 5482,
+                    "attack": 1820,
+                    "fp": 4631,
+                    "tp": 910,
+                    "fpr": 0.8447646844217439,
+                    "recall": 0.5
+                  }
+                },
+                "conformal": {
+                  "coverage": 0.13653793481238016,
+                  "mean_set_size": 0.8116954259107094,
+                  "empty_fraction": 0.1883045740892906,
+                  "class_coverage": {
+                    "0": 0.015870120394016782,
+                    "1": 0.5
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "explanation_stability": [
+      {
+        "model": "lgb_small",
+        "seeds": [
+          42,
+          43
+        ],
+        "top10_jaccard": 0.6666666666666666
+      },
+      {
+        "model": "lgb_small",
+        "seeds": [
+          42,
+          44
+        ],
+        "top10_jaccard": 0.6666666666666666
+      },
+      {
+        "model": "lgb_small",
+        "seeds": [
+          43,
+          44
+        ],
+        "top10_jaccard": 0.8181818181818182
+      },
+      {
+        "model": "lgb_large",
+        "seeds": [
+          42,
+          43
+        ],
+        "top10_jaccard": 0.6666666666666666
+      },
+      {
+        "model": "lgb_large",
+        "seeds": [
+          42,
+          44
+        ],
+        "top10_jaccard": 0.8181818181818182
+      },
+      {
+        "model": "lgb_large",
+        "seeds": [
+          43,
+          44
+        ],
+        "top10_jaccard": 0.6666666666666666
+      }
+    ]
+  }
+}

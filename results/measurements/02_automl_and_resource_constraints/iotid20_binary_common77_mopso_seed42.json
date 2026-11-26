@@ -1,0 +1,609 @@
+{
+  "source": "iotid20_binary_common77_mopso_seed42.json",
+  "source_sha256": "21e027c7de34cdfaac7f1ff61b154b57ac42f92c3deaf52e24a697afa7ba700b",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "algorithm": "feasibility-first MOPSO with external nondominated archive",
+    "seed": 42,
+    "feasibility_first": true,
+    "dimensions": [
+      {
+        "name": "n_estimators",
+        "lower": 50,
+        "upper": 200,
+        "kind": "int"
+      },
+      {
+        "name": "max_depth",
+        "lower": 5,
+        "upper": 100,
+        "kind": "int"
+      },
+      {
+        "name": "learning_rate",
+        "lower": 0.01,
+        "upper": 0.3,
+        "kind": "log_float"
+      },
+      {
+        "name": "num_leaves",
+        "lower": 10,
+        "upper": 50,
+        "kind": "int"
+      },
+      {
+        "name": "min_child_samples",
+        "lower": 10,
+        "upper": 50,
+        "kind": "int"
+      }
+    ],
+    "fixed_config": {
+      "class_weight": "balanced",
+      "verbosity": -1
+    },
+    "particles": 6,
+    "iterations": 4,
+    "iteration_log": [
+      {
+        "iteration": 1,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 6,
+        "archive_size": 3,
+        "feasible_archive_size": 3,
+        "wall_seconds": 54.661487899997155
+      },
+      {
+        "iteration": 2,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 12,
+        "archive_size": 5,
+        "feasible_archive_size": 5,
+        "wall_seconds": 1166.3116680000094
+      },
+      {
+        "iteration": 3,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 18,
+        "archive_size": 8,
+        "feasible_archive_size": 8,
+        "wall_seconds": 54.39390349999303
+      },
+      {
+        "iteration": 4,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 24,
+        "archive_size": 12,
+        "feasible_archive_size": 12,
+        "wall_seconds": 52.851800100004766
+      }
+    ],
+    "pareto_archive": [
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 196,
+          "max_depth": 77,
+          "learning_rate": 0.1449146502165535,
+          "num_leaves": 15,
+          "min_child_samples": 28
+        },
+        "metrics": {
+          "weighted_f1": 0.9741184624926424,
+          "macro_f1": 0.9028055394917338,
+          "mean_true_class_probability": 0.9609870998838742,
+          "top_label_ece": 0.012708090307017987,
+          "median_latency_ms_per_row": 0.0068335270212942206,
+          "p95_latency_ms_per_row": 0.007111609175666616,
+          "serialized_size_mb": 0.3431835174560547,
+          "mean_fit_seconds": 0.787198999998509
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 8.758996699994896,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 106,
+          "max_depth": 93,
+          "learning_rate": 0.08934430071955696,
+          "num_leaves": 43,
+          "min_child_samples": 28
+        },
+        "metrics": {
+          "weighted_f1": 0.970275326251335,
+          "macro_f1": 0.8897952159456256,
+          "mean_true_class_probability": 0.9604076912226092,
+          "top_label_ece": 0.014417410993502888,
+          "median_latency_ms_per_row": 0.0054133229075822905,
+          "p95_latency_ms_per_row": 0.006622597886439493,
+          "serialized_size_mb": 0.4987621307373047,
+          "mean_fit_seconds": 0.8227402749980683
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 8.885277599998517,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 166,
+          "max_depth": 84,
+          "learning_rate": 0.08084837760770995,
+          "num_leaves": 23,
+          "min_child_samples": 29
+        },
+        "metrics": {
+          "weighted_f1": 0.970854021633802,
+          "macro_f1": 0.8918411660224479,
+          "mean_true_class_probability": 0.957118071821899,
+          "top_label_ece": 0.012538350047430154,
+          "median_latency_ms_per_row": 0.00923022233473241,
+          "p95_latency_ms_per_row": 0.01312754040941032,
+          "serialized_size_mb": 0.4319744110107422,
+          "mean_fit_seconds": 0.9789257749980607
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 11.879806400000234,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 109,
+          "max_depth": 64,
+          "learning_rate": 0.06695783358032979,
+          "num_leaves": 39,
+          "min_child_samples": 34
+        },
+        "metrics": {
+          "weighted_f1": 0.9701781499773028,
+          "macro_f1": 0.8895317264239788,
+          "mean_true_class_probability": 0.954638156760227,
+          "top_label_ece": 0.013369849516544217,
+          "median_latency_ms_per_row": 0.005138391299508323,
+          "p95_latency_ms_per_row": 0.005563359008517181,
+          "serialized_size_mb": 0.4682903289794922,
+          "mean_fit_seconds": 0.9017463250020228
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 9.493167099994025,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 104,
+          "max_depth": 45,
+          "learning_rate": 0.0696610765581935,
+          "num_leaves": 42,
+          "min_child_samples": 38
+        },
+        "metrics": {
+          "weighted_f1": 0.969326828960732,
+          "macro_f1": 0.8864346515229147,
+          "mean_true_class_probability": 0.9548187242033107,
+          "top_label_ece": 0.015872401276347446,
+          "median_latency_ms_per_row": 0.005049011248016837,
+          "p95_latency_ms_per_row": 0.006053816141916704,
+          "serialized_size_mb": 0.4793529510498047,
+          "mean_fit_seconds": 0.8329182249981386
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 9.131235799999558,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 121,
+          "max_depth": 56,
+          "learning_rate": 0.02299876235043132,
+          "num_leaves": 15,
+          "min_child_samples": 25
+        },
+        "metrics": {
+          "weighted_f1": 0.9560232944137863,
+          "macro_f1": 0.8473704743974857,
+          "mean_true_class_probability": 0.890220017505331,
+          "top_label_ece": 0.050331296929102376,
+          "median_latency_ms_per_row": 0.003410363893344434,
+          "p95_latency_ms_per_row": 0.003878315280849548,
+          "serialized_size_mb": 0.2187938690185547,
+          "mean_fit_seconds": 0.693914824994863
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 8.317582200004836,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 179,
+          "max_depth": 84,
+          "learning_rate": 0.09523234404639151,
+          "num_leaves": 24,
+          "min_child_samples": 32
+        },
+        "metrics": {
+          "weighted_f1": 0.971107819607952,
+          "macro_f1": 0.8926563322707213,
+          "mean_true_class_probability": 0.9605768008258716,
+          "top_label_ece": 0.012254215305753985,
+          "median_latency_ms_per_row": 0.007530601774030761,
+          "p95_latency_ms_per_row": 0.007816558421234255,
+          "serialized_size_mb": 0.4828014373779297,
+          "mean_fit_seconds": 0.8938802000011492
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 9.618093700002646,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 114,
+          "max_depth": 70,
+          "learning_rate": 0.026692566726233418,
+          "num_leaves": 37,
+          "min_child_samples": 28
+        },
+        "metrics": {
+          "weighted_f1": 0.9644331686331591,
+          "macro_f1": 0.8719178312923024,
+          "mean_true_class_probability": 0.9200902416253516,
+          "top_label_ece": 0.03754309812563033,
+          "median_latency_ms_per_row": 0.00393682452695469,
+          "p95_latency_ms_per_row": 0.00431450770491683,
+          "serialized_size_mb": 0.4654979705810547,
+          "mean_fit_seconds": 0.8350239250030427
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 8.81843719999597,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 122,
+          "max_depth": 55,
+          "learning_rate": 0.0339138537259345,
+          "num_leaves": 31,
+          "min_child_samples": 26
+        },
+        "metrics": {
+          "weighted_f1": 0.9645922483079381,
+          "macro_f1": 0.872365049101917,
+          "mean_true_class_probability": 0.935125256790581,
+          "top_label_ece": 0.023992397981314282,
+          "median_latency_ms_per_row": 0.004340888523445137,
+          "p95_latency_ms_per_row": 0.0060928499675960155,
+          "serialized_size_mb": 0.4221630096435547,
+          "mean_fit_seconds": 0.8063565250013198
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 8.941053000002285,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 78,
+          "max_depth": 64,
+          "learning_rate": 0.015682178928665975,
+          "num_leaves": 44,
+          "min_child_samples": 33
+        },
+        "metrics": {
+          "weighted_f1": 0.9571180450526702,
+          "macro_f1": 0.8500320162630612,
+          "mean_true_class_probability": 0.8061201756308437,
+          "top_label_ece": 0.13342368632565998,
+          "median_latency_ms_per_row": 0.0030591784975119935,
+          "p95_latency_ms_per_row": 0.003232664555697482,
+          "serialized_size_mb": 0.3791942596435547,
+          "mean_fit_seconds": 0.672426324996195
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 8.035054399995715,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 107,
+          "max_depth": 55,
+          "learning_rate": 0.03528303462732887,
+          "num_leaves": 46,
+          "min_child_samples": 36
+        },
+        "metrics": {
+          "weighted_f1": 0.9652455682150107,
+          "macro_f1": 0.8740978808969996,
+          "mean_true_class_probability": 0.9369422538976275,
+          "top_label_ece": 0.02308327479724881,
+          "median_latency_ms_per_row": 0.004114446018895976,
+          "p95_latency_ms_per_row": 0.004383070229469046,
+          "serialized_size_mb": 0.5368785858154297,
+          "mean_fit_seconds": 0.8222098999976879
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 8.813106599991443,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 151,
+          "max_depth": 65,
+          "learning_rate": 0.04540761762017364,
+          "num_leaves": 14,
+          "min_child_samples": 21
+        },
+        "metrics": {
+          "weighted_f1": 0.9618321480697257,
+          "macro_f1": 0.8641589050275345,
+          "mean_true_class_probability": 0.9325188694475334,
+          "top_label_ece": 0.016367673124045412,
+          "median_latency_ms_per_row": 0.004980726163207284,
+          "p95_latency_ms_per_row": 0.00602285834019765,
+          "serialized_size_mb": 0.2539806365966797,
+          "mean_fit_seconds": 0.7414261499980057
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 5.0,
+            "max_serialized_size_mb": 1.5
+          }
+        },
+        "evaluation_seconds": 8.624182600004133,
+        "evaluation_metadata": {
+          "dataset": "iotid20_binary_common77_dev.csv",
+          "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+          "target_column": "is_attack",
+          "seed": 42,
+          "holdout_index_sha256_reserved_not_confirmatory": "6d0fbfe8dbd0166fc350def25663ff99b64bb2d286228f2da9ab3c6303b4b844",
+          "development_index_sha256": "7e1cf59f7e23bbe076bf3d5fab1b21f292b37fea48369164af5450587f3e287a",
+          "inner_splits": 4
+        }
+      }
+    ],
+    "dataset": "iotid20_binary_common77_dev.csv",
+    "dataset_sha256": "80f30b71b7d529d7404f29e7e09b7cc9bd984b62ac5f60eb848cfa9cd12d15fa",
+    "target_column": "is_attack",
+    "n_jobs": 1,
+    "constraints": {
+      "min_weighted_f1": 0.95,
+      "max_p95_latency_ms_per_row": 5.0,
+      "max_serialized_size_mb": 1.5
+    },
+    "search_mode": "feasibility_first",
+    "outer_partition_note": "Candidate scores use grouped development CV; reserved fold was inspected previously and is not a pristine test.",
+    "hardware": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 12,
+          "prefix": "libopenblas",
+          "filepath": "D:\\AutoML-MOO\\.venv\\Lib\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Prescott"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 12,
+          "prefix": "vcomp",
+          "filepath": "D:\\AutoML-MOO\\.venv\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 12,
+          "prefix": "libopenblas",
+          "filepath": "D:\\AutoML-MOO\\.venv\\Lib\\site-packages\\scipy.libs\\libopenblas_v0.3.27--3aa239bc726cfb0bd8e5330d8d4c15c6.dll",
+          "version": "0.3.27",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    }
+  }
+}

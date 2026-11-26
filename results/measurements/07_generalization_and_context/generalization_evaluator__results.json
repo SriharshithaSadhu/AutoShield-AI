@@ -1,0 +1,132 @@
+{
+  "source": "generalization_evaluator/results.json",
+  "source_sha256": "b702583c4315adada8d9128cc12a91203a9836eb4d46f48619bf214302954502",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "scope": "Development comparison on previously inspected NF-v3. Four shared configurations per seed, identical internal folds, final calibration excluded from selection.",
+    "bank": [
+      {
+        "n_estimators": 60,
+        "num_leaves": 15,
+        "min_child_samples": 20,
+        "reg_lambda": 0
+      },
+      {
+        "n_estimators": 150,
+        "num_leaves": 31,
+        "min_child_samples": 20,
+        "reg_lambda": 0
+      },
+      {
+        "n_estimators": 150,
+        "num_leaves": 15,
+        "min_child_samples": 200,
+        "reg_lambda": 10
+      },
+      {
+        "n_estimators": 100,
+        "num_leaves": 7,
+        "min_child_samples": 500,
+        "reg_lambda": 30
+      }
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "diagnostic_only": false,
+        "selected": {
+          "pooled": 3,
+          "worst_window": 3,
+          "family_aware": 3
+        },
+        "outcomes": {
+          "pooled": {
+            "fp": 4901,
+            "tp": 105258,
+            "fpr": 0.06221201081506493,
+            "recall": 0.8683148959338729,
+            "bytes": 95270
+          },
+          "worst_window": {
+            "fp": 4901,
+            "tp": 105258,
+            "fpr": 0.06221201081506493,
+            "recall": 0.8683148959338729,
+            "bytes": 95270
+          },
+          "family_aware": {
+            "fp": 4901,
+            "tp": 105258,
+            "fpr": 0.06221201081506493,
+            "recall": 0.8683148959338729,
+            "bytes": 95270
+          }
+        }
+      },
+      {
+        "seed": 43,
+        "diagnostic_only": false,
+        "selected": {
+          "pooled": 1,
+          "worst_window": 1,
+          "family_aware": 0
+        },
+        "outcomes": {
+          "pooled": {
+            "fp": 3245,
+            "tp": 87287,
+            "fpr": 0.04119118039071326,
+            "recall": 0.7200650052383663,
+            "bytes": 521670
+          },
+          "worst_window": {
+            "fp": 3245,
+            "tp": 87287,
+            "fpr": 0.04119118039071326,
+            "recall": 0.7200650052383663,
+            "bytes": 521670
+          },
+          "family_aware": {
+            "fp": 3315,
+            "tp": 89237,
+            "fpr": 0.0420797420632402,
+            "recall": 0.7361513269153035,
+            "bytes": 110982
+          }
+        }
+      },
+      {
+        "seed": 44,
+        "diagnostic_only": false,
+        "selected": {
+          "pooled": 2,
+          "worst_window": 2,
+          "family_aware": 0
+        },
+        "outcomes": {
+          "pooled": {
+            "fp": 2800,
+            "tp": 83095,
+            "fpr": 0.0355424669010777,
+            "recall": 0.6854835383308173,
+            "bytes": 269398
+          },
+          "worst_window": {
+            "fp": 2800,
+            "tp": 83095,
+            "fpr": 0.0355424669010777,
+            "recall": 0.6854835383308173,
+            "bytes": 269398
+          },
+          "family_aware": {
+            "fp": 3315,
+            "tp": 89237,
+            "fpr": 0.0420797420632402,
+            "recall": 0.7361513269153035,
+            "bytes": 110982
+          }
+        }
+      }
+    ]
+  }
+}

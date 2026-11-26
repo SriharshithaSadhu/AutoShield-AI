@@ -1,0 +1,117 @@
+{
+  "source": "cse_cic_ids2018_adaptation_all10_seed42_fpr_capped_dev_analysis.json",
+  "source_sha256": "c4f29953e3c115869f4313574560c627eaf6ac859f728e549b2d1fe5c6f7866e",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "source_result": "results\\cse_cic_ids2018_adaptation_all10_seed42_fpr_capped_dev.json",
+    "classification": "development_only; same CSE stream used for policy development",
+    "run_audit": {
+      "manifest_file_count": 10,
+      "manifest_raw_rows": 16233002,
+      "raw_rows_by_file": {
+        "Friday-02-03-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+        "Friday-16-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+        "Friday-23-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+        "Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv": 7948748,
+        "Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv": 331125,
+        "Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+        "Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+        "Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+        "Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv": 1048575,
+        "Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv": 613104
+      },
+      "audit_file": "data/cse_cic_ids2018/audit.json",
+      "replayed_capture_count": 9,
+      "replayed_chunk_count": 383,
+      "replayed_rows": 15184359,
+      "unique_rows_excluded": 73,
+      "complete_official_collection": true
+    },
+    "fpr_cap": 0.001,
+    "policies": {
+      "no_adaptation": {
+        "pooled_weighted_f1": 0.8185393261982223,
+        "pooled_macro_f1": 0.5815592254847967,
+        "pooled_fpr": 0.0001884985752987441,
+        "attack_recall": 0.1347015105061239,
+        "mean_chunk_macro_f1": 0.5672937547056952,
+        "mean_chunk_ece": 0.1327210769033593,
+        "mean_chunk_fpr": 0.0013215425298545714,
+        "model_updates": 0,
+        "threshold_recalibrations": 0,
+        "threshold_recalibration_seconds": 0.0,
+        "threshold_recalibration_seconds_summary": {
+          "count": 0,
+          "median": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "feature_psi": {
+        "pooled_weighted_f1": 0.9333017039602636,
+        "pooled_macro_f1": 0.862467952191233,
+        "pooled_fpr": 0.00018459752862451514,
+        "attack_recall": 0.6129183377082448,
+        "mean_chunk_macro_f1": 0.7428618389770038,
+        "mean_chunk_ece": 0.061357796638130825,
+        "mean_chunk_fpr": 0.00035247894897569456,
+        "model_updates": 34,
+        "threshold_recalibrations": 0,
+        "threshold_recalibration_seconds": 0.0,
+        "threshold_recalibration_seconds_summary": {
+          "count": 0,
+          "median": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "threshold_recalibration": {
+        "pooled_weighted_f1": 0.8891623202501389,
+        "pooled_macro_f1": 0.770402368479642,
+        "pooled_fpr": 0.02160898982162308,
+        "attack_recall": 0.47624875067904765,
+        "mean_chunk_macro_f1": 0.6532754010096832,
+        "mean_chunk_ece": 0.13305275537532177,
+        "mean_chunk_fpr": 0.052607441263164516,
+        "model_updates": 0,
+        "threshold_recalibrations": 383,
+        "threshold_recalibration_seconds": 2.5420116000008193,
+        "threshold_recalibration_seconds_summary": {
+          "count": 383,
+          "median": 0.004290500000024622,
+          "p95": 0.021940439999991665,
+          "maximum": 0.11565670000004502
+        }
+      },
+      "threshold_fpr_capped": {
+        "pooled_weighted_f1": 0.805628886312051,
+        "pooled_macro_f1": 0.5471352014423808,
+        "pooled_fpr": 6.514747945962389e-05,
+        "attack_recall": 0.09383995005250739,
+        "mean_chunk_macro_f1": 0.7419692254232194,
+        "mean_chunk_ece": 0.13298289744509278,
+        "mean_chunk_fpr": 0.0027292404280881816,
+        "model_updates": 0,
+        "threshold_recalibrations": 383,
+        "threshold_recalibration_seconds": 3.0689379999987523,
+        "threshold_recalibration_seconds_summary": {
+          "count": 383,
+          "median": 0.003957599999921513,
+          "p95": 0.017037619999973667,
+          "maximum": 0.2516833999998198
+        }
+      }
+    },
+    "fpr_capped_recent_window_guard": {
+      "windows_with_diagnostics": 383,
+      "windows_meeting_wilson_upper_cap": 375,
+      "fraction_meeting_wilson_upper_cap": 0.97911227154047,
+      "maximum_validation_wilson_upper": 0.2991450484195441,
+      "mean_validation_fpr": 2.3817687807504273e-05,
+      "future_replay_chunks_over_cap": 5,
+      "future_replay_chunk_over_cap_fraction": 0.013054830287206266,
+      "mean_observed_chunk_fpr": 0.0027292404280881808
+    },
+    "interpretation": "The Wilson restriction is imposed on the recent labeled window when choosing the next threshold. It is not a guarantee for future or pooled traffic. Compare pooled and per-chunk FPR with attack recall."
+  }
+}

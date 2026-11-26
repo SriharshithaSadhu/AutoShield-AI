@@ -1,0 +1,1019 @@
+{
+  "source": "corrected_cse_gate/recovery_delay4_3000.json",
+  "source_sha256": "75191aaa780e615359954077c3c0c6f4c39f36fd6437f11d583db3da77106b29",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "scope": "Exploratory chronological replay. Empirical gate, no risk guarantee.",
+    "shadow_events": [],
+    "shadow_cost": {
+      "scoring_seconds": 0.0,
+      "active_frozen_scoring_seconds": 0.0,
+      "active_candidate_scoring_seconds": 0.0,
+      "routing_seconds": 0.0,
+      "peak_prediction_bytes": 0,
+      "active_chunks": 0
+    },
+    "shadow_source": "rollback",
+    "input_cache": "data\\cse_original_replay_core6",
+    "capture_counts": {
+      "frozen": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 2,
+          "tp": 126747
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 31,
+          "tp": 0
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 11,
+          "tp": 0
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 18506,
+          "tp": 4322
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 9207,
+          "tp": 6277
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 20,
+          "tp": 0
+        }
+      },
+      "periodic": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 2155,
+          "tp": 373845
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 204696,
+          "tp": 95
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 645,
+          "tp": 0
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 66,
+          "tp": 22
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 0,
+          "tp": 0
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 351,
+          "tp": 182187
+        }
+      },
+      "gated": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 860,
+          "tp": 372115
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 760338,
+          "tp": 203
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 758001,
+          "tp": 257
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 401173,
+          "tp": 52193
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 169362,
+          "tp": 73152
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 492954,
+          "tp": 285843
+        }
+      },
+      "threshold_only": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 2147,
+          "tp": 373845
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 131816,
+          "tp": 42
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 11,
+          "tp": 0
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 18439,
+          "tp": 4322
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 0,
+          "tp": 0
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 19,
+          "tp": 0
+        }
+      },
+      "recall_guard": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 2,
+          "tp": 126747
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 31,
+          "tp": 0
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 11,
+          "tp": 0
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 18506,
+          "tp": 4322
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 9207,
+          "tp": 6277
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 0,
+          "tp": 0
+        }
+      },
+      "rollback": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 860,
+          "tp": 372115
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 63873,
+          "tp": 0
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 373,
+          "tp": 16
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 18506,
+          "tp": 4322
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 9207,
+          "tp": 6277
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 99,
+          "tp": 0
+        }
+      },
+      "lease": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 860,
+          "tp": 372115
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 78828,
+          "tp": 10
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 415,
+          "tp": 136
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 179,
+          "tp": 27
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 112,
+          "tp": 22
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 734,
+          "tp": 0
+        }
+      },
+      "deadline_shadow": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 860,
+          "tp": 372115
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 222,
+          "tp": 0
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 373,
+          "tp": 16
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 18506,
+          "tp": 4322
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 9207,
+          "tp": 6277
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 99,
+          "tp": 0
+        }
+      }
+    },
+    "train_end_chunk": 253,
+    "evaluation_start_chunk": 506,
+    "schedule_offset": 0,
+    "schedule": "Every ten evaluation chunks; six fit, two threshold calibration, two gate validation; deploy next chunk.",
+    "guard_rule": {
+      "minimum_attacks": 100,
+      "minimum_benign_per_chunk": 3000,
+      "max_empirical_recall_loss": 0.01,
+      "validation_chunk_fpr_cap": 0.001
+    },
+    "label_delay_chunks": 4,
+    "lease_chunks": 10,
+    "lifecycle": [
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 529,
+        "last_released_chunk": 525
+      },
+      {
+        "policy": "lease",
+        "action": "approve",
+        "after_chunk": 529,
+        "last_released_chunk": 525
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 539,
+        "evidence_chunks": [
+          534,
+          535
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 549,
+        "evidence_chunks": [
+          544,
+          545
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 558,
+        "observed_chunk": 554,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "lease",
+        "action": "expire",
+        "after_chunk": 559,
+        "evidence_chunks": [
+          554,
+          555
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "restore",
+        "after_chunk": 559,
+        "observed_chunk": 555,
+        "reason": "lease_not_renewed"
+      },
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 599,
+        "last_released_chunk": 595
+      },
+      {
+        "policy": "lease",
+        "action": "approve",
+        "after_chunk": 599,
+        "last_released_chunk": 595
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 609,
+        "evidence_chunks": [
+          604,
+          605
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 619,
+        "evidence_chunks": [
+          614,
+          615
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 629,
+        "evidence_chunks": [
+          624,
+          625
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 636,
+        "observed_chunk": 632,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 639,
+        "evidence_chunks": [
+          634,
+          635
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 649,
+        "evidence_chunks": [
+          644,
+          645
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 649,
+        "last_released_chunk": 645
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 658,
+        "observed_chunk": 654,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 659,
+        "evidence_chunks": [
+          654,
+          655
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 669,
+        "evidence_chunks": [
+          664,
+          665
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 679,
+        "evidence_chunks": [
+          674,
+          675
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 689,
+        "evidence_chunks": [
+          684,
+          685
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 699,
+        "evidence_chunks": [
+          694,
+          695
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 709,
+        "evidence_chunks": [
+          704,
+          705
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 709,
+        "last_released_chunk": 705
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 719,
+        "evidence_chunks": [
+          714,
+          715
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 729,
+        "evidence_chunks": [
+          724,
+          725
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 739,
+        "observed_chunk": 735,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 739,
+        "evidence_chunks": [
+          734,
+          735
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 749,
+        "evidence_chunks": [
+          744,
+          745
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 759,
+        "evidence_chunks": [
+          754,
+          755
+        ]
+      }
+    ],
+    "summary": {
+      "frozen": {
+        "fp": 27777,
+        "tp": 137346,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.006941478614663096,
+        "recall": 0.129234955709745,
+        "worst_chunk_fpr": 0.49632699190054624,
+        "chunks_over_cap": 19
+      },
+      "periodic": {
+        "fp": 207913,
+        "tp": 556149,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.051957505965743174,
+        "recall": 0.5233053120077684,
+        "worst_chunk_fpr": 0.896,
+        "chunks_over_cap": 41
+      },
+      "gated": {
+        "fp": 2582688,
+        "tp": 783763,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.6454143183334053,
+        "recall": 0.7374774408569369,
+        "worst_chunk_fpr": 0.8678711502604,
+        "chunks_over_cap": 206
+      },
+      "threshold_only": {
+        "fp": 152432,
+        "tp": 378209,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.038092791453012385,
+        "recall": 0.35587365750751343,
+        "worst_chunk_fpr": 0.4761,
+        "chunks_over_cap": 27
+      },
+      "recall_guard": {
+        "fp": 27757,
+        "tp": 137346,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.006936480610116411,
+        "recall": 0.129234955709745,
+        "worst_chunk_fpr": 0.49632699190054624,
+        "chunks_over_cap": 19
+      },
+      "rollback": {
+        "fp": 92918,
+        "tp": 382730,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.023220229323442615,
+        "recall": 0.36012766734226476,
+        "worst_chunk_fpr": 0.7604,
+        "chunks_over_cap": 28
+      },
+      "lease": {
+        "fp": 81128,
+        "tp": 372310,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.020273905643171962,
+        "recall": 0.35032302622788547,
+        "worst_chunk_fpr": 0.7604,
+        "chunks_over_cap": 17
+      },
+      "deadline_shadow": {
+        "fp": 29267,
+        "tp": 382730,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.007313829953391108,
+        "recall": 0.36012766734226476,
+        "worst_chunk_fpr": 0.49632699190054624,
+        "chunks_over_cap": 24
+      }
+    },
+    "events": [
+      {
+        "after_chunk": 519,
+        "threshold_only_seconds": null,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 39994,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.04306440000073053
+      },
+      {
+        "after_chunk": 529,
+        "threshold_only_seconds": 0.021923400010564364,
+        "accepted": true,
+        "cap_pass": true,
+        "validation_tp_gain": 19975,
+        "validation_attacks": 20018,
+        "shared_candidate_and_gate_seconds": 0.3468331999902148,
+        "guard_action": "keep",
+        "guard_validation_attacks": 20018,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.10917789999803063
+      },
+      {
+        "after_chunk": 539,
+        "threshold_only_seconds": 0.02135680000355933,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 20037,
+        "shared_candidate_and_gate_seconds": 0.30721479999192525,
+        "guard_action": "keep",
+        "guard_validation_attacks": 20037,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.10389550001127645
+      },
+      {
+        "after_chunk": 549,
+        "threshold_only_seconds": 0.02037670000572689,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 20033,
+        "shared_candidate_and_gate_seconds": 0.34710030000132974,
+        "guard_action": "keep",
+        "guard_validation_attacks": 20033,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.1214353000104893
+      },
+      {
+        "after_chunk": 559,
+        "threshold_only_seconds": 0.021895099998801015,
+        "accepted": false,
+        "cap_pass": false,
+        "validation_tp_gain": 0,
+        "validation_attacks": 6961,
+        "shared_candidate_and_gate_seconds": 0.3042379000107758,
+        "guard_action": "keep",
+        "guard_validation_attacks": 6961,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.0965336999943247
+      },
+      {
+        "after_chunk": 569,
+        "threshold_only_seconds": 0.03748440000344999,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.35821549998945557,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.0343008999916492
+      },
+      {
+        "after_chunk": 579,
+        "threshold_only_seconds": 0.03610709999338724,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.37133739999262616,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.033375200000591576
+      },
+      {
+        "after_chunk": 589,
+        "threshold_only_seconds": 0.039811399998143315,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.036582299988367595
+      },
+      {
+        "after_chunk": 599,
+        "threshold_only_seconds": 0.0379285999952117,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 56,
+        "shared_candidate_and_gate_seconds": 0.4040815000043949,
+        "guard_action": "keep",
+        "guard_validation_attacks": 56,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.03544069999770727
+      },
+      {
+        "after_chunk": 609,
+        "threshold_only_seconds": 0.04775529999460559,
+        "accepted": false,
+        "cap_pass": false,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.5604042000049958,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.044388700000126846
+      },
+      {
+        "after_chunk": 619,
+        "threshold_only_seconds": 0.04988279999815859,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.4531532000110019,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.045927500003017485
+      },
+      {
+        "after_chunk": 629,
+        "threshold_only_seconds": 0.04623729999002535,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.49081659999501426,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.04208149999612942
+      },
+      {
+        "after_chunk": 639,
+        "threshold_only_seconds": 0.048041600006399676,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 1,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.04731539999193046
+      },
+      {
+        "after_chunk": 649,
+        "threshold_only_seconds": 0.04302549999556504,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -25,
+        "validation_attacks": 113,
+        "shared_candidate_and_gate_seconds": 0.4384444000024814,
+        "guard_action": "keep",
+        "guard_validation_attacks": 113,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.13207530000363477
+      },
+      {
+        "after_chunk": 659,
+        "threshold_only_seconds": 0.037432800003443845,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.3870022000046447,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.034703500001342036
+      },
+      {
+        "after_chunk": 669,
+        "threshold_only_seconds": 0.030509599993820302,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -8582,
+        "validation_attacks": 11503,
+        "shared_candidate_and_gate_seconds": 0.4043340000062017,
+        "guard_action": "keep",
+        "guard_validation_attacks": 11503,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.13261970000166912
+      },
+      {
+        "after_chunk": 679,
+        "threshold_only_seconds": 0.03522670001257211,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.03338429999712389
+      },
+      {
+        "after_chunk": 689,
+        "threshold_only_seconds": 0.026369999992311932,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -9671,
+        "validation_attacks": 12720,
+        "shared_candidate_and_gate_seconds": 0.35876960000314284,
+        "guard_action": "keep",
+        "guard_validation_attacks": 12720,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.10614000000350643
+      },
+      {
+        "after_chunk": 699,
+        "threshold_only_seconds": 0.012386600006720982,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -17542,
+        "validation_attacks": 23759,
+        "shared_candidate_and_gate_seconds": 0.3892709000065224,
+        "guard_action": "keep",
+        "guard_validation_attacks": 23759,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.11106540000764653
+      },
+      {
+        "after_chunk": 709,
+        "threshold_only_seconds": 0.010286599994287826,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -2979,
+        "validation_attacks": 3474,
+        "shared_candidate_and_gate_seconds": 0.3377302000008058,
+        "guard_action": "recalibrate",
+        "guard_validation_attacks": 3474,
+        "guard_validation_fp_reduction": 921,
+        "guard_decision_seconds": 0.10972710000351071
+      },
+      {
+        "after_chunk": 719,
+        "threshold_only_seconds": 0.025712200003908947,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -937,
+        "validation_attacks": 18929,
+        "shared_candidate_and_gate_seconds": 0.4015464999974938,
+        "guard_action": "keep",
+        "guard_validation_attacks": 18929,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.11069689999567345
+      },
+      {
+        "after_chunk": 729,
+        "threshold_only_seconds": 0.016870599996764213,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -5911,
+        "validation_attacks": 16881,
+        "shared_candidate_and_gate_seconds": 0.3972689999936847,
+        "guard_action": "keep",
+        "guard_validation_attacks": 16881,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.1069569999963278
+      },
+      {
+        "after_chunk": 739,
+        "threshold_only_seconds": 0.03805790000478737,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.03477209999982733
+      },
+      {
+        "after_chunk": 749,
+        "threshold_only_seconds": 0.022566800005733967,
+        "accepted": false,
+        "cap_pass": false,
+        "validation_tp_gain": -281,
+        "validation_attacks": 15677,
+        "shared_candidate_and_gate_seconds": 0.3459720999962883,
+        "guard_action": "keep",
+        "guard_validation_attacks": 15677,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.10634650000429247
+      }
+    ],
+    "deadline_routing": {
+      "evidence_flows": 1000,
+      "batches": 151613,
+      "max_wait_seconds": 1.0,
+      "p95_wait_seconds": 0.999946,
+      "routing_wall_seconds": 2.308151699937298,
+      "switch_completion_ns": [
+        1519261211524099000,
+        1519782485000002000,
+        1519783024000005000,
+        1519783573000007000,
+        1519783795000654000,
+        1519784597000002000,
+        1519785184000009000,
+        1519785325000007000,
+        1519815004000002000,
+        1519815640000024000,
+        1519815789000004000,
+        1519815945000008000,
+        1519816338000213000,
+        1519817026322318000,
+        1519817233000021000,
+        1519819152000002000,
+        1519871423000019000,
+        1519871874000337000,
+        1519872135000025000,
+        1519874866000011000,
+        1519875432000010000,
+        1519899259000026000,
+        1519899740000023000,
+        1519900813000030000,
+        1519901258000211000
+      ],
+      "source_true_positives_suppressed": 0,
+      "recovery_flows": 3000,
+      "recovery_completion_ns": [
+        1519782600178570000,
+        1519783093000293000,
+        1519783776667528000,
+        1519783933000023000,
+        1519784776702736000,
+        1519785284849280000,
+        1519785737686171000,
+        1519815106004211000,
+        1519815776000135000,
+        1519815941000398000,
+        1519816045525396000,
+        1519816439473012000,
+        1519817211000345000,
+        1519817519493209000,
+        1519819243000000000,
+        1519871645075340000,
+        1519872031000035000,
+        1519872400695052000,
+        1519875029374613000,
+        1519875605724602000,
+        1519899420397953000,
+        1519900047000218000,
+        1519901058024625000,
+        1519901547000253000
+      ]
+    }
+  }
+}

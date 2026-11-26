@@ -1,0 +1,577 @@
+{
+  "source": "network_context_2026-11-21/prefix_coverage_control/results.json",
+  "source_sha256": "ebf90e7d97247fd07d208cefc7839c86c2a69ed0282fdaa30f107a477a9e99ee",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "protocol": {
+      "recorded_at": "2026-11-21T19:01:03.340518+05:30",
+      "scope": "Bounded deployment-assumption diagnostic, not another feature search.\n\nAfter the frozen context ablations, test whether earlier target-period labels\nhelp later target traffic under an explicit, expensive supervised warmup setting.\nAll results remain development; the parent period was previously inspected.\n",
+      "boundaries": [
+        0,
+        100000,
+        140000,
+        160000,
+        200000
+      ],
+      "variants": [
+        "physical14",
+        "context29"
+      ],
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "rows": 200000,
+      "target_train_labels": 50000,
+      "original_sources": {
+        "ton": 150000,
+        "unsw": 50000
+      },
+      "warmup_sources": {
+        "ton": 100000,
+        "unsw": 50000,
+        "target_prefix": 50000
+      },
+      "calibration_scopes": [
+        "original_shared",
+        "old_ton_matched",
+        "recent_ton_matched"
+      ],
+      "calibration_cap": 0.001,
+      "delta": 0.025,
+      "control": "Same model configuration, one fixed fit per case/seed. Same fixed benign label count for old/recent ToN calibration. No tuning on the final target suffix.",
+      "limitation": "Changed training information: 50000 earlier target labels plus full labels from the calibration prefix. Not an equal reviewer-budget improvement, independent validation, or new algorithm."
+    },
+    "results": [
+      {
+        "identity": "physical14_source_only_seed42",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_source_only_seed42",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_source_only_seed42",
+        "variant": "physical14",
+        "arm": "source_only",
+        "seed": 42,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9280351353466078,
+          "partial_roc_auc_001": 0.6062756892055532,
+          "average_precision": 0.46410663579280875,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.6790123456790124,
+            "0.01": 0.9259259259259259
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 8,
+        "fp": 14,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.09876543209876543,
+        "fpr": 0.0003507101881309652,
+        "precision": 0.36363636363636365,
+        "f1": 0.1553398058252427,
+        "worst_window_fpr": 0.004615384615384616,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.09876543209876543
+          }
+        }
+      },
+      {
+        "identity": "physical14_source_only_seed43",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_source_only_seed43",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_source_only_seed43",
+        "variant": "physical14",
+        "arm": "source_only",
+        "seed": 43,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9280589490013574,
+          "partial_roc_auc_001": 0.5675602249441204,
+          "average_precision": 0.43613739187928796,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.7160493827160493,
+            "0.01": 0.9259259259259259
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 3,
+        "fp": 13,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.037037037037037035,
+        "fpr": 0.00032565946040732485,
+        "precision": 0.1875,
+        "f1": 0.061855670103092786,
+        "worst_window_fpr": 0.004615384615384616,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.037037037037037035
+          }
+        }
+      },
+      {
+        "identity": "physical14_source_only_seed44",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_source_only_seed44",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_source_only_seed44",
+        "variant": "physical14",
+        "arm": "source_only",
+        "seed": 44,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9277939061166763,
+          "partial_roc_auc_001": 0.5539702140499554,
+          "average_precision": 0.39384726066255515,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.2345679012345679,
+            "0.01": 0.9259259259259259
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 5,
+        "fp": 13,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.06172839506172839,
+        "fpr": 0.00032565946040732485,
+        "precision": 0.2777777777777778,
+        "f1": 0.10101010101010101,
+        "worst_window_fpr": 0.004615384615384616,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.06172839506172839
+          }
+        }
+      },
+      {
+        "identity": "physical14_supervised_target_warmup_seed42",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_supervised_target_warmup_seed42",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_supervised_target_warmup_seed42",
+        "variant": "physical14",
+        "arm": "supervised_target_warmup",
+        "seed": 42,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9107224537095023,
+          "partial_roc_auc_001": 0.6217490029151991,
+          "average_precision": 0.42339061650401133,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.7530864197530864,
+            "0.01": 0.8888888888888888
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 6,
+        "fp": 15,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.07407407407407407,
+        "fpr": 0.0003757609158546056,
+        "precision": 0.2857142857142857,
+        "f1": 0.11764705882352941,
+        "worst_window_fpr": 0.0056410256410256415,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.07407407407407407
+          }
+        }
+      },
+      {
+        "identity": "physical14_supervised_target_warmup_seed43",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_supervised_target_warmup_seed43",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_supervised_target_warmup_seed43",
+        "variant": "physical14",
+        "arm": "supervised_target_warmup",
+        "seed": 43,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9042052440141904,
+          "partial_roc_auc_001": 0.6408035779057746,
+          "average_precision": 0.4492429579848975,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.7283950617283951,
+            "0.01": 0.9012345679012346
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 8,
+        "fp": 18,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.09876543209876543,
+        "fpr": 0.0004509130990255267,
+        "precision": 0.3076923076923077,
+        "f1": 0.14953271028037382,
+        "worst_window_fpr": 0.0071794871794871795,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.09876543209876543
+          }
+        }
+      },
+      {
+        "identity": "physical14_supervised_target_warmup_seed44",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_supervised_target_warmup_seed44",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "physical14_supervised_target_warmup_seed44",
+        "variant": "physical14",
+        "arm": "supervised_target_warmup",
+        "seed": 44,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9107770395544804,
+          "partial_roc_auc_001": 0.643189074177187,
+          "average_precision": 0.4413082470841982,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.7407407407407407,
+            "0.01": 0.8888888888888888
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 9,
+        "fp": 16,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.1111111111111111,
+        "fpr": 0.000400811643578246,
+        "precision": 0.36,
+        "f1": 0.16981132075471697,
+        "worst_window_fpr": 0.006153846153846154,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.1111111111111111
+          }
+        }
+      },
+      {
+        "identity": "context29_source_only_seed42",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_source_only_seed42",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_source_only_seed42",
+        "variant": "context29",
+        "arm": "source_only",
+        "seed": 42,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9991773464722854,
+          "partial_roc_auc_001": 0.7599837080521669,
+          "average_precision": 0.626847201092501,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.7530864197530864,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 4,
+        "fp": 6,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.04938271604938271,
+        "fpr": 0.00015030436634184223,
+        "precision": 0.4,
+        "f1": 0.08791208791208792,
+        "worst_window_fpr": 0.0015384615384615385,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.04938271604938271
+          }
+        }
+      },
+      {
+        "identity": "context29_source_only_seed43",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_source_only_seed43",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_source_only_seed43",
+        "variant": "context29",
+        "arm": "source_only",
+        "seed": 43,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9990125064984989,
+          "partial_roc_auc_001": 0.6797135144944119,
+          "average_precision": 0.5482937363474863,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.7283950617283951,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 4,
+        "fp": 6,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.04938271604938271,
+        "fpr": 0.00015030436634184223,
+        "precision": 0.4,
+        "f1": 0.08791208791208792,
+        "worst_window_fpr": 0.0015384615384615385,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.04938271604938271
+          }
+        }
+      },
+      {
+        "identity": "context29_source_only_seed44",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_source_only_seed44",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_source_only_seed44",
+        "variant": "context29",
+        "arm": "source_only",
+        "seed": 44,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9990684840505728,
+          "partial_roc_auc_001": 0.6794166231691093,
+          "average_precision": 0.5576775250775547,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.7160493827160493,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 6,
+        "fp": 7,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.07407407407407407,
+        "fpr": 0.0001753550940654826,
+        "precision": 0.46153846153846156,
+        "f1": 0.1276595744680851,
+        "worst_window_fpr": 0.0020512820512820513,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.07407407407407407
+          }
+        }
+      },
+      {
+        "identity": "context29_supervised_target_warmup_seed42",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_supervised_target_warmup_seed42",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_supervised_target_warmup_seed42",
+        "variant": "context29",
+        "arm": "supervised_target_warmup",
+        "seed": 42,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9987947816550737,
+          "partial_roc_auc_001": 0.6569583956737624,
+          "average_precision": 0.5286409856159641,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.7407407407407407,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7,
+        "fp": 7,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.08641975308641975,
+        "fpr": 0.0001753550940654826,
+        "precision": 0.5,
+        "f1": 0.14736842105263157,
+        "worst_window_fpr": 0.0020512820512820513,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.08641975308641975
+          }
+        }
+      },
+      {
+        "identity": "context29_supervised_target_warmup_seed43",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_supervised_target_warmup_seed43",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_supervised_target_warmup_seed43",
+        "variant": "context29",
+        "arm": "supervised_target_warmup",
+        "seed": 43,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9985830875423968,
+          "partial_roc_auc_001": 0.584966967987954,
+          "average_precision": 0.45772523047633956,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.3333333333333333,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 4,
+        "fp": 6,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.04938271604938271,
+        "fpr": 0.00015030436634184223,
+        "precision": 0.4,
+        "f1": 0.08791208791208792,
+        "worst_window_fpr": 0.0015384615384615385,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.04938271604938271
+          }
+        }
+      },
+      {
+        "identity": "context29_supervised_target_warmup_seed44",
+        "policy": "old_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_supervised_target_warmup_seed44",
+        "policy": "recent_ton_matched",
+        "feasible_calibration": false
+      },
+      {
+        "identity": "context29_supervised_target_warmup_seed44",
+        "variant": "context29",
+        "arm": "supervised_target_warmup",
+        "seed": 44,
+        "policy": "original_shared",
+        "feasible_calibration": true,
+        "ranking": {
+          "roc_auc": 0.9986515904583325,
+          "partial_roc_auc_001": 0.5846117504356378,
+          "average_precision": 0.47435856350114436,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.5308641975308642,
+            "0.01": 1.0
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 7,
+        "fp": 6,
+        "attacks": 81,
+        "benign": 39919,
+        "recall": 0.08641975308641975,
+        "fpr": 0.00015030436634184223,
+        "precision": 0.5384615384615384,
+        "f1": 0.14893617021276595,
+        "worst_window_fpr": 0.0015384615384615385,
+        "worst_window_recall": 0.0,
+        "family": {
+          "mitm": {
+            "n": 81,
+            "recall": 0.08641975308641975
+          }
+        }
+      }
+    ]
+  }
+}

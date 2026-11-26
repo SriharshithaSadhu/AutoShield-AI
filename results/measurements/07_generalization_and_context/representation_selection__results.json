@@ -1,0 +1,656 @@
+{
+  "source": "representation_selection/results.json",
+  "source_sha256": "8942a68a881be9528f83134b42fb4da0aa5d004ebb0e96ba52d50ba21d8ba19f",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "protocol": {
+      "bank": [
+        {
+          "context": false,
+          "n_estimators": 60,
+          "num_leaves": 15,
+          "min_child_samples": 20,
+          "reg_lambda": 0
+        },
+        {
+          "context": false,
+          "n_estimators": 150,
+          "num_leaves": 15,
+          "min_child_samples": 200,
+          "reg_lambda": 10
+        },
+        {
+          "context": true,
+          "n_estimators": 60,
+          "num_leaves": 15,
+          "min_child_samples": 20,
+          "reg_lambda": 0
+        },
+        {
+          "context": true,
+          "n_estimators": 150,
+          "num_leaves": 15,
+          "min_child_samples": 200,
+          "reg_lambda": 10
+        }
+      ],
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "fit_sample_end": 180000,
+      "proxy_calibration_sample_start": 180000,
+      "validation": "Three chronological tune windows; four internal leave-family-out transfer diagnostics.",
+      "fpr_cap": 0.001,
+      "recall_target": 0.5,
+      "size_cap": 1572864,
+      "latency_cap_ms": 5,
+      "scope": "Development only: previously inspected NF-v3 capture. Final calibration/evaluation are loaded after each seed selection. No optimizer comparison."
+    },
+    "runs": [
+      {
+        "seed": 42,
+        "decisions": {
+          "pooled": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7382019097952075,
+            "selection_risk": 0.00037688980256113755
+          },
+          "worst_window": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7312984285610834,
+            "selection_risk": 0.0004597701149425287
+          },
+          "family_empirical": {
+            "id": 2,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.0004597701149425287
+          },
+          "generalization_bound": {
+            "id": 2,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.0009007500577253312
+          }
+        },
+        "outcomes": {
+          "2": {
+            "tp": 96015,
+            "fp": 37416,
+            "attacks": 121221,
+            "benign": 78779,
+            "recall": 0.7920657311851906,
+            "fpr": 0.4749489077038297,
+            "precision": 0.7195854036917958,
+            "f1": 0.7540879317657038,
+            "window_score": {
+              "worst_fpr": 0.8887441114563496,
+              "worst_fpr_upper": 0.899242592996685,
+              "worst_recall_lower": 0.00020966351609455656,
+              "local_alpha": 0.0003125,
+              "missing_benign_windows": 0,
+              "missing_attack_windows": 1
+            },
+            "family": {
+              "Backdoor": {
+                "n": 4387,
+                "recall": 0.0006838386140870754
+              },
+              "ddos": {
+                "n": 19809,
+                "recall": 0.9780907668231612
+              },
+              "mitm": {
+                "n": 122,
+                "recall": 0.2786885245901639
+              },
+              "password": {
+                "n": 34960,
+                "recall": 0.9697368421052631
+              },
+              "ransomware": {
+                "n": 100,
+                "recall": 0.34
+              },
+              "xss": {
+                "n": 61843,
+                "recall": 0.6899244861989231
+              }
+            },
+            "threshold": 0.8668145022671294
+          },
+          "3": {
+            "tp": 102563,
+            "fp": 44578,
+            "attacks": 121221,
+            "benign": 78779,
+            "recall": 0.8460827744367725,
+            "fpr": 0.5658614605415149,
+            "precision": 0.6970388946656608,
+            "f1": 0.7643630618343878,
+            "window_score": {
+              "worst_fpr": 0.9998997694697805,
+              "worst_fpr_upper": 0.9999999686730647,
+              "worst_recall_lower": 0.0019314560409330536,
+              "local_alpha": 0.0003125,
+              "missing_benign_windows": 0,
+              "missing_attack_windows": 1
+            },
+            "family": {
+              "Backdoor": {
+                "n": 4387,
+                "recall": 0.0015956234328698426
+              },
+              "ddos": {
+                "n": 19809,
+                "recall": 0.984653440355394
+              },
+              "mitm": {
+                "n": 122,
+                "recall": 0.4918032786885246
+              },
+              "password": {
+                "n": 34960,
+                "recall": 0.978604118993135
+              },
+              "ransomware": {
+                "n": 100,
+                "recall": 0.4
+              },
+              "xss": {
+                "n": 61843,
+                "recall": 0.7881085975777372
+              }
+            },
+            "threshold": 0.7687083883932107
+          }
+        }
+      },
+      {
+        "seed": 43,
+        "decisions": {
+          "pooled": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7731907993513903,
+            "selection_risk": 0.00047967793053235687
+          },
+          "worst_window": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7641031211528713,
+            "selection_risk": 0.0006130268199233716
+          },
+          "family_empirical": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.0006130268199233716
+          },
+          "generalization_bound": {
+            "id": 2,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.0007246126192564355
+          }
+        },
+        "outcomes": {
+          "2": {
+            "tp": 102058,
+            "fp": 37580,
+            "attacks": 121221,
+            "benign": 78779,
+            "recall": 0.8419168295922324,
+            "fpr": 0.4770306807651785,
+            "precision": 0.7308755496354861,
+            "f1": 0.7824763569591235,
+            "window_score": {
+              "worst_fpr": 0.8833316628244964,
+              "worst_fpr_upper": 0.8940596239673726,
+              "worst_recall_lower": 0.0006023415426568546,
+              "local_alpha": 0.0003125,
+              "missing_benign_windows": 0,
+              "missing_attack_windows": 1
+            },
+            "family": {
+              "Backdoor": {
+                "n": 4387,
+                "recall": 0.0006838386140870754
+              },
+              "ddos": {
+                "n": 19809,
+                "recall": 0.9834923519612297
+              },
+              "mitm": {
+                "n": 122,
+                "recall": 0.3114754098360656
+              },
+              "password": {
+                "n": 34960,
+                "recall": 0.9804061784897025
+              },
+              "ransomware": {
+                "n": 100,
+                "recall": 0.65
+              },
+              "xss": {
+                "n": 61843,
+                "recall": 0.7793121291011109
+              }
+            },
+            "threshold": 0.7750153088689149
+          },
+          "3": {
+            "tp": 102698,
+            "fp": 45235,
+            "attacks": 121221,
+            "benign": 78779,
+            "recall": 0.8471964428605605,
+            "fpr": 0.5742012465250892,
+            "precision": 0.6942196805310512,
+            "f1": 0.7631170259405397,
+            "window_score": {
+              "worst_fpr": 0.9998997694697805,
+              "worst_fpr_upper": 0.9999999686730647,
+              "worst_recall_lower": 0.001360103240194915,
+              "local_alpha": 0.0003125,
+              "missing_benign_windows": 0,
+              "missing_attack_windows": 1
+            },
+            "family": {
+              "Backdoor": {
+                "n": 4387,
+                "recall": 0.0006838386140870754
+              },
+              "ddos": {
+                "n": 19809,
+                "recall": 0.9840981372103589
+              },
+              "mitm": {
+                "n": 122,
+                "recall": 0.48360655737704916
+              },
+              "password": {
+                "n": 34960,
+                "recall": 0.9829805491990846
+              },
+              "ransomware": {
+                "n": 100,
+                "recall": 0.5
+              },
+              "xss": {
+                "n": 61843,
+                "recall": 0.7879145578319292
+              }
+            },
+            "threshold": 0.793187630324982
+          }
+        }
+      },
+      {
+        "seed": 44,
+        "decisions": {
+          "pooled": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7695273557143715,
+            "selection_risk": 0.00041971818921581226
+          },
+          "worst_window": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7603374610761098,
+            "selection_risk": 0.0005363984674329502
+          },
+          "family_empirical": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.0005363984674329502
+          },
+          "generalization_bound": {
+            "id": 2,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.0006517458343134016
+          }
+        },
+        "outcomes": {
+          "2": {
+            "tp": 100222,
+            "fp": 39807,
+            "attacks": 121221,
+            "benign": 78779,
+            "recall": 0.8267709390287161,
+            "fpr": 0.5052996356897143,
+            "precision": 0.715723171628734,
+            "f1": 0.7672497607655503,
+            "window_score": {
+              "worst_fpr": 0.9433697504259797,
+              "worst_fpr_upper": 0.9509723781176204,
+              "worst_recall_lower": 0.00013515589756258657,
+              "local_alpha": 0.0003125,
+              "missing_benign_windows": 0,
+              "missing_attack_windows": 1
+            },
+            "family": {
+              "Backdoor": {
+                "n": 4387,
+                "recall": 0.0009117848187827673
+              },
+              "ddos": {
+                "n": 19809,
+                "recall": 0.9794537836337018
+              },
+              "mitm": {
+                "n": 122,
+                "recall": 0.26229508196721313
+              },
+              "password": {
+                "n": 34960,
+                "recall": 0.972254004576659
+              },
+              "ransomware": {
+                "n": 100,
+                "recall": 0.43
+              },
+              "xss": {
+                "n": 61843,
+                "recall": 0.7559626796888896
+              }
+            },
+            "threshold": 0.8235258208073526
+          },
+          "3": {
+            "tp": 101868,
+            "fp": 44877,
+            "attacks": 121221,
+            "benign": 78779,
+            "recall": 0.8403494444031975,
+            "fpr": 0.5696568882570228,
+            "precision": 0.6941837882040274,
+            "f1": 0.7603054118806117,
+            "window_score": {
+              "worst_fpr": 0.9998997694697805,
+              "worst_fpr_upper": 0.9999999686730647,
+              "worst_recall_lower": 0.0016406601575889724,
+              "local_alpha": 0.0003125,
+              "missing_benign_windows": 0,
+              "missing_attack_windows": 1
+            },
+            "family": {
+              "Backdoor": {
+                "n": 4387,
+                "recall": 0.0006838386140870754
+              },
+              "ddos": {
+                "n": 19809,
+                "recall": 0.9844010298349235
+              },
+              "mitm": {
+                "n": 122,
+                "recall": 0.5
+              },
+              "password": {
+                "n": 34960,
+                "recall": 0.9745137299771167
+              },
+              "ransomware": {
+                "n": 100,
+                "recall": 0.51
+              },
+              "xss": {
+                "n": 61843,
+                "recall": 0.7791342593341203
+              }
+            },
+            "threshold": 0.7921113160335472
+          }
+        }
+      },
+      {
+        "seed": 45,
+        "decisions": {
+          "pooled": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7288931595699958,
+            "selection_risk": 0.00038545547989207247
+          },
+          "worst_window": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7228981099283076,
+            "selection_risk": 0.00048531289910600255
+          },
+          "family_empirical": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.00048531289910600255
+          },
+          "generalization_bound": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.0009351748087700357
+          }
+        },
+        "outcomes": {
+          "3": {
+            "tp": 102740,
+            "fp": 45014,
+            "attacks": 121221,
+            "benign": 78779,
+            "recall": 0.8475429174812945,
+            "fpr": 0.5713959303875398,
+            "precision": 0.6953449652801278,
+            "f1": 0.7639371688818664,
+            "window_score": {
+              "worst_fpr": 0.9998997694697805,
+              "worst_fpr_upper": 0.9999999686730647,
+              "worst_recall_lower": 0.0014989963382749745,
+              "local_alpha": 0.0003125,
+              "missing_benign_windows": 0,
+              "missing_attack_windows": 1
+            },
+            "family": {
+              "Backdoor": {
+                "n": 4387,
+                "recall": 0.0006838386140870754
+              },
+              "ddos": {
+                "n": 19809,
+                "recall": 0.984653440355394
+              },
+              "mitm": {
+                "n": 122,
+                "recall": 0.5081967213114754
+              },
+              "password": {
+                "n": 34960,
+                "recall": 0.9797196796338673
+              },
+              "ransomware": {
+                "n": 100,
+                "recall": 0.5
+              },
+              "xss": {
+                "n": 61843,
+                "recall": 0.7902106948239898
+              }
+            },
+            "threshold": 0.7722007354488323
+          }
+        }
+      },
+      {
+        "seed": 46,
+        "decisions": {
+          "pooled": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7898624707224792,
+            "selection_risk": 0.00046254657587048697
+          },
+          "worst_window": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": true,
+            "memory_certified": false,
+            "selection_value": 0.7816641320877689,
+            "selection_risk": 0.0005874840357598979
+          },
+          "family_empirical": {
+            "id": 3,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.0005874840357598979
+          },
+          "generalization_bound": {
+            "id": 0,
+            "selection_fpr_feasible": true,
+            "selection_recall_feasible": false,
+            "memory_certified": false,
+            "selection_value": 0.0,
+            "selection_risk": 0.0001781331824822849
+          }
+        },
+        "outcomes": {
+          "0": {
+            "tp": 98845,
+            "fp": 4022,
+            "attacks": 121221,
+            "benign": 78779,
+            "recall": 0.815411521106079,
+            "fpr": 0.051054214955762324,
+            "precision": 0.9609009692126727,
+            "f1": 0.8821980650458748,
+            "window_score": {
+              "worst_fpr": 0.6130803794308537,
+              "worst_fpr_upper": 0.650032810321933,
+              "worst_recall_lower": 0.0,
+              "local_alpha": 0.0003125,
+              "missing_benign_windows": 0,
+              "missing_attack_windows": 1
+            },
+            "family": {
+              "Backdoor": {
+                "n": 4387,
+                "recall": 0.00022794620469569182
+              },
+              "ddos": {
+                "n": 19809,
+                "recall": 0.9844515119390176
+              },
+              "mitm": {
+                "n": 122,
+                "recall": 0.28688524590163933
+              },
+              "password": {
+                "n": 34960,
+                "recall": 0.9321796338672769
+              },
+              "ransomware": {
+                "n": 100,
+                "recall": 0.09
+              },
+              "xss": {
+                "n": 61843,
+                "recall": 0.7552997105573792
+              }
+            },
+            "threshold": 0.8033334279058489
+          },
+          "3": {
+            "tp": 102686,
+            "fp": 44344,
+            "attacks": 121221,
+            "benign": 78779,
+            "recall": 0.8470974501117793,
+            "fpr": 0.5628911258076391,
+            "precision": 0.6984016867305992,
+            "f1": 0.7655964003862055,
+            "window_score": {
+              "worst_fpr": 0.9998997694697805,
+              "worst_fpr_upper": 0.9999999686730647,
+              "worst_recall_lower": 0.0009627593507271355,
+              "local_alpha": 0.0003125,
+              "missing_benign_windows": 0,
+              "missing_attack_windows": 1
+            },
+            "family": {
+              "Backdoor": {
+                "n": 4387,
+                "recall": 0.0006838386140870754
+              },
+              "ddos": {
+                "n": 19809,
+                "recall": 0.9840981372103589
+              },
+              "mitm": {
+                "n": 122,
+                "recall": 0.4262295081967213
+              },
+              "password": {
+                "n": 34960,
+                "recall": 0.9756006864988558
+              },
+              "ransomware": {
+                "n": 100,
+                "recall": 0.47
+              },
+              "xss": {
+                "n": 61843,
+                "recall": 0.7920540724091651
+              }
+            },
+            "threshold": 0.7743339456185079
+          }
+        }
+      }
+    ]
+  }
+}

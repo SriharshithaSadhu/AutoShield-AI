@@ -1,0 +1,105 @@
+{
+  "dataset": "NF-ToN-IoT-v3 development tail",
+  "flows": 9160253,
+  "seed": 42,
+  "methods": [
+    {
+      "name": "flow14",
+      "benign": 3613012,
+      "attacks": 5547241,
+      "fp": 47177,
+      "tp": 2025378,
+      "recall": 0.3651144776295099,
+      "fpr": 0.013057526518040903,
+      "precision": 0.9772372747647228,
+      "f1": 0.5316095076561105,
+      "family": {
+        "ddos": {
+          "n": 904661,
+          "tp": 841265,
+          "recall": 0.9299229214037081
+        },
+        "password": {
+          "n": 1594777,
+          "tp": 390339,
+          "recall": 0.2447608662527739
+        },
+        "xss": {
+          "n": 2834435,
+          "tp": 602329,
+          "recall": 0.21250407929622658
+        },
+        "ransomware": {
+          "n": 3971,
+          "tp": 116,
+          "recall": 0.029211785444472425
+        },
+        "Backdoor": {
+          "n": 203384,
+          "tp": 190644,
+          "recall": 0.9373598709829681
+        },
+        "mitm": {
+          "n": 6013,
+          "tp": 685,
+          "recall": 0.11391984034591718
+        }
+      },
+      "worst_supported_flow_window_fpr": 0.2932823593664664,
+      "worst_supported_time_window_fpr": 0.31906614785992216
+    },
+    {
+      "name": "hybrid38",
+      "benign": 3613012,
+      "attacks": 5547241,
+      "fp": 313590,
+      "tp": 5007367,
+      "recall": 0.9026770244883898,
+      "fpr": 0.08679461900486353,
+      "precision": 0.9410651129110797,
+      "f1": 0.9214714343628999,
+      "family": {
+        "ddos": {
+          "n": 904661,
+          "tp": 891945,
+          "recall": 0.985943906059839
+        },
+        "password": {
+          "n": 1594777,
+          "tp": 1573010,
+          "recall": 0.9863510697733915
+        },
+        "xss": {
+          "n": 2834435,
+          "tp": 2333964,
+          "recall": 0.8234318303295013
+        },
+        "ransomware": {
+          "n": 3971,
+          "tp": 2194,
+          "recall": 0.5525056660790733
+        },
+        "Backdoor": {
+          "n": 203384,
+          "tp": 203008,
+          "recall": 0.998151280336703
+        },
+        "mitm": {
+          "n": 6013,
+          "tp": 3246,
+          "recall": 0.5398303675370032
+        }
+      },
+      "worst_supported_flow_window_fpr": 0.989861141723606,
+      "worst_supported_time_window_fpr": 0.9911357340720222
+    }
+  ],
+  "protocol": {
+    "prediction_unit": "Current completed flow",
+    "ordering": "Completion-time proxy; not measured exporter receipt.",
+    "fpr_target": 0.001,
+    "minimum_recall": 0.5,
+    "worst_window": "60seconds, at least100 benign records",
+    "independent_validation": false
+  }
+}

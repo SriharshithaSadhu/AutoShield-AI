@@ -1,0 +1,41 @@
+{
+  "source": "corrected_cse_gate/nf_ton_deadline_failure_attribution.json",
+  "source_sha256": "9b9477f1061bbadec09855d29f63ac9b289a67a52bcca4d26ec86787cd6eabdf",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "switch_chunks": [
+      932,
+      942
+    ],
+    "changed_chunks": 33,
+    "net_tp_delta": -75546,
+    "net_fp_delta": 262,
+    "worst_tp_losses": [
+      {
+        "chunk": 938,
+        "attack_delta": -12583,
+        "false_alarm_delta": -3
+      },
+      {
+        "chunk": 933,
+        "attack_delta": -11099,
+        "false_alarm_delta": 1
+      },
+      {
+        "chunk": 934,
+        "attack_delta": -9576,
+        "false_alarm_delta": -14
+      },
+      {
+        "chunk": 937,
+        "attack_delta": -8399,
+        "false_alarm_delta": -9
+      },
+      {
+        "chunk": 936,
+        "attack_delta": -7633,
+        "false_alarm_delta": -1
+      }
+    ]
+  }
+}

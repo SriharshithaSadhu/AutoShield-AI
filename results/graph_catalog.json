@@ -1,0 +1,344 @@
+{
+  "groups": {
+    "01_baseline_reproduction": [
+      {
+        "title": "CICIDS2017 \u2014 Decision Tree baseline",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_17_1.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 17, output 1",
+        "sha256": "dd65bf524e4a4d7910053b1b35fbc98cf2b24c7907edf15b1fd71c3eee0d90a0"
+      },
+      {
+        "title": "CICIDS2017 \u2014 Random Forest baseline",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_19_1.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 19, output 1",
+        "sha256": "a4fe45fbe7953b167d6766967cd5f86ace0bce155bdc788a949e894d169bf2f7"
+      },
+      {
+        "title": "CICIDS2017 \u2014 Extra Trees baseline",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_21_1.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 21, output 1",
+        "sha256": "5476191b2ac978d4570147a43ccad5ea860f12938c0bb4ad25a60fc112919627"
+      },
+      {
+        "title": "CICIDS2017 \u2014 LightGBM baseline",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_25_8.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 25, output 8",
+        "sha256": "d033f6a0a056c32d1c67517531669b939da167792938e36c13f5d5a18830318b"
+      },
+      {
+        "title": "CICIDS2017 \u2014 LightGBM after balancing",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_30_4.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 30, output 4",
+        "sha256": "6239e1eb5cecec73cda26929d62a1c9538edb8b709a222a7f694c143f6d033a3"
+      },
+      {
+        "title": "CICIDS2017 \u2014 XGBoost after balancing",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_31_1.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 31, output 1",
+        "sha256": "87b7ddc119374957946fd7cd70ab025e83286befbc3b290f554d2f6084fb9aaf"
+      },
+      {
+        "title": "CICIDS2017 \u2014 Selected feature importance",
+        "caption": "Saved reproduction output: ranks selected features; importance is not causal evidence.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_36_0.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 36, output 0",
+        "sha256": "db11aedb4852e02a2ebeeb04a59da562dc1fa5852b3342b2f771854b4b7dcf2b"
+      },
+      {
+        "title": "CICIDS2017 \u2014 LightGBM after feature selection",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_37_4.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 37, output 4",
+        "sha256": "5eb2f34ecb69f4ab78db85377edfb8b07dfa5fe81c72ad443a053a1c8593e481"
+      },
+      {
+        "title": "CICIDS2017 \u2014 XGBoost after feature selection",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_38_1.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 38, output 1",
+        "sha256": "0b727b2a6e66aac1717d8cc3c75132ad9db5cea993d8d41f9e7e30995ee054e0"
+      },
+      {
+        "title": "CICIDS2017 \u2014 Tuned LightGBM",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_44_2.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 44, output 2",
+        "sha256": "e3538b57095cbd37e9a9ee10f0a6e3b5894bb657757bd7ed1da47c485ac73cb3"
+      },
+      {
+        "title": "CICIDS2017 \u2014 Tuned XGBoost",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/CICIDS2017_cell_50_1.png",
+        "source": "MOO_AutoML_Dataset_1.ipynb, cell 50, output 1",
+        "sha256": "0b727b2a6e66aac1717d8cc3c75132ad9db5cea993d8d41f9e7e30995ee054e0"
+      },
+      {
+        "title": "IoTID20 \u2014 Decision Tree baseline",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_17_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 17, output 1",
+        "sha256": "15aec633cb0cb69bfcc18680559e1eaeaf4577365e30d20e3f3397ddc25af7b7"
+      },
+      {
+        "title": "IoTID20 \u2014 Random Forest baseline",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_19_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 19, output 1",
+        "sha256": "140fc2785068e2935cf047e9943149d1c6466f0d121d7dfa8c9548177c4ad503"
+      },
+      {
+        "title": "IoTID20 \u2014 Extra Trees baseline",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_21_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 21, output 1",
+        "sha256": "e4c12a0c5a1a11d85c8aa1210a8543c4e98c1b0e0c192d27461778f81f03cf7a"
+      },
+      {
+        "title": "IoTID20 \u2014 XGBoost baseline",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_23_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 23, output 1",
+        "sha256": "883e71e097345a3807669e8b35c68ee02f50e2fd0cbf1232e6bf2ddfba2aeb95"
+      },
+      {
+        "title": "IoTID20 \u2014 LightGBM baseline",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_25_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 25, output 1",
+        "sha256": "9151af8febe3b68226b05dcc15776b0fd361c3768c6011502e9a49736608ed62"
+      },
+      {
+        "title": "IoTID20 \u2014 LightGBM after balancing",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_30_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 30, output 1",
+        "sha256": "9ee40afbd6bc614fa8059ae0a1f94d5682b6609030f564472e813eff27070688"
+      },
+      {
+        "title": "IoTID20 \u2014 XGBoost after balancing",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_31_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 31, output 1",
+        "sha256": "d184bdf72b5629fd671ec61a439f6a2580aa321100ecc17ef60b908f6212eb1c"
+      },
+      {
+        "title": "IoTID20 \u2014 Selected feature importance",
+        "caption": "Saved reproduction output: ranks selected features; importance is not causal evidence.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_36_0.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 36, output 0",
+        "sha256": "7e78df237dacc4e124feb4b415721bb95b496a048996acb0d6cfed64a54dcf4d"
+      },
+      {
+        "title": "IoTID20 \u2014 LightGBM after feature selection",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_37_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 37, output 1",
+        "sha256": "abd31fc5890875895942adaba9f7f9d6889c1ab48a2b47312af3d414430dca86"
+      },
+      {
+        "title": "IoTID20 \u2014 XGBoost after feature selection",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_38_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 38, output 1",
+        "sha256": "73b863e2b9fdad826ceeb086dffff96706ed7a5ed922a92c9d48158579070f71"
+      },
+      {
+        "title": "IoTID20 \u2014 Tuned LightGBM",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_44_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 44, output 1",
+        "sha256": "34a7f13b56756be9df1c17a8c90a57fdef9d7f92708f137d83e9d6670688234e"
+      },
+      {
+        "title": "IoTID20 \u2014 Tuned XGBoost",
+        "caption": "Saved reproduction confusion matrix: diagonal cells are correct classifications and off-diagonal cells expose class errors. This demonstrates the named benchmark stage, not cross-network generalization or superiority over other stages.",
+        "path": "graphs/01_baseline_reproduction/IoTID20_cell_50_1.png",
+        "source": "MOO_AutoML_Dataset_2.ipynb, cell 50, output 1",
+        "sha256": "73b863e2b9fdad826ceeb086dffff96706ed7a5ed922a92c9d48158579070f71"
+      }
+    ],
+    "02_automl_and_resource_constraints": [
+      {
+        "title": "Selection stability under budget constraints",
+        "caption": "Checks the stability of candidate selection and calibrated operating points. The primary combined recall/FPR requirement was not reliably met.",
+        "path": "graphs/02_automl_and_resource_constraints/comparison.png",
+        "source": "selection_stability/comparison.png",
+        "sha256": "68c77b0194141118b113a99dd3f354f980c13788e2c975b3b0a0b144f1934308"
+      }
+    ],
+    "03_cross_dataset_transfer": [
+      {
+        "title": "Transfer threshold-gate feasibility",
+        "caption": "Tests whether transferred scores support the declared recall and false-positive budgets. Failed operating points remain visible; threshold control alone is insufficient.",
+        "path": "graphs/03_cross_dataset_transfer/IOTID20_CSE_THRESHOLD_GATE_TRADEOFF.png",
+        "source": "IOTID20_CSE_THRESHOLD_GATE_TRADEOFF.png",
+        "sha256": "b8fcb749659a31c137b8d1d96c3141c795ec709d32090cf57acdf8c9ab73b592"
+      },
+      {
+        "title": "Transfer risk by capture",
+        "caption": "Separates capture-specific recall and false alarms rather than treating pooled performance as deployment safety.",
+        "path": "graphs/03_cross_dataset_transfer/IOTID20_CSE_TRANSFER_CAPTURE_RISK_TRADEOFF.png",
+        "source": "IOTID20_CSE_TRANSFER_CAPTURE_RISK_TRADEOFF.png",
+        "sha256": "c95927abc67975e863eded631cf00c454a929887e4f0e92d395418ca630ccdb7"
+      }
+    ],
+    "04_temporal_adaptation": [
+      {
+        "title": "CSE adaptation across capture days",
+        "caption": "Compares daily F1 across frozen and update policies. Performance varies by capture; a pooled adaptation gain does not establish uniform safety.",
+        "path": "graphs/04_temporal_adaptation/cse_daily_policy_f1_seed42.png",
+        "source": "cse_daily_policy_f1_seed42.png",
+        "sha256": "c718d3da6d70853e3526edaf714887263b6625b6a84cac7eaa0f80c60b96129d"
+      },
+      {
+        "title": "Threshold recalibration, seed 42",
+        "caption": "Shows the recall/false-alarm tradeoff from threshold-only changes. Recalibration is distinct from improving the score ranking.",
+        "path": "graphs/04_temporal_adaptation/cse_threshold_recalibration_tradeoff_seed42.png",
+        "source": "cse_threshold_recalibration_tradeoff_seed42.png",
+        "sha256": "e28f64c1b54a9213d9af3b9f256583b780e9e9bbb305c9d33256dbbf342bd5d6"
+      },
+      {
+        "title": "Threshold recalibration across two seeds",
+        "caption": "Checks whether the same-stream tradeoff changes with model seed. Repeated seeds are not independent-network validation.",
+        "path": "graphs/04_temporal_adaptation/cse_threshold_recalibration_tradeoff_seeds42_43.png",
+        "source": "cse_threshold_recalibration_tradeoff_seeds42_43.png",
+        "sha256": "307c0668777094fcd13d71ce9b897ff09cdcd56361ca0361ab0ad95d326e85b8"
+      },
+      {
+        "title": "Smart-factory chronological replay",
+        "caption": "Compares policies over successive chunks. A low-FPR policy can still lose useful attack detections; family and chunk behavior must accompany pooled metrics.",
+        "path": "graphs/04_temporal_adaptation/smart_factory_a_to_s_chunk_metrics.png",
+        "source": "smart_factory_a_to_s_chunk_metrics.png",
+        "sha256": "d0df19613051bbbe3e335fe5762461afa423c8cd1b5ce2fb11e49c01227a6d52"
+      },
+      {
+        "title": "APEX frozen-model replay",
+        "caption": "Measures fixed-model behavior across temporal segments. This is additional development evidence, not a successful adaptation or independent-confirmation claim.",
+        "path": "graphs/04_temporal_adaptation/APEX_IDS2026_NO_UPDATE_TEMPORAL_RESULTS.png",
+        "source": "APEX_IDS2026_NO_UPDATE_TEMPORAL_RESULTS.png",
+        "sha256": "a687580d6ddcad24ccd9388c76b0d894b195ea70b4d3d6cb5a8ab46f4fb2f87a"
+      }
+    ],
+    "05_delayed_feedback_and_safeguards": [
+      {
+        "title": "Validate-before-commit comparison",
+        "caption": "Evaluates source-method admission and an FPR-oriented gate on a shared campaign. This is a same-stream development comparison; label-evidence budgets are not fully matched.",
+        "path": "graphs/05_delayed_feedback_and_safeguards/smart_factory_a_to_s_vbc_comparison.png",
+        "source": "smart_factory_a_to_s_vbc_comparison.png",
+        "sha256": "922cf31661116e8df1e1810f64809bd872ae8633b4f99266b77d61d0bb9253c3"
+      }
+    ],
+    "06_budgeted_verification": [],
+    "07_generalization_and_context": [
+      {
+        "title": "Context representation ablation",
+        "caption": "Separates representation effects across chronological windows and selection rules. Context additions do not automatically restore feasibility.",
+        "path": "graphs/07_generalization_and_context/context_ablation.png",
+        "source": "generalization_study_2026-11-19/context_ablation.png",
+        "sha256": "730171511c5039767a99c06afcdccc3e223b9d1d731735d93ab1cf6835c99a39"
+      },
+      {
+        "title": "Matched multi-environment fitting",
+        "caption": "Compares training exposure under matched conditions. Nearby-period gains do not guarantee later-period low-FPR generalization.",
+        "path": "graphs/07_generalization_and_context/matched_generalization_tradeoff.png",
+        "source": "multienvironment_2026-11-21/matched_generalization_tradeoff.png",
+        "sha256": "47556ea3cc8c3384b66877f19603ef36f3d9f76c6cebabb98a055f29485414bb"
+      },
+      {
+        "title": "Low-FPR ranking limits",
+        "caption": "Uses retrospective labels to diagnose recall achievable from fitted scores at fixed FPR. These thresholds are not deployable or used for protected tuning.",
+        "path": "graphs/07_generalization_and_context/matched_low_fpr_ranking_diagnostic.png",
+        "source": "multienvironment_2026-11-21/matched_low_fpr_ranking_diagnostic.png",
+        "sha256": "23633cc34fef015b754b118b2961e047fae198c7b65c226436eb619d0abf8c30"
+      },
+      {
+        "title": "Service, direction and protocol context",
+        "caption": "Compares causal contextual representations with the flow baseline. None of these contextual variants restored the required later-period joint operating point.",
+        "path": "graphs/07_generalization_and_context/context_features_tradeoff.png",
+        "source": "network_context_2026-11-21/context_features_tradeoff.png",
+        "sha256": "3df1f52e7d7903566584b4c168ce6ac9853d74653d9f01dc6d5692d0a2dbc948"
+      },
+      {
+        "title": "Full-density contextual tail risk",
+        "caption": "Shows how errors vary over real chronological windows. Worst-window false alarms can remain severe even when pooled metrics look less extreme.",
+        "path": "graphs/07_generalization_and_context/full_context_window_risk.png",
+        "source": "network_context_2026-11-21/full_context_window_risk.png",
+        "sha256": "0992f61e26f9ad7a2dc737324dae6625403c0ea6a1a60d836bf1e9c2d68357b3"
+      }
+    ],
+    "08_behavioral_detection": [
+      {
+        "title": "Full behavioral detector comparison",
+        "caption": "Six frozen pipelines score 9,160,253 development flows. The hybrid raises recall to 90.27% but also raises FPR to 8.68%; this fails the deployment operating point.",
+        "path": "graphs/08_behavioral_detection/full_development_comparison.png",
+        "source": "behavioral_observation_2026-11-22/full_development_comparison.png",
+        "sha256": "14ba7008dfdff0feaeb5aeef6c2454f7d7e001b3fe9aa0293dc93e6a21961c15"
+      },
+      {
+        "title": "Behavioral false alarms over time",
+        "caption": "Separates supported-minute FPR and recall across the replay. Behavioral/hybrid detectors can have extreme localized false alarms despite high pooled recall.",
+        "path": "graphs/08_behavioral_detection/chronological_tail_risk.png",
+        "source": "behavioral_observation_2026-11-22/chronological_tail_risk.png",
+        "sha256": "d31c9defa61468a2d319305b73928e39e3d0445ff283e856d847b34ed3a3bf4b"
+      },
+      {
+        "title": "Fitting-family coverage ablation",
+        "caption": "With ToN DDoS excluded from fitting, the hybrid retains strong nearby recall while the flow baseline drops. This local finding fails to generalize to the later stress period and is not proof of zero-day detection.",
+        "path": "graphs/08_behavioral_detection/family_coverage_control.png",
+        "source": "behavioral_observation_2026-11-22/family_coverage_control.png",
+        "sha256": "dcc4ca02f3259cad5ca4d35247ab6236346ca433a0fa33785634acf726845164"
+      }
+    ],
+    "09_data_integrity_and_observability": [
+      {
+        "title": "ToN hourly campaign composition",
+        "caption": "Establishes chronological attack-family and benign-support changes. This is a data-composition audit, not classifier accuracy or proof of natural production drift.",
+        "path": "graphs/09_data_integrity_and_observability/nf_ton_iot_v3_hourly_composition.png",
+        "source": "nf_ton_iot_v3_hourly_composition.png",
+        "sha256": "cdc0527247e46e74896a4765e38c809a752abdec8ff84461e4e4b64c1440e05f"
+      },
+      {
+        "title": "WUSTL temporal label distribution",
+        "caption": "Screens whether class support and chronology permit the intended evaluation. Dataset suitability is a separate question from model quality.",
+        "path": "graphs/09_data_integrity_and_observability/wustl_temporal_label_distribution.png",
+        "source": "wustl_temporal_label_distribution.png",
+        "sha256": "fe606e5d9983f677dc3fbe856bf45f9307603d7ec67b782b3c8fe340499fe1ef"
+      },
+      {
+        "title": "APEX temporal and feature availability",
+        "caption": "Audits timeline/feature availability before replay. Availability artifacts must be distinguished from learned attack behavior.",
+        "path": "graphs/09_data_integrity_and_observability/APEX_IDS2026_TEMPORAL_PROFILE.png",
+        "source": "APEX_IDS2026_TEMPORAL_PROFILE.png",
+        "sha256": "a96ea31ea06be95f39b154eda3580d32fd38ea38c130f71dc22cf6f95d791674"
+      },
+      {
+        "title": "Reconnaissance pulse diagnostic",
+        "caption": "Examines the relationship between campaign composition and errors. A concentrated pulse can distort pooled estimates; it is not a newly invented attack detector.",
+        "path": "graphs/09_data_integrity_and_observability/APEX_IDS2026_RECONNAISSANCE_PULSE.png",
+        "source": "APEX_IDS2026_RECONNAISSANCE_PULSE.png",
+        "sha256": "0a75b083d3d8231badf1a534a7745097c20187edb82c3bf16463733573d7a217"
+      },
+      {
+        "title": "Scanning observability on the fixed fitting sample",
+        "caption": "Measures label-assisted lookup optima for several recorded representations on the same fitting sample. Sample ceilings are not future guarantees; see the separate full-prefix audit.",
+        "path": "graphs/09_data_integrity_and_observability/scanning_observability_gap.png",
+        "source": "network_context_2026-11-21/scanning_observability_gap.png",
+        "sha256": "4991844d91658de116d394af407219b7fe48df782dc1c5ccba80c2d604ecd539"
+      },
+      {
+        "title": "Raw-text full-prefix scanning bound",
+        "caption": "Audits 13,760,005 permitted training records. At 0.1% empirical FPR, complete recorded static descriptors permit at most 4.68% scanning recall. This is a family-specific empirical bound, not overall-IDS impossibility.",
+        "path": "graphs/09_data_integrity_and_observability/full_training_observability_ceiling.png",
+        "source": "network_context_2026-11-21/full_training_observability_ceiling.png",
+        "sha256": "2ebcf9e9959ad66e6d1fb0280e2dd869ca0dfa1bd09d60dddf5efa8c36e78ae7"
+      }
+    ]
+  },
+  "graph_count": 48
+}

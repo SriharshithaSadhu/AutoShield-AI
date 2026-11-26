@@ -1,0 +1,1000 @@
+{
+  "source": "behavioral_observation_2026-11-22/source_transfer_control/stress_results.json",
+  "source_sha256": "9e16a556cad6f3f21ec8a5ad0d2779698f6f3d77996acd1ceca891231c8405dd",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "scope": "Exploratory source-only control:200k fitting rows, target-benign calibration.\n\nThis is transfer with labeled target benign calibration, not zero-shot IDS.\nFixed one fit per source/method/seed, no target attack-label model selection.\nAdded after nearby exploratory outcomes; protected data remain unused.\n",
+    "results": [
+      {
+        "identity": "ton_flow14_seed42",
+        "method": "flow14",
+        "training_source": "ton",
+        "seed": 42,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.926308521344242,
+          "partial_roc_auc_001": 0.5541492318975076,
+          "average_precision": 0.9486739720957486,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14777142574306432,
+            "0.01": 0.3131635607691737
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 45224,
+        "fp": 1663,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.373070672573234,
+        "fpr": 0.021109686591604362,
+        "precision": 0.9645317465395525,
+        "f1": 0.5380350726913651,
+        "worst_window_fpr": 0.2186046511627907,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.00022794620469569182
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9442677570801151
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.08196721311475409
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.3223112128146453
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.05
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.24634962728198825
+          }
+        }
+      },
+      {
+        "identity": "ton_flow14_seed43",
+        "method": "flow14",
+        "training_source": "ton",
+        "seed": 43,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9291154337674581,
+          "partial_roc_auc_001": 0.5541614993981908,
+          "average_precision": 0.9504019576458159,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14690523919122925,
+            "0.01": 0.3238712764290016
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 40385,
+        "fp": 1130,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.33315184662723457,
+        "fpr": 0.014343924142220642,
+        "precision": 0.9727809225581115,
+        "f1": 0.49632533674171664,
+        "worst_window_fpr": 0.17174238642036946,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.00022794620469569182
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9380079761724469
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.06557377049180328
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.22871853546910756
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.04
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.2230648577850363
+          }
+        }
+      },
+      {
+        "identity": "ton_flow14_seed44",
+        "method": "flow14",
+        "training_source": "ton",
+        "seed": 44,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9108121284811935,
+          "partial_roc_auc_001": 0.5540317705656277,
+          "average_precision": 0.9413316027802086,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.14754044266257496,
+            "0.01": 0.31835243068445235
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 39437,
+        "fp": 962,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.32533141947352356,
+        "fpr": 0.01221137612815598,
+        "precision": 0.976187529394292,
+        "f1": 0.4880212844944933,
+        "worst_window_fpr": 0.15776335496754867,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.00022794620469569182
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9382099045888233
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.05737704918032787
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.23935926773455377
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.04
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.2016719758097117
+          }
+        }
+      },
+      {
+        "identity": "ton_behavior24_seed42",
+        "method": "behavior24",
+        "training_source": "ton",
+        "seed": 42,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9581132399101994,
+          "partial_roc_auc_001": 0.5333741160251232,
+          "average_precision": 0.9598464195738677,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.08349213420116977,
+            "0.01": 0.27059667879327837
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 54557,
+        "fp": 2635,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.4500622829377748,
+        "fpr": 0.033448000101549906,
+        "precision": 0.9539271226745,
+        "f1": 0.6115809946584609,
+        "worst_window_fpr": 0.7934883720930233,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.023250512878960565
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.8793477712151042
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.05737704918032787
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9733409610983982
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.048526106430800575
+          }
+        }
+      },
+      {
+        "identity": "ton_behavior24_seed43",
+        "method": "behavior24",
+        "training_source": "ton",
+        "seed": 43,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9563846669905354,
+          "partial_roc_auc_001": 0.5167011749005296,
+          "average_precision": 0.9560970080378998,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.04397752864602668,
+            "0.01": 0.21563920442827564
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 56674,
+        "fp": 3010,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.46752625370191636,
+        "fpr": 0.03820815191865853,
+        "precision": 0.9495677233429395,
+        "f1": 0.6265609021309527,
+        "worst_window_fpr": 0.8837209302325582,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.12217916571689082
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9021656822656369
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.05737704918032787
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9928203661327231
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.02
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.05738725482269618
+          }
+        }
+      },
+      {
+        "identity": "ton_behavior24_seed44",
+        "method": "behavior24",
+        "training_source": "ton",
+        "seed": 44,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9579278023342463,
+          "partial_roc_auc_001": 0.5028056638240336,
+          "average_precision": 0.954197010231693,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.009206325636647115,
+            "0.01": 0.19063528596530305
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 53087,
+        "fp": 2602,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.4379356712120837,
+        "fpr": 0.033029106741644346,
+        "precision": 0.9532762304943526,
+        "f1": 0.6001582725679724,
+        "worst_window_fpr": 0.7469767441860465,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.015272395714611352
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.8788934322782573
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.05737704918032787
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9633295194508009
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.01
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.03111103924453859
+          }
+        }
+      },
+      {
+        "identity": "ton_hybrid38_seed42",
+        "method": "hybrid38",
+        "training_source": "ton",
+        "seed": 42,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9639601733034237,
+          "partial_roc_auc_001": 0.5562293599548117,
+          "average_precision": 0.9663009075367233,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.1401819816698427,
+            "0.01": 0.3154981397612625
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 108988,
+        "fp": 6100,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.8990851420133475,
+        "fpr": 0.07743180289163355,
+        "precision": 0.9469970804949256,
+        "f1": 0.9224193746323669,
+        "worst_window_fpr": 0.892093023255814,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.994073398677912
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9859659750618406
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.23770491803278687
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9997139588100686
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.71
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.8092427598919846
+          }
+        }
+      },
+      {
+        "identity": "ton_hybrid38_seed43",
+        "method": "hybrid38",
+        "training_source": "ton",
+        "seed": 43,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9643677894140121,
+          "partial_roc_auc_001": 0.5342979325605343,
+          "average_precision": 0.9664618019956132,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.09112282525305021,
+            "0.01": 0.3285734319961063
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 107748,
+        "fp": 5957,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.8888558913059619,
+        "fpr": 0.0756165983320428,
+        "precision": 0.9476100435337056,
+        "f1": 0.9172931050628709,
+        "worst_window_fpr": 0.8883720930232558,
+        "worst_window_recall": 0.043478260869565216,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.991793936630955
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9858650108536524
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.2540983606557377
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.9995995423340961
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.67
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.7894830457772101
+          }
+        }
+      },
+      {
+        "identity": "ton_hybrid38_seed44",
+        "method": "hybrid38",
+        "training_source": "ton",
+        "seed": 44,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": true,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.9638667109032988,
+          "partial_roc_auc_001": 0.5329939924954978,
+          "average_precision": 0.9657459889587956,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.10131907837750885,
+            "0.01": 0.3084284076191419
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 108027,
+        "fp": 5991,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.8911574727151236,
+        "fpr": 0.07604818543012731,
+        "precision": 0.9474556648950165,
+        "f1": 0.9184446456582455,
+        "worst_window_fpr": 0.8883720930232558,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.994073398677912
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.9858145287495583
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.20491803278688525
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.999570938215103
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.7
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.7939136199731578
+          }
+        }
+      },
+      {
+        "identity": "unsw_flow14_seed42",
+        "method": "flow14",
+        "training_source": "unsw",
+        "seed": 42,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.38925697472950543,
+          "partial_roc_auc_001": 0.5145229023495413,
+          "average_precision": 0.6426229825576453,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.03505168246425949,
+            "0.01": 0.03588487143316752
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 4435,
+        "fp": 923,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.03658607007036734,
+        "fpr": 0.011716320339176684,
+        "precision": 0.8277342291899963,
+        "f1": 0.07007481493770688,
+        "worst_window_fpr": 0.08561051539259772,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.933439708228858
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0035842293906810036
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.02459016393442623
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0014874141876430205
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.0
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0034603754669081384
+          }
+        }
+      },
+      {
+        "identity": "unsw_flow14_seed43",
+        "method": "flow14",
+        "training_source": "unsw",
+        "seed": 43,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.3670953757278745,
+          "partial_roc_auc_001": 0.5141329989233212,
+          "average_precision": 0.6429740306176791,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.035002186089868915,
+            "0.01": 0.1009561049653113
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 22531,
+        "fp": 2489,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.18586713523234424,
+        "fpr": 0.03159471432742228,
+        "precision": 0.900519584332534,
+        "f1": 0.3081352014824844,
+        "worst_window_fpr": 0.25043237634036664,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.933439708228858
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.004341460952092483
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.07377049180327869
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.4194221967963387
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.02
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.059440842132496806
+          }
+        }
+      },
+      {
+        "identity": "unsw_flow14_seed44",
+        "method": "flow14",
+        "training_source": "unsw",
+        "seed": 44,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.36053966039809277,
+          "partial_roc_auc_001": 0.5148822580829227,
+          "average_precision": 0.6373124922795985,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.03484544757096543,
+            "0.01": 0.03579412808011813
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 25223,
+        "fp": 2736,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.2080745085422493,
+        "fpr": 0.03473006765762449,
+        "precision": 0.9021424228334347,
+        "f1": 0.3381552486928543,
+        "worst_window_fpr": 0.25268073331027324,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.9336676544335537
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.004543389368468878
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.07377049180327869
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.48541189931350115
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.04
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.0655530941254467
+          }
+        }
+      },
+      {
+        "identity": "unsw_behavior24_seed42",
+        "method": "behavior24",
+        "training_source": "unsw",
+        "seed": 42,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.2899216936631469,
+          "partial_roc_auc_001": 0.49976105872565013,
+          "average_precision": 0.4727032762459906,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0,
+            "0.01": 0.001641629750620767
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 3793,
+        "fp": 18135,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.03128995801057573,
+        "fpr": 0.23020094187537288,
+        "precision": 0.1729751915359358,
+        "f1": 0.052993733801842836,
+        "worst_window_fpr": 0.890128669079212,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.8374743560519717
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.0028774799333636226
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.12295081967213115
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0007151029748283753
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.14
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.00012935983053862199
+          }
+        }
+      },
+      {
+        "identity": "unsw_behavior24_seed43",
+        "method": "behavior24",
+        "training_source": "unsw",
+        "seed": 43,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.29174558239792947,
+          "partial_roc_auc_001": 0.49983495730329863,
+          "average_precision": 0.4723377581168889,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0,
+            "0.01": 0.0016251309591572417
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 3870,
+        "fp": 25447,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.03192516148192145,
+        "fpr": 0.3230175554399015,
+        "precision": 0.13200532114472832,
+        "f1": 0.05141558941928284,
+        "worst_window_fpr": 0.9611982308001609,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.8386140870754502
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.003685193598869201
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.14754098360655737
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.002145308924485126
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.14
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.00017786976699060524
+          }
+        }
+      },
+      {
+        "identity": "unsw_behavior24_seed44",
+        "method": "behavior24",
+        "training_source": "unsw",
+        "seed": 44,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.2911512555259193,
+          "partial_roc_auc_001": 0.49984998125661767,
+          "average_precision": 0.47391511857286484,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 0.0,
+            "0.01": 0.001641629750620767
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 3818,
+        "fp": 36816,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.03149619290386979,
+        "fpr": 0.4673326647964559,
+        "precision": 0.09396072254762022,
+        "f1": 0.04717802971795743,
+        "worst_window_fpr": 0.9819,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.8358787326191018
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.003786157807057398
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.1557377049180328
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.0010869565217391304
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.14
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 8.084989408663875e-05
+          }
+        }
+      },
+      {
+        "identity": "unsw_hybrid38_seed42",
+        "method": "hybrid38",
+        "training_source": "unsw",
+        "seed": 42,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.37000114476950124,
+          "partial_roc_auc_001": 0.49975401631385874,
+          "average_precision": 0.5554637941737155,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.6498791463525296e-05,
+            "0.01": 0.0015921333762301912
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 34691,
+        "fp": 20197,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.28617978733057803,
+        "fpr": 0.2563754300003808,
+        "precision": 0.6320325025506486,
+        "f1": 0.3939719151207491,
+        "worst_window_fpr": 0.8895255327704061,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.9309322999772054
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.008279065071432177
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.10655737704918032
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.6461098398169336
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.68
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.12570541532590593
+          }
+        }
+      },
+      {
+        "identity": "unsw_hybrid38_seed43",
+        "method": "hybrid38",
+        "training_source": "unsw",
+        "seed": 43,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.42856482364553083,
+          "partial_roc_auc_001": 0.49975590213882315,
+          "average_precision": 0.578882850553039,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 1.6498791463525296e-05,
+            "0.01": 0.001691126125011343
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 21924,
+        "fp": 19716,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.18085975202316432,
+        "fpr": 0.2502697419363028,
+        "precision": 0.5265129682997118,
+        "f1": 0.26923572862747985,
+        "worst_window_fpr": 0.8858061921994371,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.9322999772053795
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.008279065071432177
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.10655737704918032
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.2830949656750572
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.46
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.12473521659686626
+          }
+        }
+      },
+      {
+        "identity": "unsw_hybrid38_seed44",
+        "method": "hybrid38",
+        "training_source": "unsw",
+        "seed": 44,
+        "environment": "ton_stress",
+        "deployment_network_seen_in_fit": false,
+        "calibration": "20000 labeled target benign flows; fixed tolerance rule",
+        "ranking": {
+          "roc_auc": 0.41561104001801996,
+          "partial_roc_auc_001": 0.4997520111056972,
+          "average_precision": 0.551861559962312,
+          "posthoc_threshold_oracle_recall": {
+            "0.001": 8.249395731762648e-06,
+            "0.01": 0.0017158743122066308
+          },
+          "oracle_scope": "Undeployable label-assisted ranking diagnostic; never used to choose thresholds or architecture."
+        },
+        "tp": 22492,
+        "fp": 19565,
+        "attacks": 121221,
+        "benign": 78779,
+        "recall": 0.1855454087988055,
+        "fpr": 0.24835298747128043,
+        "precision": 0.5347980122215089,
+        "f1": 0.27550557944119847,
+        "worst_window_fpr": 0.8876156011258545,
+        "worst_window_recall": 0.0,
+        "family": {
+          "Backdoor": {
+            "n": 4387,
+            "recall": 0.9901983131980853
+          },
+          "ddos": {
+            "n": 19809,
+            "recall": 0.008127618759149881
+          },
+          "mitm": {
+            "n": 122,
+            "recall": 0.10655737704918032
+          },
+          "password": {
+            "n": 34960,
+            "recall": 0.29101830663615563
+          },
+          "ransomware": {
+            "n": 100,
+            "recall": 0.5
+          },
+          "xss": {
+            "n": 61843,
+            "recall": 0.12531733583429006
+          }
+        }
+      }
+    ]
+  }
+}

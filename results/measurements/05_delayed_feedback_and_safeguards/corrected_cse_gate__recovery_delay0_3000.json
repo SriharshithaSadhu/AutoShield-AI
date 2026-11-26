@@ -1,0 +1,1039 @@
+{
+  "source": "corrected_cse_gate/recovery_delay0_3000.json",
+  "source_sha256": "d2f3b307ca77ca8ab608d4236d4b60a9c2c7311fe8ccff5a9400f8d618c963f6",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "scope": "Exploratory chronological replay. Empirical gate, no risk guarantee.",
+    "shadow_events": [],
+    "shadow_cost": {
+      "scoring_seconds": 0.0,
+      "active_frozen_scoring_seconds": 0.0,
+      "active_candidate_scoring_seconds": 0.0,
+      "routing_seconds": 0.0,
+      "peak_prediction_bytes": 0,
+      "active_chunks": 0
+    },
+    "shadow_source": "rollback",
+    "input_cache": "data\\cse_original_replay_core6",
+    "capture_counts": {
+      "frozen": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 2,
+          "tp": 126747
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 31,
+          "tp": 0
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 11,
+          "tp": 0
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 18506,
+          "tp": 4322
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 9207,
+          "tp": 6277
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 20,
+          "tp": 0
+        }
+      },
+      "periodic": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 2173,
+          "tp": 413809
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 135864,
+          "tp": 87
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 573,
+          "tp": 11
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 38,
+          "tp": 14
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 0,
+          "tp": 0
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 377,
+          "tp": 208528
+        }
+      },
+      "gated": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 862,
+          "tp": 412079
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 760338,
+          "tp": 203
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 758001,
+          "tp": 257
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 401173,
+          "tp": 52193
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 169362,
+          "tp": 73152
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 492954,
+          "tp": 285843
+        }
+      },
+      "threshold_only": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 2153,
+          "tp": 413809
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 97581,
+          "tp": 42
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 11,
+          "tp": 0
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 17359,
+          "tp": 3396
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 0,
+          "tp": 0
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 20,
+          "tp": 0
+        }
+      },
+      "recall_guard": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 2,
+          "tp": 126747
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 31,
+          "tp": 0
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 11,
+          "tp": 0
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 18506,
+          "tp": 4322
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 9206,
+          "tp": 6277
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 0,
+          "tp": 0
+        }
+      },
+      "rollback": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 862,
+          "tp": 412079
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 4384,
+          "tp": 2
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 213,
+          "tp": 26
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 18506,
+          "tp": 4322
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 9206,
+          "tp": 6277
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 120,
+          "tp": 17955
+        }
+      },
+      "lease": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 862,
+          "tp": 412079
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 19000,
+          "tp": 2
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 415,
+          "tp": 136
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 179,
+          "tp": 27
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 112,
+          "tp": 22
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 734,
+          "tp": 0
+        }
+      },
+      "deadline_shadow": {
+        "20180221": {
+          "benign": 360763,
+          "attacks": 613709,
+          "fp": 862,
+          "tp": 412079
+        },
+        "20180222": {
+          "benign": 1048204,
+          "attacks": 362,
+          "fp": 249,
+          "tp": 2
+        },
+        "20180223": {
+          "benign": 1048009,
+          "attacks": 566,
+          "fp": 213,
+          "tp": 26
+        },
+        "20180228": {
+          "benign": 544200,
+          "attacks": 68871,
+          "fp": 18506,
+          "tp": 4322
+        },
+        "20180301": {
+          "benign": 238037,
+          "attacks": 93063,
+          "fp": 9206,
+          "tp": 6277
+        },
+        "20180302": {
+          "benign": 762384,
+          "attacks": 286191,
+          "fp": 106,
+          "tp": 3228
+        }
+      }
+    },
+    "train_end_chunk": 253,
+    "evaluation_start_chunk": 506,
+    "schedule_offset": 0,
+    "schedule": "Every ten evaluation chunks; six fit, two threshold calibration, two gate validation; deploy next chunk.",
+    "guard_rule": {
+      "minimum_attacks": 100,
+      "minimum_benign_per_chunk": 3000,
+      "max_empirical_recall_loss": 0.01,
+      "validation_chunk_fpr_cap": 0.001
+    },
+    "label_delay_chunks": 0,
+    "lease_chunks": 10,
+    "lifecycle": [
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 525,
+        "last_released_chunk": 525
+      },
+      {
+        "policy": "lease",
+        "action": "approve",
+        "after_chunk": 525,
+        "last_released_chunk": 525
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 535,
+        "evidence_chunks": [
+          534,
+          535
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 545,
+        "evidence_chunks": [
+          544,
+          545
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 554,
+        "observed_chunk": 554,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "lease",
+        "action": "expire",
+        "after_chunk": 555,
+        "evidence_chunks": [
+          554,
+          555
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "restore",
+        "after_chunk": 555,
+        "observed_chunk": 555,
+        "reason": "lease_not_renewed"
+      },
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 595,
+        "last_released_chunk": 595
+      },
+      {
+        "policy": "lease",
+        "action": "approve",
+        "after_chunk": 595,
+        "last_released_chunk": 595
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 605,
+        "evidence_chunks": [
+          604,
+          605
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 615,
+        "evidence_chunks": [
+          614,
+          615
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 625,
+        "evidence_chunks": [
+          624,
+          625
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 632,
+        "observed_chunk": 632,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 635,
+        "evidence_chunks": [
+          634,
+          635
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 645,
+        "evidence_chunks": [
+          644,
+          645
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 645,
+        "last_released_chunk": 645
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 646,
+        "observed_chunk": 646,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 655,
+        "evidence_chunks": [
+          654,
+          655
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 665,
+        "evidence_chunks": [
+          664,
+          665
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 675,
+        "evidence_chunks": [
+          674,
+          675
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 685,
+        "evidence_chunks": [
+          684,
+          685
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 695,
+        "evidence_chunks": [
+          694,
+          695
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 705,
+        "evidence_chunks": [
+          704,
+          705
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 705,
+        "last_released_chunk": 705
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 715,
+        "evidence_chunks": [
+          714,
+          715
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 725,
+        "evidence_chunks": [
+          724,
+          725
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "restore",
+        "after_chunk": 735,
+        "observed_chunk": 735,
+        "reason": "observed_cap_breach"
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 735,
+        "evidence_chunks": [
+          734,
+          735
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 745,
+        "evidence_chunks": [
+          744,
+          745
+        ]
+      },
+      {
+        "policy": "lease",
+        "action": "renew",
+        "after_chunk": 755,
+        "evidence_chunks": [
+          754,
+          755
+        ]
+      },
+      {
+        "policy": "rollback",
+        "action": "approve",
+        "after_chunk": 755,
+        "last_released_chunk": 755
+      }
+    ],
+    "summary": {
+      "frozen": {
+        "fp": 27777,
+        "tp": 137346,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.006941478614663096,
+        "recall": 0.129234955709745,
+        "worst_chunk_fpr": 0.49632699190054624,
+        "chunks_over_cap": 19
+      },
+      "periodic": {
+        "fp": 139025,
+        "tp": 622449,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.034742379105142274,
+        "recall": 0.58568992869523,
+        "worst_chunk_fpr": 0.8796,
+        "chunks_over_cap": 38
+      },
+      "gated": {
+        "fp": 2582690,
+        "tp": 823727,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.64541481813386,
+        "recall": 0.7750813446472493,
+        "worst_chunk_fpr": 0.8678711502604,
+        "chunks_over_cap": 206
+      },
+      "threshold_only": {
+        "fp": 117124,
+        "tp": 417247,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.02926931422629515,
+        "recall": 0.39260624674197986,
+        "worst_chunk_fpr": 0.4761,
+        "chunks_over_cap": 21
+      },
+      "recall_guard": {
+        "fp": 27756,
+        "tp": 137346,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.006936230709889077,
+        "recall": 0.129234955709745,
+        "worst_chunk_fpr": 0.49632699190054624,
+        "chunks_over_cap": 19
+      },
+      "rollback": {
+        "fp": 33291,
+        "tp": 440661,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.008319428468184077,
+        "recall": 0.41463751997154585,
+        "worst_chunk_fpr": 0.49632699190054624,
+        "chunks_over_cap": 23
+      },
+      "lease": {
+        "fp": 21302,
+        "tp": 412266,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.005323374642673913,
+        "recall": 0.3879194024626398,
+        "worst_chunk_fpr": 0.7309,
+        "chunks_over_cap": 13
+      },
+      "deadline_shadow": {
+        "fp": 29142,
+        "tp": 425934,
+        "benign": 4001597,
+        "attacks": 1062762,
+        "fpr": 0.007282592424974329,
+        "recall": 0.4007802311335934,
+        "worst_chunk_fpr": 0.49632699190054624,
+        "chunks_over_cap": 23
+      }
+    },
+    "events": [
+      {
+        "after_chunk": 515,
+        "threshold_only_seconds": null,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 39994,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.037575599999399856
+      },
+      {
+        "after_chunk": 525,
+        "threshold_only_seconds": 0.02037699999345932,
+        "accepted": true,
+        "cap_pass": true,
+        "validation_tp_gain": 19975,
+        "validation_attacks": 20018,
+        "shared_candidate_and_gate_seconds": 0.3383551000006264,
+        "guard_action": "keep",
+        "guard_validation_attacks": 20018,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.10429230000590906
+      },
+      {
+        "after_chunk": 535,
+        "threshold_only_seconds": 0.018856399998185225,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 20037,
+        "shared_candidate_and_gate_seconds": 0.28384200000436977,
+        "guard_action": "keep",
+        "guard_validation_attacks": 20037,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.09970240000984631
+      },
+      {
+        "after_chunk": 545,
+        "threshold_only_seconds": 0.018447499998728745,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 20033,
+        "shared_candidate_and_gate_seconds": 0.331567899993388,
+        "guard_action": "keep",
+        "guard_validation_attacks": 20033,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.11311310000019148
+      },
+      {
+        "after_chunk": 555,
+        "threshold_only_seconds": 0.019948299988755025,
+        "accepted": false,
+        "cap_pass": false,
+        "validation_tp_gain": 0,
+        "validation_attacks": 6961,
+        "shared_candidate_and_gate_seconds": 0.29147630000079516,
+        "guard_action": "keep",
+        "guard_validation_attacks": 6961,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.09227269999973942
+      },
+      {
+        "after_chunk": 565,
+        "threshold_only_seconds": 0.044679400001768954,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.36194930000056047,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.033748100002412684
+      },
+      {
+        "after_chunk": 575,
+        "threshold_only_seconds": 0.03669009999430273,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.3850371000007726,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.035923499992350116
+      },
+      {
+        "after_chunk": 585,
+        "threshold_only_seconds": 0.03520169999683276,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.03371760000300128
+      },
+      {
+        "after_chunk": 595,
+        "threshold_only_seconds": 0.03771940000297036,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 56,
+        "shared_candidate_and_gate_seconds": 0.40232839999953285,
+        "guard_action": "keep",
+        "guard_validation_attacks": 56,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.0336570999934338
+      },
+      {
+        "after_chunk": 605,
+        "threshold_only_seconds": 0.0392470999940997,
+        "accepted": false,
+        "cap_pass": false,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.4069932999991579,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.03338449999864679
+      },
+      {
+        "after_chunk": 615,
+        "threshold_only_seconds": 0.03744869999354705,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.3561360000021523,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.03590550000080839
+      },
+      {
+        "after_chunk": 625,
+        "threshold_only_seconds": 0.036561600005370565,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.39494879999256227,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.036377900003571995
+      },
+      {
+        "after_chunk": 635,
+        "threshold_only_seconds": 0.036395799994352274,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 1,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.03953399999591056
+      },
+      {
+        "after_chunk": 645,
+        "threshold_only_seconds": 0.036225100004230626,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -25,
+        "validation_attacks": 113,
+        "shared_candidate_and_gate_seconds": 0.3836781999998493,
+        "guard_action": "keep",
+        "guard_validation_attacks": 113,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.10767430000123568
+      },
+      {
+        "after_chunk": 655,
+        "threshold_only_seconds": 0.03685960000439081,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": 0,
+        "validation_attacks": 0,
+        "shared_candidate_and_gate_seconds": 0.36236270000517834,
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.0421898000058718
+      },
+      {
+        "after_chunk": 665,
+        "threshold_only_seconds": 0.029441999999107793,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -8582,
+        "validation_attacks": 11503,
+        "shared_candidate_and_gate_seconds": 0.3794567000004463,
+        "guard_action": "keep",
+        "guard_validation_attacks": 11503,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.11925170000176877
+      },
+      {
+        "after_chunk": 675,
+        "threshold_only_seconds": 0.034250400000019,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.03334710000490304
+      },
+      {
+        "after_chunk": 685,
+        "threshold_only_seconds": 0.028343500001938082,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -9671,
+        "validation_attacks": 12720,
+        "shared_candidate_and_gate_seconds": 0.3390194999956293,
+        "guard_action": "keep",
+        "guard_validation_attacks": 12720,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.10504140000557527
+      },
+      {
+        "after_chunk": 695,
+        "threshold_only_seconds": 0.011438999994425103,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -17542,
+        "validation_attacks": 23759,
+        "shared_candidate_and_gate_seconds": 0.3623876000056043,
+        "guard_action": "keep",
+        "guard_validation_attacks": 23759,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.11486600000353064
+      },
+      {
+        "after_chunk": 705,
+        "threshold_only_seconds": 0.010652400000253692,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -2979,
+        "validation_attacks": 3474,
+        "shared_candidate_and_gate_seconds": 0.3525238000001991,
+        "guard_action": "recalibrate",
+        "guard_validation_attacks": 3474,
+        "guard_validation_fp_reduction": 921,
+        "guard_decision_seconds": 0.10909610000089742
+      },
+      {
+        "after_chunk": 715,
+        "threshold_only_seconds": 0.03023879999818746,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -937,
+        "validation_attacks": 18929,
+        "shared_candidate_and_gate_seconds": 0.4238043999939691,
+        "guard_action": "keep",
+        "guard_validation_attacks": 18929,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.11274440000124741
+      },
+      {
+        "after_chunk": 725,
+        "threshold_only_seconds": 0.018353599996771663,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -5911,
+        "validation_attacks": 16881,
+        "shared_candidate_and_gate_seconds": 0.3842628999991575,
+        "guard_action": "keep",
+        "guard_validation_attacks": 16881,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.10849329999473412
+      },
+      {
+        "after_chunk": 735,
+        "threshold_only_seconds": 0.036134199996013194,
+        "skipped": "insufficient_fit_or_calibration_support",
+        "guard_action": "keep",
+        "guard_validation_attacks": 0,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.03360009999596514
+      },
+      {
+        "after_chunk": 745,
+        "threshold_only_seconds": 0.022235600001295097,
+        "accepted": false,
+        "cap_pass": false,
+        "validation_tp_gain": -281,
+        "validation_attacks": 15677,
+        "shared_candidate_and_gate_seconds": 0.3637304000003496,
+        "guard_action": "keep",
+        "guard_validation_attacks": 15677,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.11017630000424106
+      },
+      {
+        "after_chunk": 755,
+        "threshold_only_seconds": 0.027984300002572127,
+        "accepted": false,
+        "cap_pass": true,
+        "validation_tp_gain": -736,
+        "validation_attacks": 10962,
+        "shared_candidate_and_gate_seconds": 0.3692628999997396,
+        "guard_action": "keep",
+        "guard_validation_attacks": 10962,
+        "guard_validation_fp_reduction": 0,
+        "guard_decision_seconds": 0.10485210000479128
+      }
+    ],
+    "deadline_routing": {
+      "evidence_flows": 1000,
+      "batches": 151613,
+      "max_wait_seconds": 1.0,
+      "p95_wait_seconds": 0.999946,
+      "routing_wall_seconds": 2.290235600012238,
+      "switch_completion_ns": [
+        1519261211524099000,
+        1519782485000002000,
+        1519783024000005000,
+        1519783573000007000,
+        1519783795000654000,
+        1519784597000002000,
+        1519785184000009000,
+        1519785325000007000,
+        1519815004000002000,
+        1519815640000024000,
+        1519815789000004000,
+        1519815945000008000,
+        1519816338000213000,
+        1519817026322318000,
+        1519817233000021000,
+        1519819152000002000,
+        1519871423000019000,
+        1519871874000337000,
+        1519872135000025000,
+        1519874866000011000,
+        1519875432000010000,
+        1519899259000026000,
+        1519899740000023000,
+        1519900813000030000,
+        1519901258000211000,
+        1519993835009359000
+      ],
+      "source_true_positives_suppressed": 14727,
+      "recovery_flows": 3000,
+      "recovery_completion_ns": [
+        1519782600178570000,
+        1519783093000293000,
+        1519783776667528000,
+        1519783933000023000,
+        1519784776702736000,
+        1519785284849280000,
+        1519785737686171000,
+        1519815106004211000,
+        1519815776000135000,
+        1519815941000398000,
+        1519816045525396000,
+        1519816439473012000,
+        1519817211000345000,
+        1519817519493209000,
+        1519819243000000000,
+        1519871645075340000,
+        1519872031000035000,
+        1519872400695052000,
+        1519875029374613000,
+        1519875605724602000,
+        1519899420397953000,
+        1519900047000218000,
+        1519901058024625000,
+        1519901547000253000
+      ]
+    }
+  }
+}

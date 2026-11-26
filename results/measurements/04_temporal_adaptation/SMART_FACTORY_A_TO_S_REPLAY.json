@@ -1,0 +1,4862 @@
+{
+  "source": "SMART_FACTORY_A_TO_S_REPLAY.json",
+  "source_sha256": "c7ae8794e74628500f5f62f5d8b2efe5a7fed40377f9ff44a71523665828fd97",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "protocol": "SMART_FACTORY_REPLAY_PROTOCOL.md",
+    "seeds": [
+      {
+        "seed": 42,
+        "dataset": "TU Wien smart factory",
+        "campaigns": "October aggressive development followed by November stealth same-site check",
+        "source_feature_policy": [
+          "flowDurationMilliseconds",
+          "protocolIdentifier one-hot",
+          "log1p(packetTotalCount)"
+        ],
+        "excluded_predictors": [
+          "SequenceNumber",
+          "flowStartMilliseconds",
+          "sourceIPAddress",
+          "destinationIPAddress",
+          "sourceTransportPort",
+          "destinationTransportPort",
+          "Label"
+        ],
+        "initial": {
+          "base_train_rows": 615922,
+          "benign_calibration_rows": 153981,
+          "warmup_rows": 20000,
+          "warmup_label_counts": {
+            "nmap": 14288,
+            "BENIGN": 5676,
+            "fping": 36
+          },
+          "threshold": 0.9944407612790835,
+          "calibration_fp": 23,
+          "model_fit_cpu_seconds": 6.546875
+        },
+        "protocol": {
+          "chunk_flows": 10000,
+          "update_every_chunks": 5,
+          "nominal_fpr_cap": 0.001,
+          "gate_alpha": 0.05,
+          "gate_validation": "current scored chunk after labels arrive; candidate fit excludes current chunk",
+          "assumption_note": "nominal binomial/McNemar; repeated looks and flow dependence are not controlled"
+        },
+        "aggregate": {
+          "no_update": {
+            "n": 1064341,
+            "benign_n": 484466,
+            "attack_n": 579875,
+            "fp": 635,
+            "tn": 483831,
+            "tp": 203,
+            "fn": 579672,
+            "fpr": 0.0013107214954196991,
+            "recall": 0.00035007544729467557,
+            "precision": 0.24224343675417662,
+            "by_phase": {
+              "development_aggressive_A": {
+                "n": 698557,
+                "benign_n": 294660,
+                "attack_n": 403897,
+                "fp": 634,
+                "tn": 294026,
+                "tp": 114,
+                "fn": 403783,
+                "fpr": 0.002151632389873074,
+                "recall": 0.0002822501776443004,
+                "precision": 0.15240641711229946,
+                "chunks_over_cap": 4,
+                "max_chunk_fpr": 0.08793509552473175,
+                "attack_family_recall": {
+                  "exfiltration(ftp)": {
+                    "n": 3,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 21,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "gobuster": {
+                    "n": 285,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 400640,
+                    "tp": 114,
+                    "recall": 0.0002845447284345048
+                  },
+                  "revshell": {
+                    "n": 12,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "sqlmap": {
+                    "n": 2936,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              },
+              "later_stealth_S_same_site_check": {
+                "n": 365784,
+                "benign_n": 189806,
+                "attack_n": 175978,
+                "fp": 1,
+                "tn": 189805,
+                "tp": 89,
+                "fn": 175889,
+                "fpr": 5.268537348661265e-06,
+                "recall": 0.0005057450363113571,
+                "precision": 0.9888888888888889,
+                "chunks_over_cap": 0,
+                "max_chunk_fpr": 0.0001717327837884252,
+                "attack_family_recall": {
+                  "exfiltration": {
+                    "n": 7,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 26,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "meterpreter": {
+                    "n": 44816,
+                    "tp": 89,
+                    "recall": 0.001985897893609425
+                  },
+                  "nmap": {
+                    "n": 131128,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "revshell": {
+                    "n": 1,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              }
+            },
+            "by_capture": {
+              "a_day1_flows_labeled.csv": {
+                "n": 350363,
+                "benign_n": 275106,
+                "attack_n": 75257,
+                "fp": 611,
+                "tn": 274495,
+                "tp": 92,
+                "fn": 75165,
+                "fpr": 0.0022209621018807295,
+                "recall": 0.0012224776432757086,
+                "precision": 0.13086770981507823
+              },
+              "a_day2_flows_labeled.csv": {
+                "n": 348194,
+                "benign_n": 19554,
+                "attack_n": 328640,
+                "fp": 23,
+                "tn": 19531,
+                "tp": 22,
+                "fn": 328618,
+                "fpr": 0.001176229927380587,
+                "recall": 6.694255111976632e-05,
+                "precision": 0.4888888888888889
+              },
+              "s_day1_flows_labeled.csv": {
+                "n": 199553,
+                "benign_n": 62448,
+                "attack_n": 137105,
+                "fp": 1,
+                "tn": 62447,
+                "tp": 80,
+                "fn": 137025,
+                "fpr": 1.601332308480656e-05,
+                "recall": 0.0005834944021005799,
+                "precision": 0.9876543209876543
+              },
+              "s_day2_flows_labeled.csv": {
+                "n": 166231,
+                "benign_n": 127358,
+                "attack_n": 38873,
+                "fp": 0,
+                "tn": 127358,
+                "tp": 9,
+                "fn": 38864,
+                "fpr": 0.0,
+                "recall": 0.00023152316517891595,
+                "precision": 1.0
+              }
+            },
+            "attack_family_recall": {
+              "exfiltration": {
+                "n": 7,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "exfiltration(ftp)": {
+                "n": 3,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "fping": {
+                "n": 47,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "gobuster": {
+                "n": 285,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "meterpreter": {
+                "n": 44816,
+                "tp": 89,
+                "recall": 0.001985897893609425
+              },
+              "nmap": {
+                "n": 531768,
+                "tp": 114,
+                "recall": 0.00021437920296068962
+              },
+              "revshell": {
+                "n": 13,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "sqlmap": {
+                "n": 2936,
+                "tp": 0,
+                "recall": 0.0
+              }
+            },
+            "chunk_tail": {
+              "max_chunk_fpr": 0.08793509552473175,
+              "chunks_over_cap": 4,
+              "chunks_with_benign": 81
+            },
+            "accepted_updates": 0,
+            "final_model_bytes_joblib_z3": 129013,
+            "promotion_tenures": [],
+            "harmful_promotions": 0
+          },
+          "periodic": {
+            "n": 1064341,
+            "benign_n": 484466,
+            "attack_n": 579875,
+            "fp": 4669,
+            "tn": 479797,
+            "tp": 290465,
+            "fn": 289410,
+            "fpr": 0.009637415215928466,
+            "recall": 0.5009096788100884,
+            "precision": 0.9841800673592335,
+            "by_phase": {
+              "development_aggressive_A": {
+                "n": 698557,
+                "benign_n": 294660,
+                "attack_n": 403897,
+                "fp": 666,
+                "tn": 293994,
+                "tp": 171784,
+                "fn": 232113,
+                "fpr": 0.002260232131948687,
+                "recall": 0.425316355407443,
+                "precision": 0.9961380110176863,
+                "chunks_over_cap": 4,
+                "max_chunk_fpr": 0.08793509552473175,
+                "attack_family_recall": {
+                  "exfiltration(ftp)": {
+                    "n": 3,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 21,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "gobuster": {
+                    "n": 285,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 400640,
+                    "tp": 171784,
+                    "recall": 0.42877396166134185
+                  },
+                  "revshell": {
+                    "n": 12,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "sqlmap": {
+                    "n": 2936,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              },
+              "later_stealth_S_same_site_check": {
+                "n": 365784,
+                "benign_n": 189806,
+                "attack_n": 175978,
+                "fp": 4003,
+                "tn": 185803,
+                "tp": 118681,
+                "fn": 57297,
+                "fpr": 0.021089955006691044,
+                "recall": 0.6744081646569458,
+                "precision": 0.967371458380881,
+                "chunks_over_cap": 3,
+                "max_chunk_fpr": 0.32021527077026574,
+                "attack_family_recall": {
+                  "exfiltration": {
+                    "n": 7,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 26,
+                    "tp": 1,
+                    "recall": 0.038461538461538464
+                  },
+                  "meterpreter": {
+                    "n": 44816,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 131128,
+                    "tp": 118680,
+                    "recall": 0.9050698554084559
+                  },
+                  "revshell": {
+                    "n": 1,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              }
+            },
+            "by_capture": {
+              "a_day1_flows_labeled.csv": {
+                "n": 350363,
+                "benign_n": 275106,
+                "attack_n": 75257,
+                "fp": 611,
+                "tn": 274495,
+                "tp": 252,
+                "fn": 75005,
+                "fpr": 0.0022209621018807295,
+                "recall": 0.0033485257185378106,
+                "precision": 0.29200463499420626
+              },
+              "a_day2_flows_labeled.csv": {
+                "n": 348194,
+                "benign_n": 19554,
+                "attack_n": 328640,
+                "fp": 55,
+                "tn": 19499,
+                "tp": 171532,
+                "fn": 157108,
+                "fpr": 0.0028127237393883605,
+                "recall": 0.5219449853943525,
+                "precision": 0.9996794628963732
+              },
+              "s_day1_flows_labeled.csv": {
+                "n": 199553,
+                "benign_n": 62448,
+                "attack_n": 137105,
+                "fp": 1000,
+                "tn": 61448,
+                "tp": 118681,
+                "fn": 18424,
+                "fpr": 0.01601332308480656,
+                "recall": 0.8656212391962365,
+                "precision": 0.9916444548424562
+              },
+              "s_day2_flows_labeled.csv": {
+                "n": 166231,
+                "benign_n": 127358,
+                "attack_n": 38873,
+                "fp": 3003,
+                "tn": 124355,
+                "tp": 0,
+                "fn": 38873,
+                "fpr": 0.02357920193470375,
+                "recall": 0.0,
+                "precision": 0.0
+              }
+            },
+            "attack_family_recall": {
+              "exfiltration": {
+                "n": 7,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "exfiltration(ftp)": {
+                "n": 3,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "fping": {
+                "n": 47,
+                "tp": 1,
+                "recall": 0.02127659574468085
+              },
+              "gobuster": {
+                "n": 285,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "meterpreter": {
+                "n": 44816,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "nmap": {
+                "n": 531768,
+                "tp": 290464,
+                "recall": 0.5462231649892434
+              },
+              "revshell": {
+                "n": 13,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "sqlmap": {
+                "n": 2936,
+                "tp": 0,
+                "recall": 0.0
+              }
+            },
+            "chunk_tail": {
+              "max_chunk_fpr": 0.32021527077026574,
+              "chunks_over_cap": 7,
+              "chunks_with_benign": 81
+            },
+            "accepted_updates": 21,
+            "final_model_bytes_joblib_z3": 134648,
+            "promotion_tenures": [
+              {
+                "promotion_chunk": 5,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 10,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 15,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 20,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 25,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 30,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 35,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 40,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 45,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 1.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 50,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 55,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.8808088011905983,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 60,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.8880164729024473,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 65,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 1.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 70,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.006718788174932812,
+                "mean_future_chunk_fpr": 0.001679697043733203,
+                "mean_future_chunk_recall": 0.49931258592675914,
+                "any_future_chunk_over_cap": true
+              },
+              {
+                "promotion_chunk": 75,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.939911575562701,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 80,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 1.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 85,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.14590020426028597,
+                "mean_future_chunk_fpr": 0.03647505106507149,
+                "mean_future_chunk_recall": 0.2498410680228862,
+                "any_future_chunk_over_cap": true
+              },
+              {
+                "promotion_chunk": 90,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 95,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 100,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.01472208312468703,
+                "mean_future_chunk_fpr": 0.0036805207811717575,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": true
+              },
+              {
+                "promotion_chunk": 105,
+                "future_chunks": 3,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              }
+            ],
+            "harmful_promotions": 3
+          },
+          "fpr_recall_gate": {
+            "n": 1064341,
+            "benign_n": 484466,
+            "attack_n": 579875,
+            "fp": 689,
+            "tn": 483777,
+            "tp": 65652,
+            "fn": 514223,
+            "fpr": 0.0014221844257388547,
+            "recall": 0.11321750377236474,
+            "precision": 0.9896142656878854,
+            "by_phase": {
+              "development_aggressive_A": {
+                "n": 698557,
+                "benign_n": 294660,
+                "attack_n": 403897,
+                "fp": 689,
+                "tn": 293971,
+                "tp": 114,
+                "fn": 403783,
+                "fpr": 0.002338288196565533,
+                "recall": 0.0002822501776443004,
+                "precision": 0.14196762141967623,
+                "chunks_over_cap": 5,
+                "max_chunk_fpr": 0.08793509552473175,
+                "attack_family_recall": {
+                  "exfiltration(ftp)": {
+                    "n": 3,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 21,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "gobuster": {
+                    "n": 285,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 400640,
+                    "tp": 114,
+                    "recall": 0.0002845447284345048
+                  },
+                  "revshell": {
+                    "n": 12,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "sqlmap": {
+                    "n": 2936,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              },
+              "later_stealth_S_same_site_check": {
+                "n": 365784,
+                "benign_n": 189806,
+                "attack_n": 175978,
+                "fp": 0,
+                "tn": 189806,
+                "tp": 65538,
+                "fn": 110440,
+                "fpr": 0.0,
+                "recall": 0.3724215526940868,
+                "precision": 1.0,
+                "chunks_over_cap": 0,
+                "max_chunk_fpr": 0.0,
+                "attack_family_recall": {
+                  "exfiltration": {
+                    "n": 7,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 26,
+                    "tp": 1,
+                    "recall": 0.038461538461538464
+                  },
+                  "meterpreter": {
+                    "n": 44816,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 131128,
+                    "tp": 65537,
+                    "recall": 0.4997940943200537
+                  },
+                  "revshell": {
+                    "n": 1,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              }
+            },
+            "by_capture": {
+              "a_day1_flows_labeled.csv": {
+                "n": 350363,
+                "benign_n": 275106,
+                "attack_n": 75257,
+                "fp": 611,
+                "tn": 274495,
+                "tp": 92,
+                "fn": 75165,
+                "fpr": 0.0022209621018807295,
+                "recall": 0.0012224776432757086,
+                "precision": 0.13086770981507823
+              },
+              "a_day2_flows_labeled.csv": {
+                "n": 348194,
+                "benign_n": 19554,
+                "attack_n": 328640,
+                "fp": 78,
+                "tn": 19476,
+                "tp": 22,
+                "fn": 328618,
+                "fpr": 0.003988953666768947,
+                "recall": 6.694255111976632e-05,
+                "precision": 0.22
+              },
+              "s_day1_flows_labeled.csv": {
+                "n": 199553,
+                "benign_n": 62448,
+                "attack_n": 137105,
+                "fp": 0,
+                "tn": 62448,
+                "tp": 65538,
+                "fn": 71567,
+                "fpr": 0.0,
+                "recall": 0.47801320156084753,
+                "precision": 1.0
+              },
+              "s_day2_flows_labeled.csv": {
+                "n": 166231,
+                "benign_n": 127358,
+                "attack_n": 38873,
+                "fp": 0,
+                "tn": 127358,
+                "tp": 0,
+                "fn": 38873,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              }
+            },
+            "attack_family_recall": {
+              "exfiltration": {
+                "n": 7,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "exfiltration(ftp)": {
+                "n": 3,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "fping": {
+                "n": 47,
+                "tp": 1,
+                "recall": 0.02127659574468085
+              },
+              "gobuster": {
+                "n": 285,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "meterpreter": {
+                "n": 44816,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "nmap": {
+                "n": 531768,
+                "tp": 65651,
+                "recall": 0.1234579741541424
+              },
+              "revshell": {
+                "n": 13,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "sqlmap": {
+                "n": 2936,
+                "tp": 0,
+                "recall": 0.0
+              }
+            },
+            "chunk_tail": {
+              "max_chunk_fpr": 0.08793509552473175,
+              "chunks_over_cap": 5,
+              "chunks_with_benign": 81
+            },
+            "accepted_updates": 2,
+            "final_model_bytes_joblib_z3": 133569,
+            "promotion_tenures": [
+              {
+                "promotion_chunk": 70,
+                "future_chunks": 24,
+                "max_future_chunk_fpr": 0.006718788174932812,
+                "mean_future_chunk_fpr": 0.00027994950728886715,
+                "mean_future_chunk_recall": 0.28153736024824333,
+                "any_future_chunk_over_cap": true
+              },
+              {
+                "promotion_chunk": 95,
+                "future_chunks": 13,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              }
+            ],
+            "harmful_promotions": 1
+          },
+          "threshold_only": {
+            "n": 1064341,
+            "benign_n": 484466,
+            "attack_n": 579875,
+            "fp": 973,
+            "tn": 483493,
+            "tp": 2311,
+            "fn": 577564,
+            "fpr": 0.002008396874084043,
+            "recall": 0.0039853416684630305,
+            "precision": 0.703714981729598,
+            "by_phase": {
+              "development_aggressive_A": {
+                "n": 698557,
+                "benign_n": 294660,
+                "attack_n": 403897,
+                "fp": 783,
+                "tn": 293877,
+                "tp": 1412,
+                "fn": 402485,
+                "fpr": 0.0026572999389126452,
+                "recall": 0.0034959407967872997,
+                "precision": 0.6432801822323463,
+                "chunks_over_cap": 14,
+                "max_chunk_fpr": 0.2,
+                "attack_family_recall": {
+                  "exfiltration(ftp)": {
+                    "n": 3,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 21,
+                    "tp": 16,
+                    "recall": 0.7619047619047619
+                  },
+                  "gobuster": {
+                    "n": 285,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 400640,
+                    "tp": 1394,
+                    "recall": 0.0034794329073482427
+                  },
+                  "revshell": {
+                    "n": 12,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "sqlmap": {
+                    "n": 2936,
+                    "tp": 2,
+                    "recall": 0.0006811989100817438
+                  }
+                }
+              },
+              "later_stealth_S_same_site_check": {
+                "n": 365784,
+                "benign_n": 189806,
+                "attack_n": 175978,
+                "fp": 190,
+                "tn": 189616,
+                "tp": 899,
+                "fn": 175079,
+                "fpr": 0.0010010220962456402,
+                "recall": 0.005108593119594495,
+                "precision": 0.8255280073461891,
+                "chunks_over_cap": 6,
+                "max_chunk_fpr": 0.004933288485256195,
+                "attack_family_recall": {
+                  "exfiltration": {
+                    "n": 7,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 26,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "meterpreter": {
+                    "n": 44816,
+                    "tp": 899,
+                    "recall": 0.02005980007140307
+                  },
+                  "nmap": {
+                    "n": 131128,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "revshell": {
+                    "n": 1,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              }
+            },
+            "by_capture": {
+              "a_day1_flows_labeled.csv": {
+                "n": 350363,
+                "benign_n": 275106,
+                "attack_n": 75257,
+                "fp": 643,
+                "tn": 274463,
+                "tp": 1267,
+                "fn": 73990,
+                "fpr": 0.002337280902633894,
+                "recall": 0.01683564319598177,
+                "precision": 0.6633507853403141
+              },
+              "a_day2_flows_labeled.csv": {
+                "n": 348194,
+                "benign_n": 19554,
+                "attack_n": 328640,
+                "fp": 140,
+                "tn": 19414,
+                "tp": 145,
+                "fn": 328495,
+                "fpr": 0.007159660427534008,
+                "recall": 0.0004412122687439143,
+                "precision": 0.5087719298245614
+              },
+              "s_day1_flows_labeled.csv": {
+                "n": 199553,
+                "benign_n": 62448,
+                "attack_n": 137105,
+                "fp": 26,
+                "tn": 62422,
+                "tp": 186,
+                "fn": 136919,
+                "fpr": 0.0004163464002049705,
+                "recall": 0.0013566244848838482,
+                "precision": 0.8773584905660378
+              },
+              "s_day2_flows_labeled.csv": {
+                "n": 166231,
+                "benign_n": 127358,
+                "attack_n": 38873,
+                "fp": 164,
+                "tn": 127194,
+                "tp": 713,
+                "fn": 38160,
+                "fpr": 0.0012877086637667048,
+                "recall": 0.01834177964139634,
+                "precision": 0.8129988597491448
+              }
+            },
+            "attack_family_recall": {
+              "exfiltration": {
+                "n": 7,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "exfiltration(ftp)": {
+                "n": 3,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "fping": {
+                "n": 47,
+                "tp": 16,
+                "recall": 0.3404255319148936
+              },
+              "gobuster": {
+                "n": 285,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "meterpreter": {
+                "n": 44816,
+                "tp": 899,
+                "recall": 0.02005980007140307
+              },
+              "nmap": {
+                "n": 531768,
+                "tp": 1394,
+                "recall": 0.0026214439379579064
+              },
+              "revshell": {
+                "n": 13,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "sqlmap": {
+                "n": 2936,
+                "tp": 2,
+                "recall": 0.0006811989100817438
+              }
+            },
+            "chunk_tail": {
+              "max_chunk_fpr": 0.2,
+              "chunks_over_cap": 20,
+              "chunks_with_benign": 81
+            },
+            "accepted_updates": 0,
+            "final_model_bytes_joblib_z3": 129013,
+            "promotion_tenures": [],
+            "harmful_promotions": 0
+          }
+        },
+        "promotion_events": {
+          "no_update": [],
+          "periodic": [
+            {
+              "chunk": 5,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 675922
+            },
+            {
+              "chunk": 10,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 725922
+            },
+            {
+              "chunk": 15,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 775922
+            },
+            {
+              "chunk": 20,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 825922
+            },
+            {
+              "chunk": 25,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 875922
+            },
+            {
+              "chunk": 30,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 0,
+                "fn": 10000,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 925922
+            },
+            {
+              "chunk": 35,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 8582,
+                "attack_n": 1418,
+                "fp": 0,
+                "tn": 8582,
+                "tp": 0,
+                "fn": 1418,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 975922
+            },
+            {
+              "chunk": 40,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 6,
+                "attack_n": 9994,
+                "fp": 0,
+                "tn": 6,
+                "tp": 0,
+                "fn": 9994,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1016285
+            },
+            {
+              "chunk": 45,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 6,
+                "attack_n": 9994,
+                "fp": 0,
+                "tn": 6,
+                "tp": 9994,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1066285
+            },
+            {
+              "chunk": 50,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 338,
+                "attack_n": 9662,
+                "fp": 0,
+                "tn": 338,
+                "tp": 2034,
+                "fn": 7628,
+                "fpr": 0.0,
+                "recall": 0.21051542123783895,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1116285
+            },
+            {
+              "chunk": 55,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 1,
+                "attack_n": 9999,
+                "fp": 0,
+                "tn": 1,
+                "tp": 9332,
+                "fn": 667,
+                "fpr": 0.0,
+                "recall": 0.9332933293329333,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1166285
+            },
+            {
+              "chunk": 60,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 9336,
+                "fn": 664,
+                "fpr": 0.0,
+                "recall": 0.9336,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1216285
+            },
+            {
+              "chunk": 65,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 10000,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1266285
+            },
+            {
+              "chunk": 70,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 6323,
+                "attack_n": 3677,
+                "fp": 0,
+                "tn": 6323,
+                "tp": 3665,
+                "fn": 12,
+                "fpr": 0.0,
+                "recall": 0.9967364699483274,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1316285
+            },
+            {
+              "chunk": 75,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 1,
+                "attack_n": 9999,
+                "fp": 0,
+                "tn": 1,
+                "tp": 9999,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1364479
+            },
+            {
+              "chunk": 80,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 10000,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1414479
+            },
+            {
+              "chunk": 85,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 10000,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1464479
+            },
+            {
+              "chunk": 90,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 5823,
+                "attack_n": 4177,
+                "fp": 0,
+                "tn": 5823,
+                "tp": 0,
+                "fn": 4177,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1514479
+            },
+            {
+              "chunk": 95,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 7397,
+                "attack_n": 2603,
+                "fp": 0,
+                "tn": 7397,
+                "tp": 793,
+                "fn": 1810,
+                "fpr": 0.0,
+                "recall": 0.304648482520169,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1564032
+            },
+            {
+              "chunk": 100,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1614032
+            },
+            {
+              "chunk": 105,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 8919,
+                "attack_n": 1081,
+                "fp": 0,
+                "tn": 8919,
+                "tp": 0,
+                "fn": 1081,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1664032
+            }
+          ],
+          "fpr_recall_gate": [
+            {
+              "chunk": 70,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 6323,
+                "attack_n": 3677,
+                "fp": 0,
+                "tn": 6323,
+                "tp": 3665,
+                "fn": 12,
+                "fpr": 0.0,
+                "recall": 0.9967364699483274,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "promote",
+                "benign_n": 6323,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.00047367115634103625,
+                "fpr_cap": 0.001,
+                "recall_better": 3665,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": true,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              },
+              "candidate_fit_rows": 1316285
+            },
+            {
+              "chunk": 95,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 7397,
+                "attack_n": 2603,
+                "fp": 0,
+                "tn": 7397,
+                "tp": 793,
+                "fn": 1810,
+                "fpr": 0.0,
+                "recall": 0.304648482520169,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "promote",
+                "benign_n": 7397,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.0004049108733716602,
+                "fpr_cap": 0.001,
+                "recall_better": 793,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.9196119217864076e-239,
+                "fpr_pass": true,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              },
+              "candidate_fit_rows": 1564032
+            }
+          ],
+          "threshold_only": []
+        },
+        "decision_log": [
+          {
+            "chunk": 5,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 675922,
+            "candidate_fit_cpu_seconds": 6.328125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 29978,
+              "calibration_fp": 22,
+              "threshold": 0.9944444615073601,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 10,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 725922,
+            "candidate_fit_cpu_seconds": 7.4375,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 30000,
+              "calibration_fp": 0,
+              "threshold": 0.9944137884448038,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 15,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 775922,
+            "candidate_fit_cpu_seconds": 9.015625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 29999,
+              "calibration_fp": 0,
+              "threshold": 0.9943995003416243,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 20,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 825922,
+            "candidate_fit_cpu_seconds": 7.609375,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 30000,
+              "calibration_fp": 5,
+              "threshold": 0.001409569034145839,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 25,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 875922,
+            "candidate_fit_cpu_seconds": 9.3125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 30000,
+              "calibration_fp": 5,
+              "threshold": 0.001409569034145839,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 30,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 925922,
+            "candidate_fit_cpu_seconds": 10.890625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 0,
+              "fn": 10000,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 3332,
+              "calibration_fp": 2,
+              "threshold": 0.0026074995731343587,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 35,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 975922,
+            "candidate_fit_cpu_seconds": 11.640625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 8582,
+              "attack_n": 1418,
+              "fp": 0,
+              "tn": 8582,
+              "tp": 0,
+              "fn": 1418,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 8582,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.0003490106585752783,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": true,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 8583,
+              "calibration_fp": 8,
+              "threshold": 0.022062866076020083,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 40,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1016285,
+            "candidate_fit_cpu_seconds": 12.296875,
+            "validation": {
+              "n": 10000,
+              "benign_n": 6,
+              "attack_n": 9994,
+              "fp": 0,
+              "tn": 6,
+              "tp": 0,
+              "fn": 9994,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 6,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.39303776899708265,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": false,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 23,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 45,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1066285,
+            "candidate_fit_cpu_seconds": 13.0625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 6,
+              "attack_n": 9994,
+              "fp": 0,
+              "tn": 6,
+              "tp": 9994,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 6,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.39303776899708265,
+                "fpr_cap": 0.001,
+                "recall_better": 9994,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": false,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 19,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 50,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1116285,
+            "candidate_fit_cpu_seconds": 13.734375,
+            "validation": {
+              "n": 10000,
+              "benign_n": 338,
+              "attack_n": 9662,
+              "fp": 0,
+              "tn": 338,
+              "tp": 2034,
+              "fn": 7628,
+              "fpr": 0.0,
+              "recall": 0.21051542123783895,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 338,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.008823951630571075,
+                "fpr_cap": 0.001,
+                "recall_better": 2034,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": false,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 352,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 55,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1166285,
+            "candidate_fit_cpu_seconds": 15.75,
+            "validation": {
+              "n": 10000,
+              "benign_n": 1,
+              "attack_n": 9999,
+              "fp": 0,
+              "tn": 1,
+              "tp": 9332,
+              "fn": 667,
+              "fpr": 0.0,
+              "recall": 0.9332933293329333,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 1,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.95,
+                "fpr_cap": 0.001,
+                "recall_better": 9332,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": false,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 3,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 60,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1216285,
+            "candidate_fit_cpu_seconds": 16.703125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 9336,
+              "fn": 664,
+              "fpr": 0.0,
+              "recall": 0.9336,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 0,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 65,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1266285,
+            "candidate_fit_cpu_seconds": 16.796875,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 10000,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 3617,
+              "calibration_fp": 3,
+              "threshold": 0.2900302928283844,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 70,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1316285,
+            "candidate_fit_cpu_seconds": 17.015625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 6323,
+              "attack_n": 3677,
+              "fp": 0,
+              "tn": 6323,
+              "tp": 3665,
+              "fn": 12,
+              "fpr": 0.0,
+              "recall": 0.9967364699483274,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": true,
+                "decision": "promote",
+                "benign_n": 6323,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.00047367115634103625,
+                "fpr_cap": 0.001,
+                "recall_better": 3665,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": true,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 6323,
+              "calibration_fp": 0,
+              "threshold": 0.9957683625209698,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 75,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day1_flows_labeled.csv",
+            "candidate_fit_rows": 1364479,
+            "candidate_fit_cpu_seconds": 16.5625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 1,
+              "attack_n": 9999,
+              "fp": 0,
+              "tn": 1,
+              "tp": 9999,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 1,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.95,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": false,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 2000,
+              "calibration_fp": 1,
+              "threshold": 0.9838002860752022,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 80,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day1_flows_labeled.csv",
+            "candidate_fit_rows": 1414479,
+            "candidate_fit_cpu_seconds": 17.53125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 10000,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 48,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 85,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day1_flows_labeled.csv",
+            "candidate_fit_rows": 1464479,
+            "candidate_fit_cpu_seconds": 19.40625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 10000,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 1,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 90,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day1_flows_labeled.csv",
+            "candidate_fit_rows": 1514479,
+            "candidate_fit_cpu_seconds": 20.40625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 5823,
+              "attack_n": 4177,
+              "fp": 0,
+              "tn": 5823,
+              "tp": 0,
+              "fn": 4177,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 5823,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.0005143331281677376,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": true,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 23995,
+              "calibration_fp": 20,
+              "threshold": 0.9408730248227195,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 95,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1564032,
+            "candidate_fit_cpu_seconds": 15.765625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 7397,
+              "attack_n": 2603,
+              "fp": 0,
+              "tn": 7397,
+              "tp": 793,
+              "fn": 1810,
+              "fpr": 0.0,
+              "recall": 0.304648482520169,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": true,
+                "decision": "promote",
+                "benign_n": 7397,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.0004049108733716602,
+                "fpr_cap": 0.001,
+                "recall_better": 793,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.9196119217864076e-239,
+                "fpr_pass": true,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 12654,
+              "calibration_fp": 6,
+              "threshold": 0.9339835679101623,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 100,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1614032,
+            "candidate_fit_cpu_seconds": 22.078125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 29781,
+              "calibration_fp": 0,
+              "threshold": 0.9378563536080662,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 105,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1664032,
+            "candidate_fit_cpu_seconds": 21.25,
+            "validation": {
+              "n": 10000,
+              "benign_n": 8919,
+              "attack_n": 1081,
+              "fp": 0,
+              "tn": 8919,
+              "tp": 0,
+              "fn": 1081,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 8919,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.00033582567815713385,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": true,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 24661,
+              "calibration_fp": 7,
+              "threshold": 0.977948030075984,
+              "fallback": false
+            }
+          }
+        ],
+        "compute": {
+          "candidate_fit_cpu_seconds": {
+            "periodic": 300.59375,
+            "fpr_recall_gate": 300.59375
+          },
+          "decision_cpu_seconds": {
+            "periodic": 0.0,
+            "fpr_recall_gate": 0.015625,
+            "threshold_only": 4.359375
+          }
+        }
+      },
+      {
+        "seed": 43,
+        "dataset": "TU Wien smart factory",
+        "campaigns": "October aggressive development followed by November stealth same-site check",
+        "source_feature_policy": [
+          "flowDurationMilliseconds",
+          "protocolIdentifier one-hot",
+          "log1p(packetTotalCount)"
+        ],
+        "excluded_predictors": [
+          "SequenceNumber",
+          "flowStartMilliseconds",
+          "sourceIPAddress",
+          "destinationIPAddress",
+          "sourceTransportPort",
+          "destinationTransportPort",
+          "Label"
+        ],
+        "initial": {
+          "base_train_rows": 615922,
+          "benign_calibration_rows": 153981,
+          "warmup_rows": 20000,
+          "warmup_label_counts": {
+            "nmap": 14288,
+            "BENIGN": 5676,
+            "fping": 36
+          },
+          "threshold": 0.9944305593499558,
+          "calibration_fp": 60,
+          "model_fit_cpu_seconds": 6.15625
+        },
+        "protocol": {
+          "chunk_flows": 10000,
+          "update_every_chunks": 5,
+          "nominal_fpr_cap": 0.001,
+          "gate_alpha": 0.05,
+          "gate_validation": "current scored chunk after labels arrive; candidate fit excludes current chunk",
+          "assumption_note": "nominal binomial/McNemar; repeated looks and flow dependence are not controlled"
+        },
+        "aggregate": {
+          "no_update": {
+            "n": 1064341,
+            "benign_n": 484466,
+            "attack_n": 579875,
+            "fp": 557,
+            "tn": 483909,
+            "tp": 311,
+            "fn": 579564,
+            "fpr": 0.001149719484958697,
+            "recall": 0.0005363224832938133,
+            "precision": 0.358294930875576,
+            "by_phase": {
+              "development_aggressive_A": {
+                "n": 698557,
+                "benign_n": 294660,
+                "attack_n": 403897,
+                "fp": 551,
+                "tn": 294109,
+                "tp": 67,
+                "fn": 403830,
+                "fpr": 0.001869951808864454,
+                "recall": 0.00016588387633480813,
+                "precision": 0.10841423948220065,
+                "chunks_over_cap": 4,
+                "max_chunk_fpr": 0.07563465061502224,
+                "attack_family_recall": {
+                  "exfiltration(ftp)": {
+                    "n": 3,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 21,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "gobuster": {
+                    "n": 285,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 400640,
+                    "tp": 67,
+                    "recall": 0.00016723242811501597
+                  },
+                  "revshell": {
+                    "n": 12,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "sqlmap": {
+                    "n": 2936,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              },
+              "later_stealth_S_same_site_check": {
+                "n": 365784,
+                "benign_n": 189806,
+                "attack_n": 175978,
+                "fp": 6,
+                "tn": 189800,
+                "tp": 244,
+                "fn": 175734,
+                "fpr": 3.161122409196759e-05,
+                "recall": 0.0013865369534828216,
+                "precision": 0.976,
+                "chunks_over_cap": 0,
+                "max_chunk_fpr": 0.0004894762604013706,
+                "attack_family_recall": {
+                  "exfiltration": {
+                    "n": 7,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 26,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "meterpreter": {
+                    "n": 44816,
+                    "tp": 244,
+                    "recall": 0.005444484112816851
+                  },
+                  "nmap": {
+                    "n": 131128,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "revshell": {
+                    "n": 1,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              }
+            },
+            "by_capture": {
+              "a_day1_flows_labeled.csv": {
+                "n": 350363,
+                "benign_n": 275106,
+                "attack_n": 75257,
+                "fp": 497,
+                "tn": 274609,
+                "tp": 34,
+                "fn": 75223,
+                "fpr": 0.001806576374197582,
+                "recall": 0.00045178521599319665,
+                "precision": 0.064030131826742
+              },
+              "a_day2_flows_labeled.csv": {
+                "n": 348194,
+                "benign_n": 19554,
+                "attack_n": 328640,
+                "fp": 54,
+                "tn": 19500,
+                "tp": 33,
+                "fn": 328607,
+                "fpr": 0.0027615833077631177,
+                "recall": 0.00010041382667964946,
+                "precision": 0.3793103448275862
+              },
+              "s_day1_flows_labeled.csv": {
+                "n": 199553,
+                "benign_n": 62448,
+                "attack_n": 137105,
+                "fp": 5,
+                "tn": 62443,
+                "tp": 178,
+                "fn": 136927,
+                "fpr": 8.00666154240328e-05,
+                "recall": 0.0012982750446737903,
+                "precision": 0.9726775956284153
+              },
+              "s_day2_flows_labeled.csv": {
+                "n": 166231,
+                "benign_n": 127358,
+                "attack_n": 38873,
+                "fp": 1,
+                "tn": 127357,
+                "tp": 66,
+                "fn": 38807,
+                "fpr": 7.851882096138444e-06,
+                "recall": 0.0016978365446453838,
+                "precision": 0.9850746268656716
+              }
+            },
+            "attack_family_recall": {
+              "exfiltration": {
+                "n": 7,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "exfiltration(ftp)": {
+                "n": 3,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "fping": {
+                "n": 47,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "gobuster": {
+                "n": 285,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "meterpreter": {
+                "n": 44816,
+                "tp": 244,
+                "recall": 0.005444484112816851
+              },
+              "nmap": {
+                "n": 531768,
+                "tp": 67,
+                "recall": 0.00012599479472251058
+              },
+              "revshell": {
+                "n": 13,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "sqlmap": {
+                "n": 2936,
+                "tp": 0,
+                "recall": 0.0
+              }
+            },
+            "chunk_tail": {
+              "max_chunk_fpr": 0.07563465061502224,
+              "chunks_over_cap": 4,
+              "chunks_with_benign": 81
+            },
+            "accepted_updates": 0,
+            "final_model_bytes_joblib_z3": 126445,
+            "promotion_tenures": [],
+            "harmful_promotions": 0
+          },
+          "periodic": {
+            "n": 1064341,
+            "benign_n": 484466,
+            "attack_n": 579875,
+            "fp": 1552,
+            "tn": 482914,
+            "tp": 290407,
+            "fn": 289468,
+            "fpr": 0.0032035271825060995,
+            "recall": 0.5008096572537185,
+            "precision": 0.994684185108183,
+            "by_phase": {
+              "development_aggressive_A": {
+                "n": 698557,
+                "benign_n": 294660,
+                "attack_n": 403897,
+                "fp": 552,
+                "tn": 294108,
+                "tp": 171726,
+                "fn": 232171,
+                "fpr": 0.0018733455508043169,
+                "recall": 0.42517275443986957,
+                "precision": 0.9967958764322781,
+                "chunks_over_cap": 4,
+                "max_chunk_fpr": 0.07563465061502224,
+                "attack_family_recall": {
+                  "exfiltration(ftp)": {
+                    "n": 3,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 21,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "gobuster": {
+                    "n": 285,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 400640,
+                    "tp": 171726,
+                    "recall": 0.42862919329073484
+                  },
+                  "revshell": {
+                    "n": 12,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "sqlmap": {
+                    "n": 2936,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              },
+              "later_stealth_S_same_site_check": {
+                "n": 365784,
+                "benign_n": 189806,
+                "attack_n": 175978,
+                "fp": 1000,
+                "tn": 188806,
+                "tp": 118681,
+                "fn": 57297,
+                "fpr": 0.005268537348661265,
+                "recall": 0.6744081646569458,
+                "precision": 0.9916444548424562,
+                "chunks_over_cap": 1,
+                "max_chunk_fpr": 0.14590020426028597,
+                "attack_family_recall": {
+                  "exfiltration": {
+                    "n": 7,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 26,
+                    "tp": 1,
+                    "recall": 0.038461538461538464
+                  },
+                  "meterpreter": {
+                    "n": 44816,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 131128,
+                    "tp": 118680,
+                    "recall": 0.9050698554084559
+                  },
+                  "revshell": {
+                    "n": 1,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              }
+            },
+            "by_capture": {
+              "a_day1_flows_labeled.csv": {
+                "n": 350363,
+                "benign_n": 275106,
+                "attack_n": 75257,
+                "fp": 497,
+                "tn": 274609,
+                "tp": 194,
+                "fn": 75063,
+                "fpr": 0.001806576374197582,
+                "recall": 0.0025778332912552984,
+                "precision": 0.28075253256150506
+              },
+              "a_day2_flows_labeled.csv": {
+                "n": 348194,
+                "benign_n": 19554,
+                "attack_n": 328640,
+                "fp": 55,
+                "tn": 19499,
+                "tp": 171532,
+                "fn": 157108,
+                "fpr": 0.0028127237393883605,
+                "recall": 0.5219449853943525,
+                "precision": 0.9996794628963732
+              },
+              "s_day1_flows_labeled.csv": {
+                "n": 199553,
+                "benign_n": 62448,
+                "attack_n": 137105,
+                "fp": 1000,
+                "tn": 61448,
+                "tp": 118681,
+                "fn": 18424,
+                "fpr": 0.01601332308480656,
+                "recall": 0.8656212391962365,
+                "precision": 0.9916444548424562
+              },
+              "s_day2_flows_labeled.csv": {
+                "n": 166231,
+                "benign_n": 127358,
+                "attack_n": 38873,
+                "fp": 0,
+                "tn": 127358,
+                "tp": 0,
+                "fn": 38873,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              }
+            },
+            "attack_family_recall": {
+              "exfiltration": {
+                "n": 7,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "exfiltration(ftp)": {
+                "n": 3,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "fping": {
+                "n": 47,
+                "tp": 1,
+                "recall": 0.02127659574468085
+              },
+              "gobuster": {
+                "n": 285,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "meterpreter": {
+                "n": 44816,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "nmap": {
+                "n": 531768,
+                "tp": 290406,
+                "recall": 0.5461140948684389
+              },
+              "revshell": {
+                "n": 13,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "sqlmap": {
+                "n": 2936,
+                "tp": 0,
+                "recall": 0.0
+              }
+            },
+            "chunk_tail": {
+              "max_chunk_fpr": 0.14590020426028597,
+              "chunks_over_cap": 5,
+              "chunks_with_benign": 81
+            },
+            "accepted_updates": 21,
+            "final_model_bytes_joblib_z3": 134844,
+            "promotion_tenures": [
+              {
+                "promotion_chunk": 5,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 10,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 15,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 20,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 25,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 30,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 35,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 40,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 45,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 1.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 50,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 55,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.8808088011905983,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 60,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.8880164729024473,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 65,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 1.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 70,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.006718788174932812,
+                "mean_future_chunk_fpr": 0.001679697043733203,
+                "mean_future_chunk_recall": 0.49931258592675914,
+                "any_future_chunk_over_cap": true
+              },
+              {
+                "promotion_chunk": 75,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.939911575562701,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 80,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 1.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 85,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.14590020426028597,
+                "mean_future_chunk_fpr": 0.03647505106507149,
+                "mean_future_chunk_recall": 0.2498410680228862,
+                "any_future_chunk_over_cap": true
+              },
+              {
+                "promotion_chunk": 90,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 95,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 100,
+                "future_chunks": 4,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              },
+              {
+                "promotion_chunk": 105,
+                "future_chunks": 3,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              }
+            ],
+            "harmful_promotions": 2
+          },
+          "fpr_recall_gate": {
+            "n": 1064341,
+            "benign_n": 484466,
+            "attack_n": 579875,
+            "fp": 606,
+            "tn": 483860,
+            "tp": 65605,
+            "fn": 514270,
+            "fpr": 0.0012508617735816341,
+            "recall": 0.11313645182151326,
+            "precision": 0.9908474422679011,
+            "by_phase": {
+              "development_aggressive_A": {
+                "n": 698557,
+                "benign_n": 294660,
+                "attack_n": 403897,
+                "fp": 606,
+                "tn": 294054,
+                "tp": 67,
+                "fn": 403830,
+                "fpr": 0.002056607615556913,
+                "recall": 0.00016588387633480813,
+                "precision": 0.09955423476968796,
+                "chunks_over_cap": 5,
+                "max_chunk_fpr": 0.07563465061502224,
+                "attack_family_recall": {
+                  "exfiltration(ftp)": {
+                    "n": 3,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 21,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "gobuster": {
+                    "n": 285,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 400640,
+                    "tp": 67,
+                    "recall": 0.00016723242811501597
+                  },
+                  "revshell": {
+                    "n": 12,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "sqlmap": {
+                    "n": 2936,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              },
+              "later_stealth_S_same_site_check": {
+                "n": 365784,
+                "benign_n": 189806,
+                "attack_n": 175978,
+                "fp": 0,
+                "tn": 189806,
+                "tp": 65538,
+                "fn": 110440,
+                "fpr": 0.0,
+                "recall": 0.3724215526940868,
+                "precision": 1.0,
+                "chunks_over_cap": 0,
+                "max_chunk_fpr": 0.0,
+                "attack_family_recall": {
+                  "exfiltration": {
+                    "n": 7,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 26,
+                    "tp": 1,
+                    "recall": 0.038461538461538464
+                  },
+                  "meterpreter": {
+                    "n": 44816,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 131128,
+                    "tp": 65537,
+                    "recall": 0.4997940943200537
+                  },
+                  "revshell": {
+                    "n": 1,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              }
+            },
+            "by_capture": {
+              "a_day1_flows_labeled.csv": {
+                "n": 350363,
+                "benign_n": 275106,
+                "attack_n": 75257,
+                "fp": 497,
+                "tn": 274609,
+                "tp": 34,
+                "fn": 75223,
+                "fpr": 0.001806576374197582,
+                "recall": 0.00045178521599319665,
+                "precision": 0.064030131826742
+              },
+              "a_day2_flows_labeled.csv": {
+                "n": 348194,
+                "benign_n": 19554,
+                "attack_n": 328640,
+                "fp": 109,
+                "tn": 19445,
+                "tp": 33,
+                "fn": 328607,
+                "fpr": 0.005574307047151478,
+                "recall": 0.00010041382667964946,
+                "precision": 0.2323943661971831
+              },
+              "s_day1_flows_labeled.csv": {
+                "n": 199553,
+                "benign_n": 62448,
+                "attack_n": 137105,
+                "fp": 0,
+                "tn": 62448,
+                "tp": 65538,
+                "fn": 71567,
+                "fpr": 0.0,
+                "recall": 0.47801320156084753,
+                "precision": 1.0
+              },
+              "s_day2_flows_labeled.csv": {
+                "n": 166231,
+                "benign_n": 127358,
+                "attack_n": 38873,
+                "fp": 0,
+                "tn": 127358,
+                "tp": 0,
+                "fn": 38873,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              }
+            },
+            "attack_family_recall": {
+              "exfiltration": {
+                "n": 7,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "exfiltration(ftp)": {
+                "n": 3,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "fping": {
+                "n": 47,
+                "tp": 1,
+                "recall": 0.02127659574468085
+              },
+              "gobuster": {
+                "n": 285,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "meterpreter": {
+                "n": 44816,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "nmap": {
+                "n": 531768,
+                "tp": 65604,
+                "recall": 0.12336958974590423
+              },
+              "revshell": {
+                "n": 13,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "sqlmap": {
+                "n": 2936,
+                "tp": 0,
+                "recall": 0.0
+              }
+            },
+            "chunk_tail": {
+              "max_chunk_fpr": 0.07563465061502224,
+              "chunks_over_cap": 5,
+              "chunks_with_benign": 81
+            },
+            "accepted_updates": 2,
+            "final_model_bytes_joblib_z3": 133643,
+            "promotion_tenures": [
+              {
+                "promotion_chunk": 70,
+                "future_chunks": 24,
+                "max_future_chunk_fpr": 0.006718788174932812,
+                "mean_future_chunk_fpr": 0.00027994950728886715,
+                "mean_future_chunk_recall": 0.28153736024824333,
+                "any_future_chunk_over_cap": true
+              },
+              {
+                "promotion_chunk": 95,
+                "future_chunks": 13,
+                "max_future_chunk_fpr": 0.0,
+                "mean_future_chunk_fpr": 0.0,
+                "mean_future_chunk_recall": 0.0,
+                "any_future_chunk_over_cap": false
+              }
+            ],
+            "harmful_promotions": 1
+          },
+          "threshold_only": {
+            "n": 1064341,
+            "benign_n": 484466,
+            "attack_n": 579875,
+            "fp": 991,
+            "tn": 483475,
+            "tp": 2265,
+            "fn": 577610,
+            "fpr": 0.002045551184190428,
+            "recall": 0.003906014227204139,
+            "precision": 0.6956388206388207,
+            "by_phase": {
+              "development_aggressive_A": {
+                "n": 698557,
+                "benign_n": 294660,
+                "attack_n": 403897,
+                "fp": 744,
+                "tn": 293916,
+                "tp": 1366,
+                "fn": 402531,
+                "fpr": 0.0025249440032579923,
+                "recall": 0.0033820503742290732,
+                "precision": 0.64739336492891,
+                "chunks_over_cap": 14,
+                "max_chunk_fpr": 0.2,
+                "attack_family_recall": {
+                  "exfiltration(ftp)": {
+                    "n": 3,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 21,
+                    "tp": 16,
+                    "recall": 0.7619047619047619
+                  },
+                  "gobuster": {
+                    "n": 285,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "nmap": {
+                    "n": 400640,
+                    "tp": 1344,
+                    "recall": 0.003354632587859425
+                  },
+                  "revshell": {
+                    "n": 12,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "sqlmap": {
+                    "n": 2936,
+                    "tp": 6,
+                    "recall": 0.0020435967302452314
+                  }
+                }
+              },
+              "later_stealth_S_same_site_check": {
+                "n": 365784,
+                "benign_n": 189806,
+                "attack_n": 175978,
+                "fp": 247,
+                "tn": 189559,
+                "tp": 899,
+                "fn": 175079,
+                "fpr": 0.0013013287251193325,
+                "recall": 0.005108593119594495,
+                "precision": 0.7844677137870855,
+                "chunks_over_cap": 3,
+                "max_chunk_fpr": 0.0248749493037718,
+                "attack_family_recall": {
+                  "exfiltration": {
+                    "n": 7,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "fping": {
+                    "n": 26,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "meterpreter": {
+                    "n": 44816,
+                    "tp": 899,
+                    "recall": 0.02005980007140307
+                  },
+                  "nmap": {
+                    "n": 131128,
+                    "tp": 0,
+                    "recall": 0.0
+                  },
+                  "revshell": {
+                    "n": 1,
+                    "tp": 0,
+                    "recall": 0.0
+                  }
+                }
+              }
+            },
+            "by_capture": {
+              "a_day1_flows_labeled.csv": {
+                "n": 350363,
+                "benign_n": 275106,
+                "attack_n": 75257,
+                "fp": 545,
+                "tn": 274561,
+                "tp": 1229,
+                "fn": 74028,
+                "fpr": 0.001981054575327328,
+                "recall": 0.01633070677810702,
+                "precision": 0.6927846674182638
+              },
+              "a_day2_flows_labeled.csv": {
+                "n": 348194,
+                "benign_n": 19554,
+                "attack_n": 328640,
+                "fp": 199,
+                "tn": 19355,
+                "tp": 137,
+                "fn": 328503,
+                "fpr": 0.01017694589342334,
+                "recall": 0.0004168695228821811,
+                "precision": 0.40773809523809523
+              },
+              "s_day1_flows_labeled.csv": {
+                "n": 199553,
+                "benign_n": 62448,
+                "attack_n": 137105,
+                "fp": 33,
+                "tn": 62415,
+                "tp": 186,
+                "fn": 136919,
+                "fpr": 0.0005284396617986165,
+                "recall": 0.0013566244848838482,
+                "precision": 0.8493150684931506
+              },
+              "s_day2_flows_labeled.csv": {
+                "n": 166231,
+                "benign_n": 127358,
+                "attack_n": 38873,
+                "fp": 214,
+                "tn": 127144,
+                "tp": 713,
+                "fn": 38160,
+                "fpr": 0.001680302768573627,
+                "recall": 0.01834177964139634,
+                "precision": 0.7691477885652643
+              }
+            },
+            "attack_family_recall": {
+              "exfiltration": {
+                "n": 7,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "exfiltration(ftp)": {
+                "n": 3,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "fping": {
+                "n": 47,
+                "tp": 16,
+                "recall": 0.3404255319148936
+              },
+              "gobuster": {
+                "n": 285,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "meterpreter": {
+                "n": 44816,
+                "tp": 899,
+                "recall": 0.02005980007140307
+              },
+              "nmap": {
+                "n": 531768,
+                "tp": 1344,
+                "recall": 0.002527417971747078
+              },
+              "revshell": {
+                "n": 13,
+                "tp": 0,
+                "recall": 0.0
+              },
+              "sqlmap": {
+                "n": 2936,
+                "tp": 6,
+                "recall": 0.0020435967302452314
+              }
+            },
+            "chunk_tail": {
+              "max_chunk_fpr": 0.2,
+              "chunks_over_cap": 17,
+              "chunks_with_benign": 81
+            },
+            "accepted_updates": 0,
+            "final_model_bytes_joblib_z3": 126445,
+            "promotion_tenures": [],
+            "harmful_promotions": 0
+          }
+        },
+        "promotion_events": {
+          "no_update": [],
+          "periodic": [
+            {
+              "chunk": 5,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 675922
+            },
+            {
+              "chunk": 10,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 725922
+            },
+            {
+              "chunk": 15,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 775922
+            },
+            {
+              "chunk": 20,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 825922
+            },
+            {
+              "chunk": 25,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 875922
+            },
+            {
+              "chunk": 30,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 0,
+                "fn": 10000,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 925922
+            },
+            {
+              "chunk": 35,
+              "phase": "development_aggressive_A",
+              "capture": "a_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 8582,
+                "attack_n": 1418,
+                "fp": 0,
+                "tn": 8582,
+                "tp": 0,
+                "fn": 1418,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 975922
+            },
+            {
+              "chunk": 40,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 6,
+                "attack_n": 9994,
+                "fp": 0,
+                "tn": 6,
+                "tp": 0,
+                "fn": 9994,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1016285
+            },
+            {
+              "chunk": 45,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 6,
+                "attack_n": 9994,
+                "fp": 0,
+                "tn": 6,
+                "tp": 9994,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1066285
+            },
+            {
+              "chunk": 50,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 338,
+                "attack_n": 9662,
+                "fp": 0,
+                "tn": 338,
+                "tp": 2034,
+                "fn": 7628,
+                "fpr": 0.0,
+                "recall": 0.21051542123783895,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1116285
+            },
+            {
+              "chunk": 55,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 1,
+                "attack_n": 9999,
+                "fp": 0,
+                "tn": 1,
+                "tp": 9332,
+                "fn": 667,
+                "fpr": 0.0,
+                "recall": 0.9332933293329333,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1166285
+            },
+            {
+              "chunk": 60,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 9336,
+                "fn": 664,
+                "fpr": 0.0,
+                "recall": 0.9336,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1216285
+            },
+            {
+              "chunk": 65,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 10000,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1266285
+            },
+            {
+              "chunk": 70,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 6323,
+                "attack_n": 3677,
+                "fp": 0,
+                "tn": 6323,
+                "tp": 3665,
+                "fn": 12,
+                "fpr": 0.0,
+                "recall": 0.9967364699483274,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1316285
+            },
+            {
+              "chunk": 75,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 1,
+                "attack_n": 9999,
+                "fp": 0,
+                "tn": 1,
+                "tp": 9999,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1364479
+            },
+            {
+              "chunk": 80,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 10000,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1414479
+            },
+            {
+              "chunk": 85,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 0,
+                "attack_n": 10000,
+                "fp": 0,
+                "tn": 0,
+                "tp": 10000,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 1.0,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1464479
+            },
+            {
+              "chunk": 90,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day1_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 5823,
+                "attack_n": 4177,
+                "fp": 0,
+                "tn": 5823,
+                "tp": 0,
+                "fn": 4177,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1514479
+            },
+            {
+              "chunk": 95,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 7397,
+                "attack_n": 2603,
+                "fp": 0,
+                "tn": 7397,
+                "tp": 796,
+                "fn": 1807,
+                "fpr": 0.0,
+                "recall": 0.3058009988474837,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1564032
+            },
+            {
+              "chunk": 100,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 10000,
+                "attack_n": 0,
+                "fp": 0,
+                "tn": 10000,
+                "tp": 0,
+                "fn": 0,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1614032
+            },
+            {
+              "chunk": 105,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 8919,
+                "attack_n": 1081,
+                "fp": 0,
+                "tn": 8919,
+                "tp": 0,
+                "fn": 1081,
+                "fpr": 0.0,
+                "recall": 0.0,
+                "precision": 0.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "candidate_fit_rows": 1664032
+            }
+          ],
+          "fpr_recall_gate": [
+            {
+              "chunk": 70,
+              "phase": "development_aggressive_A",
+              "capture": "a_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 6323,
+                "attack_n": 3677,
+                "fp": 0,
+                "tn": 6323,
+                "tp": 3665,
+                "fn": 12,
+                "fpr": 0.0,
+                "recall": 0.9967364699483274,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "promote",
+                "benign_n": 6323,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.00047367115634103625,
+                "fpr_cap": 0.001,
+                "recall_better": 3665,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": true,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              },
+              "candidate_fit_rows": 1316285
+            },
+            {
+              "chunk": 95,
+              "phase": "later_stealth_S_same_site_check",
+              "capture": "s_day2_flows_labeled.csv",
+              "validation": {
+                "n": 10000,
+                "benign_n": 7397,
+                "attack_n": 2603,
+                "fp": 0,
+                "tn": 7397,
+                "tp": 796,
+                "fn": 1807,
+                "fpr": 0.0,
+                "recall": 0.3058009988474837,
+                "precision": 1.0
+              },
+              "gate": {
+                "accept": true,
+                "decision": "promote",
+                "benign_n": 7397,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.0004049108733716602,
+                "fpr_cap": 0.001,
+                "recall_better": 796,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 2.3995149022330095e-240,
+                "fpr_pass": true,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              },
+              "candidate_fit_rows": 1564032
+            }
+          ],
+          "threshold_only": []
+        },
+        "decision_log": [
+          {
+            "chunk": 5,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 675922,
+            "candidate_fit_cpu_seconds": 7.796875,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 29978,
+              "calibration_fp": 22,
+              "threshold": 0.9944305593499558,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 10,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 725922,
+            "candidate_fit_cpu_seconds": 8.109375,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 30000,
+              "calibration_fp": 0,
+              "threshold": 0.9944305593499558,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 15,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 775922,
+            "candidate_fit_cpu_seconds": 8.703125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 29999,
+              "calibration_fp": 0,
+              "threshold": 0.9943991951596715,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 20,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 825922,
+            "candidate_fit_cpu_seconds": 7.375,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 30000,
+              "calibration_fp": 5,
+              "threshold": 0.0014167029409069061,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 25,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 875922,
+            "candidate_fit_cpu_seconds": 7.671875,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 30000,
+              "calibration_fp": 5,
+              "threshold": 0.0014167029409069061,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 30,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 925922,
+            "candidate_fit_cpu_seconds": 9.140625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 0,
+              "fn": 10000,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 3332,
+              "calibration_fp": 2,
+              "threshold": 0.002964991788848218,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 35,
+            "phase": "development_aggressive_A",
+            "capture": "a_day1_flows_labeled.csv",
+            "candidate_fit_rows": 975922,
+            "candidate_fit_cpu_seconds": 8.984375,
+            "validation": {
+              "n": 10000,
+              "benign_n": 8582,
+              "attack_n": 1418,
+              "fp": 0,
+              "tn": 8582,
+              "tp": 0,
+              "fn": 1418,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 8582,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.0003490106585752783,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": true,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 8583,
+              "calibration_fp": 8,
+              "threshold": 0.009406326407442829,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 40,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1016285,
+            "candidate_fit_cpu_seconds": 10.0625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 6,
+              "attack_n": 9994,
+              "fp": 0,
+              "tn": 6,
+              "tp": 0,
+              "fn": 9994,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 6,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.39303776899708265,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": false,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 23,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 45,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1066285,
+            "candidate_fit_cpu_seconds": 11.140625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 6,
+              "attack_n": 9994,
+              "fp": 0,
+              "tn": 6,
+              "tp": 9994,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 6,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.39303776899708265,
+                "fpr_cap": 0.001,
+                "recall_better": 9994,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": false,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 19,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 50,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1116285,
+            "candidate_fit_cpu_seconds": 11.3125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 338,
+              "attack_n": 9662,
+              "fp": 0,
+              "tn": 338,
+              "tp": 2034,
+              "fn": 7628,
+              "fpr": 0.0,
+              "recall": 0.21051542123783895,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 338,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.008823951630571075,
+                "fpr_cap": 0.001,
+                "recall_better": 2034,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": false,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 352,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 55,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1166285,
+            "candidate_fit_cpu_seconds": 12.40625,
+            "validation": {
+              "n": 10000,
+              "benign_n": 1,
+              "attack_n": 9999,
+              "fp": 0,
+              "tn": 1,
+              "tp": 9332,
+              "fn": 667,
+              "fpr": 0.0,
+              "recall": 0.9332933293329333,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 1,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.95,
+                "fpr_cap": 0.001,
+                "recall_better": 9332,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": false,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 3,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 60,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1216285,
+            "candidate_fit_cpu_seconds": 12.5,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 9336,
+              "fn": 664,
+              "fpr": 0.0,
+              "recall": 0.9336,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 0,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 65,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1266285,
+            "candidate_fit_cpu_seconds": 13.078125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 10000,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 3617,
+              "calibration_fp": 3,
+              "threshold": 0.11113074348310954,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 70,
+            "phase": "development_aggressive_A",
+            "capture": "a_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1316285,
+            "candidate_fit_cpu_seconds": 13.671875,
+            "validation": {
+              "n": 10000,
+              "benign_n": 6323,
+              "attack_n": 3677,
+              "fp": 0,
+              "tn": 6323,
+              "tp": 3665,
+              "fn": 12,
+              "fpr": 0.0,
+              "recall": 0.9967364699483274,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": true,
+                "decision": "promote",
+                "benign_n": 6323,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.00047367115634103625,
+                "fpr_cap": 0.001,
+                "recall_better": 3665,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 0.0,
+                "fpr_pass": true,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 6323,
+              "calibration_fp": 0,
+              "threshold": 0.9966285144602548,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 75,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day1_flows_labeled.csv",
+            "candidate_fit_rows": 1364479,
+            "candidate_fit_cpu_seconds": 14.71875,
+            "validation": {
+              "n": 10000,
+              "benign_n": 1,
+              "attack_n": 9999,
+              "fp": 0,
+              "tn": 1,
+              "tp": 9999,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 1,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.95,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": false,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 2000,
+              "calibration_fp": 0,
+              "threshold": 0.9897279641557438,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 80,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day1_flows_labeled.csv",
+            "candidate_fit_rows": 1414479,
+            "candidate_fit_cpu_seconds": 15.75,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 10000,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 48,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 85,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day1_flows_labeled.csv",
+            "candidate_fit_rows": 1464479,
+            "candidate_fit_cpu_seconds": 16.125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 0,
+              "attack_n": 10000,
+              "fp": 0,
+              "tn": 0,
+              "tp": 10000,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 1.0,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 0,
+                "attack_n": 10000
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 1,
+              "fallback": true
+            }
+          },
+          {
+            "chunk": 90,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day1_flows_labeled.csv",
+            "candidate_fit_rows": 1514479,
+            "candidate_fit_cpu_seconds": 16.734375,
+            "validation": {
+              "n": 10000,
+              "benign_n": 5823,
+              "attack_n": 4177,
+              "fp": 0,
+              "tn": 5823,
+              "tp": 0,
+              "fn": 4177,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 5823,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.0005143331281677376,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": true,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 23995,
+              "calibration_fp": 20,
+              "threshold": 0.9582303860141754,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 95,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1564032,
+            "candidate_fit_cpu_seconds": 17.078125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 7397,
+              "attack_n": 2603,
+              "fp": 0,
+              "tn": 7397,
+              "tp": 796,
+              "fn": 1807,
+              "fpr": 0.0,
+              "recall": 0.3058009988474837,
+              "precision": 1.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": true,
+                "decision": "promote",
+                "benign_n": 7397,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.0004049108733716602,
+                "fpr_cap": 0.001,
+                "recall_better": 796,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 2.3995149022330095e-240,
+                "fpr_pass": true,
+                "recall_gain_pass": true,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 12654,
+              "calibration_fp": 1,
+              "threshold": 0.9645362341495578,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 100,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1614032,
+            "candidate_fit_cpu_seconds": 18.078125,
+            "validation": {
+              "n": 10000,
+              "benign_n": 10000,
+              "attack_n": 0,
+              "fp": 0,
+              "tn": 10000,
+              "tp": 0,
+              "fn": 0,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "defer_single_class_validation",
+                "benign_n": 10000,
+                "attack_n": 0
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 29781,
+              "calibration_fp": 0,
+              "threshold": 0.9645362341495578,
+              "fallback": false
+            }
+          },
+          {
+            "chunk": 105,
+            "phase": "later_stealth_S_same_site_check",
+            "capture": "s_day2_flows_labeled.csv",
+            "candidate_fit_rows": 1664032,
+            "candidate_fit_cpu_seconds": 19.09375,
+            "validation": {
+              "n": 10000,
+              "benign_n": 8919,
+              "attack_n": 1081,
+              "fp": 0,
+              "tn": 8919,
+              "tp": 0,
+              "fn": 1081,
+              "fpr": 0.0,
+              "recall": 0.0,
+              "precision": 0.0
+            },
+            "decisions": {
+              "periodic": {
+                "accept": true,
+                "decision": "unconditional_periodic_promotion"
+              },
+              "fpr_recall_gate": {
+                "accept": false,
+                "decision": "reject",
+                "benign_n": 8919,
+                "candidate_fp": 0,
+                "candidate_fpr_ucb_95": 0.00033582567815713385,
+                "fpr_cap": 0.001,
+                "recall_better": 0,
+                "recall_worse": 0,
+                "recall_gain_p_one_sided": 1.0,
+                "fpr_pass": true,
+                "recall_gain_pass": false,
+                "assumption": "Nominal exact-binomial/McNemar calculations; no guarantee under serial dependence, repeated looks, or future drift."
+              }
+            },
+            "threshold_recalibration": {
+              "benign_n": 24661,
+              "calibration_fp": 16,
+              "threshold": 0.9797334998659506,
+              "fallback": false
+            }
+          }
+        ],
+        "compute": {
+          "candidate_fit_cpu_seconds": {
+            "periodic": 259.53125,
+            "fpr_recall_gate": 259.53125
+          },
+          "decision_cpu_seconds": {
+            "periodic": 0.0,
+            "fpr_recall_gate": 0.03125,
+            "threshold_only": 3.890625
+          }
+        }
+      }
+    ]
+  }
+}

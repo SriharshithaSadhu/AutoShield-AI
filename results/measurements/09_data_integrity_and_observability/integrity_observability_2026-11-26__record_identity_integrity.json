@@ -1,0 +1,36 @@
+{
+  "source": "integrity_observability_2026-11-26/record_identity_integrity.json",
+  "source_sha256": "aac57c4fc8bef995cba8e06d891c1effe73086c81e6e6080a31b09d6315ed7b7",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "created_at": "2026-11-26T13:37:21.519721+05:30",
+    "rows": 27520260,
+    "source_sha256": "c7aece9fd3b9b2c37e1382ec01705e854a29fbc351edc12d81c431ca8bdc8983",
+    "wall_s": 481.89756680000573,
+    "maximum_end_group": 457,
+    "counts": {
+      "partition_0_rows": 13760005,
+      "family_Benign": 16792214,
+      "family_scanning": 1358977,
+      "time_tuple_duplicate_groups": 668981,
+      "time_tuple_duplicate_rows": 2710022,
+      "family_dos": 203456,
+      "complete_observation_duplicate_groups": 480040,
+      "complete_observation_duplicate_rows": 2296177,
+      "family_injection": 381777,
+      "family_ddos": 4141256,
+      "partition_1_rows": 2300002,
+      "partition_2_rows": 2300000,
+      "partition_3_rows": 9160253,
+      "family_password": 1594777,
+      "family_xss": 2834435,
+      "family_ransomware": 3971,
+      "family_Backdoor": 203384,
+      "family_mitm": 6013
+    },
+    "examples": {},
+    "complete_observation_key": "All53 publisher fields, including tuple and timestamps, excluding onlyLabel/Attack; literal raw CSV field text.",
+    "time_tuple_key": "Start/end plus ordered5tuple; duplicate keys with different remaining fields are not proven duplicate packets.",
+    "caveat": "Consistency audit of exported table only, not validation of packet-level ground truth. No contradictory label is relabeled or removed."
+  }
+}

@@ -1,0 +1,649 @@
+{
+  "source": "cicids2017_lightgbm_mopso_feasibility_first_dev_seed43.json",
+  "source_sha256": "faa6f99cfdf7059a01425d4e6aad21e95995aa741e8699ae05700ef1ffbce75c",
+  "scope": "Compact export of recorded measurements; detailed arrays removed, not a new experiment.",
+  "measurement": {
+    "algorithm": "feasibility-first MOPSO with external nondominated archive",
+    "seed": 43,
+    "feasibility_first": true,
+    "dimensions": [
+      {
+        "name": "n_estimators",
+        "lower": 50,
+        "upper": 200,
+        "kind": "int"
+      },
+      {
+        "name": "max_depth",
+        "lower": 5,
+        "upper": 100,
+        "kind": "int"
+      },
+      {
+        "name": "learning_rate",
+        "lower": 0.01,
+        "upper": 0.3,
+        "kind": "log_float"
+      },
+      {
+        "name": "num_leaves",
+        "lower": 10,
+        "upper": 50,
+        "kind": "int"
+      },
+      {
+        "name": "min_child_samples",
+        "lower": 10,
+        "upper": 50,
+        "kind": "int"
+      }
+    ],
+    "fixed_config": {
+      "class_weight": "balanced",
+      "verbosity": -1
+    },
+    "particles": 6,
+    "iterations": 4,
+    "iteration_log": [
+      {
+        "iteration": 1,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 6,
+        "archive_size": 2,
+        "feasible_archive_size": 2,
+        "wall_seconds": 151.3903266999987
+      },
+      {
+        "iteration": 2,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 12,
+        "archive_size": 6,
+        "feasible_archive_size": 6,
+        "wall_seconds": 128.2297006000008
+      },
+      {
+        "iteration": 3,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 18,
+        "archive_size": 9,
+        "feasible_archive_size": 9,
+        "wall_seconds": 112.19681189999392
+      },
+      {
+        "iteration": 4,
+        "valid_particle_evaluations": 6,
+        "unique_candidates_so_far": 24,
+        "archive_size": 13,
+        "feasible_archive_size": 13,
+        "wall_seconds": 115.02255900000455
+      }
+    ],
+    "pareto_archive": [
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 55,
+          "max_depth": 16,
+          "learning_rate": 0.13316281968464377,
+          "num_leaves": 15,
+          "min_child_samples": 24
+        },
+        "metrics": {
+          "weighted_f1": 0.995512839700643,
+          "macro_f1": 0.9670431500006876,
+          "mean_true_class_probability": 0.9942216187127726,
+          "top_label_ece": 0.0019632802831590383,
+          "median_latency_ms_per_row": 0.009564670444928364,
+          "p95_latency_ms_per_row": 0.012709271908623422,
+          "serialized_size_mb": 0.6648616790771484,
+          "mean_fit_seconds": 1.5475983249998535
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 15.70361899999989,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 54,
+          "max_depth": 57,
+          "learning_rate": 0.04840938892457505,
+          "num_leaves": 19,
+          "min_child_samples": 25
+        },
+        "metrics": {
+          "weighted_f1": 0.9901645770181599,
+          "macro_f1": 0.9365361779274621,
+          "mean_true_class_probability": 0.9543032526613583,
+          "top_label_ece": 0.030885320503322954,
+          "median_latency_ms_per_row": 0.008692559434567461,
+          "p95_latency_ms_per_row": 0.010369596421008891,
+          "serialized_size_mb": 0.8071804046630859,
+          "mean_fit_seconds": 1.4611557249991165
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 15.298845400000573,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 163,
+          "max_depth": 71,
+          "learning_rate": 0.05093297161126958,
+          "num_leaves": 16,
+          "min_child_samples": 25
+        },
+        "metrics": {
+          "weighted_f1": 0.9959848465348349,
+          "macro_f1": 0.9702655884881011,
+          "mean_true_class_probability": 0.9949854913555953,
+          "top_label_ece": 0.0021928529434531874,
+          "median_latency_ms_per_row": 0.030676069189366162,
+          "p95_latency_ms_per_row": 0.04256674471732587,
+          "serialized_size_mb": 2.086385726928711,
+          "mean_fit_seconds": 3.4983358000008593
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 27.405769700002566,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 50,
+          "max_depth": 35,
+          "learning_rate": 0.30000000000000004,
+          "num_leaves": 43,
+          "min_child_samples": 28
+        },
+        "metrics": {
+          "weighted_f1": 0.9961451678410989,
+          "macro_f1": 0.9694654475055021,
+          "mean_true_class_probability": 0.9959082214538967,
+          "top_label_ece": 0.003276146568972219,
+          "median_latency_ms_per_row": 0.011716101400742768,
+          "p95_latency_ms_per_row": 0.012626495337164355,
+          "serialized_size_mb": 1.1608333587646484,
+          "mean_fit_seconds": 1.561771624999892
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 16.09530900000391,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 93,
+          "max_depth": 76,
+          "learning_rate": 0.11883790948839086,
+          "num_leaves": 40,
+          "min_child_samples": 42
+        },
+        "metrics": {
+          "weighted_f1": 0.996175568830909,
+          "macro_f1": 0.9654227965953341,
+          "mean_true_class_probability": 0.9959287677977131,
+          "top_label_ece": 0.0032423090958049313,
+          "median_latency_ms_per_row": 0.031980611266044776,
+          "p95_latency_ms_per_row": 0.043846075527527464,
+          "serialized_size_mb": 2.6012935638427734,
+          "mean_fit_seconds": 3.171243599997979
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 25.27262999999948,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 64,
+          "max_depth": 15,
+          "learning_rate": 0.13930285692844602,
+          "num_leaves": 17,
+          "min_child_samples": 26
+        },
+        "metrics": {
+          "weighted_f1": 0.9960789676972434,
+          "macro_f1": 0.971436061338896,
+          "mean_true_class_probability": 0.9953249040038462,
+          "top_label_ece": 0.0027110988486755915,
+          "median_latency_ms_per_row": 0.010872932491927879,
+          "p95_latency_ms_per_row": 0.014395257948057896,
+          "serialized_size_mb": 0.8700313568115234,
+          "mean_fit_seconds": 1.5199428249979974
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 16.055929899994226,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 50,
+          "max_depth": 43,
+          "learning_rate": 0.07972124111085818,
+          "num_leaves": 13,
+          "min_child_samples": 23
+        },
+        "metrics": {
+          "weighted_f1": 0.9930756579444943,
+          "macro_f1": 0.956837298037943,
+          "mean_true_class_probability": 0.9786342026571542,
+          "top_label_ece": 0.011017929103363182,
+          "median_latency_ms_per_row": 0.007637195391531104,
+          "p95_latency_ms_per_row": 0.013915954212728274,
+          "serialized_size_mb": 0.5322933197021484,
+          "mean_fit_seconds": 1.1699553999987984
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 13.883430500005488,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 50,
+          "max_depth": 16,
+          "learning_rate": 0.2784442461739295,
+          "num_leaves": 35,
+          "min_child_samples": 24
+        },
+        "metrics": {
+          "weighted_f1": 0.9961723879233605,
+          "macro_f1": 0.9686650488026198,
+          "mean_true_class_probability": 0.9960233582797098,
+          "top_label_ece": 0.003348057838159688,
+          "median_latency_ms_per_row": 0.01094495460002681,
+          "p95_latency_ms_per_row": 0.014605197972978452,
+          "serialized_size_mb": 1.078634262084961,
+          "mean_fit_seconds": 1.5302966500003095
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 15.838134199999331,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 79,
+          "max_depth": 58,
+          "learning_rate": 0.06060626480505772,
+          "num_leaves": 32,
+          "min_child_samples": 34
+        },
+        "metrics": {
+          "weighted_f1": 0.9954428125116034,
+          "macro_f1": 0.9621364545619943,
+          "mean_true_class_probability": 0.9925190012642723,
+          "top_label_ece": 0.0014632246295127832,
+          "median_latency_ms_per_row": 0.01600129118713295,
+          "p95_latency_ms_per_row": 0.020577757553254722,
+          "serialized_size_mb": 1.9422359466552734,
+          "mean_fit_seconds": 2.4365465249993576
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 20.167045399997733,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 76,
+          "max_depth": 17,
+          "learning_rate": 0.08238703649292493,
+          "num_leaves": 31,
+          "min_child_samples": 30
+        },
+        "metrics": {
+          "weighted_f1": 0.9956518618784912,
+          "macro_f1": 0.9606292603199779,
+          "mean_true_class_probability": 0.9947864443109932,
+          "top_label_ece": 0.0026183607337395675,
+          "median_latency_ms_per_row": 0.014416102524059433,
+          "p95_latency_ms_per_row": 0.01916991876077533,
+          "serialized_size_mb": 1.821920394897461,
+          "mean_fit_seconds": 2.3348398499983887
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 19.736896800000977,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 103,
+          "max_depth": 33,
+          "learning_rate": 0.1522714386926362,
+          "num_leaves": 17,
+          "min_child_samples": 26
+        },
+        "metrics": {
+          "weighted_f1": 0.9963996442940285,
+          "macro_f1": 0.975028317253561,
+          "mean_true_class_probability": 0.996095237214554,
+          "top_label_ece": 0.003246306605788631,
+          "median_latency_ms_per_row": 0.02085246683928234,
+          "p95_latency_ms_per_row": 0.025047197334763995,
+          "serialized_size_mb": 1.3093624114990234,
+          "mean_fit_seconds": 2.214850349999324
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 19.87896990000445,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 50,
+          "max_depth": 34,
+          "learning_rate": 0.14103080895294742,
+          "num_leaves": 27,
+          "min_child_samples": 27
+        },
+        "metrics": {
+          "weighted_f1": 0.9956969596823262,
+          "macro_f1": 0.9630345101491536,
+          "mean_true_class_probability": 0.995093791109384,
+          "top_label_ece": 0.002763035548066355,
+          "median_latency_ms_per_row": 0.009401146833858554,
+          "p95_latency_ms_per_row": 0.010047599467511032,
+          "serialized_size_mb": 1.0468502044677734,
+          "mean_fit_seconds": 1.5561024750004435
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 15.725005100000999,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      },
+      {
+        "config": {
+          "class_weight": "balanced",
+          "verbosity": -1,
+          "n_estimators": 77,
+          "max_depth": 62,
+          "learning_rate": 0.058599698138069485,
+          "num_leaves": 34,
+          "min_child_samples": 36
+        },
+        "metrics": {
+          "weighted_f1": 0.995583680005915,
+          "macro_f1": 0.9622573344806074,
+          "mean_true_class_probability": 0.9917580204685637,
+          "top_label_ece": 0.001656458345050334,
+          "median_latency_ms_per_row": 0.016768219486039557,
+          "p95_latency_ms_per_row": 0.022518055920599803,
+          "serialized_size_mb": 2.006612777709961,
+          "mean_fit_seconds": 2.431994125003257
+        },
+        "feasibility": {
+          "feasible": true,
+          "violations": [],
+          "constraints": {
+            "min_weighted_f1": 0.95,
+            "max_p95_latency_ms_per_row": 0.05,
+            "max_serialized_size_mb": 4.0
+          }
+        },
+        "evaluation_seconds": 20.341205400000035,
+        "evaluation_metadata": {
+          "dataset": "CICIDS2017_sample_km.csv",
+          "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+          "target_column": "Label",
+          "seed": 43,
+          "holdout_index_sha256_reserved_not_confirmatory": "92f43bb5d1bb3e58f5feb47768d48f87650669552cc6d630ab609cee3c352596",
+          "development_index_sha256": "b1b2ffa8c118419833d492b07be3e8269a7d180f85303da5050426addb306ee2",
+          "inner_splits": 4
+        }
+      }
+    ],
+    "dataset": "CICIDS2017_sample_km.csv",
+    "dataset_sha256": "60d64da339179f289c587950f63f567cf9e5090e32b5976eddedb9821800a766",
+    "target_column": "Label",
+    "n_jobs": 1,
+    "constraints": {
+      "min_weighted_f1": 0.95,
+      "max_p95_latency_ms_per_row": 0.05,
+      "max_serialized_size_mb": 4.0
+    },
+    "search_mode": "feasibility_first",
+    "outer_partition_note": "Candidate scores use grouped development CV; reserved fold was inspected previously and is not a pristine test.",
+    "hardware": {
+      "platform": "Windows-10-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 12,
+          "prefix": "libopenblas",
+          "filepath": "D:\\AutoML-MOO\\.venv\\Lib\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Prescott"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 12,
+          "prefix": "vcomp",
+          "filepath": "D:\\AutoML-MOO\\.venv\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 12,
+          "prefix": "libopenblas",
+          "filepath": "D:\\AutoML-MOO\\.venv\\Lib\\site-packages\\scipy.libs\\libopenblas_v0.3.27--3aa239bc726cfb0bd8e5330d8d4c15c6.dll",
+          "version": "0.3.27",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    }
+  }
+}
