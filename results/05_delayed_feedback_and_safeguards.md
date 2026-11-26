@@ -2,13 +2,15 @@
 
 Evaluated label delays, approval, rollback, recovery and deadline batching. The work measures harmful updates, missed attacks, switching and delivery cost; it does not establish a universally safe update controller.
 
-[Experiment implementations](../conducted_experiments/05_delayed_feedback_and_safeguards.md) Â· [All results](README.md)
+[Experiment implementations](../conducted_experiments/05_delayed_feedback_and_safeguards.md) · [All results](README.md)
 
 ## Validate-before-commit comparison
 
 ![Validate-before-commit comparison](graphs/05_delayed_feedback_and_safeguards/smart_factory_a_to_s_vbc_comparison.png)
 
-**What the graph shows:** Evaluates source-method admission and an FPR-oriented gate on a shared campaign. This is a same-stream development comparison; label-evidence budgets are not fully matched.
+**What we did:** Compared update-admission policies using the same campaign stream and examined false alarms, recall and policy variation.
+
+**What the graph establishes:** Evaluates source-method admission and an FPR-oriented gate on a shared campaign. This is a same-stream development comparison; label-evidence budgets are not fully matched.
 
 **Recorded source:** `smart_factory_a_to_s_vbc_comparison.png`
 

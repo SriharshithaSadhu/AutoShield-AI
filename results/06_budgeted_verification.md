@@ -2,10 +2,9 @@
 
 Compared randomized disagreement review and decision-value allocation under label/reviewer budgets. No reliable general advantage was established; this direction was not promoted as a successful new algorithm.
 
-[Experiment implementations](../conducted_experiments/06_budgeted_verification.md) Â· [All results](README.md)
+[Experiment implementations](../conducted_experiments/06_budgeted_verification.md) · [All results](README.md)
 
-This study is documented through the implementations and tabulated measurements linked below.
-
+This study is documented through its implementations and tabulated measurements rather than a standalone saved PNG.
 
 ## Recorded measurements
 

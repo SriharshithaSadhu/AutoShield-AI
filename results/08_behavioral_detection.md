@@ -2,13 +2,15 @@
 
 Implemented bounded host histories and flow/behavioral/hybrid comparisons. Hybrid recall increases substantially on the full development replay, but false alarms exceed the target. Coverage and sensor-visibility controls are reported separately.
 
-[Experiment implementations](../conducted_experiments/08_behavioral_detection.md) Â· [All results](README.md)
+[Experiment implementations](../conducted_experiments/08_behavioral_detection.md) · [All results](README.md)
 
 ## Full behavioral detector comparison
 
 ![Full behavioral detector comparison](graphs/08_behavioral_detection/full_development_comparison.png)
 
-**What the graph shows:** Six frozen pipelines score 9,160,253 development flows. The hybrid raises recall to 90.27% but also raises FPR to 8.68%; this fails the deployment operating point.
+**What we did:** Replayed the complete development tail through frozen flow, behavioral, anomaly and hybrid pipelines using actual per-batch model calls.
+
+**What the graph establishes:** Six frozen pipelines score 9,160,253 development flows. The hybrid raises recall to 90.27% but also raises FPR to 8.68%; this fails the deployment operating point.
 
 **Recorded source:** `behavioral_observation_2026-11-22/full_development_comparison.png`
 
@@ -16,7 +18,9 @@ Implemented bounded host histories and flow/behavioral/hybrid comparisons. Hybri
 
 ![Behavioral false alarms over time](graphs/08_behavioral_detection/chronological_tail_risk.png)
 
-**What the graph shows:** Separates supported-minute FPR and recall across the replay. Behavioral/hybrid detectors can have extreme localized false alarms despite high pooled recall.
+**What we did:** Broke the chronological replay into supported windows and inspected local errors alongside the pooled score.
+
+**What the graph establishes:** Separates supported-minute FPR and recall across the replay. Behavioral/hybrid detectors can have extreme localized false alarms despite high pooled recall.
 
 **Recorded source:** `behavioral_observation_2026-11-22/chronological_tail_risk.png`
 
@@ -24,7 +28,9 @@ Implemented bounded host histories and flow/behavioral/hybrid comparisons. Hybri
 
 ![Fitting-family coverage ablation](graphs/08_behavioral_detection/family_coverage_control.png)
 
-**What the graph shows:** With ToN DDoS excluded from fitting, the hybrid retains strong nearby recall while the flow baseline drops. This local finding fails to generalize to the later stress period and is not proof of zero-day detection.
+**What we did:** Withheld a named attack family from fitting and compared flow and hybrid models against a matched training-count control.
+
+**What the graph establishes:** With ToN DDoS excluded from fitting, the hybrid retains strong nearby recall while the flow baseline drops. This local finding fails to generalize to the later stress period and is not proof of zero-day detection.
 
 **Recorded source:** `behavioral_observation_2026-11-22/family_coverage_control.png`
 

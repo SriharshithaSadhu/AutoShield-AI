@@ -2,13 +2,15 @@
 
 Compared single- and multi-environment fitting, robust/group-aware controls and legitimate service/direction context. Later-period performance remains below the joint recall/FPR requirement.
 
-[Experiment implementations](../conducted_experiments/07_generalization_and_context.md) Â· [All results](README.md)
+[Experiment implementations](../conducted_experiments/07_generalization_and_context.md) · [All results](README.md)
 
 ## Context representation ablation
 
 ![Context representation ablation](graphs/07_generalization_and_context/context_ablation.png)
 
-**What the graph shows:** Separates representation effects across chronological windows and selection rules. Context additions do not automatically restore feasibility.
+**What we did:** Compared representations or fitting environments under matched conditions, then checked performance on later traffic.
+
+**What the graph establishes:** Separates representation effects across chronological windows and selection rules. Context additions do not automatically restore feasibility.
 
 **Recorded source:** `generalization_study_2026-11-19/context_ablation.png`
 
@@ -16,7 +18,9 @@ Compared single- and multi-environment fitting, robust/group-aware controls and 
 
 ![Matched multi-environment fitting](graphs/07_generalization_and_context/matched_generalization_tradeoff.png)
 
-**What the graph shows:** Compares training exposure under matched conditions. Nearby-period gains do not guarantee later-period low-FPR generalization.
+**What we did:** Compared representations or fitting environments under matched conditions, then checked performance on later traffic.
+
+**What the graph establishes:** Compares training exposure under matched conditions. Nearby-period gains do not guarantee later-period low-FPR generalization.
 
 **Recorded source:** `multienvironment_2026-11-21/matched_generalization_tradeoff.png`
 
@@ -24,7 +28,9 @@ Compared single- and multi-environment fitting, robust/group-aware controls and 
 
 ![Low-FPR ranking limits](graphs/07_generalization_and_context/matched_low_fpr_ranking_diagnostic.png)
 
-**What the graph shows:** Uses retrospective labels to diagnose recall achievable from fitted scores at fixed FPR. These thresholds are not deployable or used for protected tuning.
+**What we did:** Inspected fitted-score ordering at a fixed false-positive budget to distinguish a weak ranking from a threshold-selection problem.
+
+**What the graph establishes:** Uses retrospective labels to diagnose recall achievable from fitted scores at fixed FPR. These thresholds are not deployable or used for protected tuning.
 
 **Recorded source:** `multienvironment_2026-11-21/matched_low_fpr_ranking_diagnostic.png`
 
@@ -32,7 +38,9 @@ Compared single- and multi-environment fitting, robust/group-aware controls and 
 
 ![Service, direction and protocol context](graphs/07_generalization_and_context/context_features_tradeoff.png)
 
-**What the graph shows:** Compares causal contextual representations with the flow baseline. None of these contextual variants restored the required later-period joint operating point.
+**What we did:** Compared representations or fitting environments under matched conditions, then checked performance on later traffic.
+
+**What the graph establishes:** Compares causal contextual representations with the flow baseline. None of these contextual variants restored the required later-period joint operating point.
 
 **Recorded source:** `network_context_2026-11-21/context_features_tradeoff.png`
 
@@ -40,7 +48,9 @@ Compared single- and multi-environment fitting, robust/group-aware controls and 
 
 ![Full-density contextual tail risk](graphs/07_generalization_and_context/full_context_window_risk.png)
 
-**What the graph shows:** Shows how errors vary over real chronological windows. Worst-window false alarms can remain severe even when pooled metrics look less extreme.
+**What we did:** Broke the chronological replay into supported windows and inspected local errors alongside the pooled score.
+
+**What the graph establishes:** Shows how errors vary over real chronological windows. Worst-window false alarms can remain severe even when pooled metrics look less extreme.
 
 **Recorded source:** `network_context_2026-11-21/full_context_window_risk.png`
 

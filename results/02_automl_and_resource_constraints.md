@@ -2,13 +2,15 @@
 
 Implemented Pareto archives, feasibility-first search, repeated seeds and matched optimizer comparisons. Results do not establish consistent MOPSO superiority; measured compute and feasibility accompany quality metrics.
 
-[Experiment implementations](../conducted_experiments/02_automl_and_resource_constraints.md) Â· [All results](README.md)
+[Experiment implementations](../conducted_experiments/02_automl_and_resource_constraints.md) · [All results](README.md)
 
 ## Selection stability under budget constraints
 
 ![Selection stability under budget constraints](graphs/02_automl_and_resource_constraints/comparison.png)
 
-**What the graph shows:** Checks the stability of candidate selection and calibrated operating points. The primary combined recall/FPR requirement was not reliably met.
+**What we did:** Repeated resource-constrained candidate selection and calibration-partition checks to test how stable the selected operating points were.
+
+**What the graph establishes:** Checks the stability of candidate selection and calibrated operating points. The primary combined recall/FPR requirement was not reliably met.
 
 **Recorded source:** `selection_stability/comparison.png`
 
