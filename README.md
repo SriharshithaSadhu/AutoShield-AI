@@ -4,7 +4,7 @@
 
 AutoShield AI is an implemented machine-learning research framework for detecting malicious network traffic while measuring the cost and reliability of the detector. It brings together multi-objective model selection, controlled training pipelines, chronological adaptation experiments and bounded-memory behavioral inference.
 
-**Start here:** [Implementation](src/autoshield/) · [Conducted experiments](conducted_experiments/README.md) · [Results and graph guide](results/README.md) · [Automated tests](https://github.com/SriharshithaSadhu/AutoShield-AI/actions/workflows/tests.yml)
+**Start here:** [Implementation guide](IMPLEMENTATION.md) · [Core source code](src/autoshield/) · [Conducted experiments](conducted_experiments/README.md) · [Results and graph guide](results/README.md) · [Automated tests](https://github.com/SriharshithaSadhu/AutoShield-AI/actions/workflows/tests.yml)
 
 ## Contents
 
@@ -57,6 +57,21 @@ The work began with reproducing the Yang–Shami MOO-AutoML IDS on CICIDS2017 an
 The repository separates the installable implementation from the historical research studies. It includes **two baseline reproduction notebooks, nine organized experiment groups, 48 saved graphs, compact measured outputs and two frozen inference models**.
 
 ## Implementation
+
+The two files in `examples/` are entry points, not the whole implementation. The core package contains **eight functional modules plus its package initializer**. A separate catalog preserves **320 historical research source files** for the conducted studies.
+
+| Implementation file | Responsibility |
+|---|---|
+| [automl.py](src/autoshield/automl.py) | Classifier construction, grouped candidate evaluation, development comparisons and search integration. |
+| [optimization.py](src/autoshield/optimization.py) | Search dimensions, feasibility-first MOPSO, nondominated archive and checkpoints. |
+| [preprocessing.py](src/autoshield/preprocessing.py) | Numeric feature handling, fold-local normalization and hybrid class balancing. |
+| [evaluation.py](src/autoshield/evaluation.py) | Detection/calibration metrics, timing, serialized size, feasibility and Pareto filtering. |
+| [features.py](src/autoshield/features.py) | Derived physical flow representation with explicit directional ratios and missing-value handling. |
+| [observation.py](src/autoshield/observation.py) | Bounded causal host histories, contact counts and timestamp-group handling. |
+| [runtime.py](src/autoshield/runtime.py) | Input validation, ordered batch inference and thresholded alarm decisions. |
+| [scoring.py](src/autoshield/scoring.py) | Native model scoring and the conventional tail-anomaly baseline. |
+
+For the call paths, key APIs and suggested code-reading order, see [IMPLEMENTATION.md](IMPLEMENTATION.md). The [adaptation experiment](experiments/replay_adaptation.py) and [historical research code](conducted_experiments/source/) sit outside the installable core.
 
 ### 1. Training and evaluation
 
